@@ -509,3 +509,248 @@
 [2026-03-12T02:10:43.238+0000] {logging_mixin.py:190} INFO - [2026-03-12T02:10:43.238+0000] {dag.py:3239} INFO - Sync 1 DAGs
 [2026-03-12T02:10:43.258+0000] {logging_mixin.py:190} INFO - [2026-03-12T02:10:43.258+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_with_http_operator to None, run_after=None
 [2026-03-12T02:10:43.278+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/create_dag_with_http_operator.py took 0.092 seconds
+[2026-03-12T02:11:13.799+0000] {processor.py:186} INFO - Started process (PID=56039) to work on /opt/airflow/dags/create_dag_with_http_operator.py
+[2026-03-12T02:11:13.801+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/create_dag_with_http_operator.py for tasks to queue
+[2026-03-12T02:11:13.802+0000] {logging_mixin.py:190} INFO - [2026-03-12T02:11:13.802+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/create_dag_with_http_operator.py
+[2026-03-12T02:11:13.815+0000] {processor.py:925} INFO - DAG(s) 'dag_with_http_operator' retrieved from /opt/airflow/dags/create_dag_with_http_operator.py
+[2026-03-12T02:11:13.855+0000] {logging_mixin.py:190} INFO - [2026-03-12T02:11:13.854+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-03-12T02:11:13.879+0000] {logging_mixin.py:190} INFO - [2026-03-12T02:11:13.878+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_with_http_operator to None, run_after=None
+[2026-03-12T02:11:13.904+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/create_dag_with_http_operator.py took 0.114 seconds
+[2026-03-12T02:11:45.163+0000] {processor.py:186} INFO - Started process (PID=56107) to work on /opt/airflow/dags/create_dag_with_http_operator.py
+[2026-03-12T02:11:45.164+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/create_dag_with_http_operator.py for tasks to queue
+[2026-03-12T02:11:45.166+0000] {logging_mixin.py:190} INFO - [2026-03-12T02:11:45.165+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/create_dag_with_http_operator.py
+[2026-03-12T02:11:45.180+0000] {processor.py:925} INFO - DAG(s) 'dag_with_http_operator' retrieved from /opt/airflow/dags/create_dag_with_http_operator.py
+[2026-03-12T02:11:45.215+0000] {logging_mixin.py:190} INFO - [2026-03-12T02:11:45.215+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-03-12T02:11:45.236+0000] {logging_mixin.py:190} INFO - [2026-03-12T02:11:45.235+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_with_http_operator to None, run_after=None
+[2026-03-12T02:11:45.257+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/create_dag_with_http_operator.py took 0.104 seconds
+[2026-03-12T02:12:16.706+0000] {processor.py:186} INFO - Started process (PID=56173) to work on /opt/airflow/dags/create_dag_with_http_operator.py
+[2026-03-12T02:12:16.708+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/create_dag_with_http_operator.py for tasks to queue
+[2026-03-12T02:12:16.711+0000] {logging_mixin.py:190} INFO - [2026-03-12T02:12:16.710+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/create_dag_with_http_operator.py
+[2026-03-12T02:12:16.725+0000] {processor.py:925} INFO - DAG(s) 'dag_with_http_operator' retrieved from /opt/airflow/dags/create_dag_with_http_operator.py
+[2026-03-12T02:12:16.764+0000] {logging_mixin.py:190} INFO - [2026-03-12T02:12:16.764+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-03-12T02:12:16.788+0000] {logging_mixin.py:190} INFO - [2026-03-12T02:12:16.787+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_with_http_operator to None, run_after=None
+[2026-03-12T02:12:16.816+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/create_dag_with_http_operator.py took 0.119 seconds
+[2026-03-12T02:12:47.778+0000] {processor.py:186} INFO - Started process (PID=56241) to work on /opt/airflow/dags/create_dag_with_http_operator.py
+[2026-03-12T02:12:47.779+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/create_dag_with_http_operator.py for tasks to queue
+[2026-03-12T02:12:47.781+0000] {logging_mixin.py:190} INFO - [2026-03-12T02:12:47.780+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/create_dag_with_http_operator.py
+[2026-03-12T02:12:47.790+0000] {processor.py:925} INFO - DAG(s) 'dag_with_http_operator' retrieved from /opt/airflow/dags/create_dag_with_http_operator.py
+[2026-03-12T02:12:47.817+0000] {logging_mixin.py:190} INFO - [2026-03-12T02:12:47.816+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-03-12T02:12:47.835+0000] {logging_mixin.py:190} INFO - [2026-03-12T02:12:47.835+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_with_http_operator to None, run_after=None
+[2026-03-12T02:12:47.859+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/create_dag_with_http_operator.py took 0.089 seconds
+[2026-03-12T02:13:18.677+0000] {processor.py:186} INFO - Started process (PID=56309) to work on /opt/airflow/dags/create_dag_with_http_operator.py
+[2026-03-12T02:13:18.682+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/create_dag_with_http_operator.py for tasks to queue
+[2026-03-12T02:13:18.685+0000] {logging_mixin.py:190} INFO - [2026-03-12T02:13:18.684+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/create_dag_with_http_operator.py
+[2026-03-12T02:13:18.703+0000] {processor.py:925} INFO - DAG(s) 'dag_with_http_operator' retrieved from /opt/airflow/dags/create_dag_with_http_operator.py
+[2026-03-12T02:13:18.760+0000] {logging_mixin.py:190} INFO - [2026-03-12T02:13:18.759+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-03-12T02:13:18.796+0000] {logging_mixin.py:190} INFO - [2026-03-12T02:13:18.796+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_with_http_operator to None, run_after=None
+[2026-03-12T02:13:18.845+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/create_dag_with_http_operator.py took 0.181 seconds
+[2026-03-12T02:13:50.074+0000] {processor.py:186} INFO - Started process (PID=56378) to work on /opt/airflow/dags/create_dag_with_http_operator.py
+[2026-03-12T02:13:50.075+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/create_dag_with_http_operator.py for tasks to queue
+[2026-03-12T02:13:50.077+0000] {logging_mixin.py:190} INFO - [2026-03-12T02:13:50.077+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/create_dag_with_http_operator.py
+[2026-03-12T02:13:50.085+0000] {processor.py:925} INFO - DAG(s) 'dag_with_http_operator' retrieved from /opt/airflow/dags/create_dag_with_http_operator.py
+[2026-03-12T02:13:50.115+0000] {logging_mixin.py:190} INFO - [2026-03-12T02:13:50.115+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-03-12T02:13:50.139+0000] {logging_mixin.py:190} INFO - [2026-03-12T02:13:50.138+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_with_http_operator to None, run_after=None
+[2026-03-12T02:13:50.169+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/create_dag_with_http_operator.py took 0.103 seconds
+[2026-03-12T02:14:22.239+0000] {processor.py:186} INFO - Started process (PID=56446) to work on /opt/airflow/dags/create_dag_with_http_operator.py
+[2026-03-12T02:14:22.240+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/create_dag_with_http_operator.py for tasks to queue
+[2026-03-12T02:14:22.242+0000] {logging_mixin.py:190} INFO - [2026-03-12T02:14:22.241+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/create_dag_with_http_operator.py
+[2026-03-12T02:14:22.251+0000] {processor.py:925} INFO - DAG(s) 'dag_with_http_operator' retrieved from /opt/airflow/dags/create_dag_with_http_operator.py
+[2026-03-12T02:14:22.280+0000] {logging_mixin.py:190} INFO - [2026-03-12T02:14:22.279+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-03-12T02:14:22.297+0000] {logging_mixin.py:190} INFO - [2026-03-12T02:14:22.297+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_with_http_operator to None, run_after=None
+[2026-03-12T02:14:22.321+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/create_dag_with_http_operator.py took 0.089 seconds
+[2026-03-12T02:14:53.921+0000] {processor.py:186} INFO - Started process (PID=56514) to work on /opt/airflow/dags/create_dag_with_http_operator.py
+[2026-03-12T02:14:53.922+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/create_dag_with_http_operator.py for tasks to queue
+[2026-03-12T02:14:53.923+0000] {logging_mixin.py:190} INFO - [2026-03-12T02:14:53.923+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/create_dag_with_http_operator.py
+[2026-03-12T02:14:53.932+0000] {processor.py:925} INFO - DAG(s) 'dag_with_http_operator' retrieved from /opt/airflow/dags/create_dag_with_http_operator.py
+[2026-03-12T02:14:53.961+0000] {logging_mixin.py:190} INFO - [2026-03-12T02:14:53.961+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-03-12T02:14:53.982+0000] {logging_mixin.py:190} INFO - [2026-03-12T02:14:53.982+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_with_http_operator to None, run_after=None
+[2026-03-12T02:14:54.000+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/create_dag_with_http_operator.py took 0.087 seconds
+[2026-03-12T02:15:25.605+0000] {processor.py:186} INFO - Started process (PID=56583) to work on /opt/airflow/dags/create_dag_with_http_operator.py
+[2026-03-12T02:15:25.606+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/create_dag_with_http_operator.py for tasks to queue
+[2026-03-12T02:15:25.608+0000] {logging_mixin.py:190} INFO - [2026-03-12T02:15:25.607+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/create_dag_with_http_operator.py
+[2026-03-12T02:15:25.617+0000] {processor.py:925} INFO - DAG(s) 'dag_with_http_operator' retrieved from /opt/airflow/dags/create_dag_with_http_operator.py
+[2026-03-12T02:15:25.642+0000] {logging_mixin.py:190} INFO - [2026-03-12T02:15:25.642+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-03-12T02:15:25.659+0000] {logging_mixin.py:190} INFO - [2026-03-12T02:15:25.659+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_with_http_operator to None, run_after=None
+[2026-03-12T02:15:25.678+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/create_dag_with_http_operator.py took 0.080 seconds
+[2026-03-12T02:16:01.254+0000] {processor.py:186} INFO - Started process (PID=56651) to work on /opt/airflow/dags/create_dag_with_http_operator.py
+[2026-03-12T02:16:01.256+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/create_dag_with_http_operator.py for tasks to queue
+[2026-03-12T02:16:01.258+0000] {logging_mixin.py:190} INFO - [2026-03-12T02:16:01.258+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/create_dag_with_http_operator.py
+[2026-03-12T02:16:01.274+0000] {processor.py:925} INFO - DAG(s) 'dag_with_http_operator' retrieved from /opt/airflow/dags/create_dag_with_http_operator.py
+[2026-03-12T02:16:01.326+0000] {logging_mixin.py:190} INFO - [2026-03-12T02:16:01.326+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-03-12T02:16:01.361+0000] {logging_mixin.py:190} INFO - [2026-03-12T02:16:01.361+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_with_http_operator to None, run_after=None
+[2026-03-12T02:16:01.397+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/create_dag_with_http_operator.py took 0.154 seconds
+[2026-03-12T02:16:37.323+0000] {processor.py:186} INFO - Started process (PID=56720) to work on /opt/airflow/dags/create_dag_with_http_operator.py
+[2026-03-12T02:16:37.326+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/create_dag_with_http_operator.py for tasks to queue
+[2026-03-12T02:16:37.329+0000] {logging_mixin.py:190} INFO - [2026-03-12T02:16:37.328+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/create_dag_with_http_operator.py
+[2026-03-12T02:16:37.340+0000] {processor.py:925} INFO - DAG(s) 'dag_with_http_operator' retrieved from /opt/airflow/dags/create_dag_with_http_operator.py
+[2026-03-12T02:16:37.366+0000] {logging_mixin.py:190} INFO - [2026-03-12T02:16:37.366+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-03-12T02:16:37.383+0000] {logging_mixin.py:190} INFO - [2026-03-12T02:16:37.382+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_with_http_operator to None, run_after=None
+[2026-03-12T02:16:37.404+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/create_dag_with_http_operator.py took 0.092 seconds
+[2026-03-12T02:17:09.311+0000] {processor.py:186} INFO - Started process (PID=56788) to work on /opt/airflow/dags/create_dag_with_http_operator.py
+[2026-03-12T02:17:09.313+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/create_dag_with_http_operator.py for tasks to queue
+[2026-03-12T02:17:09.314+0000] {logging_mixin.py:190} INFO - [2026-03-12T02:17:09.314+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/create_dag_with_http_operator.py
+[2026-03-12T02:17:09.325+0000] {processor.py:925} INFO - DAG(s) 'dag_with_http_operator' retrieved from /opt/airflow/dags/create_dag_with_http_operator.py
+[2026-03-12T02:17:09.359+0000] {logging_mixin.py:190} INFO - [2026-03-12T02:17:09.359+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-03-12T02:17:09.379+0000] {logging_mixin.py:190} INFO - [2026-03-12T02:17:09.379+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_with_http_operator to None, run_after=None
+[2026-03-12T02:17:09.400+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/create_dag_with_http_operator.py took 0.097 seconds
+[2026-03-12T02:17:39.510+0000] {processor.py:186} INFO - Started process (PID=56856) to work on /opt/airflow/dags/create_dag_with_http_operator.py
+[2026-03-12T02:17:39.512+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/create_dag_with_http_operator.py for tasks to queue
+[2026-03-12T02:17:39.515+0000] {logging_mixin.py:190} INFO - [2026-03-12T02:17:39.514+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/create_dag_with_http_operator.py
+[2026-03-12T02:17:39.528+0000] {processor.py:925} INFO - DAG(s) 'dag_with_http_operator' retrieved from /opt/airflow/dags/create_dag_with_http_operator.py
+[2026-03-12T02:17:39.566+0000] {logging_mixin.py:190} INFO - [2026-03-12T02:17:39.566+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-03-12T02:17:39.595+0000] {logging_mixin.py:190} INFO - [2026-03-12T02:17:39.595+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_with_http_operator to None, run_after=None
+[2026-03-12T02:17:39.624+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/create_dag_with_http_operator.py took 0.129 seconds
+[2026-03-12T02:18:11.597+0000] {processor.py:186} INFO - Started process (PID=56930) to work on /opt/airflow/dags/create_dag_with_http_operator.py
+[2026-03-12T02:18:11.599+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/create_dag_with_http_operator.py for tasks to queue
+[2026-03-12T02:18:11.602+0000] {logging_mixin.py:190} INFO - [2026-03-12T02:18:11.601+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/create_dag_with_http_operator.py
+[2026-03-12T02:18:11.617+0000] {processor.py:925} INFO - DAG(s) 'dag_with_http_operator' retrieved from /opt/airflow/dags/create_dag_with_http_operator.py
+[2026-03-12T02:18:11.665+0000] {logging_mixin.py:190} INFO - [2026-03-12T02:18:11.665+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-03-12T02:18:11.691+0000] {logging_mixin.py:190} INFO - [2026-03-12T02:18:11.691+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_with_http_operator to None, run_after=None
+[2026-03-12T02:18:11.718+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/create_dag_with_http_operator.py took 0.131 seconds
+[2026-03-12T02:18:42.058+0000] {processor.py:186} INFO - Started process (PID=56997) to work on /opt/airflow/dags/create_dag_with_http_operator.py
+[2026-03-12T02:18:42.063+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/create_dag_with_http_operator.py for tasks to queue
+[2026-03-12T02:18:42.064+0000] {logging_mixin.py:190} INFO - [2026-03-12T02:18:42.064+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/create_dag_with_http_operator.py
+[2026-03-12T02:18:42.073+0000] {processor.py:925} INFO - DAG(s) 'dag_with_http_operator' retrieved from /opt/airflow/dags/create_dag_with_http_operator.py
+[2026-03-12T02:18:42.101+0000] {logging_mixin.py:190} INFO - [2026-03-12T02:18:42.101+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-03-12T02:18:42.121+0000] {logging_mixin.py:190} INFO - [2026-03-12T02:18:42.120+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_with_http_operator to None, run_after=None
+[2026-03-12T02:18:42.147+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/create_dag_with_http_operator.py took 0.098 seconds
+[2026-03-12T02:19:12.912+0000] {processor.py:186} INFO - Started process (PID=57066) to work on /opt/airflow/dags/create_dag_with_http_operator.py
+[2026-03-12T02:19:12.914+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/create_dag_with_http_operator.py for tasks to queue
+[2026-03-12T02:19:12.917+0000] {logging_mixin.py:190} INFO - [2026-03-12T02:19:12.916+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/create_dag_with_http_operator.py
+[2026-03-12T02:19:12.929+0000] {processor.py:925} INFO - DAG(s) 'dag_with_http_operator' retrieved from /opt/airflow/dags/create_dag_with_http_operator.py
+[2026-03-12T02:19:12.967+0000] {logging_mixin.py:190} INFO - [2026-03-12T02:19:12.967+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-03-12T02:19:12.990+0000] {logging_mixin.py:190} INFO - [2026-03-12T02:19:12.989+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_with_http_operator to None, run_after=None
+[2026-03-12T02:19:13.020+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/create_dag_with_http_operator.py took 0.116 seconds
+[2026-03-12T02:19:43.346+0000] {processor.py:186} INFO - Started process (PID=57135) to work on /opt/airflow/dags/create_dag_with_http_operator.py
+[2026-03-12T02:19:43.348+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/create_dag_with_http_operator.py for tasks to queue
+[2026-03-12T02:19:43.352+0000] {logging_mixin.py:190} INFO - [2026-03-12T02:19:43.351+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/create_dag_with_http_operator.py
+[2026-03-12T02:19:43.381+0000] {processor.py:925} INFO - DAG(s) 'dag_with_http_operator' retrieved from /opt/airflow/dags/create_dag_with_http_operator.py
+[2026-03-12T02:19:43.423+0000] {logging_mixin.py:190} INFO - [2026-03-12T02:19:43.422+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-03-12T02:19:43.450+0000] {logging_mixin.py:190} INFO - [2026-03-12T02:19:43.450+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_with_http_operator to None, run_after=None
+[2026-03-12T02:19:43.480+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/create_dag_with_http_operator.py took 0.154 seconds
+[2026-03-12T02:20:13.626+0000] {processor.py:186} INFO - Started process (PID=57204) to work on /opt/airflow/dags/create_dag_with_http_operator.py
+[2026-03-12T02:20:13.628+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/create_dag_with_http_operator.py for tasks to queue
+[2026-03-12T02:20:13.629+0000] {logging_mixin.py:190} INFO - [2026-03-12T02:20:13.629+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/create_dag_with_http_operator.py
+[2026-03-12T02:20:13.641+0000] {processor.py:925} INFO - DAG(s) 'dag_with_http_operator' retrieved from /opt/airflow/dags/create_dag_with_http_operator.py
+[2026-03-12T02:20:13.676+0000] {logging_mixin.py:190} INFO - [2026-03-12T02:20:13.676+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-03-12T02:20:13.692+0000] {logging_mixin.py:190} INFO - [2026-03-12T02:20:13.692+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_with_http_operator to None, run_after=None
+[2026-03-12T02:20:13.713+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/create_dag_with_http_operator.py took 0.095 seconds
+[2026-03-12T02:20:44.115+0000] {processor.py:186} INFO - Started process (PID=57272) to work on /opt/airflow/dags/create_dag_with_http_operator.py
+[2026-03-12T02:20:44.117+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/create_dag_with_http_operator.py for tasks to queue
+[2026-03-12T02:20:44.118+0000] {logging_mixin.py:190} INFO - [2026-03-12T02:20:44.118+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/create_dag_with_http_operator.py
+[2026-03-12T02:20:44.129+0000] {processor.py:925} INFO - DAG(s) 'dag_with_http_operator' retrieved from /opt/airflow/dags/create_dag_with_http_operator.py
+[2026-03-12T02:20:44.162+0000] {logging_mixin.py:190} INFO - [2026-03-12T02:20:44.162+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-03-12T02:20:44.183+0000] {logging_mixin.py:190} INFO - [2026-03-12T02:20:44.183+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_with_http_operator to None, run_after=None
+[2026-03-12T02:20:44.211+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/create_dag_with_http_operator.py took 0.105 seconds
+[2026-03-12T02:21:14.293+0000] {processor.py:186} INFO - Started process (PID=57339) to work on /opt/airflow/dags/create_dag_with_http_operator.py
+[2026-03-12T02:21:14.294+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/create_dag_with_http_operator.py for tasks to queue
+[2026-03-12T02:21:14.296+0000] {logging_mixin.py:190} INFO - [2026-03-12T02:21:14.295+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/create_dag_with_http_operator.py
+[2026-03-12T02:21:14.303+0000] {processor.py:925} INFO - DAG(s) 'dag_with_http_operator' retrieved from /opt/airflow/dags/create_dag_with_http_operator.py
+[2026-03-12T02:21:14.330+0000] {logging_mixin.py:190} INFO - [2026-03-12T02:21:14.329+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-03-12T02:21:14.533+0000] {logging_mixin.py:190} INFO - [2026-03-12T02:21:14.532+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_with_http_operator to None, run_after=None
+[2026-03-12T02:21:14.554+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/create_dag_with_http_operator.py took 0.270 seconds
+[2026-03-12T02:21:45.521+0000] {processor.py:186} INFO - Started process (PID=57407) to work on /opt/airflow/dags/create_dag_with_http_operator.py
+[2026-03-12T02:21:45.523+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/create_dag_with_http_operator.py for tasks to queue
+[2026-03-12T02:21:45.524+0000] {logging_mixin.py:190} INFO - [2026-03-12T02:21:45.524+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/create_dag_with_http_operator.py
+[2026-03-12T02:21:45.535+0000] {processor.py:925} INFO - DAG(s) 'dag_with_http_operator' retrieved from /opt/airflow/dags/create_dag_with_http_operator.py
+[2026-03-12T02:21:45.568+0000] {logging_mixin.py:190} INFO - [2026-03-12T02:21:45.567+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-03-12T02:21:45.589+0000] {logging_mixin.py:190} INFO - [2026-03-12T02:21:45.588+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_with_http_operator to None, run_after=None
+[2026-03-12T02:21:45.800+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/create_dag_with_http_operator.py took 0.285 seconds
+[2026-03-12T02:22:16.180+0000] {processor.py:186} INFO - Started process (PID=57475) to work on /opt/airflow/dags/create_dag_with_http_operator.py
+[2026-03-12T02:22:16.182+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/create_dag_with_http_operator.py for tasks to queue
+[2026-03-12T02:22:16.183+0000] {logging_mixin.py:190} INFO - [2026-03-12T02:22:16.183+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/create_dag_with_http_operator.py
+[2026-03-12T02:22:16.197+0000] {processor.py:925} INFO - DAG(s) 'dag_with_http_operator' retrieved from /opt/airflow/dags/create_dag_with_http_operator.py
+[2026-03-12T02:22:16.228+0000] {logging_mixin.py:190} INFO - [2026-03-12T02:22:16.228+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-03-12T02:22:16.260+0000] {logging_mixin.py:190} INFO - [2026-03-12T02:22:16.259+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_with_http_operator to None, run_after=None
+[2026-03-12T02:22:16.521+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/create_dag_with_http_operator.py took 0.347 seconds
+[2026-03-12T02:22:47.946+0000] {processor.py:186} INFO - Started process (PID=57544) to work on /opt/airflow/dags/create_dag_with_http_operator.py
+[2026-03-12T02:22:47.948+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/create_dag_with_http_operator.py for tasks to queue
+[2026-03-12T02:22:47.950+0000] {logging_mixin.py:190} INFO - [2026-03-12T02:22:47.950+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/create_dag_with_http_operator.py
+[2026-03-12T02:22:47.967+0000] {processor.py:925} INFO - DAG(s) 'dag_with_http_operator' retrieved from /opt/airflow/dags/create_dag_with_http_operator.py
+[2026-03-12T02:22:48.018+0000] {logging_mixin.py:190} INFO - [2026-03-12T02:22:48.018+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-03-12T02:22:48.050+0000] {logging_mixin.py:190} INFO - [2026-03-12T02:22:48.050+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_with_http_operator to None, run_after=None
+[2026-03-12T02:22:48.094+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/create_dag_with_http_operator.py took 0.161 seconds
+[2026-03-12T02:23:18.568+0000] {processor.py:186} INFO - Started process (PID=57611) to work on /opt/airflow/dags/create_dag_with_http_operator.py
+[2026-03-12T02:23:18.570+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/create_dag_with_http_operator.py for tasks to queue
+[2026-03-12T02:23:18.572+0000] {logging_mixin.py:190} INFO - [2026-03-12T02:23:18.572+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/create_dag_with_http_operator.py
+[2026-03-12T02:23:18.585+0000] {processor.py:925} INFO - DAG(s) 'dag_with_http_operator' retrieved from /opt/airflow/dags/create_dag_with_http_operator.py
+[2026-03-12T02:23:18.626+0000] {logging_mixin.py:190} INFO - [2026-03-12T02:23:18.626+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-03-12T02:23:18.653+0000] {logging_mixin.py:190} INFO - [2026-03-12T02:23:18.653+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_with_http_operator to None, run_after=None
+[2026-03-12T02:23:18.681+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/create_dag_with_http_operator.py took 0.126 seconds
+[2026-03-12T02:23:48.996+0000] {processor.py:186} INFO - Started process (PID=57679) to work on /opt/airflow/dags/create_dag_with_http_operator.py
+[2026-03-12T02:23:48.998+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/create_dag_with_http_operator.py for tasks to queue
+[2026-03-12T02:23:48.999+0000] {logging_mixin.py:190} INFO - [2026-03-12T02:23:48.998+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/create_dag_with_http_operator.py
+[2026-03-12T02:23:49.010+0000] {processor.py:925} INFO - DAG(s) 'dag_with_http_operator' retrieved from /opt/airflow/dags/create_dag_with_http_operator.py
+[2026-03-12T02:23:49.035+0000] {logging_mixin.py:190} INFO - [2026-03-12T02:23:49.035+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-03-12T02:23:49.054+0000] {logging_mixin.py:190} INFO - [2026-03-12T02:23:49.054+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_with_http_operator to None, run_after=None
+[2026-03-12T02:23:49.074+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/create_dag_with_http_operator.py took 0.084 seconds
+[2026-03-12T02:24:20.216+0000] {processor.py:186} INFO - Started process (PID=57744) to work on /opt/airflow/dags/create_dag_with_http_operator.py
+[2026-03-12T02:24:20.218+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/create_dag_with_http_operator.py for tasks to queue
+[2026-03-12T02:24:20.219+0000] {logging_mixin.py:190} INFO - [2026-03-12T02:24:20.219+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/create_dag_with_http_operator.py
+[2026-03-12T02:24:20.233+0000] {processor.py:925} INFO - DAG(s) 'dag_with_http_operator' retrieved from /opt/airflow/dags/create_dag_with_http_operator.py
+[2026-03-12T02:24:20.276+0000] {logging_mixin.py:190} INFO - [2026-03-12T02:24:20.276+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-03-12T02:24:20.301+0000] {logging_mixin.py:190} INFO - [2026-03-12T02:24:20.301+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_with_http_operator to None, run_after=None
+[2026-03-12T02:24:20.323+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/create_dag_with_http_operator.py took 0.115 seconds
+[2026-03-12T02:24:53.645+0000] {processor.py:186} INFO - Started process (PID=57804) to work on /opt/airflow/dags/create_dag_with_http_operator.py
+[2026-03-12T02:24:53.648+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/create_dag_with_http_operator.py for tasks to queue
+[2026-03-12T02:24:53.650+0000] {logging_mixin.py:190} INFO - [2026-03-12T02:24:53.649+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/create_dag_with_http_operator.py
+[2026-03-12T02:24:53.699+0000] {processor.py:925} INFO - DAG(s) 'dag_with_http_operator' retrieved from /opt/airflow/dags/create_dag_with_http_operator.py
+[2026-03-12T02:24:53.791+0000] {logging_mixin.py:190} INFO - [2026-03-12T02:24:53.790+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-03-12T02:24:53.834+0000] {logging_mixin.py:190} INFO - [2026-03-12T02:24:53.834+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_with_http_operator to None, run_after=None
+[2026-03-12T02:24:53.884+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/create_dag_with_http_operator.py took 0.253 seconds
+[2026-03-12T02:25:24.332+0000] {processor.py:186} INFO - Started process (PID=57872) to work on /opt/airflow/dags/create_dag_with_http_operator.py
+[2026-03-12T02:25:24.333+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/create_dag_with_http_operator.py for tasks to queue
+[2026-03-12T02:25:24.334+0000] {logging_mixin.py:190} INFO - [2026-03-12T02:25:24.334+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/create_dag_with_http_operator.py
+[2026-03-12T02:25:24.348+0000] {processor.py:925} INFO - DAG(s) 'dag_with_http_operator' retrieved from /opt/airflow/dags/create_dag_with_http_operator.py
+[2026-03-12T02:25:24.384+0000] {logging_mixin.py:190} INFO - [2026-03-12T02:25:24.383+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-03-12T02:25:24.401+0000] {logging_mixin.py:190} INFO - [2026-03-12T02:25:24.401+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_with_http_operator to None, run_after=None
+[2026-03-12T02:25:24.426+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/create_dag_with_http_operator.py took 0.102 seconds
+[2026-03-12T02:25:54.718+0000] {processor.py:186} INFO - Started process (PID=57938) to work on /opt/airflow/dags/create_dag_with_http_operator.py
+[2026-03-12T02:25:54.720+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/create_dag_with_http_operator.py for tasks to queue
+[2026-03-12T02:25:54.723+0000] {logging_mixin.py:190} INFO - [2026-03-12T02:25:54.722+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/create_dag_with_http_operator.py
+[2026-03-12T02:25:54.734+0000] {processor.py:925} INFO - DAG(s) 'dag_with_http_operator' retrieved from /opt/airflow/dags/create_dag_with_http_operator.py
+[2026-03-12T02:25:54.766+0000] {logging_mixin.py:190} INFO - [2026-03-12T02:25:54.765+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-03-12T02:25:54.782+0000] {logging_mixin.py:190} INFO - [2026-03-12T02:25:54.782+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_with_http_operator to None, run_after=None
+[2026-03-12T02:25:54.801+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/create_dag_with_http_operator.py took 0.098 seconds
+[2026-03-12T02:26:25.785+0000] {processor.py:186} INFO - Started process (PID=58007) to work on /opt/airflow/dags/create_dag_with_http_operator.py
+[2026-03-12T02:26:25.787+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/create_dag_with_http_operator.py for tasks to queue
+[2026-03-12T02:26:25.788+0000] {logging_mixin.py:190} INFO - [2026-03-12T02:26:25.788+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/create_dag_with_http_operator.py
+[2026-03-12T02:26:25.796+0000] {processor.py:925} INFO - DAG(s) 'dag_with_http_operator' retrieved from /opt/airflow/dags/create_dag_with_http_operator.py
+[2026-03-12T02:26:25.823+0000] {logging_mixin.py:190} INFO - [2026-03-12T02:26:25.823+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-03-12T02:26:25.841+0000] {logging_mixin.py:190} INFO - [2026-03-12T02:26:25.840+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_with_http_operator to None, run_after=None
+[2026-03-12T02:26:25.860+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/create_dag_with_http_operator.py took 0.080 seconds
+[2026-03-12T02:26:56.142+0000] {processor.py:186} INFO - Started process (PID=58075) to work on /opt/airflow/dags/create_dag_with_http_operator.py
+[2026-03-12T02:26:56.146+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/create_dag_with_http_operator.py for tasks to queue
+[2026-03-12T02:26:56.147+0000] {logging_mixin.py:190} INFO - [2026-03-12T02:26:56.147+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/create_dag_with_http_operator.py
+[2026-03-12T02:26:56.156+0000] {processor.py:925} INFO - DAG(s) 'dag_with_http_operator' retrieved from /opt/airflow/dags/create_dag_with_http_operator.py
+[2026-03-12T02:26:56.198+0000] {logging_mixin.py:190} INFO - [2026-03-12T02:26:56.197+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-03-12T02:26:56.215+0000] {logging_mixin.py:190} INFO - [2026-03-12T02:26:56.215+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_with_http_operator to None, run_after=None
+[2026-03-12T02:26:56.239+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/create_dag_with_http_operator.py took 0.105 seconds
+[2026-03-12T02:27:26.552+0000] {processor.py:186} INFO - Started process (PID=58143) to work on /opt/airflow/dags/create_dag_with_http_operator.py
+[2026-03-12T02:27:26.556+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/create_dag_with_http_operator.py for tasks to queue
+[2026-03-12T02:27:26.558+0000] {logging_mixin.py:190} INFO - [2026-03-12T02:27:26.557+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/create_dag_with_http_operator.py
+[2026-03-12T02:27:26.567+0000] {processor.py:925} INFO - DAG(s) 'dag_with_http_operator' retrieved from /opt/airflow/dags/create_dag_with_http_operator.py
+[2026-03-12T02:27:26.598+0000] {logging_mixin.py:190} INFO - [2026-03-12T02:27:26.598+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-03-12T02:27:26.618+0000] {logging_mixin.py:190} INFO - [2026-03-12T02:27:26.618+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_with_http_operator to None, run_after=None
+[2026-03-12T02:27:26.642+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/create_dag_with_http_operator.py took 0.096 seconds
+[2026-03-12T02:27:56.697+0000] {processor.py:186} INFO - Started process (PID=58211) to work on /opt/airflow/dags/create_dag_with_http_operator.py
+[2026-03-12T02:27:56.699+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/create_dag_with_http_operator.py for tasks to queue
+[2026-03-12T02:27:56.701+0000] {logging_mixin.py:190} INFO - [2026-03-12T02:27:56.700+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/create_dag_with_http_operator.py
+[2026-03-12T02:27:56.711+0000] {processor.py:925} INFO - DAG(s) 'dag_with_http_operator' retrieved from /opt/airflow/dags/create_dag_with_http_operator.py
+[2026-03-12T02:27:56.740+0000] {logging_mixin.py:190} INFO - [2026-03-12T02:27:56.740+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-03-12T02:27:56.759+0000] {logging_mixin.py:190} INFO - [2026-03-12T02:27:56.759+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_with_http_operator to None, run_after=None
+[2026-03-12T02:27:56.784+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/create_dag_with_http_operator.py took 0.095 seconds
+[2026-03-12T02:28:26.891+0000] {processor.py:186} INFO - Started process (PID=58279) to work on /opt/airflow/dags/create_dag_with_http_operator.py
+[2026-03-12T02:28:26.893+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/create_dag_with_http_operator.py for tasks to queue
+[2026-03-12T02:28:26.894+0000] {logging_mixin.py:190} INFO - [2026-03-12T02:28:26.893+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/create_dag_with_http_operator.py
+[2026-03-12T02:28:26.908+0000] {processor.py:925} INFO - DAG(s) 'dag_with_http_operator' retrieved from /opt/airflow/dags/create_dag_with_http_operator.py
+[2026-03-12T02:28:26.944+0000] {logging_mixin.py:190} INFO - [2026-03-12T02:28:26.944+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-03-12T02:28:26.966+0000] {logging_mixin.py:190} INFO - [2026-03-12T02:28:26.965+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_with_http_operator to None, run_after=None
+[2026-03-12T02:28:26.994+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/create_dag_with_http_operator.py took 0.111 seconds
+[2026-03-12T02:28:57.046+0000] {processor.py:186} INFO - Started process (PID=58347) to work on /opt/airflow/dags/create_dag_with_http_operator.py
+[2026-03-12T02:28:57.048+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/create_dag_with_http_operator.py for tasks to queue
+[2026-03-12T02:28:57.049+0000] {logging_mixin.py:190} INFO - [2026-03-12T02:28:57.048+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/create_dag_with_http_operator.py
+[2026-03-12T02:28:57.058+0000] {processor.py:925} INFO - DAG(s) 'dag_with_http_operator' retrieved from /opt/airflow/dags/create_dag_with_http_operator.py
+[2026-03-12T02:28:57.085+0000] {logging_mixin.py:190} INFO - [2026-03-12T02:28:57.085+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-03-12T02:28:57.102+0000] {logging_mixin.py:190} INFO - [2026-03-12T02:28:57.101+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_with_http_operator to None, run_after=None
+[2026-03-12T02:28:57.120+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/create_dag_with_http_operator.py took 0.081 seconds
