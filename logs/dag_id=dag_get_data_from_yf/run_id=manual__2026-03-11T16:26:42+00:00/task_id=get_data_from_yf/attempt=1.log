@@ -1,0 +1,45 @@
+[2026-03-11T16:26:57.981+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-03-11T16:26:58.037+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_get_data_from_yf.get_data_from_yf manual__2026-03-11T16:26:42+00:00 [queued]>
+[2026-03-11T16:26:58.060+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_get_data_from_yf.get_data_from_yf manual__2026-03-11T16:26:42+00:00 [queued]>
+[2026-03-11T16:26:58.060+0000] {taskinstance.py:2884} INFO - Starting attempt 1 of 1
+[2026-03-11T16:26:58.096+0000] {taskinstance.py:2907} INFO - Executing <Task(_PythonDecoratedOperator): get_data_from_yf> on 2026-03-11 16:26:42+00:00
+[2026-03-11T16:26:58.115+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=13582) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2026-03-11T16:26:58.117+0000] {standard_task_runner.py:72} INFO - Started process 13584 to run task
+[2026-03-11T16:26:58.119+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'dag_get_data_from_yf', 'get_data_from_yf', 'manual__2026-03-11T16:26:42+00:00', '--job-id', '11232', '--raw', '--subdir', 'DAGS_FOLDER/get_finance_yf_csv.py', '--cfg-path', '/tmp/tmp41atolca']
+[2026-03-11T16:26:58.120+0000] {standard_task_runner.py:105} INFO - Job 11232: Subtask get_data_from_yf
+[2026-03-11T16:26:58.230+0000] {task_command.py:467} INFO - Running <TaskInstance: dag_get_data_from_yf.get_data_from_yf manual__2026-03-11T16:26:42+00:00 [running]> on host ea47c22639fa
+[2026-03-11T16:26:58.412+0000] {taskinstance.py:3157} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag_get_data_from_yf' AIRFLOW_CTX_TASK_ID='get_data_from_yf' AIRFLOW_CTX_EXECUTION_DATE='2026-03-11T16:26:42+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-03-11T16:26:42+00:00'
+[2026-03-11T16:26:58.414+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2026-03-11T16:26:58.414+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2026-03-11T16:26:58.415+0000] {logging_mixin.py:190} INFO - Current task name:get_data_from_yf state:running start_date:2026-03-11 16:26:58.038248+00:00
+[2026-03-11T16:26:58.415+0000] {logging_mixin.py:190} INFO - Dag name:dag_get_data_from_yf and current dag run status:running
+[2026-03-11T16:26:58.415+0000] {taskinstance.py:740} INFO - ::endgroup::
+[2026-03-11T16:26:58.417+0000] {logging_mixin.py:190} INFO - Ini tickers user: ptro, bren,cdia, tpia
+[2026-03-11T16:26:58.417+0000] {logging_mixin.py:190} INFO - Ini start date user: 2026-03-03
+[2026-03-11T16:26:58.417+0000] {logging_mixin.py:190} INFO - Ini end date user: None
+[2026-03-11T16:26:59.588+0000] {history.py:276} ERROR - $CDIA.JK: possibly delisted; no price data found  (1d 2026-03-03 -> 2026-03-03)
+[2026-03-11T16:26:59.590+0000] {logging_mixin.py:190} WARNING - [                       0%                       ]
+[2026-03-11T16:26:59.593+0000] {history.py:276} ERROR - $BREN.JK: possibly delisted; no price data found  (1d 2026-03-03 -> 2026-03-03)
+[2026-03-11T16:26:59.609+0000] {history.py:276} ERROR - $PTRO.JK: possibly delisted; no price data found  (1d 2026-03-03 -> 2026-03-03)
+[2026-03-11T16:26:59.611+0000] {logging_mixin.py:190} WARNING - [**********************50%                       ]  2 of 4 completed
+[2026-03-11T16:26:59.615+0000] {history.py:276} ERROR - $TPIA.JK: possibly delisted; no price data found  (1d 2026-03-03 -> 2026-03-03)
+[2026-03-11T16:26:59.616+0000] {logging_mixin.py:190} WARNING - [**********************75%***********            ]  3 of 4 completed
+[2026-03-11T16:26:59.620+0000] {logging_mixin.py:190} WARNING - [*********************100%***********************]  4 of 4 completed
+[2026-03-11T16:26:59.620+0000] {multi.py:176} ERROR - 
+4 Failed downloads:
+[2026-03-11T16:26:59.621+0000] {multi.py:189} ERROR - ['CDIA.JK', 'BREN.JK', 'PTRO.JK', 'TPIA.JK']: possibly delisted; no price data found  (1d 2026-03-03 -> 2026-03-03)
+[2026-03-11T16:26:59.645+0000] {logging_mixin.py:190} INFO - None
+[2026-03-11T16:26:59.646+0000] {python.py:240} INFO - Done. Returned value was: Empty DataFrame
+Columns: [(Close, BREN.JK), (Close, CDIA.JK), (Close, PTRO.JK), (Close, TPIA.JK), (High, BREN.JK), (High, CDIA.JK), (High, PTRO.JK), (High, TPIA.JK), (Low, BREN.JK), (Low, CDIA.JK), (Low, PTRO.JK), (Low, TPIA.JK), (Open, BREN.JK), (Open, CDIA.JK), (Open, PTRO.JK), (Open, TPIA.JK)]
+Index: []
+[2026-03-11T16:26:59.758+0000] {taskinstance.py:349} INFO - ::group::Post task execution logs
+[2026-03-11T16:26:59.759+0000] {taskinstance.py:361} INFO - Marking task as SUCCESS. dag_id=dag_get_data_from_yf, task_id=get_data_from_yf, run_id=manual__2026-03-11T16:26:42+00:00, execution_date=20260311T162642, start_date=20260311T162658, end_date=20260311T162659
+[2026-03-11T16:26:59.830+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2026-03-11T16:26:59.831+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2026-03-11T16:26:59.831+0000] {logging_mixin.py:190} INFO - Dag name:dag_get_data_from_yf queued_at:2026-03-11 16:26:48.837276+00:00
+[2026-03-11T16:26:59.831+0000] {logging_mixin.py:190} INFO - Task hostname:ea47c22639fa operator:_PythonDecoratedOperator
+[2026-03-11T16:26:59.857+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-03-11T16:26:59.937+0000] {taskinstance.py:3924} INFO - 4 downstream tasks scheduled from follow-on schedule check
+[2026-03-11T16:26:59.940+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

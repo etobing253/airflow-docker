@@ -1,0 +1,29 @@
+[2026-03-04T08:50:32.926+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-03-04T08:50:32.959+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_with_python_operator.get_name manual__2026-03-04T08:50:27.362355+00:00 [queued]>
+[2026-03-04T08:50:32.968+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_with_python_operator.get_name manual__2026-03-04T08:50:27.362355+00:00 [queued]>
+[2026-03-04T08:50:32.968+0000] {taskinstance.py:2884} INFO - Starting attempt 1 of 1
+[2026-03-04T08:50:32.985+0000] {taskinstance.py:2907} INFO - Executing <Task(_PythonDecoratedOperator): get_name> on 2026-03-04 08:50:27.362355+00:00
+[2026-03-04T08:50:32.996+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=183) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2026-03-04T08:50:32.998+0000] {standard_task_runner.py:72} INFO - Started process 185 to run task
+[2026-03-04T08:50:32.998+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'dag_with_python_operator', 'get_name', 'manual__2026-03-04T08:50:27.362355+00:00', '--job-id', '221', '--raw', '--subdir', 'DAGS_FOLDER/create_dag_with_python_operator.py', '--cfg-path', '/tmp/tmpy8xuj6_2']
+[2026-03-04T08:50:32.999+0000] {standard_task_runner.py:105} INFO - Job 221: Subtask get_name
+[2026-03-04T08:50:33.072+0000] {task_command.py:467} INFO - Running <TaskInstance: dag_with_python_operator.get_name manual__2026-03-04T08:50:27.362355+00:00 [running]> on host 041008e416ba
+[2026-03-04T08:50:33.188+0000] {taskinstance.py:3157} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag_with_python_operator' AIRFLOW_CTX_TASK_ID='get_name' AIRFLOW_CTX_EXECUTION_DATE='2026-03-04T08:50:27.362355+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-03-04T08:50:27.362355+00:00'
+[2026-03-04T08:50:33.190+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2026-03-04T08:50:33.190+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2026-03-04T08:50:33.190+0000] {logging_mixin.py:190} INFO - Current task name:get_name state:running start_date:2026-03-04 08:50:32.959429+00:00
+[2026-03-04T08:50:33.190+0000] {logging_mixin.py:190} INFO - Dag name:dag_with_python_operator and current dag run status:running
+[2026-03-04T08:50:33.190+0000] {taskinstance.py:740} INFO - ::endgroup::
+[2026-03-04T08:50:33.191+0000] {logging_mixin.py:190} INFO - My Name is Elfra
+[2026-03-04T08:50:33.191+0000] {python.py:240} INFO - Done. Returned value was: None
+[2026-03-04T08:50:33.208+0000] {taskinstance.py:349} INFO - ::group::Post task execution logs
+[2026-03-04T08:50:33.209+0000] {taskinstance.py:361} INFO - Marking task as SUCCESS. dag_id=dag_with_python_operator, task_id=get_name, run_id=manual__2026-03-04T08:50:27.362355+00:00, execution_date=20260304T085027, start_date=20260304T085032, end_date=20260304T085033
+[2026-03-04T08:50:33.248+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2026-03-04T08:50:33.248+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2026-03-04T08:50:33.248+0000] {logging_mixin.py:190} INFO - Dag name:dag_with_python_operator queued_at:2026-03-04 08:50:27.382295+00:00
+[2026-03-04T08:50:33.248+0000] {logging_mixin.py:190} INFO - Task hostname:041008e416ba operator:_PythonDecoratedOperator
+[2026-03-04T08:50:33.258+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-03-04T08:50:33.281+0000] {taskinstance.py:3924} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-03-04T08:50:33.284+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

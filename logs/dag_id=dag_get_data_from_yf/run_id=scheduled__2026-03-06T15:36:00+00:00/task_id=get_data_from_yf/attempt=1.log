@@ -1,0 +1,49 @@
+[2026-03-06T15:37:05.234+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-03-06T15:37:05.272+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_get_data_from_yf.get_data_from_yf scheduled__2026-03-06T15:36:00+00:00 [queued]>
+[2026-03-06T15:37:05.283+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_get_data_from_yf.get_data_from_yf scheduled__2026-03-06T15:36:00+00:00 [queued]>
+[2026-03-06T15:37:05.283+0000] {taskinstance.py:2884} INFO - Starting attempt 1 of 1
+[2026-03-06T15:37:05.300+0000] {taskinstance.py:2907} INFO - Executing <Task(_PythonDecoratedOperator): get_data_from_yf> on 2026-03-06 15:36:00+00:00
+[2026-03-06T15:37:05.310+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=2306) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2026-03-06T15:37:05.312+0000] {standard_task_runner.py:72} INFO - Started process 2311 to run task
+[2026-03-06T15:37:05.313+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'dag_get_data_from_yf', 'get_data_from_yf', 'scheduled__2026-03-06T15:36:00+00:00', '--job-id', '3302', '--raw', '--subdir', 'DAGS_FOLDER/get_finance_yf_csv.py', '--cfg-path', '/tmp/tmps3dh_1qv']
+[2026-03-06T15:37:05.314+0000] {standard_task_runner.py:105} INFO - Job 3302: Subtask get_data_from_yf
+[2026-03-06T15:37:05.384+0000] {task_command.py:467} INFO - Running <TaskInstance: dag_get_data_from_yf.get_data_from_yf scheduled__2026-03-06T15:36:00+00:00 [running]> on host 450e3c808cfd
+[2026-03-06T15:37:05.487+0000] {taskinstance.py:3157} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag_get_data_from_yf' AIRFLOW_CTX_TASK_ID='get_data_from_yf' AIRFLOW_CTX_EXECUTION_DATE='2026-03-06T15:36:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-03-06T15:36:00+00:00'
+[2026-03-06T15:37:05.489+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2026-03-06T15:37:05.489+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2026-03-06T15:37:05.489+0000] {logging_mixin.py:190} INFO - Current task name:get_data_from_yf state:running start_date:2026-03-06 15:37:05.273378+00:00
+[2026-03-06T15:37:05.489+0000] {logging_mixin.py:190} INFO - Dag name:dag_get_data_from_yf and current dag run status:running
+[2026-03-06T15:37:05.490+0000] {taskinstance.py:740} INFO - ::endgroup::
+[2026-03-06T15:37:06.092+0000] {logging_mixin.py:190} WARNING - [                       0%                       ]
+[2026-03-06T15:37:06.140+0000] {logging_mixin.py:190} WARNING - [****************      33%                       ]  2 of 6 completed
+[2026-03-06T15:37:06.164+0000] {logging_mixin.py:190} WARNING - [**********************50%                       ]  3 of 6 completed
+[2026-03-06T15:37:06.165+0000] {logging_mixin.py:190} WARNING - [**********************50%                       ]  3 of 6 completed
+[2026-03-06T15:37:06.172+0000] {logging_mixin.py:190} WARNING - [**********************83%***************        ]  5 of 6 completed
+[2026-03-06T15:37:06.174+0000] {logging_mixin.py:190} WARNING - [*********************100%***********************]  6 of 6 completed
+[2026-03-06T15:37:06.182+0000] {python.py:240} INFO - Done. Returned value was: Price             Close               ...     Volume           
+Ticker          ASII.JK      BBRI.JK  ...    TLKM.JK    UNVR.JK
+Date                                  ...                      
+2025-03-06  4511.919434  3598.063477  ...  131136100   75420000
+2025-03-07  4539.542969  3470.537354  ...  182407000  116830700
+2025-03-10  4392.214844  3424.992188  ...   88949400   73948200
+2025-03-11  4419.839355  3452.319336  ...  102235600   35888100
+2025-03-12  4429.047363  3543.409424  ...   98938700   59364000
+...                 ...          ...  ...        ...        ...
+2026-03-02  6300.000000  3820.000000  ...   80022100   23912200
+2026-03-03  6275.000000  3770.000000  ...  125403800   29682000
+2026-03-04  6150.000000  3690.000000  ...  206478300   31919800
+2026-03-05  6325.000000  3750.000000  ...  137853600   14954200
+2026-03-06  6125.000000  3670.000000  ...   84932600   11788500
+
+[237 rows x 30 columns]
+[2026-03-06T15:37:06.313+0000] {taskinstance.py:349} INFO - ::group::Post task execution logs
+[2026-03-06T15:37:06.313+0000] {taskinstance.py:361} INFO - Marking task as SUCCESS. dag_id=dag_get_data_from_yf, task_id=get_data_from_yf, run_id=scheduled__2026-03-06T15:36:00+00:00, execution_date=20260306T153600, start_date=20260306T153705, end_date=20260306T153706
+[2026-03-06T15:37:06.352+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2026-03-06T15:37:06.352+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2026-03-06T15:37:06.352+0000] {logging_mixin.py:190} INFO - Dag name:dag_get_data_from_yf queued_at:2026-03-06 15:37:00.224555+00:00
+[2026-03-06T15:37:06.353+0000] {logging_mixin.py:190} INFO - Task hostname:450e3c808cfd operator:_PythonDecoratedOperator
+[2026-03-06T15:37:06.366+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-03-06T15:37:06.411+0000] {taskinstance.py:3924} INFO - 4 downstream tasks scheduled from follow-on schedule check
+[2026-03-06T15:37:06.415+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

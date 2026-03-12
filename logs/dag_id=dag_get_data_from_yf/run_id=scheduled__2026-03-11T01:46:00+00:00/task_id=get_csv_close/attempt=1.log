@@ -1,0 +1,125 @@
+[2026-03-11T02:03:55.450+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-03-11T02:03:56.020+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_get_data_from_yf.get_csv_close scheduled__2026-03-11T01:46:00+00:00 [queued]>
+[2026-03-11T02:03:56.086+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_get_data_from_yf.get_csv_close scheduled__2026-03-11T01:46:00+00:00 [queued]>
+[2026-03-11T02:03:56.094+0000] {taskinstance.py:2884} INFO - Starting attempt 1 of 1
+[2026-03-11T02:03:56.335+0000] {taskinstance.py:2907} INFO - Executing <Task(_PythonDecoratedOperator): get_csv_close> on 2026-03-11 01:46:00+00:00
+[2026-03-11T02:03:56.464+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=312) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2026-03-11T02:03:56.533+0000] {standard_task_runner.py:72} INFO - Started process 415 to run task
+[2026-03-11T02:03:56.485+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'dag_get_data_from_yf', 'get_csv_close', 'scheduled__2026-03-11T01:46:00+00:00', '--job-id', '9576', '--raw', '--subdir', 'DAGS_FOLDER/get_finance_yf_csv.py', '--cfg-path', '/tmp/tmp4o473wps']
+[2026-03-11T02:03:56.536+0000] {standard_task_runner.py:105} INFO - Job 9576: Subtask get_csv_close
+[2026-03-11T02:03:57.329+0000] {task_command.py:467} INFO - Running <TaskInstance: dag_get_data_from_yf.get_csv_close scheduled__2026-03-11T01:46:00+00:00 [running]> on host 5d3fd889fbfb
+[2026-03-11T02:03:58.326+0000] {taskinstance.py:3157} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag_get_data_from_yf' AIRFLOW_CTX_TASK_ID='get_csv_close' AIRFLOW_CTX_EXECUTION_DATE='2026-03-11T01:46:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-03-11T01:46:00+00:00'
+[2026-03-11T02:03:58.331+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2026-03-11T02:03:58.332+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2026-03-11T02:03:58.333+0000] {logging_mixin.py:190} INFO - Current task name:get_csv_close state:running start_date:2026-03-11 02:03:56.022211+00:00
+[2026-03-11T02:03:58.334+0000] {logging_mixin.py:190} INFO - Dag name:dag_get_data_from_yf and current dag run status:running
+[2026-03-11T02:03:58.334+0000] {taskinstance.py:740} INFO - ::endgroup::
+[2026-03-11T02:03:58.339+0000] {taskinstance.py:3336} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 776, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 742, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 425, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/decorators/base.py", line 266, in execute
+    return_value = super().execute(context)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 425, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 256, in execute_callable
+    return runner.run(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/get_finance_yf_csv.py", line 129, in get_csv_close
+    csv_string_close=data['Close'].to_csv(files["file_path_close"], index=True)
+                     ~~~~^^^^^^^^^
+TypeError: 'PythonOperator' object is not subscriptable
+[2026-03-11T02:03:58.421+0000] {logging_mixin.py:190} INFO - Task instance in failure state
+[2026-03-11T02:03:58.423+0000] {logging_mixin.py:190} INFO - Task start:2026-03-11 02:03:56.022211+00:00 end:2026-03-11 02:03:58.420200+00:00 duration:2.397989
+[2026-03-11T02:03:58.429+0000] {logging_mixin.py:190} INFO - Task:<Task(_PythonDecoratedOperator): get_csv_close> dag:<DAG: dag_get_data_from_yf> dagrun:<DagRun dag_get_data_from_yf @ 2026-03-11 01:46:00+00:00: scheduled__2026-03-11T01:46:00+00:00, state:running, queued_at: 2026-03-11 01:47:01.272388+00:00. externally triggered: False>
+[2026-03-11T02:03:58.430+0000] {logging_mixin.py:190} INFO - Failure caused by 'PythonOperator' object is not subscriptable
+[2026-03-11T02:03:58.431+0000] {taskinstance.py:1242} INFO - Marking task as FAILED. dag_id=dag_get_data_from_yf, task_id=get_csv_close, run_id=scheduled__2026-03-11T01:46:00+00:00, execution_date=20260311T014600, start_date=20260311T020356, end_date=20260311T020358
+[2026-03-11T02:03:58.676+0000] {taskinstance.py:349} INFO - ::group::Post task execution logs
+[2026-03-11T02:03:58.683+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 9576 for task get_csv_close ('PythonOperator' object is not subscriptable; 415)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/cli.py", line 116, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3029, in _run_raw_task
+    return _run_raw_task(
+           ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 282, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3184, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3208, in _execute_task
+    return _execute_task(self, context, task_orig)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 776, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 742, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 425, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/decorators/base.py", line 266, in execute
+    return_value = super().execute(context)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 425, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 256, in execute_callable
+    return runner.run(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/get_finance_yf_csv.py", line 129, in get_csv_close
+    csv_string_close=data['Close'].to_csv(files["file_path_close"], index=True)
+                     ~~~~^^^^^^^^^
+TypeError: 'PythonOperator' object is not subscriptable
+[2026-03-11T02:03:58.790+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 1
+[2026-03-11T02:03:58.970+0000] {taskinstance.py:3924} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-03-11T02:03:58.984+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

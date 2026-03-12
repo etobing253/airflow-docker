@@ -1,0 +1,45 @@
+[2026-03-11T13:14:31.703+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-03-11T13:14:31.739+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_get_data_from_yf.get_data_from_yf manual__2026-03-11T13:13:55+00:00 [queued]>
+[2026-03-11T13:14:31.749+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_get_data_from_yf.get_data_from_yf manual__2026-03-11T13:13:55+00:00 [queued]>
+[2026-03-11T13:14:31.750+0000] {taskinstance.py:2884} INFO - Starting attempt 1 of 1
+[2026-03-11T13:14:31.767+0000] {taskinstance.py:2907} INFO - Executing <Task(_PythonDecoratedOperator): get_data_from_yf> on 2026-03-11 13:13:55+00:00
+[2026-03-11T13:14:31.778+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=9346) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2026-03-11T13:14:31.780+0000] {standard_task_runner.py:72} INFO - Started process 9355 to run task
+[2026-03-11T13:14:31.782+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'dag_get_data_from_yf', 'get_data_from_yf', 'manual__2026-03-11T13:13:55+00:00', '--job-id', '10815', '--raw', '--subdir', 'DAGS_FOLDER/get_finance_yf_csv.py', '--cfg-path', '/tmp/tmpc8c8izen']
+[2026-03-11T13:14:31.784+0000] {standard_task_runner.py:105} INFO - Job 10815: Subtask get_data_from_yf
+[2026-03-11T13:14:31.872+0000] {task_command.py:467} INFO - Running <TaskInstance: dag_get_data_from_yf.get_data_from_yf manual__2026-03-11T13:13:55+00:00 [running]> on host ea47c22639fa
+[2026-03-11T13:14:32.010+0000] {taskinstance.py:3157} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag_get_data_from_yf' AIRFLOW_CTX_TASK_ID='get_data_from_yf' AIRFLOW_CTX_EXECUTION_DATE='2026-03-11T13:13:55+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-03-11T13:13:55+00:00'
+[2026-03-11T13:14:32.012+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2026-03-11T13:14:32.013+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2026-03-11T13:14:32.013+0000] {logging_mixin.py:190} INFO - Current task name:get_data_from_yf state:running start_date:2026-03-11 13:14:31.739414+00:00
+[2026-03-11T13:14:32.013+0000] {logging_mixin.py:190} INFO - Dag name:dag_get_data_from_yf and current dag run status:running
+[2026-03-11T13:14:32.013+0000] {taskinstance.py:740} INFO - ::endgroup::
+[2026-03-11T13:14:32.014+0000] {logging_mixin.py:190} INFO - Ini tickers user: ptro, bren,cdia, tpia
+[2026-03-11T13:14:32.015+0000] {logging_mixin.py:190} INFO - Ini start date user: 2026-03-02
+[2026-03-11T13:14:32.015+0000] {logging_mixin.py:190} INFO - Ini end date user: 2026-03-09
+[2026-03-11T13:14:32.863+0000] {logging_mixin.py:190} WARNING - [                       0%                       ]
+[2026-03-11T13:14:32.875+0000] {logging_mixin.py:190} WARNING - [**********************50%                       ]  2 of 4 completed
+[2026-03-11T13:14:32.890+0000] {logging_mixin.py:190} WARNING - [**********************75%***********            ]  3 of 4 completed
+[2026-03-11T13:14:32.900+0000] {logging_mixin.py:190} WARNING - [*********************100%***********************]  4 of 4 completed
+[2026-03-11T13:14:32.918+0000] {logging_mixin.py:190} INFO - None
+[2026-03-11T13:14:32.918+0000] {python.py:240} INFO - Done. Returned value was: Price        Close                          ...    Open                        
+Ticker     BREN.JK CDIA.JK PTRO.JK TPIA.JK  ... BREN.JK CDIA.JK PTRO.JK TPIA.JK
+Date                                        ...                                
+2026-03-02  7775.0   985.0  6000.0  5975.0  ...  8050.0   990.0  5725.0  6525.0
+2026-03-03  7575.0   965.0  5825.0  5825.0  ...  7775.0   985.0  6275.0  6050.0
+2026-03-04  7425.0   895.0  5300.0  5350.0  ...  7500.0   945.0  5725.0  5550.0
+2026-03-05  7300.0   895.0  5225.0  5375.0  ...  7525.0   920.0  5700.0  5475.0
+2026-03-06  7725.0   895.0  4960.0  6325.0  ...  7300.0   890.0  5200.0  5400.0
+
+[5 rows x 16 columns]
+[2026-03-11T13:14:33.029+0000] {taskinstance.py:349} INFO - ::group::Post task execution logs
+[2026-03-11T13:14:33.029+0000] {taskinstance.py:361} INFO - Marking task as SUCCESS. dag_id=dag_get_data_from_yf, task_id=get_data_from_yf, run_id=manual__2026-03-11T13:13:55+00:00, execution_date=20260311T131355, start_date=20260311T131431, end_date=20260311T131433
+[2026-03-11T13:14:33.073+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2026-03-11T13:14:33.073+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2026-03-11T13:14:33.073+0000] {logging_mixin.py:190} INFO - Dag name:dag_get_data_from_yf queued_at:2026-03-11 13:14:24.365658+00:00
+[2026-03-11T13:14:33.074+0000] {logging_mixin.py:190} INFO - Task hostname:ea47c22639fa operator:_PythonDecoratedOperator
+[2026-03-11T13:14:33.091+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-03-11T13:14:33.141+0000] {taskinstance.py:3924} INFO - 4 downstream tasks scheduled from follow-on schedule check
+[2026-03-11T13:14:33.144+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

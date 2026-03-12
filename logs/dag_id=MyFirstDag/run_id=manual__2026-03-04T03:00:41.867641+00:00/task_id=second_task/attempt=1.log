@@ -1,0 +1,32 @@
+[2026-03-04T03:00:55.667+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-03-04T03:00:55.726+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: MyFirstDag.second_task manual__2026-03-04T03:00:41.867641+00:00 [queued]>
+[2026-03-04T03:00:55.742+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: MyFirstDag.second_task manual__2026-03-04T03:00:41.867641+00:00 [queued]>
+[2026-03-04T03:00:55.743+0000] {taskinstance.py:2884} INFO - Starting attempt 1 of 1
+[2026-03-04T03:00:55.768+0000] {taskinstance.py:2907} INFO - Executing <Task(BashOperator): second_task> on 2026-03-04 03:00:41.867641+00:00
+[2026-03-04T03:00:55.782+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=940) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2026-03-04T03:00:55.786+0000] {standard_task_runner.py:72} INFO - Started process 942 to run task
+[2026-03-04T03:00:55.787+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'MyFirstDag', 'second_task', 'manual__2026-03-04T03:00:41.867641+00:00', '--job-id', '5', '--raw', '--subdir', 'DAGS_FOLDER/myFirstDag.py', '--cfg-path', '/tmp/tmp27u_wqw7']
+[2026-03-04T03:00:55.789+0000] {standard_task_runner.py:105} INFO - Job 5: Subtask second_task
+[2026-03-04T03:00:55.886+0000] {task_command.py:467} INFO - Running <TaskInstance: MyFirstDag.second_task manual__2026-03-04T03:00:41.867641+00:00 [running]> on host a68b9ce4803c
+[2026-03-04T03:00:56.029+0000] {taskinstance.py:3157} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='MyFirstDag' AIRFLOW_CTX_TASK_ID='second_task' AIRFLOW_CTX_EXECUTION_DATE='2026-03-04T03:00:41.867641+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-03-04T03:00:41.867641+00:00'
+[2026-03-04T03:00:56.031+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2026-03-04T03:00:56.031+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2026-03-04T03:00:56.032+0000] {logging_mixin.py:190} INFO - Current task name:second_task state:running start_date:2026-03-04 03:00:55.726861+00:00
+[2026-03-04T03:00:56.032+0000] {logging_mixin.py:190} INFO - Dag name:MyFirstDag and current dag run status:running
+[2026-03-04T03:00:56.032+0000] {taskinstance.py:740} INFO - ::endgroup::
+[2026-03-04T03:00:56.034+0000] {subprocess.py:78} INFO - Tmp dir root location: /tmp
+[2026-03-04T03:00:56.035+0000] {subprocess.py:88} INFO - Running command: ['/usr/bin/bash', '-c', 'echo hello from the second task']
+[2026-03-04T03:00:56.057+0000] {subprocess.py:99} INFO - Output:
+[2026-03-04T03:00:56.059+0000] {subprocess.py:106} INFO - hello from the second task
+[2026-03-04T03:00:56.060+0000] {subprocess.py:110} INFO - Command exited with return code 0
+[2026-03-04T03:00:56.108+0000] {taskinstance.py:349} INFO - ::group::Post task execution logs
+[2026-03-04T03:00:56.109+0000] {taskinstance.py:361} INFO - Marking task as SUCCESS. dag_id=MyFirstDag, task_id=second_task, run_id=manual__2026-03-04T03:00:41.867641+00:00, execution_date=20260304T030041, start_date=20260304T030055, end_date=20260304T030056
+[2026-03-04T03:00:56.153+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2026-03-04T03:00:56.153+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2026-03-04T03:00:56.154+0000] {logging_mixin.py:190} INFO - Dag name:MyFirstDag queued_at:2026-03-04 03:00:41.971075+00:00
+[2026-03-04T03:00:56.154+0000] {logging_mixin.py:190} INFO - Task hostname:a68b9ce4803c operator:BashOperator
+[2026-03-04T03:00:56.167+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-03-04T03:00:56.194+0000] {taskinstance.py:3924} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-03-04T03:00:56.198+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

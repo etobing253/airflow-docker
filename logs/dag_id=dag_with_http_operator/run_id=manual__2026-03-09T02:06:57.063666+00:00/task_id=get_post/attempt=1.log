@@ -1,0 +1,36 @@
+[2026-03-09T02:07:04.202+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-03-09T02:07:04.268+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_with_http_operator.get_post manual__2026-03-09T02:06:57.063666+00:00 [queued]>
+[2026-03-09T02:07:04.285+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_with_http_operator.get_post manual__2026-03-09T02:06:57.063666+00:00 [queued]>
+[2026-03-09T02:07:04.285+0000] {taskinstance.py:2884} INFO - Starting attempt 1 of 1
+[2026-03-09T02:07:04.307+0000] {taskinstance.py:2907} INFO - Executing <Task(HttpOperator): get_post> on 2026-03-09 02:06:57.063666+00:00
+[2026-03-09T02:07:04.320+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=1125) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2026-03-09T02:07:04.323+0000] {standard_task_runner.py:72} INFO - Started process 1131 to run task
+[2026-03-09T02:07:04.323+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'dag_with_http_operator', 'get_post', 'manual__2026-03-09T02:06:57.063666+00:00', '--job-id', '4709', '--raw', '--subdir', 'DAGS_FOLDER/create_dag_with_http_operator.py', '--cfg-path', '/tmp/tmpx2szowhf']
+[2026-03-09T02:07:04.327+0000] {standard_task_runner.py:105} INFO - Job 4709: Subtask get_post
+[2026-03-09T02:07:04.440+0000] {task_command.py:467} INFO - Running <TaskInstance: dag_with_http_operator.get_post manual__2026-03-09T02:06:57.063666+00:00 [running]> on host 0b29540d368e
+[2026-03-09T02:07:04.667+0000] {taskinstance.py:3157} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag_with_http_operator' AIRFLOW_CTX_TASK_ID='get_post' AIRFLOW_CTX_EXECUTION_DATE='2026-03-09T02:06:57.063666+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-03-09T02:06:57.063666+00:00'
+[2026-03-09T02:07:04.670+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2026-03-09T02:07:04.671+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2026-03-09T02:07:04.671+0000] {logging_mixin.py:190} INFO - Current task name:get_post state:running start_date:2026-03-09 02:07:04.268547+00:00
+[2026-03-09T02:07:04.672+0000] {logging_mixin.py:190} INFO - Dag name:dag_with_http_operator and current dag run status:running
+[2026-03-09T02:07:04.672+0000] {taskinstance.py:740} INFO - ::endgroup::
+[2026-03-09T02:07:04.673+0000] {http.py:173} INFO - Calling HTTP method
+[2026-03-09T02:07:04.708+0000] {base.py:84} INFO - Retrieving connection 'http_default'
+[2026-03-09T02:07:04.734+0000] {base.py:84} INFO - Retrieving connection 'http_default'
+[2026-03-09T02:07:05.356+0000] {http.py:255} INFO - {
+  "userId": 1,
+  "id": 1,
+  "title": "delectus aut autem",
+  "completed": false
+}
+[2026-03-09T02:07:05.450+0000] {taskinstance.py:349} INFO - ::group::Post task execution logs
+[2026-03-09T02:07:05.451+0000] {taskinstance.py:361} INFO - Marking task as SUCCESS. dag_id=dag_with_http_operator, task_id=get_post, run_id=manual__2026-03-09T02:06:57.063666+00:00, execution_date=20260309T020657, start_date=20260309T020704, end_date=20260309T020705
+[2026-03-09T02:07:05.548+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2026-03-09T02:07:05.549+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2026-03-09T02:07:05.550+0000] {logging_mixin.py:190} INFO - Dag name:dag_with_http_operator queued_at:2026-03-09 02:06:57.081043+00:00
+[2026-03-09T02:07:05.550+0000] {logging_mixin.py:190} INFO - Task hostname:0b29540d368e operator:HttpOperator
+[2026-03-09T02:07:05.575+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-03-09T02:07:05.677+0000] {taskinstance.py:3924} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-03-09T02:07:05.684+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

@@ -1,0 +1,77 @@
+[2026-03-11T17:09:15.499+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-03-11T17:09:15.546+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_get_data_from_yf.get_data_from_yf manual__2026-03-11T17:06:19+00:00 [queued]>
+[2026-03-11T17:09:15.561+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_get_data_from_yf.get_data_from_yf manual__2026-03-11T17:06:19+00:00 [queued]>
+[2026-03-11T17:09:15.561+0000] {taskinstance.py:2884} INFO - Starting attempt 1 of 1
+[2026-03-11T17:09:15.587+0000] {taskinstance.py:2907} INFO - Executing <Task(_PythonDecoratedOperator): get_data_from_yf> on 2026-03-11 17:06:19+00:00
+[2026-03-11T17:09:15.602+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=15304) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2026-03-11T17:09:15.605+0000] {standard_task_runner.py:72} INFO - Started process 15308 to run task
+[2026-03-11T17:09:15.606+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'dag_get_data_from_yf', 'get_data_from_yf', 'manual__2026-03-11T17:06:19+00:00', '--job-id', '11399', '--raw', '--subdir', 'DAGS_FOLDER/get_finance_yf_csv.py', '--cfg-path', '/tmp/tmpd04xg7oq']
+[2026-03-11T17:09:15.608+0000] {standard_task_runner.py:105} INFO - Job 11399: Subtask get_data_from_yf
+[2026-03-11T17:09:15.698+0000] {task_command.py:467} INFO - Running <TaskInstance: dag_get_data_from_yf.get_data_from_yf manual__2026-03-11T17:06:19+00:00 [running]> on host ea47c22639fa
+[2026-03-11T17:09:15.861+0000] {taskinstance.py:3157} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag_get_data_from_yf' AIRFLOW_CTX_TASK_ID='get_data_from_yf' AIRFLOW_CTX_EXECUTION_DATE='2026-03-11T17:06:19+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-03-11T17:06:19+00:00'
+[2026-03-11T17:09:15.863+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2026-03-11T17:09:15.863+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2026-03-11T17:09:15.863+0000] {logging_mixin.py:190} INFO - Current task name:get_data_from_yf state:running start_date:2026-03-11 17:09:15.547323+00:00
+[2026-03-11T17:09:15.863+0000] {logging_mixin.py:190} INFO - Dag name:dag_get_data_from_yf and current dag run status:running
+[2026-03-11T17:09:15.864+0000] {taskinstance.py:740} INFO - ::endgroup::
+[2026-03-11T17:09:15.864+0000] {logging_mixin.py:190} INFO - Ini tickers user: None
+[2026-03-11T17:09:15.865+0000] {logging_mixin.py:190} INFO - Ini start date user: 2026-01-01
+[2026-03-11T17:09:15.865+0000] {logging_mixin.py:190} INFO - Ini end date user: 2026-03-01
+[2026-03-11T17:09:16.505+0000] {logging_mixin.py:190} WARNING - [                       0%                       ]
+[2026-03-11T17:09:16.526+0000] {logging_mixin.py:190} WARNING - [**********************67%*******                ]  2 of 3 completed
+[2026-03-11T17:09:16.548+0000] {logging_mixin.py:190} WARNING - [*********************100%***********************]  3 of 3 completed
+[2026-03-11T17:09:16.572+0000] {logging_mixin.py:190} INFO - None
+[2026-03-11T17:09:16.572+0000] {python.py:240} INFO - Done. Returned value was: Price        Close                       ...    Open                     
+Ticker     BBCA.JK BBRI.JK      BMRI.JK  ... BBCA.JK BBRI.JK      BMRI.JK
+Date                                     ...                             
+2026-01-02  8025.0  3640.0  4974.504883  ...  8075.0  3660.0  5023.514783
+2026-01-05  8075.0  3630.0  4950.000000  ...  8000.0  3630.0  4974.504950
+2026-01-06  8175.0  3680.0  4880.000000  ...  8175.0  3630.0  4990.000000
+2026-01-07  8150.0  3700.0  4810.000000  ...  8125.0  3680.0  4890.000000
+2026-01-08  8050.0  3710.0  4810.000000  ...  8100.0  3710.0  4820.000000
+2026-01-09  8125.0  3680.0  4760.000000  ...  8125.0  3730.0  4820.000000
+2026-01-12  8025.0  3700.0  4770.000000  ...  8075.0  3680.0  4780.000000
+2026-01-13  8075.0  3720.0  4820.000000  ...  8025.0  3700.0  4800.000000
+2026-01-14  8000.0  3720.0  4840.000000  ...  8025.0  3740.0  4840.000000
+2026-01-15  8075.0  3820.0  4990.000000  ...  8000.0  3730.0  4840.000000
+2026-01-19  8125.0  3840.0  5000.000000  ...  8075.0  3850.0  5025.000000
+2026-01-20  8000.0  3850.0  5025.000000  ...  8050.0  3840.0  5000.000000
+2026-01-21  7700.0  3820.0  4990.000000  ...  7925.0  3850.0  5025.000000
+2026-01-22  7650.0  3810.0  4980.000000  ...  7700.0  3850.0  4990.000000
+2026-01-23  7650.0  3850.0  4990.000000  ...  7600.0  3810.0  4980.000000
+2026-01-26  7650.0  3850.0  4910.000000  ...  7550.0  3840.0  4910.000000
+2026-01-27  7500.0  3820.0  4810.000000  ...  7575.0  3850.0  4860.000000
+2026-01-28  7025.0  3590.0  4560.000000  ...  7050.0  3630.0  4570.000000
+2026-01-29  7200.0  3780.0  4630.000000  ...  6675.0  3550.0  4420.000000
+2026-01-30  7400.0  3810.0  4820.000000  ...  7200.0  3780.0  4700.000000
+2026-02-02  7600.0  3830.0  4800.000000  ...  7600.0  3860.0  4900.000000
+2026-02-03  7650.0  3800.0  4830.000000  ...  7600.0  3860.0  4830.000000
+2026-02-04  7800.0  3870.0  5000.000000  ...  7650.0  3820.0  4860.000000
+2026-02-05  7800.0  3850.0  5050.000000  ...  7800.0  3850.0  5050.000000
+2026-02-06  7675.0  3780.0  5050.000000  ...  7700.0  3800.0  4950.000000
+2026-02-09  7500.0  3770.0  5000.000000  ...  7675.0  3790.0  5050.000000
+2026-02-10  7475.0  3780.0  5100.000000  ...  7500.0  3750.0  5000.000000
+2026-02-11  7450.0  3800.0  5025.000000  ...  7475.0  3790.0  5075.000000
+2026-02-12  7325.0  3790.0  5075.000000  ...  7450.0  3780.0  5025.000000
+2026-02-13  7200.0  3780.0  5075.000000  ...  7325.0  3780.0  5050.000000
+2026-02-18  7275.0  3830.0  5275.000000  ...  7225.0  3780.0  5075.000000
+2026-02-19  7175.0  3770.0  5075.000000  ...  7325.0  3850.0  5275.000000
+2026-02-20  7225.0  3840.0  5125.000000  ...  7175.0  3790.0  5100.000000
+2026-02-23  7300.0  3900.0  5275.000000  ...  7300.0  3880.0  5150.000000
+2026-02-24  7225.0  3870.0  5375.000000  ...  7275.0  3880.0  5275.000000
+2026-02-25  7325.0  3970.0  5300.000000  ...  7275.0  3880.0  5350.000000
+2026-02-26  7300.0  3950.0  5325.000000  ...  7350.0  3970.0  5350.000000
+2026-02-27  7175.0  3910.0  5275.000000  ...  7200.0  3950.0  5325.000000
+
+[38 rows x 12 columns]
+[2026-03-11T17:09:16.713+0000] {taskinstance.py:349} INFO - ::group::Post task execution logs
+[2026-03-11T17:09:16.713+0000] {taskinstance.py:361} INFO - Marking task as SUCCESS. dag_id=dag_get_data_from_yf, task_id=get_data_from_yf, run_id=manual__2026-03-11T17:06:19+00:00, execution_date=20260311T170619, start_date=20260311T170915, end_date=20260311T170916
+[2026-03-11T17:09:16.762+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2026-03-11T17:09:16.763+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2026-03-11T17:09:16.763+0000] {logging_mixin.py:190} INFO - Dag name:dag_get_data_from_yf queued_at:2026-03-11 17:09:04.567126+00:00
+[2026-03-11T17:09:16.763+0000] {logging_mixin.py:190} INFO - Task hostname:ea47c22639fa operator:_PythonDecoratedOperator
+[2026-03-11T17:09:16.784+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-03-11T17:09:16.841+0000] {taskinstance.py:3924} INFO - 4 downstream tasks scheduled from follow-on schedule check
+[2026-03-11T17:09:16.844+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
