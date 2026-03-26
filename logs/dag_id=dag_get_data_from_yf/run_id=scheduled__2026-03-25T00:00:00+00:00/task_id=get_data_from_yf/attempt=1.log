@@ -1,0 +1,42 @@
+[2026-03-26T04:01:26.654+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-03-26T04:01:26.699+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_get_data_from_yf.get_data_from_yf scheduled__2026-03-25T00:00:00+00:00 [queued]>
+[2026-03-26T04:01:26.716+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_get_data_from_yf.get_data_from_yf scheduled__2026-03-25T00:00:00+00:00 [queued]>
+[2026-03-26T04:01:26.717+0000] {taskinstance.py:2884} INFO - Starting attempt 1 of 1
+[2026-03-26T04:01:26.747+0000] {taskinstance.py:2907} INFO - Executing <Task(_PythonDecoratedOperator): get_data_from_yf> on 2026-03-25 00:00:00+00:00
+[2026-03-26T04:01:26.767+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'dag_get_data_from_yf', 'get_data_from_yf', 'scheduled__2026-03-25T00:00:00+00:00', '--job-id', '3', '--raw', '--subdir', 'DAGS_FOLDER/get_finance_yf_csv.py', '--cfg-path', '/tmp/tmpgvo7s5py']
+[2026-03-26T04:01:26.770+0000] {standard_task_runner.py:105} INFO - Job 3: Subtask get_data_from_yf
+[2026-03-26T04:01:26.770+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=444) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-03-26T04:01:26.771+0000] {standard_task_runner.py:72} INFO - Started process 467 to run task
+[2026-03-26T04:01:26.886+0000] {task_command.py:467} INFO - Running <TaskInstance: dag_get_data_from_yf.get_data_from_yf scheduled__2026-03-25T00:00:00+00:00 [running]> on host f77800151ff9
+[2026-03-26T04:01:27.054+0000] {taskinstance.py:3157} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag_get_data_from_yf' AIRFLOW_CTX_TASK_ID='get_data_from_yf' AIRFLOW_CTX_EXECUTION_DATE='2026-03-25T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-03-25T00:00:00+00:00'
+[2026-03-26T04:01:27.060+0000] {taskinstance.py:740} INFO - ::endgroup::
+[2026-03-26T04:01:27.066+0000] {logging_mixin.py:190} INFO - Ini tickers user: None
+[2026-03-26T04:01:27.066+0000] {logging_mixin.py:190} INFO - Ini start date user: None
+[2026-03-26T04:01:27.066+0000] {logging_mixin.py:190} INFO - Ini end date user: None
+[2026-03-26T04:01:28.016+0000] {logging_mixin.py:190} WARNING - [                       0%                       ]
+[2026-03-26T04:01:28.031+0000] {logging_mixin.py:190} WARNING - [**********************67%*******                ]  2 of 3 completed
+[2026-03-26T04:01:28.041+0000] {logging_mixin.py:190} WARNING - [*********************100%***********************]  3 of 3 completed
+[2026-03-26T04:01:28.059+0000] {logging_mixin.py:190} INFO - scheduled
+[2026-03-26T04:01:28.060+0000] {logging_mixin.py:190} INFO - DEBUG: Row count fetched: 1
+[2026-03-26T04:01:28.098+0000] {logging_mixin.py:190} INFO - DEBUG: Data content: Price        Close                  ...    Volume                    
+Ticker     BBCA.JK BBRI.JK BMRI.JK  ...   BBCA.JK   BBRI.JK   BMRI.JK
+Date                                ...                              
+2026-03-26  6925.0  3520.0  4920.0  ...  52659100  63046700  55552200
+
+[1 rows x 15 columns]
+[2026-03-26T04:01:28.120+0000] {logging_mixin.py:190} INFO - data_filtered:  Price        Close                    High  ...     Low    Open                
+Ticker     BBCA.JK BBRI.JK BMRI.JK BBCA.JK  ... BMRI.JK BBCA.JK BBRI.JK BMRI.JK
+Date                                        ...                                
+2026-03-26  6925.0  3520.0  4920.0  6975.0  ...  4900.0  6900.0  3540.0  4970.0
+
+[1 rows x 12 columns]
+[2026-03-26T04:01:28.157+0000] {logging_mixin.py:190} INFO - data_long.columns before Inserted_at_timestamp:  Index(['Date', 'Ticker', 'Close', 'High', 'Low', 'Open'], dtype='object')
+[2026-03-26T04:01:28.159+0000] {logging_mixin.py:190} INFO - data_long.columns:  Index(['Date', 'Ticker', 'Close', 'High', 'Low', 'Open',
+       'Inserted_at_timestamp_WIB'],
+      dtype='object')
+[2026-03-26T04:01:28.166+0000] {python.py:240} INFO - Done. Returned value was: [{'Date': '2026-03-26', 'Ticker': 'BBCA.JK', 'Close': 6925.0, 'High': 6975.0, 'Low': 6900.0, 'Open': 6900.0, 'Inserted_at_timestamp_WIB': '2026-03-26 11:01:27'}, {'Date': '2026-03-26', 'Ticker': 'BBRI.JK', 'Close': 3520.0, 'High': 3570.0, 'Low': 3500.0, 'Open': 3540.0, 'Inserted_at_timestamp_WIB': '2026-03-26 11:01:27'}, {'Date': '2026-03-26', 'Ticker': 'BMRI.JK', 'Close': 4920.0, 'High': 4980.0, 'Low': 4900.0, 'Open': 4970.0, 'Inserted_at_timestamp_WIB': '2026-03-26 11:01:27'}]
+[2026-03-26T04:01:28.224+0000] {taskinstance.py:349} INFO - ::group::Post task execution logs
+[2026-03-26T04:01:28.225+0000] {taskinstance.py:361} INFO - Marking task as SUCCESS. dag_id=dag_get_data_from_yf, task_id=get_data_from_yf, run_id=scheduled__2026-03-25T00:00:00+00:00, execution_date=20260325T000000, start_date=20260326T040126, end_date=20260326T040128
+[2026-03-26T04:01:28.297+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-03-26T04:01:28.361+0000] {taskinstance.py:3924} INFO - 4 downstream tasks scheduled from follow-on schedule check
+[2026-03-26T04:01:28.365+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

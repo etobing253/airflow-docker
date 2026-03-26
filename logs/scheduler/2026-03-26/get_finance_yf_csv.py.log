@@ -1,0 +1,463 @@
+[2026-03-26T03:56:22.533+0000] {processor.py:186} INFO - Started process (PID=193) to work on /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T03:56:22.534+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/get_finance_yf_csv.py for tasks to queue
+[2026-03-26T03:56:22.536+0000] {logging_mixin.py:190} INFO - [2026-03-26T03:56:22.535+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T03:56:35.441+0000] {processor.py:925} INFO - DAG(s) 'dag_get_data_from_yf' retrieved from /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T03:56:36.784+0000] {logging_mixin.py:190} INFO - [2026-03-26T03:56:36.783+0000] {override.py:1932} INFO - Created Permission View: can read on DAG:dag_get_data_from_yf
+[2026-03-26T03:56:36.847+0000] {logging_mixin.py:190} INFO - [2026-03-26T03:56:36.846+0000] {override.py:1932} INFO - Created Permission View: can delete on DAG:dag_get_data_from_yf
+[2026-03-26T03:56:36.896+0000] {logging_mixin.py:190} INFO - [2026-03-26T03:56:36.895+0000] {override.py:1932} INFO - Created Permission View: can edit on DAG:dag_get_data_from_yf
+[2026-03-26T03:56:36.968+0000] {logging_mixin.py:190} INFO - [2026-03-26T03:56:36.967+0000] {override.py:1932} INFO - Created Permission View: can read on DAG Run:dag_get_data_from_yf
+[2026-03-26T03:56:37.012+0000] {logging_mixin.py:190} INFO - [2026-03-26T03:56:37.011+0000] {override.py:1932} INFO - Created Permission View: menu access on DAG Run:dag_get_data_from_yf
+[2026-03-26T03:56:37.070+0000] {logging_mixin.py:190} INFO - [2026-03-26T03:56:37.069+0000] {override.py:1932} INFO - Created Permission View: can delete on DAG Run:dag_get_data_from_yf
+[2026-03-26T03:56:37.111+0000] {logging_mixin.py:190} INFO - [2026-03-26T03:56:37.110+0000] {override.py:1932} INFO - Created Permission View: can create on DAG Run:dag_get_data_from_yf
+[2026-03-26T03:56:37.114+0000] {logging_mixin.py:190} INFO - [2026-03-26T03:56:37.112+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-03-26T03:56:37.180+0000] {logging_mixin.py:190} INFO - [2026-03-26T03:56:37.179+0000] {dag.py:3262} INFO - Creating ORM DAG for dag_get_data_from_yf
+[2026-03-26T03:56:37.228+0000] {logging_mixin.py:190} INFO - [2026-03-26T03:56:37.226+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_get_data_from_yf to 2026-03-25 00:00:00+00:00, run_after=2026-03-26 00:00:00+00:00
+[2026-03-26T03:56:37.315+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/get_finance_yf_csv.py took 14.791 seconds
+[2026-03-26T03:57:07.584+0000] {processor.py:186} INFO - Started process (PID=226) to work on /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T03:57:07.594+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/get_finance_yf_csv.py for tasks to queue
+[2026-03-26T03:57:07.601+0000] {logging_mixin.py:190} INFO - [2026-03-26T03:57:07.597+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T03:57:12.749+0000] {processor.py:925} INFO - DAG(s) 'dag_get_data_from_yf' retrieved from /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T03:57:13.108+0000] {logging_mixin.py:190} INFO - [2026-03-26T03:57:13.106+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-03-26T03:57:13.246+0000] {logging_mixin.py:190} INFO - [2026-03-26T03:57:13.233+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_get_data_from_yf to 2026-03-25 00:00:00+00:00, run_after=2026-03-26 00:00:00+00:00
+[2026-03-26T03:57:13.347+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/get_finance_yf_csv.py took 5.740 seconds
+[2026-03-26T03:57:44.042+0000] {processor.py:186} INFO - Started process (PID=254) to work on /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T03:57:44.046+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/get_finance_yf_csv.py for tasks to queue
+[2026-03-26T03:57:44.061+0000] {logging_mixin.py:190} INFO - [2026-03-26T03:57:44.060+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T03:57:50.539+0000] {processor.py:925} INFO - DAG(s) 'dag_get_data_from_yf' retrieved from /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T03:57:50.757+0000] {logging_mixin.py:190} INFO - [2026-03-26T03:57:50.755+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-03-26T03:57:50.878+0000] {logging_mixin.py:190} INFO - [2026-03-26T03:57:50.876+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_get_data_from_yf to 2026-03-25 00:00:00+00:00, run_after=2026-03-26 00:00:00+00:00
+[2026-03-26T03:57:50.953+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/get_finance_yf_csv.py took 6.947 seconds
+[2026-03-26T03:58:21.755+0000] {processor.py:186} INFO - Started process (PID=281) to work on /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T03:58:21.767+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/get_finance_yf_csv.py for tasks to queue
+[2026-03-26T03:58:21.771+0000] {logging_mixin.py:190} INFO - [2026-03-26T03:58:21.770+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T03:58:26.198+0000] {processor.py:925} INFO - DAG(s) 'dag_get_data_from_yf' retrieved from /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T03:58:26.394+0000] {logging_mixin.py:190} INFO - [2026-03-26T03:58:26.392+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-03-26T03:58:26.483+0000] {logging_mixin.py:190} INFO - [2026-03-26T03:58:26.482+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_get_data_from_yf to 2026-03-25 00:00:00+00:00, run_after=2026-03-26 00:00:00+00:00
+[2026-03-26T03:58:26.548+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/get_finance_yf_csv.py took 4.813 seconds
+[2026-03-26T03:58:57.188+0000] {processor.py:186} INFO - Started process (PID=314) to work on /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T03:58:57.192+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/get_finance_yf_csv.py for tasks to queue
+[2026-03-26T03:58:57.199+0000] {logging_mixin.py:190} INFO - [2026-03-26T03:58:57.195+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T03:59:01.158+0000] {processor.py:925} INFO - DAG(s) 'dag_get_data_from_yf' retrieved from /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T03:59:01.423+0000] {logging_mixin.py:190} INFO - [2026-03-26T03:59:01.420+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-03-26T03:59:01.526+0000] {logging_mixin.py:190} INFO - [2026-03-26T03:59:01.525+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_get_data_from_yf to 2026-03-25 00:00:00+00:00, run_after=2026-03-26 00:00:00+00:00
+[2026-03-26T03:59:01.610+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/get_finance_yf_csv.py took 4.452 seconds
+[2026-03-26T03:59:31.850+0000] {processor.py:186} INFO - Started process (PID=342) to work on /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T03:59:31.860+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/get_finance_yf_csv.py for tasks to queue
+[2026-03-26T03:59:31.861+0000] {logging_mixin.py:190} INFO - [2026-03-26T03:59:31.861+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T03:59:33.932+0000] {processor.py:925} INFO - DAG(s) 'dag_get_data_from_yf' retrieved from /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T03:59:34.084+0000] {logging_mixin.py:190} INFO - [2026-03-26T03:59:34.083+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-03-26T03:59:34.129+0000] {logging_mixin.py:190} INFO - [2026-03-26T03:59:34.128+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_get_data_from_yf to 2026-03-25 00:00:00+00:00, run_after=2026-03-26 00:00:00+00:00
+[2026-03-26T03:59:34.157+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/get_finance_yf_csv.py took 2.316 seconds
+[2026-03-26T04:00:04.373+0000] {processor.py:186} INFO - Started process (PID=369) to work on /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:00:04.382+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/get_finance_yf_csv.py for tasks to queue
+[2026-03-26T04:00:04.384+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:00:04.383+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:00:06.105+0000] {processor.py:925} INFO - DAG(s) 'dag_get_data_from_yf' retrieved from /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:00:06.184+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:00:06.183+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-03-26T04:00:06.222+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:00:06.221+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_get_data_from_yf to 2026-03-25 00:00:00+00:00, run_after=2026-03-26 00:00:00+00:00
+[2026-03-26T04:00:06.260+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/get_finance_yf_csv.py took 1.896 seconds
+[2026-03-26T04:00:36.641+0000] {processor.py:186} INFO - Started process (PID=396) to work on /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:00:36.651+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/get_finance_yf_csv.py for tasks to queue
+[2026-03-26T04:00:36.654+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:00:36.653+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:00:38.318+0000] {processor.py:925} INFO - DAG(s) 'dag_get_data_from_yf' retrieved from /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:00:38.401+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:00:38.400+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-03-26T04:00:38.427+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:00:38.427+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_get_data_from_yf to 2026-03-25 00:00:00+00:00, run_after=2026-03-26 00:00:00+00:00
+[2026-03-26T04:00:38.458+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/get_finance_yf_csv.py took 1.829 seconds
+[2026-03-26T04:01:08.833+0000] {processor.py:186} INFO - Started process (PID=423) to work on /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:01:08.843+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/get_finance_yf_csv.py for tasks to queue
+[2026-03-26T04:01:08.845+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:01:08.844+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:01:10.594+0000] {processor.py:925} INFO - DAG(s) 'dag_get_data_from_yf' retrieved from /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:01:10.672+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:01:10.671+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-03-26T04:01:10.701+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:01:10.700+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_get_data_from_yf to 2026-03-25 00:00:00+00:00, run_after=2026-03-26 00:00:00+00:00
+[2026-03-26T04:01:10.726+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/get_finance_yf_csv.py took 1.901 seconds
+[2026-03-26T04:01:41.143+0000] {processor.py:186} INFO - Started process (PID=553) to work on /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:01:41.152+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/get_finance_yf_csv.py for tasks to queue
+[2026-03-26T04:01:41.154+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:01:41.154+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:01:43.094+0000] {processor.py:925} INFO - DAG(s) 'dag_get_data_from_yf' retrieved from /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:01:43.192+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:01:43.191+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-03-26T04:01:43.221+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:01:43.221+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_get_data_from_yf to 2026-03-26 00:00:00+00:00, run_after=2026-03-27 00:00:00+00:00
+[2026-03-26T04:01:43.250+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/get_finance_yf_csv.py took 2.117 seconds
+[2026-03-26T04:02:13.488+0000] {processor.py:186} INFO - Started process (PID=580) to work on /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:02:13.492+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/get_finance_yf_csv.py for tasks to queue
+[2026-03-26T04:02:13.496+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:02:13.495+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:02:15.464+0000] {processor.py:925} INFO - DAG(s) 'dag_get_data_from_yf' retrieved from /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:02:15.545+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:02:15.544+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-03-26T04:02:15.570+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:02:15.570+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_get_data_from_yf to 2026-03-26 00:00:00+00:00, run_after=2026-03-27 00:00:00+00:00
+[2026-03-26T04:02:15.589+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/get_finance_yf_csv.py took 2.110 seconds
+[2026-03-26T04:02:45.885+0000] {processor.py:186} INFO - Started process (PID=607) to work on /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:02:45.893+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/get_finance_yf_csv.py for tasks to queue
+[2026-03-26T04:02:45.895+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:02:45.895+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:02:47.754+0000] {processor.py:925} INFO - DAG(s) 'dag_get_data_from_yf' retrieved from /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:02:47.853+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:02:47.852+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-03-26T04:02:47.889+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:02:47.889+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_get_data_from_yf to 2026-03-26 00:00:00+00:00, run_after=2026-03-27 00:00:00+00:00
+[2026-03-26T04:02:47.920+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/get_finance_yf_csv.py took 2.048 seconds
+[2026-03-26T04:03:18.310+0000] {processor.py:186} INFO - Started process (PID=634) to work on /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:03:18.313+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/get_finance_yf_csv.py for tasks to queue
+[2026-03-26T04:03:18.315+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:03:18.314+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:03:20.423+0000] {processor.py:925} INFO - DAG(s) 'dag_get_data_from_yf' retrieved from /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:03:20.543+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:03:20.541+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-03-26T04:03:20.595+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:03:20.595+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_get_data_from_yf to 2026-03-26 00:00:00+00:00, run_after=2026-03-27 00:00:00+00:00
+[2026-03-26T04:03:20.636+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/get_finance_yf_csv.py took 2.336 seconds
+[2026-03-26T04:03:50.991+0000] {processor.py:186} INFO - Started process (PID=661) to work on /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:03:51.001+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/get_finance_yf_csv.py for tasks to queue
+[2026-03-26T04:03:51.003+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:03:51.003+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:03:52.773+0000] {processor.py:925} INFO - DAG(s) 'dag_get_data_from_yf' retrieved from /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:03:52.849+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:03:52.848+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-03-26T04:03:52.882+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:03:52.881+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_get_data_from_yf to 2026-03-26 00:00:00+00:00, run_after=2026-03-27 00:00:00+00:00
+[2026-03-26T04:03:52.913+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/get_finance_yf_csv.py took 1.931 seconds
+[2026-03-26T04:04:23.309+0000] {processor.py:186} INFO - Started process (PID=688) to work on /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:04:23.311+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/get_finance_yf_csv.py for tasks to queue
+[2026-03-26T04:04:23.313+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:04:23.312+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:04:25.105+0000] {processor.py:925} INFO - DAG(s) 'dag_get_data_from_yf' retrieved from /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:04:25.187+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:04:25.186+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-03-26T04:04:25.220+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:04:25.219+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_get_data_from_yf to 2026-03-26 00:00:00+00:00, run_after=2026-03-27 00:00:00+00:00
+[2026-03-26T04:04:25.257+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/get_finance_yf_csv.py took 1.958 seconds
+[2026-03-26T04:04:55.655+0000] {processor.py:186} INFO - Started process (PID=715) to work on /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:04:55.657+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/get_finance_yf_csv.py for tasks to queue
+[2026-03-26T04:04:55.659+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:04:55.658+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:04:57.341+0000] {processor.py:925} INFO - DAG(s) 'dag_get_data_from_yf' retrieved from /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:04:57.435+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:04:57.434+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-03-26T04:04:57.468+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:04:57.468+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_get_data_from_yf to 2026-03-26 00:00:00+00:00, run_after=2026-03-27 00:00:00+00:00
+[2026-03-26T04:04:57.502+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/get_finance_yf_csv.py took 1.860 seconds
+[2026-03-26T04:05:27.630+0000] {processor.py:186} INFO - Started process (PID=748) to work on /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:05:27.638+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/get_finance_yf_csv.py for tasks to queue
+[2026-03-26T04:05:27.640+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:05:27.640+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:05:29.265+0000] {processor.py:925} INFO - DAG(s) 'dag_get_data_from_yf' retrieved from /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:05:29.343+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:05:29.342+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-03-26T04:05:29.369+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:05:29.368+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_get_data_from_yf to 2026-03-26 00:00:00+00:00, run_after=2026-03-27 00:00:00+00:00
+[2026-03-26T04:05:29.400+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/get_finance_yf_csv.py took 1.780 seconds
+[2026-03-26T04:05:59.790+0000] {processor.py:186} INFO - Started process (PID=775) to work on /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:05:59.799+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/get_finance_yf_csv.py for tasks to queue
+[2026-03-26T04:05:59.800+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:05:59.800+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:06:01.273+0000] {processor.py:925} INFO - DAG(s) 'dag_get_data_from_yf' retrieved from /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:06:01.341+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:06:01.340+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-03-26T04:06:01.366+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:06:01.366+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_get_data_from_yf to 2026-03-26 00:00:00+00:00, run_after=2026-03-27 00:00:00+00:00
+[2026-03-26T04:06:01.400+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/get_finance_yf_csv.py took 1.620 seconds
+[2026-03-26T04:06:31.756+0000] {processor.py:186} INFO - Started process (PID=802) to work on /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:06:31.765+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/get_finance_yf_csv.py for tasks to queue
+[2026-03-26T04:06:31.767+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:06:31.766+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:06:33.863+0000] {processor.py:925} INFO - DAG(s) 'dag_get_data_from_yf' retrieved from /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:06:33.942+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:06:33.941+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-03-26T04:06:33.976+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:06:33.975+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_get_data_from_yf to 2026-03-26 00:00:00+00:00, run_after=2026-03-27 00:00:00+00:00
+[2026-03-26T04:06:34.023+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/get_finance_yf_csv.py took 2.277 seconds
+[2026-03-26T04:07:04.410+0000] {processor.py:186} INFO - Started process (PID=829) to work on /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:07:04.415+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/get_finance_yf_csv.py for tasks to queue
+[2026-03-26T04:07:04.420+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:07:04.419+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:07:06.889+0000] {processor.py:925} INFO - DAG(s) 'dag_get_data_from_yf' retrieved from /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:07:06.982+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:07:06.981+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-03-26T04:07:07.259+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:07:07.258+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_get_data_from_yf to 2026-03-26 00:00:00+00:00, run_after=2026-03-27 00:00:00+00:00
+[2026-03-26T04:07:07.288+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/get_finance_yf_csv.py took 2.899 seconds
+[2026-03-26T04:07:37.417+0000] {processor.py:186} INFO - Started process (PID=856) to work on /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:07:37.420+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/get_finance_yf_csv.py for tasks to queue
+[2026-03-26T04:07:37.422+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:07:37.422+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:07:39.072+0000] {processor.py:925} INFO - DAG(s) 'dag_get_data_from_yf' retrieved from /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:07:39.146+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:07:39.145+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-03-26T04:07:39.172+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:07:39.172+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_get_data_from_yf to 2026-03-26 00:00:00+00:00, run_after=2026-03-27 00:00:00+00:00
+[2026-03-26T04:07:39.206+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/get_finance_yf_csv.py took 1.800 seconds
+[2026-03-26T04:08:09.638+0000] {processor.py:186} INFO - Started process (PID=883) to work on /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:08:09.648+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/get_finance_yf_csv.py for tasks to queue
+[2026-03-26T04:08:09.651+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:08:09.650+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:08:11.500+0000] {processor.py:925} INFO - DAG(s) 'dag_get_data_from_yf' retrieved from /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:08:11.588+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:08:11.587+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-03-26T04:08:11.623+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:08:11.622+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_get_data_from_yf to 2026-03-26 00:00:00+00:00, run_after=2026-03-27 00:00:00+00:00
+[2026-03-26T04:08:11.658+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/get_finance_yf_csv.py took 2.018 seconds
+[2026-03-26T04:08:42.050+0000] {processor.py:186} INFO - Started process (PID=910) to work on /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:08:42.059+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/get_finance_yf_csv.py for tasks to queue
+[2026-03-26T04:08:42.062+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:08:42.061+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:08:43.910+0000] {processor.py:925} INFO - DAG(s) 'dag_get_data_from_yf' retrieved from /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:08:44.003+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:08:44.002+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-03-26T04:08:44.043+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:08:44.043+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_get_data_from_yf to 2026-03-26 00:00:00+00:00, run_after=2026-03-27 00:00:00+00:00
+[2026-03-26T04:08:44.080+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/get_finance_yf_csv.py took 2.045 seconds
+[2026-03-26T04:09:14.408+0000] {processor.py:186} INFO - Started process (PID=937) to work on /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:09:14.418+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/get_finance_yf_csv.py for tasks to queue
+[2026-03-26T04:09:14.421+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:09:14.419+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:09:16.187+0000] {processor.py:925} INFO - DAG(s) 'dag_get_data_from_yf' retrieved from /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:09:16.264+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:09:16.263+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-03-26T04:09:16.536+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:09:16.536+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_get_data_from_yf to 2026-03-26 00:00:00+00:00, run_after=2026-03-27 00:00:00+00:00
+[2026-03-26T04:09:16.571+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/get_finance_yf_csv.py took 2.172 seconds
+[2026-03-26T04:09:46.745+0000] {processor.py:186} INFO - Started process (PID=963) to work on /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:09:46.755+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/get_finance_yf_csv.py for tasks to queue
+[2026-03-26T04:09:46.757+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:09:46.756+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:09:48.484+0000] {processor.py:925} INFO - DAG(s) 'dag_get_data_from_yf' retrieved from /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:09:48.556+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:09:48.555+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-03-26T04:09:48.585+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:09:48.584+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_get_data_from_yf to 2026-03-26 00:00:00+00:00, run_after=2026-03-27 00:00:00+00:00
+[2026-03-26T04:09:48.620+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/get_finance_yf_csv.py took 1.884 seconds
+[2026-03-26T04:10:18.984+0000] {processor.py:186} INFO - Started process (PID=990) to work on /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:10:18.993+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/get_finance_yf_csv.py for tasks to queue
+[2026-03-26T04:10:18.995+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:10:18.994+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:10:20.597+0000] {processor.py:925} INFO - DAG(s) 'dag_get_data_from_yf' retrieved from /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:10:20.675+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:10:20.674+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-03-26T04:10:20.701+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:10:20.701+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_get_data_from_yf to 2026-03-26 00:00:00+00:00, run_after=2026-03-27 00:00:00+00:00
+[2026-03-26T04:10:20.735+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/get_finance_yf_csv.py took 1.759 seconds
+[2026-03-26T04:10:51.127+0000] {processor.py:186} INFO - Started process (PID=1138) to work on /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:10:51.129+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/get_finance_yf_csv.py for tasks to queue
+[2026-03-26T04:10:51.133+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:10:51.132+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:10:53.006+0000] {processor.py:925} INFO - DAG(s) 'dag_get_data_from_yf' retrieved from /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:10:53.626+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:10:53.625+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-03-26T04:10:53.685+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:10:53.685+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_get_data_from_yf to 2026-03-26 00:00:00+00:00, run_after=2026-03-27 00:00:00+00:00
+[2026-03-26T04:10:53.725+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/get_finance_yf_csv.py took 2.609 seconds
+[2026-03-26T04:11:23.911+0000] {processor.py:186} INFO - Started process (PID=1260) to work on /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:11:23.914+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/get_finance_yf_csv.py for tasks to queue
+[2026-03-26T04:11:23.917+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:11:23.916+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:11:25.595+0000] {processor.py:925} INFO - DAG(s) 'dag_get_data_from_yf' retrieved from /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:11:25.683+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:11:25.682+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-03-26T04:11:25.967+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:11:25.967+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_get_data_from_yf to 2026-03-26 00:00:00+00:00, run_after=2026-03-27 00:00:00+00:00
+[2026-03-26T04:11:25.989+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/get_finance_yf_csv.py took 2.087 seconds
+[2026-03-26T04:11:56.247+0000] {processor.py:186} INFO - Started process (PID=1287) to work on /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:11:56.253+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/get_finance_yf_csv.py for tasks to queue
+[2026-03-26T04:11:56.254+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:11:56.254+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:11:57.948+0000] {processor.py:925} INFO - DAG(s) 'dag_get_data_from_yf' retrieved from /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:11:58.045+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:11:58.043+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-03-26T04:11:58.079+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:11:58.079+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_get_data_from_yf to 2026-03-26 00:00:00+00:00, run_after=2026-03-27 00:00:00+00:00
+[2026-03-26T04:11:58.117+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/get_finance_yf_csv.py took 1.883 seconds
+[2026-03-26T04:12:28.777+0000] {processor.py:186} INFO - Started process (PID=1797) to work on /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:12:28.786+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/get_finance_yf_csv.py for tasks to queue
+[2026-03-26T04:12:28.790+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:12:28.789+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:12:30.728+0000] {processor.py:925} INFO - DAG(s) 'dag_get_data_from_yf' retrieved from /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:12:30.899+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:12:30.897+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-03-26T04:12:31.197+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:12:31.197+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_get_data_from_yf to 2026-03-26 00:00:00+00:00, run_after=2026-03-27 00:00:00+00:00
+[2026-03-26T04:12:31.225+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/get_finance_yf_csv.py took 2.460 seconds
+[2026-03-26T04:13:01.573+0000] {processor.py:186} INFO - Started process (PID=1848) to work on /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:13:01.575+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/get_finance_yf_csv.py for tasks to queue
+[2026-03-26T04:13:01.576+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:13:01.576+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:13:03.238+0000] {processor.py:925} INFO - DAG(s) 'dag_get_data_from_yf' retrieved from /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:13:03.315+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:13:03.313+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-03-26T04:13:03.599+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:13:03.598+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_get_data_from_yf to 2026-03-26 00:00:00+00:00, run_after=2026-03-27 00:00:00+00:00
+[2026-03-26T04:13:03.634+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/get_finance_yf_csv.py took 2.074 seconds
+[2026-03-26T04:13:33.909+0000] {processor.py:186} INFO - Started process (PID=1875) to work on /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:13:33.918+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/get_finance_yf_csv.py for tasks to queue
+[2026-03-26T04:13:33.920+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:13:33.920+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:13:35.578+0000] {processor.py:925} INFO - DAG(s) 'dag_get_data_from_yf' retrieved from /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:13:35.648+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:13:35.647+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-03-26T04:13:35.997+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:13:35.997+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_get_data_from_yf to 2026-03-26 00:00:00+00:00, run_after=2026-03-27 00:00:00+00:00
+[2026-03-26T04:13:36.022+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/get_finance_yf_csv.py took 2.122 seconds
+[2026-03-26T04:14:06.275+0000] {processor.py:186} INFO - Started process (PID=1902) to work on /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:14:06.284+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/get_finance_yf_csv.py for tasks to queue
+[2026-03-26T04:14:06.286+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:14:06.286+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:14:07.949+0000] {processor.py:925} INFO - DAG(s) 'dag_get_data_from_yf' retrieved from /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:14:08.033+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:14:08.032+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-03-26T04:14:08.059+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:14:08.059+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_get_data_from_yf to 2026-03-26 00:00:00+00:00, run_after=2026-03-27 00:00:00+00:00
+[2026-03-26T04:14:08.083+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/get_finance_yf_csv.py took 1.816 seconds
+[2026-03-26T04:14:38.540+0000] {processor.py:186} INFO - Started process (PID=1929) to work on /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:14:38.541+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/get_finance_yf_csv.py for tasks to queue
+[2026-03-26T04:14:38.543+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:14:38.543+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:14:40.196+0000] {processor.py:925} INFO - DAG(s) 'dag_get_data_from_yf' retrieved from /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:14:40.259+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:14:40.258+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-03-26T04:14:40.288+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:14:40.288+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_get_data_from_yf to 2026-03-26 00:00:00+00:00, run_after=2026-03-27 00:00:00+00:00
+[2026-03-26T04:14:40.562+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/get_finance_yf_csv.py took 2.039 seconds
+[2026-03-26T04:15:10.883+0000] {processor.py:186} INFO - Started process (PID=1956) to work on /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:15:10.892+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/get_finance_yf_csv.py for tasks to queue
+[2026-03-26T04:15:10.894+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:15:10.894+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:15:12.607+0000] {processor.py:925} INFO - DAG(s) 'dag_get_data_from_yf' retrieved from /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:15:12.712+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:15:12.711+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-03-26T04:15:13.013+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:15:13.013+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_get_data_from_yf to 2026-03-26 00:00:00+00:00, run_after=2026-03-27 00:00:00+00:00
+[2026-03-26T04:15:13.056+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/get_finance_yf_csv.py took 2.164 seconds
+[2026-03-26T04:15:43.279+0000] {processor.py:186} INFO - Started process (PID=2085) to work on /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:15:43.281+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/get_finance_yf_csv.py for tasks to queue
+[2026-03-26T04:15:43.283+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:15:43.282+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:15:45.639+0000] {processor.py:925} INFO - DAG(s) 'dag_get_data_from_yf' retrieved from /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:15:45.724+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:15:45.723+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-03-26T04:15:45.750+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:15:45.749+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_get_data_from_yf to 2026-03-26 00:00:00+00:00, run_after=2026-03-27 00:00:00+00:00
+[2026-03-26T04:15:45.772+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/get_finance_yf_csv.py took 2.503 seconds
+[2026-03-26T04:16:16.207+0000] {processor.py:186} INFO - Started process (PID=2793) to work on /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:16:16.212+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/get_finance_yf_csv.py for tasks to queue
+[2026-03-26T04:16:16.217+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:16:16.216+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:16:18.191+0000] {processor.py:925} INFO - DAG(s) 'dag_get_data_from_yf' retrieved from /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:16:18.632+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:16:18.631+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-03-26T04:16:18.656+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:16:18.656+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_get_data_from_yf to 2026-03-26 00:00:00+00:00, run_after=2026-03-27 00:00:00+00:00
+[2026-03-26T04:16:18.689+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/get_finance_yf_csv.py took 2.497 seconds
+[2026-03-26T04:16:48.803+0000] {processor.py:186} INFO - Started process (PID=2821) to work on /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:16:48.805+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/get_finance_yf_csv.py for tasks to queue
+[2026-03-26T04:16:48.806+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:16:48.806+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:16:50.556+0000] {processor.py:925} INFO - DAG(s) 'dag_get_data_from_yf' retrieved from /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:16:50.636+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:16:50.635+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-03-26T04:16:50.668+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:16:50.668+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_get_data_from_yf to 2026-03-26 00:00:00+00:00, run_after=2026-03-27 00:00:00+00:00
+[2026-03-26T04:16:50.989+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/get_finance_yf_csv.py took 2.196 seconds
+[2026-03-26T04:17:21.354+0000] {processor.py:186} INFO - Started process (PID=2848) to work on /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:17:21.363+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/get_finance_yf_csv.py for tasks to queue
+[2026-03-26T04:17:21.366+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:17:21.365+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:17:22.884+0000] {processor.py:925} INFO - DAG(s) 'dag_get_data_from_yf' retrieved from /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:17:22.954+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:17:22.953+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-03-26T04:17:23.271+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:17:23.270+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_get_data_from_yf to 2026-03-26 00:00:00+00:00, run_after=2026-03-27 00:00:00+00:00
+[2026-03-26T04:17:23.307+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/get_finance_yf_csv.py took 1.963 seconds
+[2026-03-26T04:17:53.704+0000] {processor.py:186} INFO - Started process (PID=2875) to work on /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:17:53.713+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/get_finance_yf_csv.py for tasks to queue
+[2026-03-26T04:17:53.716+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:17:53.715+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:17:55.804+0000] {processor.py:925} INFO - DAG(s) 'dag_get_data_from_yf' retrieved from /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:17:55.899+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:17:55.897+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-03-26T04:17:55.933+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:17:55.933+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_get_data_from_yf to 2026-03-26 00:00:00+00:00, run_after=2026-03-27 00:00:00+00:00
+[2026-03-26T04:17:55.973+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/get_finance_yf_csv.py took 2.277 seconds
+[2026-03-26T04:18:26.074+0000] {processor.py:186} INFO - Started process (PID=2901) to work on /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:18:26.076+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/get_finance_yf_csv.py for tasks to queue
+[2026-03-26T04:18:26.079+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:18:26.078+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:18:27.854+0000] {processor.py:925} INFO - DAG(s) 'dag_get_data_from_yf' retrieved from /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:18:28.199+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:18:28.198+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-03-26T04:18:28.229+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:18:28.228+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_get_data_from_yf to 2026-03-26 00:00:00+00:00, run_after=2026-03-27 00:00:00+00:00
+[2026-03-26T04:18:28.259+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/get_finance_yf_csv.py took 2.197 seconds
+[2026-03-26T04:18:58.616+0000] {processor.py:186} INFO - Started process (PID=3643) to work on /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:18:58.619+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/get_finance_yf_csv.py for tasks to queue
+[2026-03-26T04:18:58.626+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:18:58.625+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:19:07.402+0000] {processor.py:925} INFO - DAG(s) 'dag_get_data_from_yf' retrieved from /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:19:07.942+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:19:07.940+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-03-26T04:19:08.000+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:19:07.999+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_get_data_from_yf to 2026-03-26 00:00:00+00:00, run_after=2026-03-27 00:00:00+00:00
+[2026-03-26T04:19:08.075+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/get_finance_yf_csv.py took 9.480 seconds
+[2026-03-26T04:19:38.388+0000] {processor.py:186} INFO - Started process (PID=3860) to work on /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:19:38.391+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/get_finance_yf_csv.py for tasks to queue
+[2026-03-26T04:19:38.393+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:19:38.392+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:19:40.225+0000] {processor.py:925} INFO - DAG(s) 'dag_get_data_from_yf' retrieved from /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:19:40.298+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:19:40.297+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-03-26T04:19:40.325+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:19:40.325+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_get_data_from_yf to 2026-03-26 00:00:00+00:00, run_after=2026-03-27 00:00:00+00:00
+[2026-03-26T04:19:40.349+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/get_finance_yf_csv.py took 1.974 seconds
+[2026-03-26T04:20:10.696+0000] {processor.py:186} INFO - Started process (PID=3886) to work on /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:20:10.698+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/get_finance_yf_csv.py for tasks to queue
+[2026-03-26T04:20:10.699+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:20:10.699+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:20:12.617+0000] {processor.py:925} INFO - DAG(s) 'dag_get_data_from_yf' retrieved from /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:20:12.686+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:20:12.685+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-03-26T04:20:12.713+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:20:12.713+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_get_data_from_yf to 2026-03-26 00:00:00+00:00, run_after=2026-03-27 00:00:00+00:00
+[2026-03-26T04:20:12.755+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/get_finance_yf_csv.py took 2.018 seconds
+[2026-03-26T04:20:43.095+0000] {processor.py:186} INFO - Started process (PID=3913) to work on /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:20:43.104+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/get_finance_yf_csv.py for tasks to queue
+[2026-03-26T04:20:43.106+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:20:43.105+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:20:45.298+0000] {processor.py:925} INFO - DAG(s) 'dag_get_data_from_yf' retrieved from /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:20:45.687+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:20:45.686+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-03-26T04:20:45.718+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:20:45.718+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_get_data_from_yf to 2026-03-26 00:00:00+00:00, run_after=2026-03-27 00:00:00+00:00
+[2026-03-26T04:20:45.743+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/get_finance_yf_csv.py took 2.657 seconds
+[2026-03-26T04:21:16.145+0000] {processor.py:186} INFO - Started process (PID=3940) to work on /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:21:16.146+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/get_finance_yf_csv.py for tasks to queue
+[2026-03-26T04:21:16.147+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:21:16.147+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:21:18.070+0000] {processor.py:925} INFO - DAG(s) 'dag_get_data_from_yf' retrieved from /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:21:18.142+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:21:18.141+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-03-26T04:21:18.166+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:21:18.166+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_get_data_from_yf to 2026-03-26 00:00:00+00:00, run_after=2026-03-27 00:00:00+00:00
+[2026-03-26T04:21:18.196+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/get_finance_yf_csv.py took 2.061 seconds
+[2026-03-26T04:21:48.499+0000] {processor.py:186} INFO - Started process (PID=3967) to work on /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:21:48.502+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/get_finance_yf_csv.py for tasks to queue
+[2026-03-26T04:21:48.503+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:21:48.503+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:21:50.401+0000] {processor.py:925} INFO - DAG(s) 'dag_get_data_from_yf' retrieved from /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:21:50.470+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:21:50.470+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-03-26T04:21:50.500+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:21:50.500+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_get_data_from_yf to 2026-03-26 00:00:00+00:00, run_after=2026-03-27 00:00:00+00:00
+[2026-03-26T04:21:50.534+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/get_finance_yf_csv.py took 2.044 seconds
+[2026-03-26T04:22:20.873+0000] {processor.py:186} INFO - Started process (PID=3994) to work on /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:22:20.876+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/get_finance_yf_csv.py for tasks to queue
+[2026-03-26T04:22:20.878+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:22:20.877+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:22:23.270+0000] {processor.py:925} INFO - DAG(s) 'dag_get_data_from_yf' retrieved from /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:22:23.375+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:22:23.373+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-03-26T04:22:23.432+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:22:23.432+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_get_data_from_yf to 2026-03-26 00:00:00+00:00, run_after=2026-03-27 00:00:00+00:00
+[2026-03-26T04:22:23.473+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/get_finance_yf_csv.py took 2.611 seconds
+[2026-03-26T04:22:53.900+0000] {processor.py:186} INFO - Started process (PID=4021) to work on /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:22:53.901+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/get_finance_yf_csv.py for tasks to queue
+[2026-03-26T04:22:53.903+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:22:53.902+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:22:56.057+0000] {processor.py:925} INFO - DAG(s) 'dag_get_data_from_yf' retrieved from /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:22:56.146+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:22:56.144+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-03-26T04:22:56.223+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:22:56.221+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_get_data_from_yf to 2026-03-26 00:00:00+00:00, run_after=2026-03-27 00:00:00+00:00
+[2026-03-26T04:22:56.283+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/get_finance_yf_csv.py took 2.398 seconds
+[2026-03-26T04:23:26.590+0000] {processor.py:186} INFO - Started process (PID=4048) to work on /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:23:26.592+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/get_finance_yf_csv.py for tasks to queue
+[2026-03-26T04:23:26.594+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:23:26.593+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:23:28.619+0000] {processor.py:925} INFO - DAG(s) 'dag_get_data_from_yf' retrieved from /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:23:28.723+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:23:28.721+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-03-26T04:23:28.761+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:23:28.760+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_get_data_from_yf to 2026-03-26 00:00:00+00:00, run_after=2026-03-27 00:00:00+00:00
+[2026-03-26T04:23:28.806+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/get_finance_yf_csv.py took 2.225 seconds
+[2026-03-26T04:23:59.020+0000] {processor.py:186} INFO - Started process (PID=4075) to work on /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:23:59.022+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/get_finance_yf_csv.py for tasks to queue
+[2026-03-26T04:23:59.024+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:23:59.023+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:24:01.366+0000] {processor.py:925} INFO - DAG(s) 'dag_get_data_from_yf' retrieved from /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:24:01.455+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:24:01.454+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-03-26T04:24:01.492+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:24:01.492+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_get_data_from_yf to 2026-03-26 00:00:00+00:00, run_after=2026-03-27 00:00:00+00:00
+[2026-03-26T04:24:01.535+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/get_finance_yf_csv.py took 2.524 seconds
+[2026-03-26T04:24:31.951+0000] {processor.py:186} INFO - Started process (PID=4102) to work on /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:24:31.961+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/get_finance_yf_csv.py for tasks to queue
+[2026-03-26T04:24:31.963+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:24:31.962+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:24:34.021+0000] {processor.py:925} INFO - DAG(s) 'dag_get_data_from_yf' retrieved from /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:24:34.113+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:24:34.112+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-03-26T04:24:34.142+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:24:34.142+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_get_data_from_yf to 2026-03-26 00:00:00+00:00, run_after=2026-03-27 00:00:00+00:00
+[2026-03-26T04:24:34.174+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/get_finance_yf_csv.py took 2.232 seconds
+[2026-03-26T04:25:04.282+0000] {processor.py:186} INFO - Started process (PID=4134) to work on /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:25:04.283+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/get_finance_yf_csv.py for tasks to queue
+[2026-03-26T04:25:04.285+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:25:04.284+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:25:06.490+0000] {processor.py:925} INFO - DAG(s) 'dag_get_data_from_yf' retrieved from /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:25:06.574+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:25:06.573+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-03-26T04:25:06.606+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:25:06.606+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_get_data_from_yf to 2026-03-26 00:00:00+00:00, run_after=2026-03-27 00:00:00+00:00
+[2026-03-26T04:25:06.640+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/get_finance_yf_csv.py took 2.368 seconds
+[2026-03-26T04:25:36.885+0000] {processor.py:186} INFO - Started process (PID=4161) to work on /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:25:36.887+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/get_finance_yf_csv.py for tasks to queue
+[2026-03-26T04:25:36.888+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:25:36.888+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:25:38.929+0000] {processor.py:925} INFO - DAG(s) 'dag_get_data_from_yf' retrieved from /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:25:39.018+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:25:39.017+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-03-26T04:25:39.043+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:25:39.043+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_get_data_from_yf to 2026-03-26 00:00:00+00:00, run_after=2026-03-27 00:00:00+00:00
+[2026-03-26T04:25:39.070+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/get_finance_yf_csv.py took 2.198 seconds
+[2026-03-26T04:26:09.305+0000] {processor.py:186} INFO - Started process (PID=4188) to work on /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:26:09.314+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/get_finance_yf_csv.py for tasks to queue
+[2026-03-26T04:26:09.316+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:26:09.315+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:26:11.170+0000] {processor.py:925} INFO - DAG(s) 'dag_get_data_from_yf' retrieved from /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:26:11.242+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:26:11.241+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-03-26T04:26:11.269+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:26:11.269+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_get_data_from_yf to 2026-03-26 00:00:00+00:00, run_after=2026-03-27 00:00:00+00:00
+[2026-03-26T04:26:11.300+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/get_finance_yf_csv.py took 2.004 seconds
+[2026-03-26T04:26:41.678+0000] {processor.py:186} INFO - Started process (PID=4215) to work on /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:26:41.680+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/get_finance_yf_csv.py for tasks to queue
+[2026-03-26T04:26:41.682+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:26:41.682+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:26:43.724+0000] {processor.py:925} INFO - DAG(s) 'dag_get_data_from_yf' retrieved from /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:26:43.800+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:26:43.799+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-03-26T04:26:43.846+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:26:43.845+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_get_data_from_yf to 2026-03-26 00:00:00+00:00, run_after=2026-03-27 00:00:00+00:00
+[2026-03-26T04:26:43.881+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/get_finance_yf_csv.py took 2.160 seconds
+[2026-03-26T04:27:14.063+0000] {processor.py:186} INFO - Started process (PID=4242) to work on /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:27:14.073+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/get_finance_yf_csv.py for tasks to queue
+[2026-03-26T04:27:14.077+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:27:14.076+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:27:16.214+0000] {processor.py:925} INFO - DAG(s) 'dag_get_data_from_yf' retrieved from /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:27:16.312+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:27:16.311+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-03-26T04:27:16.345+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:27:16.345+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_get_data_from_yf to 2026-03-26 00:00:00+00:00, run_after=2026-03-27 00:00:00+00:00
+[2026-03-26T04:27:16.381+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/get_finance_yf_csv.py took 2.328 seconds
+[2026-03-26T04:27:46.549+0000] {processor.py:186} INFO - Started process (PID=4269) to work on /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:27:46.559+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/get_finance_yf_csv.py for tasks to queue
+[2026-03-26T04:27:46.561+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:27:46.561+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:27:48.676+0000] {processor.py:925} INFO - DAG(s) 'dag_get_data_from_yf' retrieved from /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:27:48.759+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:27:48.758+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-03-26T04:27:48.790+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:27:48.789+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_get_data_from_yf to 2026-03-26 00:00:00+00:00, run_after=2026-03-27 00:00:00+00:00
+[2026-03-26T04:27:48.825+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/get_finance_yf_csv.py took 2.289 seconds
+[2026-03-26T04:28:19.028+0000] {processor.py:186} INFO - Started process (PID=4296) to work on /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:28:19.030+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/get_finance_yf_csv.py for tasks to queue
+[2026-03-26T04:28:19.034+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:28:19.033+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:28:21.249+0000] {processor.py:925} INFO - DAG(s) 'dag_get_data_from_yf' retrieved from /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:28:21.325+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:28:21.324+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-03-26T04:28:21.355+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:28:21.355+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_get_data_from_yf to 2026-03-26 00:00:00+00:00, run_after=2026-03-27 00:00:00+00:00
+[2026-03-26T04:28:21.388+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/get_finance_yf_csv.py took 2.370 seconds
+[2026-03-26T04:28:51.555+0000] {processor.py:186} INFO - Started process (PID=4323) to work on /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:28:51.557+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/get_finance_yf_csv.py for tasks to queue
+[2026-03-26T04:28:51.559+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:28:51.559+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:28:53.654+0000] {processor.py:925} INFO - DAG(s) 'dag_get_data_from_yf' retrieved from /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:28:53.752+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:28:53.750+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-03-26T04:28:53.784+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:28:53.783+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_get_data_from_yf to 2026-03-26 00:00:00+00:00, run_after=2026-03-27 00:00:00+00:00
+[2026-03-26T04:28:53.819+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/get_finance_yf_csv.py took 2.274 seconds
+[2026-03-26T04:29:24.080+0000] {processor.py:186} INFO - Started process (PID=4350) to work on /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:29:24.082+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/get_finance_yf_csv.py for tasks to queue
+[2026-03-26T04:29:24.084+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:29:24.084+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:29:26.683+0000] {processor.py:925} INFO - DAG(s) 'dag_get_data_from_yf' retrieved from /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:29:26.772+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:29:26.771+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-03-26T04:29:26.806+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:29:26.805+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_get_data_from_yf to 2026-03-26 00:00:00+00:00, run_after=2026-03-27 00:00:00+00:00
+[2026-03-26T04:29:26.842+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/get_finance_yf_csv.py took 2.775 seconds
+[2026-03-26T04:29:57.230+0000] {processor.py:186} INFO - Started process (PID=4377) to work on /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:29:57.239+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/get_finance_yf_csv.py for tasks to queue
+[2026-03-26T04:29:57.241+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:29:57.241+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:29:59.141+0000] {processor.py:925} INFO - DAG(s) 'dag_get_data_from_yf' retrieved from /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:29:59.210+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:29:59.209+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-03-26T04:29:59.238+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:29:59.238+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_get_data_from_yf to 2026-03-26 00:00:00+00:00, run_after=2026-03-27 00:00:00+00:00
+[2026-03-26T04:29:59.268+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/get_finance_yf_csv.py took 2.053 seconds
+[2026-03-26T04:30:29.547+0000] {processor.py:186} INFO - Started process (PID=4404) to work on /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:30:29.551+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/get_finance_yf_csv.py for tasks to queue
+[2026-03-26T04:30:29.554+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:30:29.553+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:30:31.447+0000] {processor.py:925} INFO - DAG(s) 'dag_get_data_from_yf' retrieved from /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:30:31.530+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:30:31.528+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-03-26T04:30:31.558+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:30:31.558+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_get_data_from_yf to 2026-03-26 00:00:00+00:00, run_after=2026-03-27 00:00:00+00:00
+[2026-03-26T04:30:31.587+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/get_finance_yf_csv.py took 2.061 seconds
+[2026-03-26T04:31:01.954+0000] {processor.py:186} INFO - Started process (PID=4431) to work on /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:31:01.955+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/get_finance_yf_csv.py for tasks to queue
+[2026-03-26T04:31:01.957+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:31:01.956+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:31:03.870+0000] {processor.py:925} INFO - DAG(s) 'dag_get_data_from_yf' retrieved from /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:31:03.950+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:31:03.948+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-03-26T04:31:03.978+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:31:03.978+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_get_data_from_yf to 2026-03-26 00:00:00+00:00, run_after=2026-03-27 00:00:00+00:00
+[2026-03-26T04:31:04.009+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/get_finance_yf_csv.py took 2.065 seconds
+[2026-03-26T04:31:34.307+0000] {processor.py:186} INFO - Started process (PID=4458) to work on /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:31:34.309+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/get_finance_yf_csv.py for tasks to queue
+[2026-03-26T04:31:34.311+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:31:34.311+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:31:36.208+0000] {processor.py:925} INFO - DAG(s) 'dag_get_data_from_yf' retrieved from /opt/airflow/dags/get_finance_yf_csv.py
+[2026-03-26T04:31:36.300+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:31:36.299+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-03-26T04:31:36.331+0000] {logging_mixin.py:190} INFO - [2026-03-26T04:31:36.331+0000] {dag.py:4180} INFO - Setting next_dagrun for dag_get_data_from_yf to 2026-03-26 00:00:00+00:00, run_after=2026-03-27 00:00:00+00:00
+[2026-03-26T04:31:36.377+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/get_finance_yf_csv.py took 2.090 seconds
