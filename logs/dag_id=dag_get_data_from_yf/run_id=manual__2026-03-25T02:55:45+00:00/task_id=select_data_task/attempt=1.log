@@ -1,0 +1,32 @@
+[2026-03-25T02:58:47.301+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-03-25T02:58:47.361+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_get_data_from_yf.select_data_task manual__2026-03-25T02:55:45+00:00 [queued]>
+[2026-03-25T02:58:47.380+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_get_data_from_yf.select_data_task manual__2026-03-25T02:55:45+00:00 [queued]>
+[2026-03-25T02:58:47.380+0000] {taskinstance.py:2884} INFO - Starting attempt 1 of 1
+[2026-03-25T02:58:47.400+0000] {taskinstance.py:2907} INFO - Executing <Task(SQLExecuteQueryOperator): select_data_task> on 2026-03-25 02:55:45+00:00
+[2026-03-25T02:58:47.417+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=405) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2026-03-25T02:58:47.420+0000] {standard_task_runner.py:72} INFO - Started process 414 to run task
+[2026-03-25T02:58:47.422+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'dag_get_data_from_yf', 'select_data_task', 'manual__2026-03-25T02:55:45+00:00', '--job-id', '2689', '--raw', '--subdir', 'DAGS_FOLDER/get_finance_yf_csv.py', '--cfg-path', '/tmp/tmp4q208cgw']
+[2026-03-25T02:58:47.424+0000] {standard_task_runner.py:105} INFO - Job 2689: Subtask select_data_task
+[2026-03-25T02:58:47.515+0000] {task_command.py:467} INFO - Running <TaskInstance: dag_get_data_from_yf.select_data_task manual__2026-03-25T02:55:45+00:00 [running]> on host 2cd601aaa810
+[2026-03-25T02:58:47.717+0000] {taskinstance.py:3157} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag_get_data_from_yf' AIRFLOW_CTX_TASK_ID='select_data_task' AIRFLOW_CTX_EXECUTION_DATE='2026-03-25T02:55:45+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-03-25T02:55:45+00:00'
+[2026-03-25T02:58:47.719+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2026-03-25T02:58:47.720+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2026-03-25T02:58:47.720+0000] {logging_mixin.py:190} INFO - Current task name:select_data_task state:running start_date:2026-03-25 02:58:47.362149+00:00
+[2026-03-25T02:58:47.720+0000] {logging_mixin.py:190} INFO - Dag name:dag_get_data_from_yf and current dag run status:running
+[2026-03-25T02:58:47.721+0000] {taskinstance.py:740} INFO - ::endgroup::
+[2026-03-25T02:58:47.721+0000] {sql.py:410} INFO - Executing:  SELECT * FROM indonesian_stocks; 
+[2026-03-25T02:58:47.723+0000] {crypto.py:82} WARNING - empty cryptography key - values will not be stored encrypted.
+[2026-03-25T02:58:47.725+0000] {base.py:84} INFO - Retrieving connection 'db_custom'
+[2026-03-25T02:58:47.754+0000] {base.py:84} INFO - Retrieving connection 'db_custom'
+[2026-03-25T02:58:47.812+0000] {sql.py:861} INFO - Running statement:  SELECT * FROM indonesian_stocks; , parameters: None
+[2026-03-25T02:58:47.826+0000] {sql.py:879} INFO - Rows affected: 18
+[2026-03-25T02:58:47.906+0000] {taskinstance.py:349} INFO - ::group::Post task execution logs
+[2026-03-25T02:58:47.907+0000] {taskinstance.py:361} INFO - Marking task as SUCCESS. dag_id=dag_get_data_from_yf, task_id=select_data_task, run_id=manual__2026-03-25T02:55:45+00:00, execution_date=20260325T025545, start_date=20260325T025847, end_date=20260325T025847
+[2026-03-25T02:58:47.954+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2026-03-25T02:58:47.954+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2026-03-25T02:58:47.954+0000] {logging_mixin.py:190} INFO - Dag name:dag_get_data_from_yf queued_at:2026-03-25 02:55:59.171234+00:00
+[2026-03-25T02:58:47.955+0000] {logging_mixin.py:190} INFO - Task hostname:2cd601aaa810 operator:SQLExecuteQueryOperator
+[2026-03-25T02:58:47.975+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-03-25T02:58:48.002+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

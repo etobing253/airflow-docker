@@ -1,0 +1,402 @@
+[2026-03-18T12:04:14.715+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-03-18T12:04:14.841+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_get_data_from_yf.insert_data_task scheduled__2026-03-17T01:00:00+00:00 map_index=0 [queued]>
+[2026-03-18T12:04:14.875+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_get_data_from_yf.insert_data_task scheduled__2026-03-17T01:00:00+00:00 map_index=0 [queued]>
+[2026-03-18T12:04:14.876+0000] {taskinstance.py:2884} INFO - Starting attempt 1 of 1
+[2026-03-18T12:04:14.947+0000] {taskinstance.py:2907} INFO - Executing <Mapped(SQLExecuteQueryOperator): insert_data_task> on 2026-03-17 01:00:00+00:00
+[2026-03-18T12:04:14.970+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=790) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2026-03-18T12:04:14.974+0000] {standard_task_runner.py:72} INFO - Started process 804 to run task
+[2026-03-18T12:04:14.990+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'dag_get_data_from_yf', 'insert_data_task', 'scheduled__2026-03-17T01:00:00+00:00', '--job-id', '2250', '--raw', '--subdir', 'DAGS_FOLDER/get_finance_yf_csv.py', '--cfg-path', '/tmp/tmprw9ye_wf', '--map-index', '0']
+[2026-03-18T12:04:14.994+0000] {standard_task_runner.py:105} INFO - Job 2250: Subtask insert_data_task
+[2026-03-18T12:04:15.202+0000] {task_command.py:467} INFO - Running <TaskInstance: dag_get_data_from_yf.insert_data_task scheduled__2026-03-17T01:00:00+00:00 map_index=0 [running]> on host acd199b76f5e
+[2026-03-18T12:04:15.541+0000] {taskinstance.py:3157} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag_get_data_from_yf' AIRFLOW_CTX_TASK_ID='insert_data_task' AIRFLOW_CTX_EXECUTION_DATE='2026-03-17T01:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-03-17T01:00:00+00:00'
+[2026-03-18T12:04:15.545+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2026-03-18T12:04:15.547+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2026-03-18T12:04:15.548+0000] {logging_mixin.py:190} INFO - Current task name:insert_data_task state:running start_date:2026-03-18 12:04:14.843133+00:00
+[2026-03-18T12:04:15.549+0000] {logging_mixin.py:190} INFO - Dag name:dag_get_data_from_yf and current dag run status:running
+[2026-03-18T12:04:15.550+0000] {taskinstance.py:740} INFO - ::endgroup::
+[2026-03-18T12:04:15.551+0000] {sql.py:392} INFO - Executing:  INSERT INTO indonesia_stocks_table (date, ticker, close, high, low, open, inserted_at_timestamp_wib) 
+                VALUES ('2026-03-17', 'BBCA.JK', 6775.0, 6825.0, 6750.0, 6750.0, 2026-03-18 19:03:14 )
+                ON CONFLICT (date, ticker) DO NOTHING; 
+[2026-03-18T12:04:15.590+0000] {base.py:84} INFO - Retrieving connection 'db_custom'
+[2026-03-18T12:04:15.647+0000] {base.py:84} INFO - Retrieving connection 'db_custom'
+[2026-03-18T12:04:15.671+0000] {sql.py:829} INFO - Running statement:  INSERT INTO indonesia_stocks_table (date, ticker, close, high, low, open, inserted_at_timestamp_wib) 
+                VALUES ('2026-03-17', 'BBCA.JK', 6775.0, 6825.0, 6750.0, 6750.0, 2026-03-18 19:03:14 )
+                ON CONFLICT (date, ticker) DO NOTHING; , parameters: None
+[2026-03-18T12:04:15.678+0000] {taskinstance.py:3336} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 776, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 742, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 425, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/common/sql/operators/sql.py", line 398, in execute
+    output = hook.run(
+             ^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/common/sql/hooks/sql.py", line 786, in run
+    self._run_command(cur, sql_statement, parameters)
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/common/sql/hooks/sql.py", line 837, in _run_command
+    cur.execute(sql_statement)
+psycopg2.errors.SyntaxError: syntax error at or near "19"
+LINE 2: ...A.JK', 6775.0, 6825.0, 6750.0, 6750.0, 2026-03-18 19:03:14 )
+                                                             ^
+
+[2026-03-18T12:04:15.727+0000] {logging_mixin.py:190} INFO - Task instance in failure state
+[2026-03-18T12:04:15.728+0000] {logging_mixin.py:190} INFO - Task start:2026-03-18 12:04:14.843133+00:00 end:2026-03-18 12:04:15.726052+00:00 duration:0.882919
+[2026-03-18T12:04:15.729+0000] {logging_mixin.py:190} INFO - Task:<Task(SQLExecuteQueryOperator): insert_data_task> dag:<DAG: dag_get_data_from_yf> dagrun:<DagRun dag_get_data_from_yf @ 2026-03-17 01:00:00+00:00: scheduled__2026-03-17T01:00:00+00:00, state:running, queued_at: 2026-03-18 12:03:02.803534+00:00. externally triggered: False>
+[2026-03-18T12:04:15.729+0000] {logging_mixin.py:190} INFO - Failure caused by syntax error at or near "19"
+LINE 2: ...A.JK', 6775.0, 6825.0, 6750.0, 6750.0, 2026-03-18 19:03:14 )
+                                                             ^
+[2026-03-18T12:04:15.730+0000] {taskinstance.py:1242} INFO - Marking task as FAILED. dag_id=dag_get_data_from_yf, task_id=insert_data_task, run_id=scheduled__2026-03-17T01:00:00+00:00, map_index=0, execution_date=20260317T010000, start_date=20260318T120414, end_date=20260318T120415
+[2026-03-18T12:04:15.831+0000] {taskinstance.py:349} INFO - ::group::Post task execution logs
+[2026-03-18T12:04:15.832+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 2250 for task insert_data_task (syntax error at or near "19"
+LINE 2: ...A.JK', 6775.0, 6825.0, 6750.0, 6750.0, 2026-03-18 19:03:14 )
+                                                             ^
+; 804)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/cli.py", line 116, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3029, in _run_raw_task
+    return _run_raw_task(
+           ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 282, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3184, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3208, in _execute_task
+    return _execute_task(self, context, task_orig)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 776, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 742, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 425, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/common/sql/operators/sql.py", line 398, in execute
+    output = hook.run(
+             ^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/common/sql/hooks/sql.py", line 786, in run
+    self._run_command(cur, sql_statement, parameters)
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/common/sql/hooks/sql.py", line 837, in _run_command
+    cur.execute(sql_statement)
+psycopg2.errors.SyntaxError: syntax error at or near "19"
+LINE 2: ...A.JK', 6775.0, 6825.0, 6750.0, 6750.0, 2026-03-18 19:03:14 )
+                                                             ^
+
+[2026-03-18T12:04:15.857+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 1
+[2026-03-18T12:04:15.950+0000] {taskinstance.py:3924} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-03-18T12:04:15.966+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2026-03-18T12:15:08.967+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-03-18T12:15:09.070+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_get_data_from_yf.insert_data_task scheduled__2026-03-17T01:00:00+00:00 map_index=0 [queued]>
+[2026-03-18T12:15:09.109+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_get_data_from_yf.insert_data_task scheduled__2026-03-17T01:00:00+00:00 map_index=0 [queued]>
+[2026-03-18T12:15:09.110+0000] {taskinstance.py:2884} INFO - Starting attempt 1 of 1
+[2026-03-18T12:15:09.149+0000] {taskinstance.py:2907} INFO - Executing <Mapped(SQLExecuteQueryOperator): insert_data_task> on 2026-03-17 01:00:00+00:00
+[2026-03-18T12:15:09.176+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=999) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2026-03-18T12:15:09.179+0000] {standard_task_runner.py:72} INFO - Started process 1005 to run task
+[2026-03-18T12:15:09.194+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'dag_get_data_from_yf', 'insert_data_task', 'scheduled__2026-03-17T01:00:00+00:00', '--job-id', '2267', '--raw', '--subdir', 'DAGS_FOLDER/get_finance_yf_csv.py', '--cfg-path', '/tmp/tmpz9wxbnk6', '--map-index', '0']
+[2026-03-18T12:15:09.197+0000] {standard_task_runner.py:105} INFO - Job 2267: Subtask insert_data_task
+[2026-03-18T12:15:09.386+0000] {task_command.py:467} INFO - Running <TaskInstance: dag_get_data_from_yf.insert_data_task scheduled__2026-03-17T01:00:00+00:00 map_index=0 [running]> on host acd199b76f5e
+[2026-03-18T12:15:09.690+0000] {taskinstance.py:3157} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag_get_data_from_yf' AIRFLOW_CTX_TASK_ID='insert_data_task' AIRFLOW_CTX_EXECUTION_DATE='2026-03-17T01:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-03-17T01:00:00+00:00'
+[2026-03-18T12:15:09.693+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2026-03-18T12:15:09.694+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2026-03-18T12:15:09.696+0000] {logging_mixin.py:190} INFO - Current task name:insert_data_task state:running start_date:2026-03-18 12:15:09.071432+00:00
+[2026-03-18T12:15:09.696+0000] {logging_mixin.py:190} INFO - Dag name:dag_get_data_from_yf and current dag run status:running
+[2026-03-18T12:15:09.698+0000] {taskinstance.py:740} INFO - ::endgroup::
+[2026-03-18T12:15:09.699+0000] {sql.py:392} INFO - Executing:  INSERT INTO indonesia_stocks_table (date, ticker, close, high, low, open, inserted_at_timestamp_wib) 
+                VALUES ('2026-03-17', 'BBCA.JK', 6775.0, 6825.0, 6750.0, 6750.0, 2026-03-18 19:14:16 )
+                ON CONFLICT (date, ticker) DO NOTHING; 
+[2026-03-18T12:15:09.740+0000] {base.py:84} INFO - Retrieving connection 'db_custom'
+[2026-03-18T12:15:09.785+0000] {base.py:84} INFO - Retrieving connection 'db_custom'
+[2026-03-18T12:15:09.811+0000] {sql.py:829} INFO - Running statement:  INSERT INTO indonesia_stocks_table (date, ticker, close, high, low, open, inserted_at_timestamp_wib) 
+                VALUES ('2026-03-17', 'BBCA.JK', 6775.0, 6825.0, 6750.0, 6750.0, 2026-03-18 19:14:16 )
+                ON CONFLICT (date, ticker) DO NOTHING; , parameters: None
+[2026-03-18T12:15:09.815+0000] {taskinstance.py:3336} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 776, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 742, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 425, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/common/sql/operators/sql.py", line 398, in execute
+    output = hook.run(
+             ^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/common/sql/hooks/sql.py", line 786, in run
+    self._run_command(cur, sql_statement, parameters)
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/common/sql/hooks/sql.py", line 837, in _run_command
+    cur.execute(sql_statement)
+psycopg2.errors.SyntaxError: syntax error at or near "19"
+LINE 2: ...A.JK', 6775.0, 6825.0, 6750.0, 6750.0, 2026-03-18 19:14:16 )
+                                                             ^
+
+[2026-03-18T12:15:09.858+0000] {logging_mixin.py:190} INFO - Task instance in failure state
+[2026-03-18T12:15:09.859+0000] {logging_mixin.py:190} INFO - Task start:2026-03-18 12:15:09.071432+00:00 end:2026-03-18 12:15:09.857006+00:00 duration:0.785574
+[2026-03-18T12:15:09.860+0000] {logging_mixin.py:190} INFO - Task:<Task(SQLExecuteQueryOperator): insert_data_task> dag:<DAG: dag_get_data_from_yf> dagrun:<DagRun dag_get_data_from_yf @ 2026-03-17 01:00:00+00:00: scheduled__2026-03-17T01:00:00+00:00, state:running, queued_at: 2026-03-18 12:14:01.764724+00:00. externally triggered: False>
+[2026-03-18T12:15:09.860+0000] {logging_mixin.py:190} INFO - Failure caused by syntax error at or near "19"
+LINE 2: ...A.JK', 6775.0, 6825.0, 6750.0, 6750.0, 2026-03-18 19:14:16 )
+                                                             ^
+[2026-03-18T12:15:09.861+0000] {taskinstance.py:1242} INFO - Marking task as FAILED. dag_id=dag_get_data_from_yf, task_id=insert_data_task, run_id=scheduled__2026-03-17T01:00:00+00:00, map_index=0, execution_date=20260317T010000, start_date=20260318T121509, end_date=20260318T121509
+[2026-03-18T12:15:09.976+0000] {taskinstance.py:349} INFO - ::group::Post task execution logs
+[2026-03-18T12:15:09.978+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 2267 for task insert_data_task (syntax error at or near "19"
+LINE 2: ...A.JK', 6775.0, 6825.0, 6750.0, 6750.0, 2026-03-18 19:14:16 )
+                                                             ^
+; 1005)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/cli.py", line 116, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3029, in _run_raw_task
+    return _run_raw_task(
+           ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 282, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3184, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3208, in _execute_task
+    return _execute_task(self, context, task_orig)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 776, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 742, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 425, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/common/sql/operators/sql.py", line 398, in execute
+    output = hook.run(
+             ^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/common/sql/hooks/sql.py", line 786, in run
+    self._run_command(cur, sql_statement, parameters)
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/common/sql/hooks/sql.py", line 837, in _run_command
+    cur.execute(sql_statement)
+psycopg2.errors.SyntaxError: syntax error at or near "19"
+LINE 2: ...A.JK', 6775.0, 6825.0, 6750.0, 6750.0, 2026-03-18 19:14:16 )
+                                                             ^
+
+[2026-03-18T12:15:10.017+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 1
+[2026-03-18T12:15:10.098+0000] {taskinstance.py:3924} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-03-18T12:15:10.108+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2026-03-18T16:44:57.742+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-03-18T16:44:57.862+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_get_data_from_yf.insert_data_task scheduled__2026-03-17T01:00:00+00:00 map_index=0 [queued]>
+[2026-03-18T16:44:57.905+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_get_data_from_yf.insert_data_task scheduled__2026-03-17T01:00:00+00:00 map_index=0 [queued]>
+[2026-03-18T16:44:57.906+0000] {taskinstance.py:2884} INFO - Starting attempt 1 of 1
+[2026-03-18T16:44:57.948+0000] {taskinstance.py:2907} INFO - Executing <Mapped(SQLExecuteQueryOperator): insert_data_task> on 2026-03-17 01:00:00+00:00
+[2026-03-18T16:44:57.971+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=189) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2026-03-18T16:44:57.981+0000] {standard_task_runner.py:72} INFO - Started process 193 to run task
+[2026-03-18T16:44:57.990+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'dag_get_data_from_yf', 'insert_data_task', 'scheduled__2026-03-17T01:00:00+00:00', '--job-id', '2279', '--raw', '--subdir', 'DAGS_FOLDER/get_finance_yf_csv.py', '--cfg-path', '/tmp/tmpou78qgtg', '--map-index', '0']
+[2026-03-18T16:44:57.994+0000] {standard_task_runner.py:105} INFO - Job 2279: Subtask insert_data_task
+[2026-03-18T16:44:58.224+0000] {task_command.py:467} INFO - Running <TaskInstance: dag_get_data_from_yf.insert_data_task scheduled__2026-03-17T01:00:00+00:00 map_index=0 [running]> on host 86b6d01610d0
+[2026-03-18T16:44:58.637+0000] {taskinstance.py:3157} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag_get_data_from_yf' AIRFLOW_CTX_TASK_ID='insert_data_task' AIRFLOW_CTX_EXECUTION_DATE='2026-03-17T01:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-03-17T01:00:00+00:00'
+[2026-03-18T16:44:58.640+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2026-03-18T16:44:58.641+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2026-03-18T16:44:58.643+0000] {logging_mixin.py:190} INFO - Current task name:insert_data_task state:running start_date:2026-03-18 16:44:57.862984+00:00
+[2026-03-18T16:44:58.644+0000] {logging_mixin.py:190} INFO - Dag name:dag_get_data_from_yf and current dag run status:running
+[2026-03-18T16:44:58.645+0000] {taskinstance.py:740} INFO - ::endgroup::
+[2026-03-18T16:44:58.646+0000] {sql.py:392} INFO - Executing:  INSERT INTO indonesian_stocks (date, ticker, close, high, low, open, inserted_at_timestamp_wib) 
+                VALUES ('2026-03-17', 'BBCA.JK', '6775.0', '6825.0', '6750.0', '6750.0', '2026-03-18 23:44:06' )
+                ON CONFLICT (date, ticker) DO NOTHING; 
+[2026-03-18T16:44:58.691+0000] {base.py:84} INFO - Retrieving connection 'db_custom'
+[2026-03-18T16:44:58.748+0000] {base.py:84} INFO - Retrieving connection 'db_custom'
+[2026-03-18T16:44:58.772+0000] {sql.py:829} INFO - Running statement:  INSERT INTO indonesian_stocks (date, ticker, close, high, low, open, inserted_at_timestamp_wib) 
+                VALUES ('2026-03-17', 'BBCA.JK', '6775.0', '6825.0', '6750.0', '6750.0', '2026-03-18 23:44:06' )
+                ON CONFLICT (date, ticker) DO NOTHING; , parameters: None
+[2026-03-18T16:44:58.784+0000] {taskinstance.py:3336} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 776, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 742, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 425, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/common/sql/operators/sql.py", line 398, in execute
+    output = hook.run(
+             ^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/common/sql/hooks/sql.py", line 786, in run
+    self._run_command(cur, sql_statement, parameters)
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/common/sql/hooks/sql.py", line 837, in _run_command
+    cur.execute(sql_statement)
+psycopg2.errors.InvalidTextRepresentation: invalid input syntax for type integer: "6775.0"
+LINE 2:                 VALUES ('2026-03-17', 'BBCA.JK', '6775.0', '...
+                                                         ^
+
+[2026-03-18T16:44:58.831+0000] {logging_mixin.py:190} INFO - Task instance in failure state
+[2026-03-18T16:44:58.832+0000] {logging_mixin.py:190} INFO - Task start:2026-03-18 16:44:57.862984+00:00 end:2026-03-18 16:44:58.829474+00:00 duration:0.96649
+[2026-03-18T16:44:58.833+0000] {logging_mixin.py:190} INFO - Task:<Task(SQLExecuteQueryOperator): insert_data_task> dag:<DAG: dag_get_data_from_yf> dagrun:<DagRun dag_get_data_from_yf @ 2026-03-17 01:00:00+00:00: scheduled__2026-03-17T01:00:00+00:00, state:running, queued_at: 2026-03-18 16:43:44.878683+00:00. externally triggered: False>
+[2026-03-18T16:44:58.834+0000] {logging_mixin.py:190} INFO - Failure caused by invalid input syntax for type integer: "6775.0"
+LINE 2:                 VALUES ('2026-03-17', 'BBCA.JK', '6775.0', '...
+                                                         ^
+[2026-03-18T16:44:58.834+0000] {taskinstance.py:1242} INFO - Marking task as FAILED. dag_id=dag_get_data_from_yf, task_id=insert_data_task, run_id=scheduled__2026-03-17T01:00:00+00:00, map_index=0, execution_date=20260317T010000, start_date=20260318T164457, end_date=20260318T164458
+[2026-03-18T16:44:58.939+0000] {taskinstance.py:349} INFO - ::group::Post task execution logs
+[2026-03-18T16:44:58.941+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 2279 for task insert_data_task (invalid input syntax for type integer: "6775.0"
+LINE 2:                 VALUES ('2026-03-17', 'BBCA.JK', '6775.0', '...
+                                                         ^
+; 193)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/cli.py", line 116, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3029, in _run_raw_task
+    return _run_raw_task(
+           ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 282, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3184, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3208, in _execute_task
+    return _execute_task(self, context, task_orig)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 776, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 742, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 425, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/common/sql/operators/sql.py", line 398, in execute
+    output = hook.run(
+             ^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/common/sql/hooks/sql.py", line 786, in run
+    self._run_command(cur, sql_statement, parameters)
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/common/sql/hooks/sql.py", line 837, in _run_command
+    cur.execute(sql_statement)
+psycopg2.errors.InvalidTextRepresentation: invalid input syntax for type integer: "6775.0"
+LINE 2:                 VALUES ('2026-03-17', 'BBCA.JK', '6775.0', '...
+                                                         ^
+
+[2026-03-18T16:44:58.977+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 1
+[2026-03-18T16:44:59.071+0000] {taskinstance.py:3924} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-03-18T16:44:59.083+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2026-03-18T16:56:06.281+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-03-18T16:56:06.431+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_get_data_from_yf.insert_data_task scheduled__2026-03-17T01:00:00+00:00 map_index=0 [queued]>
+[2026-03-18T16:56:06.483+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_get_data_from_yf.insert_data_task scheduled__2026-03-17T01:00:00+00:00 map_index=0 [queued]>
+[2026-03-18T16:56:06.485+0000] {taskinstance.py:2884} INFO - Starting attempt 1 of 1
+[2026-03-18T16:56:06.561+0000] {taskinstance.py:2907} INFO - Executing <Mapped(SQLExecuteQueryOperator): insert_data_task> on 2026-03-17 01:00:00+00:00
+[2026-03-18T16:56:06.587+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=228) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2026-03-18T16:56:06.593+0000] {standard_task_runner.py:72} INFO - Started process 232 to run task
+[2026-03-18T16:56:06.617+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'dag_get_data_from_yf', 'insert_data_task', 'scheduled__2026-03-17T01:00:00+00:00', '--job-id', '2291', '--raw', '--subdir', 'DAGS_FOLDER/get_finance_yf_csv.py', '--cfg-path', '/tmp/tmprceyxdmo', '--map-index', '0']
+[2026-03-18T16:56:06.620+0000] {standard_task_runner.py:105} INFO - Job 2291: Subtask insert_data_task
+[2026-03-18T16:56:06.829+0000] {task_command.py:467} INFO - Running <TaskInstance: dag_get_data_from_yf.insert_data_task scheduled__2026-03-17T01:00:00+00:00 map_index=0 [running]> on host f1613c7ed19d
+[2026-03-18T16:56:07.122+0000] {taskinstance.py:3157} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag_get_data_from_yf' AIRFLOW_CTX_TASK_ID='insert_data_task' AIRFLOW_CTX_EXECUTION_DATE='2026-03-17T01:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-03-17T01:00:00+00:00'
+[2026-03-18T16:56:07.125+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2026-03-18T16:56:07.127+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2026-03-18T16:56:07.127+0000] {logging_mixin.py:190} INFO - Current task name:insert_data_task state:running start_date:2026-03-18 16:56:06.435098+00:00
+[2026-03-18T16:56:07.128+0000] {logging_mixin.py:190} INFO - Dag name:dag_get_data_from_yf and current dag run status:running
+[2026-03-18T16:56:07.128+0000] {taskinstance.py:740} INFO - ::endgroup::
+[2026-03-18T16:56:07.129+0000] {sql.py:392} INFO - Executing:  INSERT INTO indonesian_stocks (date, ticker, close, high, low, open, inserted_at_timestamp_wib) 
+                VALUES ('2026-03-17', 'BBCA.JK', '6775.0', '6825.0', '6750.0', '6750.0', '2026-03-18 23:51:42' )
+                ON CONFLICT (date, ticker) DO NOTHING; 
+[2026-03-18T16:56:07.176+0000] {base.py:84} INFO - Retrieving connection 'db_custom'
+[2026-03-18T16:56:07.221+0000] {base.py:84} INFO - Retrieving connection 'db_custom'
+[2026-03-18T16:56:07.244+0000] {sql.py:829} INFO - Running statement:  INSERT INTO indonesian_stocks (date, ticker, close, high, low, open, inserted_at_timestamp_wib) 
+                VALUES ('2026-03-17', 'BBCA.JK', '6775.0', '6825.0', '6750.0', '6750.0', '2026-03-18 23:51:42' )
+                ON CONFLICT (date, ticker) DO NOTHING; , parameters: None
+[2026-03-18T16:56:07.270+0000] {sql.py:841} INFO - Rows affected: 1
+[2026-03-18T16:56:07.311+0000] {taskinstance.py:349} INFO - ::group::Post task execution logs
+[2026-03-18T16:56:07.312+0000] {taskinstance.py:361} INFO - Marking task as SUCCESS. dag_id=dag_get_data_from_yf, task_id=insert_data_task, run_id=scheduled__2026-03-17T01:00:00+00:00, map_index=0, execution_date=20260317T010000, start_date=20260318T165606, end_date=20260318T165607
+[2026-03-18T16:56:07.394+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2026-03-18T16:56:07.395+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2026-03-18T16:56:07.395+0000] {logging_mixin.py:190} INFO - Dag name:dag_get_data_from_yf queued_at:2026-03-18 16:55:53.700394+00:00
+[2026-03-18T16:56:07.396+0000] {logging_mixin.py:190} INFO - Task hostname:f1613c7ed19d operator:SQLExecuteQueryOperator
+[2026-03-18T16:56:07.421+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-03-18T16:56:07.500+0000] {taskinstance.py:3924} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-03-18T16:56:07.504+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

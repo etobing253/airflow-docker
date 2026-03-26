@@ -1,0 +1,401 @@
+[2026-03-15T09:53:52.704+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-03-15T09:53:52.943+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_get_data_from_yf.combine_csv scheduled__2026-03-06T00:00:00+00:00 [queued]>
+[2026-03-15T09:53:53.034+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_get_data_from_yf.combine_csv scheduled__2026-03-06T00:00:00+00:00 [queued]>
+[2026-03-15T09:53:53.034+0000] {taskinstance.py:2884} INFO - Starting attempt 1 of 1
+[2026-03-15T09:53:53.124+0000] {taskinstance.py:2907} INFO - Executing <Task(_PythonDecoratedOperator): combine_csv> on 2026-03-06 00:00:00+00:00
+[2026-03-15T09:53:53.172+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=1036) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2026-03-15T09:53:53.176+0000] {standard_task_runner.py:72} INFO - Started process 1095 to run task
+[2026-03-15T09:53:53.192+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'dag_get_data_from_yf', 'combine_csv', 'scheduled__2026-03-06T00:00:00+00:00', '--job-id', '82', '--raw', '--subdir', 'DAGS_FOLDER/get_finance_yf_csv.py', '--cfg-path', '/tmp/tmp639u39o5']
+[2026-03-15T09:53:53.216+0000] {standard_task_runner.py:105} INFO - Job 82: Subtask combine_csv
+[2026-03-15T09:53:53.610+0000] {task_command.py:467} INFO - Running <TaskInstance: dag_get_data_from_yf.combine_csv scheduled__2026-03-06T00:00:00+00:00 [running]> on host 8c556da65e50
+[2026-03-15T09:53:54.241+0000] {taskinstance.py:3157} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag_get_data_from_yf' AIRFLOW_CTX_TASK_ID='combine_csv' AIRFLOW_CTX_EXECUTION_DATE='2026-03-06T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-03-06T00:00:00+00:00'
+[2026-03-15T09:53:54.244+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2026-03-15T09:53:54.249+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2026-03-15T09:53:54.249+0000] {logging_mixin.py:190} INFO - Current task name:combine_csv state:running start_date:2026-03-15 09:53:52.944252+00:00
+[2026-03-15T09:53:54.250+0000] {logging_mixin.py:190} INFO - Dag name:dag_get_data_from_yf and current dag run status:running
+[2026-03-15T09:53:54.251+0000] {taskinstance.py:740} INFO - ::endgroup::
+[2026-03-15T09:53:54.474+0000] {logging_mixin.py:190} INFO - None
+[2026-03-15T09:53:54.475+0000] {python.py:240} INFO - Done. Returned value was: /opt/***/scripts/saham_indonesia_all.csv
+[2026-03-15T09:53:54.659+0000] {taskinstance.py:349} INFO - ::group::Post task execution logs
+[2026-03-15T09:53:54.660+0000] {taskinstance.py:361} INFO - Marking task as SUCCESS. dag_id=dag_get_data_from_yf, task_id=combine_csv, run_id=scheduled__2026-03-06T00:00:00+00:00, execution_date=20260306T000000, start_date=20260315T095352, end_date=20260315T095354
+[2026-03-15T09:53:54.824+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2026-03-15T09:53:54.825+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2026-03-15T09:53:54.826+0000] {logging_mixin.py:190} INFO - Dag name:dag_get_data_from_yf queued_at:2026-03-15 09:40:30.774753+00:00
+[2026-03-15T09:53:54.827+0000] {logging_mixin.py:190} INFO - Task hostname:8c556da65e50 operator:_PythonDecoratedOperator
+[2026-03-15T09:53:54.886+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-03-15T09:53:55.164+0000] {taskinstance.py:3924} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-03-15T09:53:55.184+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2026-03-15T11:39:32.114+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-03-15T11:39:32.255+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_get_data_from_yf.combine_csv scheduled__2026-03-06T00:00:00+00:00 [queued]>
+[2026-03-15T11:39:32.292+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_get_data_from_yf.combine_csv scheduled__2026-03-06T00:00:00+00:00 [queued]>
+[2026-03-15T11:39:32.293+0000] {taskinstance.py:2884} INFO - Starting attempt 1 of 1
+[2026-03-15T11:39:32.328+0000] {taskinstance.py:2907} INFO - Executing <Task(_PythonDecoratedOperator): combine_csv> on 2026-03-06 00:00:00+00:00
+[2026-03-15T11:39:32.369+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=954) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2026-03-15T11:39:32.373+0000] {standard_task_runner.py:72} INFO - Started process 1092 to run task
+[2026-03-15T11:39:32.392+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'dag_get_data_from_yf', 'combine_csv', 'scheduled__2026-03-06T00:00:00+00:00', '--job-id', '64', '--raw', '--subdir', 'DAGS_FOLDER/get_finance_yf_csv.py', '--cfg-path', '/tmp/tmppg82w7vm']
+[2026-03-15T11:39:32.394+0000] {standard_task_runner.py:105} INFO - Job 64: Subtask combine_csv
+[2026-03-15T11:39:32.725+0000] {task_command.py:467} INFO - Running <TaskInstance: dag_get_data_from_yf.combine_csv scheduled__2026-03-06T00:00:00+00:00 [running]> on host 0682dd67c20c
+[2026-03-15T11:39:33.174+0000] {taskinstance.py:3157} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag_get_data_from_yf' AIRFLOW_CTX_TASK_ID='combine_csv' AIRFLOW_CTX_EXECUTION_DATE='2026-03-06T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-03-06T00:00:00+00:00'
+[2026-03-15T11:39:33.179+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2026-03-15T11:39:33.180+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2026-03-15T11:39:33.180+0000] {logging_mixin.py:190} INFO - Current task name:combine_csv state:running start_date:2026-03-15 11:39:32.256168+00:00
+[2026-03-15T11:39:33.181+0000] {logging_mixin.py:190} INFO - Dag name:dag_get_data_from_yf and current dag run status:running
+[2026-03-15T11:39:33.182+0000] {taskinstance.py:740} INFO - ::endgroup::
+[2026-03-15T11:39:33.364+0000] {logging_mixin.py:190} INFO - None
+[2026-03-15T11:39:33.369+0000] {python.py:240} INFO - Done. Returned value was: /opt/***/scripts/saham_indonesia_all.csv
+[2026-03-15T11:39:33.538+0000] {taskinstance.py:349} INFO - ::group::Post task execution logs
+[2026-03-15T11:39:33.539+0000] {taskinstance.py:361} INFO - Marking task as SUCCESS. dag_id=dag_get_data_from_yf, task_id=combine_csv, run_id=scheduled__2026-03-06T00:00:00+00:00, execution_date=20260306T000000, start_date=20260315T113932, end_date=20260315T113933
+[2026-03-15T11:39:33.689+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2026-03-15T11:39:33.690+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2026-03-15T11:39:33.691+0000] {logging_mixin.py:190} INFO - Dag name:dag_get_data_from_yf queued_at:2026-03-15 11:31:36.047616+00:00
+[2026-03-15T11:39:33.691+0000] {logging_mixin.py:190} INFO - Task hostname:0682dd67c20c operator:_PythonDecoratedOperator
+[2026-03-15T11:39:33.753+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-03-15T11:39:33.852+0000] {taskinstance.py:3924} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-03-15T11:39:33.861+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2026-03-15T12:14:13.693+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-03-15T12:14:14.107+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_get_data_from_yf.combine_csv scheduled__2026-03-06T00:00:00+00:00 [queued]>
+[2026-03-15T12:14:14.268+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_get_data_from_yf.combine_csv scheduled__2026-03-06T00:00:00+00:00 [queued]>
+[2026-03-15T12:14:14.270+0000] {taskinstance.py:2884} INFO - Starting attempt 1 of 1
+[2026-03-15T12:14:14.428+0000] {taskinstance.py:2907} INFO - Executing <Task(_PythonDecoratedOperator): combine_csv> on 2026-03-06 00:00:00+00:00
+[2026-03-15T12:14:14.543+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=3058) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2026-03-15T12:14:14.563+0000] {standard_task_runner.py:72} INFO - Started process 3168 to run task
+[2026-03-15T12:14:14.568+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'dag_get_data_from_yf', 'combine_csv', 'scheduled__2026-03-06T00:00:00+00:00', '--job-id', '245', '--raw', '--subdir', 'DAGS_FOLDER/get_finance_yf_csv.py', '--cfg-path', '/tmp/tmpzgyqmx7y']
+[2026-03-15T12:14:14.578+0000] {standard_task_runner.py:105} INFO - Job 245: Subtask combine_csv
+[2026-03-15T12:14:15.135+0000] {task_command.py:467} INFO - Running <TaskInstance: dag_get_data_from_yf.combine_csv scheduled__2026-03-06T00:00:00+00:00 [running]> on host 0682dd67c20c
+[2026-03-15T12:14:16.315+0000] {taskinstance.py:3157} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag_get_data_from_yf' AIRFLOW_CTX_TASK_ID='combine_csv' AIRFLOW_CTX_EXECUTION_DATE='2026-03-06T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-03-06T00:00:00+00:00'
+[2026-03-15T12:14:16.349+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2026-03-15T12:14:16.376+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2026-03-15T12:14:16.393+0000] {logging_mixin.py:190} INFO - Current task name:combine_csv state:running start_date:2026-03-15 12:14:14.108133+00:00
+[2026-03-15T12:14:16.436+0000] {logging_mixin.py:190} INFO - Dag name:dag_get_data_from_yf and current dag run status:running
+[2026-03-15T12:14:16.437+0000] {taskinstance.py:740} INFO - ::endgroup::
+[2026-03-15T12:14:16.750+0000] {logging_mixin.py:190} INFO - None
+[2026-03-15T12:14:16.751+0000] {python.py:240} INFO - Done. Returned value was: /opt/***/scripts/saham_indonesia_all.csv
+[2026-03-15T12:14:17.083+0000] {taskinstance.py:349} INFO - ::group::Post task execution logs
+[2026-03-15T12:14:17.084+0000] {taskinstance.py:361} INFO - Marking task as SUCCESS. dag_id=dag_get_data_from_yf, task_id=combine_csv, run_id=scheduled__2026-03-06T00:00:00+00:00, execution_date=20260306T000000, start_date=20260315T121414, end_date=20260315T121417
+[2026-03-15T12:14:17.457+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2026-03-15T12:14:17.458+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2026-03-15T12:14:17.464+0000] {logging_mixin.py:190} INFO - Dag name:dag_get_data_from_yf queued_at:2026-03-15 12:05:15.276601+00:00
+[2026-03-15T12:14:17.465+0000] {logging_mixin.py:190} INFO - Task hostname:0682dd67c20c operator:_PythonDecoratedOperator
+[2026-03-15T12:14:17.556+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-03-15T12:14:17.746+0000] {taskinstance.py:3924} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-03-15T12:14:17.760+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2026-03-15T14:59:41.648+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-03-15T14:59:41.833+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_get_data_from_yf.combine_csv scheduled__2026-03-06T00:00:00+00:00 [queued]>
+[2026-03-15T14:59:41.881+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_get_data_from_yf.combine_csv scheduled__2026-03-06T00:00:00+00:00 [queued]>
+[2026-03-15T14:59:41.883+0000] {taskinstance.py:2884} INFO - Starting attempt 1 of 1
+[2026-03-15T14:59:41.980+0000] {taskinstance.py:2907} INFO - Executing <Task(_PythonDecoratedOperator): combine_csv> on 2026-03-06 00:00:00+00:00
+[2026-03-15T14:59:42.064+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=4302) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2026-03-15T14:59:42.068+0000] {standard_task_runner.py:72} INFO - Started process 4448 to run task
+[2026-03-15T14:59:42.066+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'dag_get_data_from_yf', 'combine_csv', 'scheduled__2026-03-06T00:00:00+00:00', '--job-id', '354', '--raw', '--subdir', 'DAGS_FOLDER/get_finance_yf_csv.py', '--cfg-path', '/tmp/tmpm_p18z8i']
+[2026-03-15T14:59:42.094+0000] {standard_task_runner.py:105} INFO - Job 354: Subtask combine_csv
+[2026-03-15T14:59:42.420+0000] {task_command.py:467} INFO - Running <TaskInstance: dag_get_data_from_yf.combine_csv scheduled__2026-03-06T00:00:00+00:00 [running]> on host 0682dd67c20c
+[2026-03-15T14:59:42.917+0000] {taskinstance.py:3157} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag_get_data_from_yf' AIRFLOW_CTX_TASK_ID='combine_csv' AIRFLOW_CTX_EXECUTION_DATE='2026-03-06T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-03-06T00:00:00+00:00'
+[2026-03-15T14:59:42.922+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2026-03-15T14:59:42.923+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2026-03-15T14:59:42.924+0000] {logging_mixin.py:190} INFO - Current task name:combine_csv state:running start_date:2026-03-15 14:59:41.834977+00:00
+[2026-03-15T14:59:42.924+0000] {logging_mixin.py:190} INFO - Dag name:dag_get_data_from_yf and current dag run status:running
+[2026-03-15T14:59:42.925+0000] {taskinstance.py:740} INFO - ::endgroup::
+[2026-03-15T14:59:43.018+0000] {logging_mixin.py:190} INFO - None
+[2026-03-15T14:59:43.020+0000] {python.py:240} INFO - Done. Returned value was: /opt/***/scripts/saham_indonesia_all.csv
+[2026-03-15T14:59:43.223+0000] {taskinstance.py:349} INFO - ::group::Post task execution logs
+[2026-03-15T14:59:43.224+0000] {taskinstance.py:361} INFO - Marking task as SUCCESS. dag_id=dag_get_data_from_yf, task_id=combine_csv, run_id=scheduled__2026-03-06T00:00:00+00:00, execution_date=20260306T000000, start_date=20260315T145941, end_date=20260315T145943
+[2026-03-15T14:59:43.533+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2026-03-15T14:59:43.535+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2026-03-15T14:59:43.535+0000] {logging_mixin.py:190} INFO - Dag name:dag_get_data_from_yf queued_at:2026-03-15 14:51:59.735894+00:00
+[2026-03-15T14:59:43.539+0000] {logging_mixin.py:190} INFO - Task hostname:0682dd67c20c operator:_PythonDecoratedOperator
+[2026-03-15T14:59:43.630+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-03-15T14:59:43.980+0000] {taskinstance.py:3924} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-03-15T14:59:44.033+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2026-03-15T15:24:57.607+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-03-15T15:24:57.933+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_get_data_from_yf.combine_csv scheduled__2026-03-06T00:00:00+00:00 [queued]>
+[2026-03-15T15:24:58.071+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_get_data_from_yf.combine_csv scheduled__2026-03-06T00:00:00+00:00 [queued]>
+[2026-03-15T15:24:58.072+0000] {taskinstance.py:2884} INFO - Starting attempt 1 of 1
+[2026-03-15T15:24:58.202+0000] {taskinstance.py:2907} INFO - Executing <Task(_PythonDecoratedOperator): combine_csv> on 2026-03-06 00:00:00+00:00
+[2026-03-15T15:24:58.313+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=1008) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2026-03-15T15:24:58.316+0000] {standard_task_runner.py:72} INFO - Started process 1114 to run task
+[2026-03-15T15:24:58.450+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'dag_get_data_from_yf', 'combine_csv', 'scheduled__2026-03-06T00:00:00+00:00', '--job-id', '481', '--raw', '--subdir', 'DAGS_FOLDER/get_finance_yf_csv.py', '--cfg-path', '/tmp/tmprpfiwxk4']
+[2026-03-15T15:24:58.456+0000] {standard_task_runner.py:105} INFO - Job 481: Subtask combine_csv
+[2026-03-15T15:24:58.924+0000] {task_command.py:467} INFO - Running <TaskInstance: dag_get_data_from_yf.combine_csv scheduled__2026-03-06T00:00:00+00:00 [running]> on host c2f7721b6bb3
+[2026-03-15T15:25:00.158+0000] {taskinstance.py:3157} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag_get_data_from_yf' AIRFLOW_CTX_TASK_ID='combine_csv' AIRFLOW_CTX_EXECUTION_DATE='2026-03-06T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-03-06T00:00:00+00:00'
+[2026-03-15T15:25:00.184+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2026-03-15T15:25:00.185+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2026-03-15T15:25:00.186+0000] {logging_mixin.py:190} INFO - Current task name:combine_csv state:running start_date:2026-03-15 15:24:57.933777+00:00
+[2026-03-15T15:25:00.214+0000] {logging_mixin.py:190} INFO - Dag name:dag_get_data_from_yf and current dag run status:running
+[2026-03-15T15:25:00.240+0000] {taskinstance.py:740} INFO - ::endgroup::
+[2026-03-15T15:25:00.900+0000] {logging_mixin.py:190} INFO - None
+[2026-03-15T15:25:00.912+0000] {python.py:240} INFO - Done. Returned value was: /opt/***/scripts/saham_indonesia_all.csv
+[2026-03-15T15:25:01.063+0000] {taskinstance.py:349} INFO - ::group::Post task execution logs
+[2026-03-15T15:25:01.065+0000] {taskinstance.py:361} INFO - Marking task as SUCCESS. dag_id=dag_get_data_from_yf, task_id=combine_csv, run_id=scheduled__2026-03-06T00:00:00+00:00, execution_date=20260306T000000, start_date=20260315T152457, end_date=20260315T152501
+[2026-03-15T15:25:01.789+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2026-03-15T15:25:01.789+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2026-03-15T15:25:01.790+0000] {logging_mixin.py:190} INFO - Dag name:dag_get_data_from_yf queued_at:2026-03-15 15:18:38.354658+00:00
+[2026-03-15T15:25:01.790+0000] {logging_mixin.py:190} INFO - Task hostname:c2f7721b6bb3 operator:_PythonDecoratedOperator
+[2026-03-15T15:25:01.906+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-03-15T15:25:02.082+0000] {taskinstance.py:3924} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-03-15T15:25:02.087+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2026-03-15T16:22:15.142+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-03-15T16:22:15.966+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_get_data_from_yf.combine_csv scheduled__2026-03-06T00:00:00+00:00 [queued]>
+[2026-03-15T16:22:16.197+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_get_data_from_yf.combine_csv scheduled__2026-03-06T00:00:00+00:00 [queued]>
+[2026-03-15T16:22:16.198+0000] {taskinstance.py:2884} INFO - Starting attempt 1 of 1
+[2026-03-15T16:22:16.250+0000] {taskinstance.py:2907} INFO - Executing <Task(_PythonDecoratedOperator): combine_csv> on 2026-03-06 00:00:00+00:00
+[2026-03-15T16:22:16.505+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=2834) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2026-03-15T16:22:16.519+0000] {standard_task_runner.py:72} INFO - Started process 2986 to run task
+[2026-03-15T16:22:16.576+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'dag_get_data_from_yf', 'combine_csv', 'scheduled__2026-03-06T00:00:00+00:00', '--job-id', '614', '--raw', '--subdir', 'DAGS_FOLDER/get_finance_yf_csv.py', '--cfg-path', '/tmp/tmpinv5no5_']
+[2026-03-15T16:22:16.615+0000] {standard_task_runner.py:105} INFO - Job 614: Subtask combine_csv
+[2026-03-15T16:22:17.768+0000] {task_command.py:467} INFO - Running <TaskInstance: dag_get_data_from_yf.combine_csv scheduled__2026-03-06T00:00:00+00:00 [running]> on host c2f7721b6bb3
+[2026-03-15T16:22:18.450+0000] {taskinstance.py:3157} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag_get_data_from_yf' AIRFLOW_CTX_TASK_ID='combine_csv' AIRFLOW_CTX_EXECUTION_DATE='2026-03-06T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-03-06T00:00:00+00:00'
+[2026-03-15T16:22:18.454+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2026-03-15T16:22:18.555+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2026-03-15T16:22:18.555+0000] {logging_mixin.py:190} INFO - Current task name:combine_csv state:running start_date:2026-03-15 16:22:15.994932+00:00
+[2026-03-15T16:22:18.556+0000] {logging_mixin.py:190} INFO - Dag name:dag_get_data_from_yf and current dag run status:running
+[2026-03-15T16:22:18.557+0000] {taskinstance.py:740} INFO - ::endgroup::
+[2026-03-15T16:22:19.227+0000] {logging_mixin.py:190} INFO - None
+[2026-03-15T16:22:19.287+0000] {python.py:240} INFO - Done. Returned value was: /opt/***/scripts/saham_indonesia_all.csv
+[2026-03-15T16:22:19.576+0000] {taskinstance.py:349} INFO - ::group::Post task execution logs
+[2026-03-15T16:22:19.579+0000] {taskinstance.py:361} INFO - Marking task as SUCCESS. dag_id=dag_get_data_from_yf, task_id=combine_csv, run_id=scheduled__2026-03-06T00:00:00+00:00, execution_date=20260306T000000, start_date=20260315T162215, end_date=20260315T162219
+[2026-03-15T16:22:20.050+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2026-03-15T16:22:20.051+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2026-03-15T16:22:20.051+0000] {logging_mixin.py:190} INFO - Dag name:dag_get_data_from_yf queued_at:2026-03-15 16:14:39.083895+00:00
+[2026-03-15T16:22:20.052+0000] {logging_mixin.py:190} INFO - Task hostname:c2f7721b6bb3 operator:_PythonDecoratedOperator
+[2026-03-15T16:22:20.112+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-03-15T16:22:20.221+0000] {taskinstance.py:3924} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-03-15T16:22:20.231+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2026-03-16T04:35:02.708+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-03-16T04:35:02.991+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_get_data_from_yf.combine_csv scheduled__2026-03-06T00:00:00+00:00 [queued]>
+[2026-03-16T04:35:03.285+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_get_data_from_yf.combine_csv scheduled__2026-03-06T00:00:00+00:00 [queued]>
+[2026-03-16T04:35:03.286+0000] {taskinstance.py:2884} INFO - Starting attempt 1 of 1
+[2026-03-16T04:35:03.323+0000] {taskinstance.py:2907} INFO - Executing <Task(_PythonDecoratedOperator): combine_csv> on 2026-03-06 00:00:00+00:00
+[2026-03-16T04:35:03.368+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=1202) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2026-03-16T04:35:03.377+0000] {standard_task_runner.py:72} INFO - Started process 1344 to run task
+[2026-03-16T04:35:03.398+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'dag_get_data_from_yf', 'combine_csv', 'scheduled__2026-03-06T00:00:00+00:00', '--job-id', '747', '--raw', '--subdir', 'DAGS_FOLDER/get_finance_yf_csv.py', '--cfg-path', '/tmp/tmp7wuabfnh']
+[2026-03-16T04:35:03.417+0000] {standard_task_runner.py:105} INFO - Job 747: Subtask combine_csv
+[2026-03-16T04:35:03.971+0000] {task_command.py:467} INFO - Running <TaskInstance: dag_get_data_from_yf.combine_csv scheduled__2026-03-06T00:00:00+00:00 [running]> on host 662456f34d26
+[2026-03-16T04:35:04.803+0000] {taskinstance.py:3157} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag_get_data_from_yf' AIRFLOW_CTX_TASK_ID='combine_csv' AIRFLOW_CTX_EXECUTION_DATE='2026-03-06T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-03-06T00:00:00+00:00'
+[2026-03-16T04:35:04.819+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2026-03-16T04:35:04.854+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2026-03-16T04:35:04.857+0000] {logging_mixin.py:190} INFO - Current task name:combine_csv state:running start_date:2026-03-16 04:35:02.992451+00:00
+[2026-03-16T04:35:04.858+0000] {logging_mixin.py:190} INFO - Dag name:dag_get_data_from_yf and current dag run status:running
+[2026-03-16T04:35:04.859+0000] {taskinstance.py:740} INFO - ::endgroup::
+[2026-03-16T04:35:05.100+0000] {taskinstance.py:3336} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 776, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 742, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 425, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/decorators/base.py", line 266, in execute
+    return_value = super().execute(context)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 425, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 256, in execute_callable
+    return runner.run(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/get_finance_yf_csv.py", line 182, in combine_csv
+    print("Ini kolom combined_df: ", combined_df.column)
+                                   ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/core/generic.py", line 6204, in __getattr__
+    return object.__getattribute__(self, name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'DataFrame' object has no attribute 'column'. Did you mean: 'columns'?
+[2026-03-16T04:35:05.416+0000] {logging_mixin.py:190} INFO - Task instance in failure state
+[2026-03-16T04:35:05.416+0000] {logging_mixin.py:190} INFO - Task start:2026-03-16 04:35:02.992451+00:00 end:2026-03-16 04:35:05.415060+00:00 duration:2.422609
+[2026-03-16T04:35:05.417+0000] {logging_mixin.py:190} INFO - Task:<Task(_PythonDecoratedOperator): combine_csv> dag:<DAG: dag_get_data_from_yf> dagrun:<DagRun dag_get_data_from_yf @ 2026-03-06 00:00:00+00:00: scheduled__2026-03-06T00:00:00+00:00, state:running, queued_at: 2026-03-16 04:26:37.363018+00:00. externally triggered: False>
+[2026-03-16T04:35:05.418+0000] {logging_mixin.py:190} INFO - Failure caused by 'DataFrame' object has no attribute 'column'
+[2026-03-16T04:35:05.422+0000] {taskinstance.py:1242} INFO - Marking task as FAILED. dag_id=dag_get_data_from_yf, task_id=combine_csv, run_id=scheduled__2026-03-06T00:00:00+00:00, execution_date=20260306T000000, start_date=20260316T043502, end_date=20260316T043505
+[2026-03-16T04:35:05.613+0000] {taskinstance.py:349} INFO - ::group::Post task execution logs
+[2026-03-16T04:35:05.615+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 747 for task combine_csv ('DataFrame' object has no attribute 'column'; 1344)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/cli.py", line 116, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3029, in _run_raw_task
+    return _run_raw_task(
+           ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 282, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3184, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3208, in _execute_task
+    return _execute_task(self, context, task_orig)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 776, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 742, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 425, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/decorators/base.py", line 266, in execute
+    return_value = super().execute(context)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 425, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 256, in execute_callable
+    return runner.run(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/get_finance_yf_csv.py", line 182, in combine_csv
+    print("Ini kolom combined_df: ", combined_df.column)
+                                   ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/core/generic.py", line 6204, in __getattr__
+    return object.__getattribute__(self, name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'DataFrame' object has no attribute 'column'. Did you mean: 'columns'?
+[2026-03-16T04:35:05.975+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 1
+[2026-03-16T04:35:06.132+0000] {taskinstance.py:3924} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-03-16T04:35:06.157+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2026-03-16T05:53:46.705+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-03-16T05:53:46.793+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_get_data_from_yf.combine_csv scheduled__2026-03-06T00:00:00+00:00 [queued]>
+[2026-03-16T05:53:46.834+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_get_data_from_yf.combine_csv scheduled__2026-03-06T00:00:00+00:00 [queued]>
+[2026-03-16T05:53:46.835+0000] {taskinstance.py:2884} INFO - Starting attempt 1 of 1
+[2026-03-16T05:53:46.861+0000] {taskinstance.py:2907} INFO - Executing <Task(_PythonDecoratedOperator): combine_csv> on 2026-03-06 00:00:00+00:00
+[2026-03-16T05:53:46.881+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=2298) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2026-03-16T05:53:46.884+0000] {standard_task_runner.py:72} INFO - Started process 2413 to run task
+[2026-03-16T05:53:46.889+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'dag_get_data_from_yf', 'combine_csv', 'scheduled__2026-03-06T00:00:00+00:00', '--job-id', '835', '--raw', '--subdir', 'DAGS_FOLDER/get_finance_yf_csv.py', '--cfg-path', '/tmp/tmpfrjyy03c']
+[2026-03-16T05:53:46.890+0000] {standard_task_runner.py:105} INFO - Job 835: Subtask combine_csv
+[2026-03-16T05:53:47.028+0000] {task_command.py:467} INFO - Running <TaskInstance: dag_get_data_from_yf.combine_csv scheduled__2026-03-06T00:00:00+00:00 [running]> on host 662456f34d26
+[2026-03-16T05:53:47.274+0000] {taskinstance.py:3157} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag_get_data_from_yf' AIRFLOW_CTX_TASK_ID='combine_csv' AIRFLOW_CTX_EXECUTION_DATE='2026-03-06T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-03-06T00:00:00+00:00'
+[2026-03-16T05:53:47.277+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2026-03-16T05:53:47.278+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2026-03-16T05:53:47.278+0000] {logging_mixin.py:190} INFO - Current task name:combine_csv state:running start_date:2026-03-16 05:53:46.793697+00:00
+[2026-03-16T05:53:47.278+0000] {logging_mixin.py:190} INFO - Dag name:dag_get_data_from_yf and current dag run status:running
+[2026-03-16T05:53:47.279+0000] {taskinstance.py:740} INFO - ::endgroup::
+[2026-03-16T05:53:47.370+0000] {logging_mixin.py:190} INFO - Ini kolom combined_df:  Index(['Date', 'Ticker', 'Close', 'High', 'Low', 'Open',
+       'Inserted_at_timestamp'],
+      dtype='object')
+[2026-03-16T05:53:47.380+0000] {logging_mixin.py:190} INFO - Ini csv_string_all:  None
+[2026-03-16T05:53:47.382+0000] {python.py:240} INFO - Done. Returned value was: /opt/***/scripts/saham_indonesia_all.csv
+[2026-03-16T05:53:47.477+0000] {taskinstance.py:349} INFO - ::group::Post task execution logs
+[2026-03-16T05:53:47.478+0000] {taskinstance.py:361} INFO - Marking task as SUCCESS. dag_id=dag_get_data_from_yf, task_id=combine_csv, run_id=scheduled__2026-03-06T00:00:00+00:00, execution_date=20260306T000000, start_date=20260316T055346, end_date=20260316T055347
+[2026-03-16T05:53:47.562+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2026-03-16T05:53:47.563+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2026-03-16T05:53:47.563+0000] {logging_mixin.py:190} INFO - Dag name:dag_get_data_from_yf queued_at:2026-03-16 04:41:05.252485+00:00
+[2026-03-16T05:53:47.564+0000] {logging_mixin.py:190} INFO - Task hostname:662456f34d26 operator:_PythonDecoratedOperator
+[2026-03-16T05:53:47.601+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-03-16T05:53:47.701+0000] {taskinstance.py:3924} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-03-16T05:53:47.705+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2026-03-16T10:24:37.188+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-03-16T10:24:37.830+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_get_data_from_yf.combine_csv scheduled__2026-03-06T00:00:00+00:00 [queued]>
+[2026-03-16T10:24:38.021+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_get_data_from_yf.combine_csv scheduled__2026-03-06T00:00:00+00:00 [queued]>
+[2026-03-16T10:24:38.022+0000] {taskinstance.py:2884} INFO - Starting attempt 1 of 1
+[2026-03-16T10:24:38.191+0000] {taskinstance.py:2907} INFO - Executing <Task(_PythonDecoratedOperator): combine_csv> on 2026-03-06 00:00:00+00:00
+[2026-03-16T10:24:38.243+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=1306) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2026-03-16T10:24:38.243+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'dag_get_data_from_yf', 'combine_csv', 'scheduled__2026-03-06T00:00:00+00:00', '--job-id', '981', '--raw', '--subdir', 'DAGS_FOLDER/get_finance_yf_csv.py', '--cfg-path', '/tmp/tmp7iy_s1qt']
+[2026-03-16T10:24:38.246+0000] {standard_task_runner.py:105} INFO - Job 981: Subtask combine_csv
+[2026-03-16T10:24:38.265+0000] {standard_task_runner.py:72} INFO - Started process 1390 to run task
+[2026-03-16T10:24:38.797+0000] {task_command.py:467} INFO - Running <TaskInstance: dag_get_data_from_yf.combine_csv scheduled__2026-03-06T00:00:00+00:00 [running]> on host b3714f9398e4
+[2026-03-16T10:24:39.694+0000] {taskinstance.py:3157} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag_get_data_from_yf' AIRFLOW_CTX_TASK_ID='combine_csv' AIRFLOW_CTX_EXECUTION_DATE='2026-03-06T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-03-06T00:00:00+00:00'
+[2026-03-16T10:24:39.715+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2026-03-16T10:24:39.717+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2026-03-16T10:24:39.782+0000] {logging_mixin.py:190} INFO - Current task name:combine_csv state:running start_date:2026-03-16 10:24:37.831194+00:00
+[2026-03-16T10:24:39.783+0000] {logging_mixin.py:190} INFO - Dag name:dag_get_data_from_yf and current dag run status:running
+[2026-03-16T10:24:39.784+0000] {taskinstance.py:740} INFO - ::endgroup::
+[2026-03-16T10:24:40.220+0000] {logging_mixin.py:190} INFO - Ini kolom combined_df:  Index(['Date', 'Ticker', 'Close', 'High', 'Low', 'Open',
+       'Inserted_at_timestamp'],
+      dtype='object')
+[2026-03-16T10:24:40.444+0000] {logging_mixin.py:190} INFO - Ini csv_string_all:  None
+[2026-03-16T10:24:40.453+0000] {python.py:240} INFO - Done. Returned value was: /opt/***/scripts/saham_indonesia_all.csv
+[2026-03-16T10:24:40.846+0000] {taskinstance.py:349} INFO - ::group::Post task execution logs
+[2026-03-16T10:24:40.862+0000] {taskinstance.py:361} INFO - Marking task as SUCCESS. dag_id=dag_get_data_from_yf, task_id=combine_csv, run_id=scheduled__2026-03-06T00:00:00+00:00, execution_date=20260306T000000, start_date=20260316T102437, end_date=20260316T102440
+[2026-03-16T10:24:41.106+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2026-03-16T10:24:41.106+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2026-03-16T10:24:41.107+0000] {logging_mixin.py:190} INFO - Dag name:dag_get_data_from_yf queued_at:2026-03-16 10:15:48.606307+00:00
+[2026-03-16T10:24:41.107+0000] {logging_mixin.py:190} INFO - Task hostname:b3714f9398e4 operator:_PythonDecoratedOperator
+[2026-03-16T10:24:41.261+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-03-16T10:24:41.448+0000] {taskinstance.py:3924} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-03-16T10:24:41.462+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2026-03-16T14:17:31.428+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-03-16T14:17:31.541+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_get_data_from_yf.combine_csv scheduled__2026-03-06T00:00:00+00:00 [queued]>
+[2026-03-16T14:17:31.580+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_get_data_from_yf.combine_csv scheduled__2026-03-06T00:00:00+00:00 [queued]>
+[2026-03-16T14:17:31.581+0000] {taskinstance.py:2884} INFO - Starting attempt 1 of 1
+[2026-03-16T14:17:31.759+0000] {taskinstance.py:2907} INFO - Executing <Task(_PythonDecoratedOperator): combine_csv> on 2026-03-06 00:00:00+00:00
+[2026-03-16T14:17:31.798+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=1076) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2026-03-16T14:17:31.801+0000] {standard_task_runner.py:72} INFO - Started process 1222 to run task
+[2026-03-16T14:17:31.805+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'dag_get_data_from_yf', 'combine_csv', 'scheduled__2026-03-06T00:00:00+00:00', '--job-id', '1117', '--raw', '--subdir', 'DAGS_FOLDER/get_finance_yf_csv.py', '--cfg-path', '/tmp/tmpf_nbzgc2']
+[2026-03-16T14:17:31.806+0000] {standard_task_runner.py:105} INFO - Job 1117: Subtask combine_csv
+[2026-03-16T14:17:32.725+0000] {task_command.py:467} INFO - Running <TaskInstance: dag_get_data_from_yf.combine_csv scheduled__2026-03-06T00:00:00+00:00 [running]> on host 80c99acb76df
+[2026-03-16T14:17:33.222+0000] {taskinstance.py:3157} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag_get_data_from_yf' AIRFLOW_CTX_TASK_ID='combine_csv' AIRFLOW_CTX_EXECUTION_DATE='2026-03-06T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-03-06T00:00:00+00:00'
+[2026-03-16T14:17:33.226+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2026-03-16T14:17:33.226+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2026-03-16T14:17:33.227+0000] {logging_mixin.py:190} INFO - Current task name:combine_csv state:running start_date:2026-03-16 14:17:31.543207+00:00
+[2026-03-16T14:17:33.233+0000] {logging_mixin.py:190} INFO - Dag name:dag_get_data_from_yf and current dag run status:running
+[2026-03-16T14:17:33.234+0000] {taskinstance.py:740} INFO - ::endgroup::
+[2026-03-16T14:17:33.634+0000] {logging_mixin.py:190} INFO - Ini kolom combined_df:  Index(['Date', 'Ticker', 'Close', 'High', 'Low', 'Open',
+       'Inserted_at_timestamp'],
+      dtype='object')
+[2026-03-16T14:17:33.670+0000] {logging_mixin.py:190} INFO - Ini csv_string_all:  None
+[2026-03-16T14:17:33.671+0000] {python.py:240} INFO - Done. Returned value was: /opt/***/scripts/saham_indonesia_all.csv
+[2026-03-16T14:17:33.824+0000] {taskinstance.py:349} INFO - ::group::Post task execution logs
+[2026-03-16T14:17:33.828+0000] {taskinstance.py:361} INFO - Marking task as SUCCESS. dag_id=dag_get_data_from_yf, task_id=combine_csv, run_id=scheduled__2026-03-06T00:00:00+00:00, execution_date=20260306T000000, start_date=20260316T141731, end_date=20260316T141733
+[2026-03-16T14:17:34.014+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2026-03-16T14:17:34.014+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2026-03-16T14:17:34.015+0000] {logging_mixin.py:190} INFO - Dag name:dag_get_data_from_yf queued_at:2026-03-16 10:57:52.352749+00:00
+[2026-03-16T14:17:34.015+0000] {logging_mixin.py:190} INFO - Task hostname:80c99acb76df operator:_PythonDecoratedOperator
+[2026-03-16T14:17:34.109+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-03-16T14:17:34.252+0000] {taskinstance.py:3924} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-03-16T14:17:34.266+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

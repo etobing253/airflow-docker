@@ -1,0 +1,589 @@
+[2026-03-16T15:33:56.363+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-03-16T15:33:57.141+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_get_data_from_yf.combine_csv scheduled__2026-03-11T17:00:00+00:00 [queued]>
+[2026-03-16T15:33:57.713+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_get_data_from_yf.combine_csv scheduled__2026-03-11T17:00:00+00:00 [queued]>
+[2026-03-16T15:33:57.729+0000] {taskinstance.py:2884} INFO - Starting attempt 1 of 1
+[2026-03-16T15:33:58.255+0000] {taskinstance.py:2907} INFO - Executing <Task(_PythonDecoratedOperator): combine_csv> on 2026-03-11 17:00:00+00:00
+[2026-03-16T15:33:58.527+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'dag_get_data_from_yf', 'combine_csv', 'scheduled__2026-03-11T17:00:00+00:00', '--job-id', '1287', '--raw', '--subdir', 'DAGS_FOLDER/get_finance_yf_csv.py', '--cfg-path', '/tmp/tmpk9hcs5wn']
+[2026-03-16T15:33:58.534+0000] {standard_task_runner.py:105} INFO - Job 1287: Subtask combine_csv
+[2026-03-16T15:33:58.541+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=1821) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2026-03-16T15:33:58.600+0000] {standard_task_runner.py:72} INFO - Started process 1910 to run task
+[2026-03-16T15:33:59.071+0000] {task_command.py:467} INFO - Running <TaskInstance: dag_get_data_from_yf.combine_csv scheduled__2026-03-11T17:00:00+00:00 [running]> on host 82763a516181
+[2026-03-16T15:33:59.731+0000] {taskinstance.py:3157} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag_get_data_from_yf' AIRFLOW_CTX_TASK_ID='combine_csv' AIRFLOW_CTX_EXECUTION_DATE='2026-03-11T17:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-03-11T17:00:00+00:00'
+[2026-03-16T15:33:59.744+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2026-03-16T15:33:59.747+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2026-03-16T15:33:59.748+0000] {logging_mixin.py:190} INFO - Current task name:combine_csv state:running start_date:2026-03-16 15:33:57.142742+00:00
+[2026-03-16T15:33:59.753+0000] {logging_mixin.py:190} INFO - Dag name:dag_get_data_from_yf and current dag run status:running
+[2026-03-16T15:33:59.754+0000] {taskinstance.py:740} INFO - ::endgroup::
+[2026-03-16T15:33:59.895+0000] {logging_mixin.py:190} INFO - Ini kolom combined_df:  Index(['Date', 'Ticker', 'Close', 'High', 'Low', 'Open',
+       'Inserted_at_timestamp'],
+      dtype='object')
+[2026-03-16T15:33:59.910+0000] {logging_mixin.py:190} INFO - Ini csv_string_all:  None
+[2026-03-16T15:33:59.912+0000] {python.py:240} INFO - Done. Returned value was: /opt/***/scripts/saham_indonesia_all.csv
+[2026-03-16T15:34:00.070+0000] {taskinstance.py:349} INFO - ::group::Post task execution logs
+[2026-03-16T15:34:00.072+0000] {taskinstance.py:361} INFO - Marking task as SUCCESS. dag_id=dag_get_data_from_yf, task_id=combine_csv, run_id=scheduled__2026-03-11T17:00:00+00:00, execution_date=20260311T170000, start_date=20260316T153357, end_date=20260316T153400
+[2026-03-16T15:34:00.344+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2026-03-16T15:34:00.344+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2026-03-16T15:34:00.345+0000] {logging_mixin.py:190} INFO - Dag name:dag_get_data_from_yf queued_at:2026-03-16 15:30:01.325379+00:00
+[2026-03-16T15:34:00.346+0000] {logging_mixin.py:190} INFO - Task hostname:82763a516181 operator:_PythonDecoratedOperator
+[2026-03-16T15:34:00.519+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-03-16T15:34:00.596+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2026-03-16T16:03:36.197+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-03-16T16:03:36.438+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_get_data_from_yf.combine_csv scheduled__2026-03-11T17:00:00+00:00 [queued]>
+[2026-03-16T16:03:36.491+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_get_data_from_yf.combine_csv scheduled__2026-03-11T17:00:00+00:00 [queued]>
+[2026-03-16T16:03:36.493+0000] {taskinstance.py:2884} INFO - Starting attempt 1 of 1
+[2026-03-16T16:03:36.551+0000] {taskinstance.py:2907} INFO - Executing <Task(_PythonDecoratedOperator): combine_csv> on 2026-03-11 17:00:00+00:00
+[2026-03-16T16:03:36.591+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=725) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2026-03-16T16:03:36.595+0000] {standard_task_runner.py:72} INFO - Started process 777 to run task
+[2026-03-16T16:03:36.607+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'dag_get_data_from_yf', 'combine_csv', 'scheduled__2026-03-11T17:00:00+00:00', '--job-id', '1356', '--raw', '--subdir', 'DAGS_FOLDER/get_finance_yf_csv.py', '--cfg-path', '/tmp/tmpopvxg9or']
+[2026-03-16T16:03:36.609+0000] {standard_task_runner.py:105} INFO - Job 1356: Subtask combine_csv
+[2026-03-16T16:03:36.904+0000] {task_command.py:467} INFO - Running <TaskInstance: dag_get_data_from_yf.combine_csv scheduled__2026-03-11T17:00:00+00:00 [running]> on host 957a712a5251
+[2026-03-16T16:03:37.270+0000] {taskinstance.py:3157} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag_get_data_from_yf' AIRFLOW_CTX_TASK_ID='combine_csv' AIRFLOW_CTX_EXECUTION_DATE='2026-03-11T17:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-03-11T17:00:00+00:00'
+[2026-03-16T16:03:37.285+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2026-03-16T16:03:37.288+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2026-03-16T16:03:37.289+0000] {logging_mixin.py:190} INFO - Current task name:combine_csv state:running start_date:2026-03-16 16:03:36.439454+00:00
+[2026-03-16T16:03:37.289+0000] {logging_mixin.py:190} INFO - Dag name:dag_get_data_from_yf and current dag run status:running
+[2026-03-16T16:03:37.290+0000] {taskinstance.py:740} INFO - ::endgroup::
+[2026-03-16T16:03:37.416+0000] {logging_mixin.py:190} INFO - Ini kolom combined_df:  Index(['Date', 'Ticker', 'Close', 'High', 'Low', 'Open',
+       'Inserted_at_timestamp'],
+      dtype='object')
+[2026-03-16T16:03:37.422+0000] {logging_mixin.py:190} INFO - Ini csv_string_all:  None
+[2026-03-16T16:03:37.426+0000] {python.py:240} INFO - Done. Returned value was: /opt/***/scripts/saham_indonesia_all.csv
+[2026-03-16T16:03:37.547+0000] {taskinstance.py:349} INFO - ::group::Post task execution logs
+[2026-03-16T16:03:37.548+0000] {taskinstance.py:361} INFO - Marking task as SUCCESS. dag_id=dag_get_data_from_yf, task_id=combine_csv, run_id=scheduled__2026-03-11T17:00:00+00:00, execution_date=20260311T170000, start_date=20260316T160336, end_date=20260316T160337
+[2026-03-16T16:03:37.649+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2026-03-16T16:03:37.649+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2026-03-16T16:03:37.651+0000] {logging_mixin.py:190} INFO - Dag name:dag_get_data_from_yf queued_at:2026-03-16 15:59:47.173766+00:00
+[2026-03-16T16:03:37.651+0000] {logging_mixin.py:190} INFO - Task hostname:957a712a5251 operator:_PythonDecoratedOperator
+[2026-03-16T16:03:37.676+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-03-16T16:03:37.747+0000] {taskinstance.py:3924} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-03-16T16:03:37.752+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2026-03-16T17:29:07.470+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-03-16T17:29:07.834+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_get_data_from_yf.combine_csv scheduled__2026-03-11T17:00:00+00:00 [queued]>
+[2026-03-16T17:29:07.975+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_get_data_from_yf.combine_csv scheduled__2026-03-11T17:00:00+00:00 [queued]>
+[2026-03-16T17:29:07.975+0000] {taskinstance.py:2884} INFO - Starting attempt 1 of 1
+[2026-03-16T17:29:08.524+0000] {taskinstance.py:2907} INFO - Executing <Task(_PythonDecoratedOperator): combine_csv> on 2026-03-11 17:00:00+00:00
+[2026-03-16T17:29:08.569+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=433) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2026-03-16T17:29:08.571+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'dag_get_data_from_yf', 'combine_csv', 'scheduled__2026-03-11T17:00:00+00:00', '--job-id', '1466', '--raw', '--subdir', 'DAGS_FOLDER/get_finance_yf_csv.py', '--cfg-path', '/tmp/tmpdq5jfl1v']
+[2026-03-16T17:29:08.590+0000] {standard_task_runner.py:72} INFO - Started process 467 to run task
+[2026-03-16T17:29:08.598+0000] {standard_task_runner.py:105} INFO - Job 1466: Subtask combine_csv
+[2026-03-16T17:29:09.017+0000] {task_command.py:467} INFO - Running <TaskInstance: dag_get_data_from_yf.combine_csv scheduled__2026-03-11T17:00:00+00:00 [running]> on host 27461aedc806
+[2026-03-16T17:29:09.941+0000] {taskinstance.py:3157} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag_get_data_from_yf' AIRFLOW_CTX_TASK_ID='combine_csv' AIRFLOW_CTX_EXECUTION_DATE='2026-03-11T17:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-03-11T17:00:00+00:00'
+[2026-03-16T17:29:09.948+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2026-03-16T17:29:09.949+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2026-03-16T17:29:09.949+0000] {logging_mixin.py:190} INFO - Current task name:combine_csv state:running start_date:2026-03-16 17:29:07.835448+00:00
+[2026-03-16T17:29:09.950+0000] {logging_mixin.py:190} INFO - Dag name:dag_get_data_from_yf and current dag run status:running
+[2026-03-16T17:29:09.951+0000] {taskinstance.py:740} INFO - ::endgroup::
+[2026-03-16T17:29:10.522+0000] {taskinstance.py:3336} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 776, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 742, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 425, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/decorators/base.py", line 266, in execute
+    return_value = super().execute(context)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 425, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 256, in execute_callable
+    return runner.run(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/get_finance_yf_csv.py", line 166, in combine_csv
+    df_open = pd.read_csv(path_open)
+              ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 948, in read_csv
+    return _read(filepath_or_buffer, kwds)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 611, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 1448, in __init__
+    self._engine = self._make_engine(f, self.engine)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 1705, in _make_engine
+    self.handles = get_handle(
+                   ^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/io/common.py", line 718, in get_handle
+    ioargs = _get_filepath_or_buffer(
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/io/common.py", line 460, in _get_filepath_or_buffer
+    raise ValueError(msg)
+ValueError: Invalid file path or buffer object type: <class 'NoneType'>
+[2026-03-16T17:29:10.659+0000] {logging_mixin.py:190} INFO - Task instance in failure state
+[2026-03-16T17:29:10.671+0000] {logging_mixin.py:190} INFO - Task start:2026-03-16 17:29:07.835448+00:00 end:2026-03-16 17:29:10.658659+00:00 duration:2.823211
+[2026-03-16T17:29:10.672+0000] {logging_mixin.py:190} INFO - Task:<Task(_PythonDecoratedOperator): combine_csv> dag:<DAG: dag_get_data_from_yf> dagrun:<DagRun dag_get_data_from_yf @ 2026-03-11 17:00:00+00:00: scheduled__2026-03-11T17:00:00+00:00, state:running, queued_at: 2026-03-16 17:24:23.293925+00:00. externally triggered: False>
+[2026-03-16T17:29:10.673+0000] {logging_mixin.py:190} INFO - Failure caused by Invalid file path or buffer object type: <class 'NoneType'>
+[2026-03-16T17:29:10.687+0000] {taskinstance.py:1242} INFO - Marking task as FAILED. dag_id=dag_get_data_from_yf, task_id=combine_csv, run_id=scheduled__2026-03-11T17:00:00+00:00, execution_date=20260311T170000, start_date=20260316T172907, end_date=20260316T172910
+[2026-03-16T17:29:11.057+0000] {taskinstance.py:349} INFO - ::group::Post task execution logs
+[2026-03-16T17:29:11.061+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 1466 for task combine_csv (Invalid file path or buffer object type: <class 'NoneType'>; 467)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/cli.py", line 116, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3029, in _run_raw_task
+    return _run_raw_task(
+           ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 282, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3184, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3208, in _execute_task
+    return _execute_task(self, context, task_orig)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 776, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 742, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 425, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/decorators/base.py", line 266, in execute
+    return_value = super().execute(context)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 425, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 256, in execute_callable
+    return runner.run(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/get_finance_yf_csv.py", line 166, in combine_csv
+    df_open = pd.read_csv(path_open)
+              ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 948, in read_csv
+    return _read(filepath_or_buffer, kwds)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 611, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 1448, in __init__
+    self._engine = self._make_engine(f, self.engine)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 1705, in _make_engine
+    self.handles = get_handle(
+                   ^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/io/common.py", line 718, in get_handle
+    ioargs = _get_filepath_or_buffer(
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/pandas/io/common.py", line 460, in _get_filepath_or_buffer
+    raise ValueError(msg)
+ValueError: Invalid file path or buffer object type: <class 'NoneType'>
+[2026-03-16T17:29:11.103+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 1
+[2026-03-16T17:29:11.322+0000] {taskinstance.py:3924} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-03-16T17:29:11.349+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2026-03-16T21:49:50.941+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-03-16T21:49:51.148+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_get_data_from_yf.combine_csv scheduled__2026-03-11T17:00:00+00:00 [queued]>
+[2026-03-16T21:49:51.214+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_get_data_from_yf.combine_csv scheduled__2026-03-11T17:00:00+00:00 [queued]>
+[2026-03-16T21:49:51.216+0000] {taskinstance.py:2884} INFO - Starting attempt 1 of 1
+[2026-03-16T21:49:51.392+0000] {taskinstance.py:2907} INFO - Executing <Task(_PythonDecoratedOperator): combine_csv> on 2026-03-11 17:00:00+00:00
+[2026-03-16T21:49:51.430+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=1290) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2026-03-16T21:49:51.441+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'dag_get_data_from_yf', 'combine_csv', 'scheduled__2026-03-11T17:00:00+00:00', '--job-id', '1530', '--raw', '--subdir', 'DAGS_FOLDER/get_finance_yf_csv.py', '--cfg-path', '/tmp/tmp8sg21hto']
+[2026-03-16T21:49:51.448+0000] {standard_task_runner.py:105} INFO - Job 1530: Subtask combine_csv
+[2026-03-16T21:49:51.448+0000] {standard_task_runner.py:72} INFO - Started process 1328 to run task
+[2026-03-16T21:49:51.721+0000] {task_command.py:467} INFO - Running <TaskInstance: dag_get_data_from_yf.combine_csv scheduled__2026-03-11T17:00:00+00:00 [running]> on host 27461aedc806
+[2026-03-16T21:49:52.150+0000] {taskinstance.py:3157} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag_get_data_from_yf' AIRFLOW_CTX_TASK_ID='combine_csv' AIRFLOW_CTX_EXECUTION_DATE='2026-03-11T17:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-03-11T17:00:00+00:00'
+[2026-03-16T21:49:52.155+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2026-03-16T21:49:52.156+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2026-03-16T21:49:52.157+0000] {logging_mixin.py:190} INFO - Current task name:combine_csv state:running start_date:2026-03-16 21:49:51.149534+00:00
+[2026-03-16T21:49:52.158+0000] {logging_mixin.py:190} INFO - Dag name:dag_get_data_from_yf and current dag run status:running
+[2026-03-16T21:49:52.159+0000] {taskinstance.py:740} INFO - ::endgroup::
+[2026-03-16T21:49:52.386+0000] {taskinstance.py:3336} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 776, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 742, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 425, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/decorators/base.py", line 266, in execute
+    return_value = super().execute(context)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 425, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 256, in execute_callable
+    return runner.run(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/get_finance_yf_csv.py", line 185, in combine_csv
+    raise ValueError(f"Task get_csv_{key} tidak mengirimkan path (None). Cek logs task tersebut!")
+ValueError: Task get_csv_open tidak mengirimkan path (None). Cek logs task tersebut!
+[2026-03-16T21:49:52.444+0000] {logging_mixin.py:190} INFO - Task instance in failure state
+[2026-03-16T21:49:52.445+0000] {logging_mixin.py:190} INFO - Task start:2026-03-16 21:49:51.149534+00:00 end:2026-03-16 21:49:52.442642+00:00 duration:1.293108
+[2026-03-16T21:49:52.445+0000] {logging_mixin.py:190} INFO - Task:<Task(_PythonDecoratedOperator): combine_csv> dag:<DAG: dag_get_data_from_yf> dagrun:<DagRun dag_get_data_from_yf @ 2026-03-11 17:00:00+00:00: scheduled__2026-03-11T17:00:00+00:00, state:running, queued_at: 2026-03-16 21:43:49.134938+00:00. externally triggered: False>
+[2026-03-16T21:49:52.446+0000] {logging_mixin.py:190} INFO - Failure caused by Task get_csv_open tidak mengirimkan path (None). Cek logs task tersebut!
+[2026-03-16T21:49:52.447+0000] {taskinstance.py:1242} INFO - Marking task as FAILED. dag_id=dag_get_data_from_yf, task_id=combine_csv, run_id=scheduled__2026-03-11T17:00:00+00:00, execution_date=20260311T170000, start_date=20260316T214951, end_date=20260316T214952
+[2026-03-16T21:49:52.558+0000] {taskinstance.py:349} INFO - ::group::Post task execution logs
+[2026-03-16T21:49:52.565+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 1530 for task combine_csv (Task get_csv_open tidak mengirimkan path (None). Cek logs task tersebut!; 1328)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/cli.py", line 116, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3029, in _run_raw_task
+    return _run_raw_task(
+           ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 282, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3184, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3208, in _execute_task
+    return _execute_task(self, context, task_orig)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 776, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 742, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 425, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/decorators/base.py", line 266, in execute
+    return_value = super().execute(context)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 425, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 256, in execute_callable
+    return runner.run(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/get_finance_yf_csv.py", line 185, in combine_csv
+    raise ValueError(f"Task get_csv_{key} tidak mengirimkan path (None). Cek logs task tersebut!")
+ValueError: Task get_csv_open tidak mengirimkan path (None). Cek logs task tersebut!
+[2026-03-16T21:49:52.652+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 1
+[2026-03-16T21:49:52.702+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2026-03-16T22:11:47.449+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-03-16T22:11:47.636+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_get_data_from_yf.combine_csv scheduled__2026-03-11T17:00:00+00:00 [queued]>
+[2026-03-16T22:11:47.683+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_get_data_from_yf.combine_csv scheduled__2026-03-11T17:00:00+00:00 [queued]>
+[2026-03-16T22:11:47.684+0000] {taskinstance.py:2884} INFO - Starting attempt 1 of 1
+[2026-03-16T22:11:47.757+0000] {taskinstance.py:2907} INFO - Executing <Task(_PythonDecoratedOperator): combine_csv> on 2026-03-11 17:00:00+00:00
+[2026-03-16T22:11:47.798+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=1820) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2026-03-16T22:11:47.802+0000] {standard_task_runner.py:72} INFO - Started process 1874 to run task
+[2026-03-16T22:11:47.815+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'dag_get_data_from_yf', 'combine_csv', 'scheduled__2026-03-11T17:00:00+00:00', '--job-id', '1590', '--raw', '--subdir', 'DAGS_FOLDER/get_finance_yf_csv.py', '--cfg-path', '/tmp/tmp5vj0928q']
+[2026-03-16T22:11:47.834+0000] {standard_task_runner.py:105} INFO - Job 1590: Subtask combine_csv
+[2026-03-16T22:11:48.215+0000] {task_command.py:467} INFO - Running <TaskInstance: dag_get_data_from_yf.combine_csv scheduled__2026-03-11T17:00:00+00:00 [running]> on host 27461aedc806
+[2026-03-16T22:11:49.178+0000] {taskinstance.py:3157} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag_get_data_from_yf' AIRFLOW_CTX_TASK_ID='combine_csv' AIRFLOW_CTX_EXECUTION_DATE='2026-03-11T17:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-03-11T17:00:00+00:00'
+[2026-03-16T22:11:49.188+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2026-03-16T22:11:49.188+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2026-03-16T22:11:49.189+0000] {logging_mixin.py:190} INFO - Current task name:combine_csv state:running start_date:2026-03-16 22:11:47.637299+00:00
+[2026-03-16T22:11:49.201+0000] {logging_mixin.py:190} INFO - Dag name:dag_get_data_from_yf and current dag run status:running
+[2026-03-16T22:11:49.202+0000] {taskinstance.py:740} INFO - ::endgroup::
+[2026-03-16T22:11:49.521+0000] {taskinstance.py:3336} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 776, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 742, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 425, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/decorators/base.py", line 266, in execute
+    return_value = super().execute(context)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 425, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 256, in execute_callable
+    return runner.run(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/get_finance_yf_csv.py", line 181, in combine_csv
+    raise ValueError(f"Task get_csv_{key} tidak mengirimkan path (None). Cek logs task tersebut!")
+ValueError: Task get_csv_open tidak mengirimkan path (None). Cek logs task tersebut!
+[2026-03-16T22:11:49.601+0000] {logging_mixin.py:190} INFO - Task instance in failure state
+[2026-03-16T22:11:49.602+0000] {logging_mixin.py:190} INFO - Task start:2026-03-16 22:11:47.637299+00:00 end:2026-03-16 22:11:49.600291+00:00 duration:1.962992
+[2026-03-16T22:11:49.602+0000] {logging_mixin.py:190} INFO - Task:<Task(_PythonDecoratedOperator): combine_csv> dag:<DAG: dag_get_data_from_yf> dagrun:<DagRun dag_get_data_from_yf @ 2026-03-11 17:00:00+00:00: scheduled__2026-03-11T17:00:00+00:00, state:running, queued_at: 2026-03-16 22:05:13.851145+00:00. externally triggered: False>
+[2026-03-16T22:11:49.603+0000] {logging_mixin.py:190} INFO - Failure caused by Task get_csv_open tidak mengirimkan path (None). Cek logs task tersebut!
+[2026-03-16T22:11:49.603+0000] {taskinstance.py:1242} INFO - Marking task as FAILED. dag_id=dag_get_data_from_yf, task_id=combine_csv, run_id=scheduled__2026-03-11T17:00:00+00:00, execution_date=20260311T170000, start_date=20260316T221147, end_date=20260316T221149
+[2026-03-16T22:11:49.815+0000] {taskinstance.py:349} INFO - ::group::Post task execution logs
+[2026-03-16T22:11:49.816+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 1590 for task combine_csv (Task get_csv_open tidak mengirimkan path (None). Cek logs task tersebut!; 1874)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/cli.py", line 116, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3029, in _run_raw_task
+    return _run_raw_task(
+           ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 282, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3184, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3208, in _execute_task
+    return _execute_task(self, context, task_orig)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 776, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 742, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 425, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/decorators/base.py", line 266, in execute
+    return_value = super().execute(context)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 425, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 256, in execute_callable
+    return runner.run(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/get_finance_yf_csv.py", line 181, in combine_csv
+    raise ValueError(f"Task get_csv_{key} tidak mengirimkan path (None). Cek logs task tersebut!")
+ValueError: Task get_csv_open tidak mengirimkan path (None). Cek logs task tersebut!
+[2026-03-16T22:11:49.958+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 1
+[2026-03-16T22:11:50.033+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2026-03-16T22:40:20.989+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-03-16T22:40:21.070+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_get_data_from_yf.combine_csv scheduled__2026-03-11T17:00:00+00:00 [queued]>
+[2026-03-16T22:40:21.101+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_get_data_from_yf.combine_csv scheduled__2026-03-11T17:00:00+00:00 [queued]>
+[2026-03-16T22:40:21.102+0000] {taskinstance.py:2884} INFO - Starting attempt 1 of 1
+[2026-03-16T22:40:21.137+0000] {taskinstance.py:2907} INFO - Executing <Task(_PythonDecoratedOperator): combine_csv> on 2026-03-11 17:00:00+00:00
+[2026-03-16T22:40:21.157+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=289) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2026-03-16T22:40:21.162+0000] {standard_task_runner.py:72} INFO - Started process 326 to run task
+[2026-03-16T22:40:21.166+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'dag_get_data_from_yf', 'combine_csv', 'scheduled__2026-03-11T17:00:00+00:00', '--job-id', '1680', '--raw', '--subdir', 'DAGS_FOLDER/get_finance_yf_csv.py', '--cfg-path', '/tmp/tmpjqu66cyq']
+[2026-03-16T22:40:21.168+0000] {standard_task_runner.py:105} INFO - Job 1680: Subtask combine_csv
+[2026-03-16T22:40:21.329+0000] {task_command.py:467} INFO - Running <TaskInstance: dag_get_data_from_yf.combine_csv scheduled__2026-03-11T17:00:00+00:00 [running]> on host 245fc8f76c1e
+[2026-03-16T22:40:21.551+0000] {taskinstance.py:3157} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag_get_data_from_yf' AIRFLOW_CTX_TASK_ID='combine_csv' AIRFLOW_CTX_EXECUTION_DATE='2026-03-11T17:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-03-11T17:00:00+00:00'
+[2026-03-16T22:40:21.554+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2026-03-16T22:40:21.554+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2026-03-16T22:40:21.555+0000] {logging_mixin.py:190} INFO - Current task name:combine_csv state:running start_date:2026-03-16 22:40:21.070718+00:00
+[2026-03-16T22:40:21.555+0000] {logging_mixin.py:190} INFO - Dag name:dag_get_data_from_yf and current dag run status:running
+[2026-03-16T22:40:21.556+0000] {taskinstance.py:740} INFO - ::endgroup::
+[2026-03-16T22:40:21.656+0000] {taskinstance.py:3336} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 776, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 742, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 425, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/decorators/base.py", line 266, in execute
+    return_value = super().execute(context)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 425, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 256, in execute_callable
+    return runner.run(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/get_finance_yf_csv.py", line 181, in combine_csv
+    raise ValueError(f"Task get_csv_{key} tidak mengirimkan path (None). Cek logs task tersebut!")
+ValueError: Task get_csv_open tidak mengirimkan path (None). Cek logs task tersebut!
+[2026-03-16T22:40:21.686+0000] {logging_mixin.py:190} INFO - Task instance in failure state
+[2026-03-16T22:40:21.687+0000] {logging_mixin.py:190} INFO - Task start:2026-03-16 22:40:21.070718+00:00 end:2026-03-16 22:40:21.685059+00:00 duration:0.614341
+[2026-03-16T22:40:21.687+0000] {logging_mixin.py:190} INFO - Task:<Task(_PythonDecoratedOperator): combine_csv> dag:<DAG: dag_get_data_from_yf> dagrun:<DagRun dag_get_data_from_yf @ 2026-03-11 17:00:00+00:00: scheduled__2026-03-11T17:00:00+00:00, state:running, queued_at: 2026-03-16 22:37:40.938386+00:00. externally triggered: False>
+[2026-03-16T22:40:21.688+0000] {logging_mixin.py:190} INFO - Failure caused by Task get_csv_open tidak mengirimkan path (None). Cek logs task tersebut!
+[2026-03-16T22:40:21.688+0000] {taskinstance.py:1242} INFO - Marking task as FAILED. dag_id=dag_get_data_from_yf, task_id=combine_csv, run_id=scheduled__2026-03-11T17:00:00+00:00, execution_date=20260311T170000, start_date=20260316T224021, end_date=20260316T224021
+[2026-03-16T22:40:21.768+0000] {taskinstance.py:349} INFO - ::group::Post task execution logs
+[2026-03-16T22:40:21.769+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 1680 for task combine_csv (Task get_csv_open tidak mengirimkan path (None). Cek logs task tersebut!; 326)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/cli.py", line 116, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3029, in _run_raw_task
+    return _run_raw_task(
+           ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 282, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3184, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3208, in _execute_task
+    return _execute_task(self, context, task_orig)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 776, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 742, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 425, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/decorators/base.py", line 266, in execute
+    return_value = super().execute(context)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 425, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 256, in execute_callable
+    return runner.run(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/get_finance_yf_csv.py", line 181, in combine_csv
+    raise ValueError(f"Task get_csv_{key} tidak mengirimkan path (None). Cek logs task tersebut!")
+ValueError: Task get_csv_open tidak mengirimkan path (None). Cek logs task tersebut!
+[2026-03-16T22:40:21.798+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 1
+[2026-03-16T22:40:21.882+0000] {taskinstance.py:3924} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-03-16T22:40:21.891+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

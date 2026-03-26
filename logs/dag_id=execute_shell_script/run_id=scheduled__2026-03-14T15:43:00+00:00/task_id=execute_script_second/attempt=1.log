@@ -1,0 +1,32 @@
+[2026-03-14T15:44:10.326+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-03-14T15:44:10.392+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: execute_shell_script.execute_script_second scheduled__2026-03-14T15:43:00+00:00 [queued]>
+[2026-03-14T15:44:10.412+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: execute_shell_script.execute_script_second scheduled__2026-03-14T15:43:00+00:00 [queued]>
+[2026-03-14T15:44:10.413+0000] {taskinstance.py:2884} INFO - Starting attempt 1 of 1
+[2026-03-14T15:44:10.448+0000] {taskinstance.py:2907} INFO - Executing <Task(BashOperator): execute_script_second> on 2026-03-14 15:43:00+00:00
+[2026-03-14T15:44:10.470+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=2863) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2026-03-14T15:44:10.474+0000] {standard_task_runner.py:72} INFO - Started process 2865 to run task
+[2026-03-14T15:44:10.476+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'execute_shell_script', 'execute_script_second', 'scheduled__2026-03-14T15:43:00+00:00', '--job-id', '14189', '--raw', '--subdir', 'DAGS_FOLDER/executeShellScript.py', '--cfg-path', '/tmp/tmpspapkxn8']
+[2026-03-14T15:44:10.479+0000] {standard_task_runner.py:105} INFO - Job 14189: Subtask execute_script_second
+[2026-03-14T15:44:10.617+0000] {task_command.py:467} INFO - Running <TaskInstance: execute_shell_script.execute_script_second scheduled__2026-03-14T15:43:00+00:00 [running]> on host 089a6defb738
+[2026-03-14T15:44:10.839+0000] {taskinstance.py:3157} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='execute_shell_script' AIRFLOW_CTX_TASK_ID='execute_script_second' AIRFLOW_CTX_EXECUTION_DATE='2026-03-14T15:43:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-03-14T15:43:00+00:00'
+[2026-03-14T15:44:10.841+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2026-03-14T15:44:10.842+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2026-03-14T15:44:10.842+0000] {logging_mixin.py:190} INFO - Current task name:execute_script_second state:running start_date:2026-03-14 15:44:10.393166+00:00
+[2026-03-14T15:44:10.843+0000] {logging_mixin.py:190} INFO - Dag name:execute_shell_script and current dag run status:running
+[2026-03-14T15:44:10.843+0000] {taskinstance.py:740} INFO - ::endgroup::
+[2026-03-14T15:44:10.844+0000] {subprocess.py:78} INFO - Tmp dir root location: /tmp
+[2026-03-14T15:44:10.846+0000] {subprocess.py:88} INFO - Running command: ['/usr/bin/bash', '-c', 'sh /opt/***/scripts/SampleShellScript.sh /opt/***/scripts/task_output2.txt']
+[2026-03-14T15:44:10.867+0000] {subprocess.py:99} INFO - Output:
+[2026-03-14T15:44:10.872+0000] {subprocess.py:106} INFO - File '/opt/***/scripts/task_output2.txt' dibuat dengan sample text.
+[2026-03-14T15:44:10.873+0000] {subprocess.py:110} INFO - Command exited with return code 0
+[2026-03-14T15:44:10.931+0000] {taskinstance.py:349} INFO - ::group::Post task execution logs
+[2026-03-14T15:44:10.932+0000] {taskinstance.py:361} INFO - Marking task as SUCCESS. dag_id=execute_shell_script, task_id=execute_script_second, run_id=scheduled__2026-03-14T15:43:00+00:00, execution_date=20260314T154300, start_date=20260314T154410, end_date=20260314T154410
+[2026-03-14T15:44:10.974+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2026-03-14T15:44:10.975+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2026-03-14T15:44:10.975+0000] {logging_mixin.py:190} INFO - Dag name:execute_shell_script queued_at:2026-03-14 15:44:00.205161+00:00
+[2026-03-14T15:44:10.976+0000] {logging_mixin.py:190} INFO - Task hostname:089a6defb738 operator:BashOperator
+[2026-03-14T15:44:10.989+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-03-14T15:44:11.011+0000] {taskinstance.py:3924} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-03-14T15:44:11.014+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

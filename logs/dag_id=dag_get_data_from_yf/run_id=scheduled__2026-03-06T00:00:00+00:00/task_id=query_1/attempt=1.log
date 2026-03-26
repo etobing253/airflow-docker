@@ -1,0 +1,84 @@
+[2026-03-15T09:55:26.734+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-03-15T09:55:26.902+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_get_data_from_yf.query_1 scheduled__2026-03-06T00:00:00+00:00 [queued]>
+[2026-03-15T09:55:26.939+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_get_data_from_yf.query_1 scheduled__2026-03-06T00:00:00+00:00 [queued]>
+[2026-03-15T09:55:26.940+0000] {taskinstance.py:2884} INFO - Starting attempt 1 of 1
+[2026-03-15T09:55:27.045+0000] {taskinstance.py:2907} INFO - Executing <Task(_PythonDecoratedOperator): query_1> on 2026-03-06 00:00:00+00:00
+[2026-03-15T09:55:27.082+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=1189) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2026-03-15T09:55:27.091+0000] {standard_task_runner.py:72} INFO - Started process 1219 to run task
+[2026-03-15T09:55:27.094+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'dag_get_data_from_yf', 'query_1', 'scheduled__2026-03-06T00:00:00+00:00', '--job-id', '111', '--raw', '--subdir', 'DAGS_FOLDER/get_finance_yf_csv.py', '--cfg-path', '/tmp/tmpt3msx5c_']
+[2026-03-15T09:55:27.098+0000] {standard_task_runner.py:105} INFO - Job 111: Subtask query_1
+[2026-03-15T09:55:27.388+0000] {task_command.py:467} INFO - Running <TaskInstance: dag_get_data_from_yf.query_1 scheduled__2026-03-06T00:00:00+00:00 [running]> on host 8c556da65e50
+[2026-03-15T09:55:27.786+0000] {taskinstance.py:3157} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag_get_data_from_yf' AIRFLOW_CTX_TASK_ID='query_1' AIRFLOW_CTX_EXECUTION_DATE='2026-03-06T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-03-06T00:00:00+00:00'
+[2026-03-15T09:55:27.795+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2026-03-15T09:55:27.796+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2026-03-15T09:55:27.797+0000] {logging_mixin.py:190} INFO - Current task name:query_1 state:running start_date:2026-03-15 09:55:26.903439+00:00
+[2026-03-15T09:55:27.797+0000] {logging_mixin.py:190} INFO - Dag name:dag_get_data_from_yf and current dag run status:running
+[2026-03-15T09:55:27.798+0000] {taskinstance.py:740} INFO - ::endgroup::
+[2026-03-15T09:55:27.799+0000] {python.py:240} INFO - Done. Returned value was: None
+[2026-03-15T09:55:27.847+0000] {taskinstance.py:349} INFO - ::group::Post task execution logs
+[2026-03-15T09:55:27.848+0000] {taskinstance.py:361} INFO - Marking task as SUCCESS. dag_id=dag_get_data_from_yf, task_id=query_1, run_id=scheduled__2026-03-06T00:00:00+00:00, execution_date=20260306T000000, start_date=20260315T095526, end_date=20260315T095527
+[2026-03-15T09:55:27.965+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2026-03-15T09:55:27.966+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2026-03-15T09:55:27.966+0000] {logging_mixin.py:190} INFO - Dag name:dag_get_data_from_yf queued_at:2026-03-15 09:40:30.774753+00:00
+[2026-03-15T09:55:27.967+0000] {logging_mixin.py:190} INFO - Task hostname:8c556da65e50 operator:_PythonDecoratedOperator
+[2026-03-15T09:55:28.006+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-03-15T09:55:28.082+0000] {taskinstance.py:3924} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-03-15T09:55:28.103+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2026-03-15T11:40:36.271+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-03-15T11:40:36.376+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_get_data_from_yf.query_1 scheduled__2026-03-06T00:00:00+00:00 [queued]>
+[2026-03-15T11:40:36.404+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_get_data_from_yf.query_1 scheduled__2026-03-06T00:00:00+00:00 [queued]>
+[2026-03-15T11:40:36.406+0000] {taskinstance.py:2884} INFO - Starting attempt 1 of 1
+[2026-03-15T11:40:36.530+0000] {taskinstance.py:2907} INFO - Executing <Task(_PythonDecoratedOperator): query_1> on 2026-03-06 00:00:00+00:00
+[2026-03-15T11:40:36.647+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=1174) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2026-03-15T11:40:36.650+0000] {standard_task_runner.py:72} INFO - Started process 1211 to run task
+[2026-03-15T11:40:36.622+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'dag_get_data_from_yf', 'query_1', 'scheduled__2026-03-06T00:00:00+00:00', '--job-id', '88', '--raw', '--subdir', 'DAGS_FOLDER/get_finance_yf_csv.py', '--cfg-path', '/tmp/tmpxam55nzg']
+[2026-03-15T11:40:36.655+0000] {standard_task_runner.py:105} INFO - Job 88: Subtask query_1
+[2026-03-15T11:40:36.910+0000] {task_command.py:467} INFO - Running <TaskInstance: dag_get_data_from_yf.query_1 scheduled__2026-03-06T00:00:00+00:00 [running]> on host 0682dd67c20c
+[2026-03-15T11:40:37.194+0000] {taskinstance.py:3157} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag_get_data_from_yf' AIRFLOW_CTX_TASK_ID='query_1' AIRFLOW_CTX_EXECUTION_DATE='2026-03-06T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-03-06T00:00:00+00:00'
+[2026-03-15T11:40:37.197+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2026-03-15T11:40:37.198+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2026-03-15T11:40:37.199+0000] {logging_mixin.py:190} INFO - Current task name:query_1 state:running start_date:2026-03-15 11:40:36.377895+00:00
+[2026-03-15T11:40:37.199+0000] {logging_mixin.py:190} INFO - Dag name:dag_get_data_from_yf and current dag run status:running
+[2026-03-15T11:40:37.200+0000] {taskinstance.py:740} INFO - ::endgroup::
+[2026-03-15T11:40:37.202+0000] {python.py:240} INFO - Done. Returned value was: None
+[2026-03-15T11:40:37.280+0000] {taskinstance.py:349} INFO - ::group::Post task execution logs
+[2026-03-15T11:40:37.282+0000] {taskinstance.py:361} INFO - Marking task as SUCCESS. dag_id=dag_get_data_from_yf, task_id=query_1, run_id=scheduled__2026-03-06T00:00:00+00:00, execution_date=20260306T000000, start_date=20260315T114036, end_date=20260315T114037
+[2026-03-15T11:40:37.387+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2026-03-15T11:40:37.388+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2026-03-15T11:40:37.389+0000] {logging_mixin.py:190} INFO - Dag name:dag_get_data_from_yf queued_at:2026-03-15 11:31:36.047616+00:00
+[2026-03-15T11:40:37.389+0000] {logging_mixin.py:190} INFO - Task hostname:0682dd67c20c operator:_PythonDecoratedOperator
+[2026-03-15T11:40:37.457+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-03-15T11:40:37.578+0000] {taskinstance.py:3924} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-03-15T11:40:37.582+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2026-03-15T15:27:46.887+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-03-15T15:27:47.060+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_get_data_from_yf.query_1 scheduled__2026-03-06T00:00:00+00:00 [queued]>
+[2026-03-15T15:27:47.128+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_get_data_from_yf.query_1 scheduled__2026-03-06T00:00:00+00:00 [queued]>
+[2026-03-15T15:27:47.146+0000] {taskinstance.py:2884} INFO - Starting attempt 1 of 1
+[2026-03-15T15:27:47.223+0000] {taskinstance.py:2907} INFO - Executing <Task(_PythonDecoratedOperator): query_1> on 2026-03-06 00:00:00+00:00
+[2026-03-15T15:27:47.276+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=1282) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2026-03-15T15:27:47.281+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'dag_get_data_from_yf', 'query_1', 'scheduled__2026-03-06T00:00:00+00:00', '--job-id', '529', '--raw', '--subdir', 'DAGS_FOLDER/get_finance_yf_csv.py', '--cfg-path', '/tmp/tmpwx5cgnxt']
+[2026-03-15T15:27:47.284+0000] {standard_task_runner.py:105} INFO - Job 529: Subtask query_1
+[2026-03-15T15:27:47.308+0000] {standard_task_runner.py:72} INFO - Started process 1352 to run task
+[2026-03-15T15:27:47.686+0000] {task_command.py:467} INFO - Running <TaskInstance: dag_get_data_from_yf.query_1 scheduled__2026-03-06T00:00:00+00:00 [running]> on host c2f7721b6bb3
+[2026-03-15T15:27:48.379+0000] {taskinstance.py:3157} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag_get_data_from_yf' AIRFLOW_CTX_TASK_ID='query_1' AIRFLOW_CTX_EXECUTION_DATE='2026-03-06T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-03-06T00:00:00+00:00'
+[2026-03-15T15:27:48.392+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2026-03-15T15:27:48.405+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2026-03-15T15:27:48.406+0000] {logging_mixin.py:190} INFO - Current task name:query_1 state:running start_date:2026-03-15 15:27:47.061452+00:00
+[2026-03-15T15:27:48.407+0000] {logging_mixin.py:190} INFO - Dag name:dag_get_data_from_yf and current dag run status:running
+[2026-03-15T15:27:48.408+0000] {taskinstance.py:740} INFO - ::endgroup::
+[2026-03-15T15:27:48.410+0000] {python.py:240} INFO - Done. Returned value was: None
+[2026-03-15T15:27:48.456+0000] {taskinstance.py:349} INFO - ::group::Post task execution logs
+[2026-03-15T15:27:48.458+0000] {taskinstance.py:361} INFO - Marking task as SUCCESS. dag_id=dag_get_data_from_yf, task_id=query_1, run_id=scheduled__2026-03-06T00:00:00+00:00, execution_date=20260306T000000, start_date=20260315T152747, end_date=20260315T152748
+[2026-03-15T15:27:48.669+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2026-03-15T15:27:48.675+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2026-03-15T15:27:48.677+0000] {logging_mixin.py:190} INFO - Dag name:dag_get_data_from_yf queued_at:2026-03-15 15:18:38.354658+00:00
+[2026-03-15T15:27:48.678+0000] {logging_mixin.py:190} INFO - Task hostname:c2f7721b6bb3 operator:_PythonDecoratedOperator
+[2026-03-15T15:27:48.712+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-03-15T15:27:48.802+0000] {taskinstance.py:3924} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-03-15T15:27:48.814+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

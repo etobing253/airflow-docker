@@ -1,0 +1,29 @@
+[2026-03-17T07:43:48.621+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-03-17T07:43:48.738+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_get_data_from_yf.olhc_branching.get_csv_low manual__2026-03-17T07:42:39+00:00 [queued]>
+[2026-03-17T07:43:48.762+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_get_data_from_yf.olhc_branching.get_csv_low manual__2026-03-17T07:42:39+00:00 [queued]>
+[2026-03-17T07:43:48.763+0000] {taskinstance.py:2884} INFO - Starting attempt 2 of 2
+[2026-03-17T07:43:48.797+0000] {taskinstance.py:2907} INFO - Executing <Task(_PythonDecoratedOperator): olhc_branching.get_csv_low> on 2026-03-17 07:42:39+00:00
+[2026-03-17T07:43:48.824+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=957) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2026-03-17T07:43:48.828+0000] {standard_task_runner.py:72} INFO - Started process 964 to run task
+[2026-03-17T07:43:48.831+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'dag_get_data_from_yf', 'olhc_branching.get_csv_low', 'manual__2026-03-17T07:42:39+00:00', '--job-id', '2001', '--raw', '--subdir', 'DAGS_FOLDER/get_finance_yf_csv.py', '--cfg-path', '/tmp/tmpyt1gw3if']
+[2026-03-17T07:43:48.834+0000] {standard_task_runner.py:105} INFO - Job 2001: Subtask olhc_branching.get_csv_low
+[2026-03-17T07:43:49.053+0000] {task_command.py:467} INFO - Running <TaskInstance: dag_get_data_from_yf.olhc_branching.get_csv_low manual__2026-03-17T07:42:39+00:00 [running]> on host e9ef5a9cb8d3
+[2026-03-17T07:43:49.414+0000] {taskinstance.py:3157} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag_get_data_from_yf' AIRFLOW_CTX_TASK_ID='olhc_branching.get_csv_low' AIRFLOW_CTX_EXECUTION_DATE='2026-03-17T07:42:39+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-03-17T07:42:39+00:00'
+[2026-03-17T07:43:49.418+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2026-03-17T07:43:49.419+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2026-03-17T07:43:49.420+0000] {logging_mixin.py:190} INFO - Current task name:olhc_branching.get_csv_low state:running start_date:2026-03-17 07:43:48.738907+00:00
+[2026-03-17T07:43:49.420+0000] {logging_mixin.py:190} INFO - Dag name:dag_get_data_from_yf and current dag run status:running
+[2026-03-17T07:43:49.421+0000] {taskinstance.py:740} INFO - ::endgroup::
+[2026-03-17T07:43:49.448+0000] {logging_mixin.py:190} INFO - Data saved to /opt/***/scripts/saham_indonesia_low.csv
+[2026-03-17T07:43:49.449+0000] {python.py:240} INFO - Done. Returned value was: /opt/***/scripts/saham_indonesia_low.csv
+[2026-03-17T07:43:49.619+0000] {taskinstance.py:349} INFO - ::group::Post task execution logs
+[2026-03-17T07:43:49.626+0000] {taskinstance.py:361} INFO - Marking task as SUCCESS. dag_id=dag_get_data_from_yf, task_id=olhc_branching.get_csv_low, run_id=manual__2026-03-17T07:42:39+00:00, execution_date=20260317T074239, start_date=20260317T074348, end_date=20260317T074349
+[2026-03-17T07:43:49.807+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2026-03-17T07:43:49.808+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2026-03-17T07:43:49.808+0000] {logging_mixin.py:190} INFO - Dag name:dag_get_data_from_yf queued_at:2026-03-17 07:43:38.011623+00:00
+[2026-03-17T07:43:49.809+0000] {logging_mixin.py:190} INFO - Task hostname:e9ef5a9cb8d3 operator:_PythonDecoratedOperator
+[2026-03-17T07:43:49.857+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-03-17T07:43:49.975+0000] {taskinstance.py:3924} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-03-17T07:43:49.989+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

@@ -1,0 +1,60 @@
+[2026-03-17T07:42:56.995+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-03-17T07:42:57.058+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_get_data_from_yf.get_data_from_yf manual__2026-03-17T07:42:39+00:00 [queued]>
+[2026-03-17T07:42:57.082+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_get_data_from_yf.get_data_from_yf manual__2026-03-17T07:42:39+00:00 [queued]>
+[2026-03-17T07:42:57.083+0000] {taskinstance.py:2884} INFO - Starting attempt 1 of 1
+[2026-03-17T07:42:57.112+0000] {taskinstance.py:2907} INFO - Executing <Task(_PythonDecoratedOperator): get_data_from_yf> on 2026-03-17 07:42:39+00:00
+[2026-03-17T07:42:57.129+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=920) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2026-03-17T07:42:57.133+0000] {standard_task_runner.py:72} INFO - Started process 922 to run task
+[2026-03-17T07:42:57.136+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'dag_get_data_from_yf', 'get_data_from_yf', 'manual__2026-03-17T07:42:39+00:00', '--job-id', '1995', '--raw', '--subdir', 'DAGS_FOLDER/get_finance_yf_csv.py', '--cfg-path', '/tmp/tmpt6glk668']
+[2026-03-17T07:42:57.139+0000] {standard_task_runner.py:105} INFO - Job 1995: Subtask get_data_from_yf
+[2026-03-17T07:42:57.258+0000] {task_command.py:467} INFO - Running <TaskInstance: dag_get_data_from_yf.get_data_from_yf manual__2026-03-17T07:42:39+00:00 [running]> on host e9ef5a9cb8d3
+[2026-03-17T07:42:57.438+0000] {taskinstance.py:3157} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag_get_data_from_yf' AIRFLOW_CTX_TASK_ID='get_data_from_yf' AIRFLOW_CTX_EXECUTION_DATE='2026-03-17T07:42:39+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-03-17T07:42:39+00:00'
+[2026-03-17T07:42:57.440+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2026-03-17T07:42:57.441+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2026-03-17T07:42:57.441+0000] {logging_mixin.py:190} INFO - Current task name:get_data_from_yf state:running start_date:2026-03-17 07:42:57.059896+00:00
+[2026-03-17T07:42:57.442+0000] {logging_mixin.py:190} INFO - Dag name:dag_get_data_from_yf and current dag run status:running
+[2026-03-17T07:42:57.442+0000] {taskinstance.py:740} INFO - ::endgroup::
+[2026-03-17T07:42:57.443+0000] {logging_mixin.py:190} INFO - Ini tickers user: None
+[2026-03-17T07:42:57.444+0000] {logging_mixin.py:190} INFO - Ini start date user: 2026-03-09
+[2026-03-17T07:42:57.444+0000] {logging_mixin.py:190} INFO - Ini end date user: 2026-03-13
+[2026-03-17T07:42:58.034+0000] {logging_mixin.py:190} WARNING - [                       0%                       ]
+[2026-03-17T07:42:58.048+0000] {logging_mixin.py:190} WARNING - [**********************67%*******                ]  2 of 3 completed
+[2026-03-17T07:42:58.056+0000] {logging_mixin.py:190} WARNING - [*********************100%***********************]  3 of 3 completed
+[2026-03-17T07:42:58.068+0000] {logging_mixin.py:190} INFO - triggered
+[2026-03-17T07:42:58.070+0000] {logging_mixin.py:190} INFO - DEBUG: Row count fetched: 5
+[2026-03-17T07:42:58.126+0000] {logging_mixin.py:190} INFO - DEBUG: Data content: Price        Close                  ...     Volume                      
+Ticker     BBCA.JK BBRI.JK BMRI.JK  ...    BBCA.JK    BBRI.JK    BMRI.JK
+Date                                ...                                 
+2026-03-09  6875.0  3570.0  4820.0  ...  150426400  215587500  217673200
+2026-03-10  6975.0  3560.0  4910.0  ...  129977900  175353400  124581800
+2026-03-11  6825.0  3580.0  4880.0  ...   91723400  100862200   86606500
+2026-03-12  6900.0  3570.0  4960.0  ...   98787400  141366700   85989900
+2026-03-13  6875.0  3510.0  4750.0  ...  107940600  159393900  187462500
+
+[5 rows x 15 columns]
+[2026-03-17T07:42:58.173+0000] {logging_mixin.py:190} INFO - data_filtered:  Price        Close                    High  ...     Low    Open                
+Ticker     BBCA.JK BBRI.JK BMRI.JK BBCA.JK  ... BMRI.JK BBCA.JK BBRI.JK BMRI.JK
+Date                                        ...                                
+2026-03-09  6875.0  3570.0  4820.0  6950.0  ...  4780.0  6900.0  3590.0  4800.0
+2026-03-10  6975.0  3560.0  4910.0  7050.0  ...  4860.0  6950.0  3600.0  4920.0
+2026-03-11  6825.0  3580.0  4880.0  7000.0  ...  4880.0  6975.0  3580.0  4930.0
+2026-03-12  6900.0  3570.0  4960.0  7025.0  ...  4870.0  6825.0  3580.0  4870.0
+2026-03-13  6875.0  3510.0  4750.0  7025.0  ...  4750.0  6850.0  3560.0  4900.0
+
+[5 rows x 12 columns]
+[2026-03-17T07:42:58.188+0000] {logging_mixin.py:190} INFO - data_long.columns before Inserted_at_timestamp:  Index(['Date', 'Ticker', 'Close', 'High', 'Low', 'Open'], dtype='object')
+[2026-03-17T07:42:58.190+0000] {logging_mixin.py:190} INFO - data_long.columns:  Index(['Date', 'Ticker', 'Close', 'High', 'Low', 'Open',
+       'Inserted_at_timestamp'],
+      dtype='object')
+[2026-03-17T07:42:58.192+0000] {python.py:240} INFO - Done. Returned value was: [{'Date': '2026-03-09', 'Ticker': 'BBCA.JK', 'Close': 6875.0, 'High': 6950.0, 'Low': 6825.0, 'Open': 6900.0, 'Inserted_at_timestamp': '2026-03-17'}, {'Date': '2026-03-09', 'Ticker': 'BBRI.JK', 'Close': 3570.0, 'High': 3630.0, 'Low': 3560.0, 'Open': 3590.0, 'Inserted_at_timestamp': '2026-03-17'}, {'Date': '2026-03-09', 'Ticker': 'BMRI.JK', 'Close': 4820.0, 'High': 4870.0, 'Low': 4780.0, 'Open': 4800.0, 'Inserted_at_timestamp': '2026-03-17'}, {'Date': '2026-03-10', 'Ticker': 'BBCA.JK', 'Close': 6975.0, 'High': 7050.0, 'Low': 6925.0, 'Open': 6950.0, 'Inserted_at_timestamp': '2026-03-17'}, {'Date': '2026-03-10', 'Ticker': 'BBRI.JK', 'Close': 3560.0, 'High': 3610.0, 'Low': 3560.0, 'Open': 3600.0, 'Inserted_at_timestamp': '2026-03-17'}, {'Date': '2026-03-10', 'Ticker': 'BMRI.JK', 'Close': 4910.0, 'High': 4990.0, 'Low': 4860.0, 'Open': 4920.0, 'Inserted_at_timestamp': '2026-03-17'}, {'Date': '2026-03-11', 'Ticker': 'BBCA.JK', 'Close': 6825.0, 'High': 7000.0, 'Low': 6825.0, 'Open': 6975.0, 'Inserted_at_timestamp': '2026-03-17'}, {'Date': '2026-03-11', 'Ticker': 'BBRI.JK', 'Close': 3580.0, 'High': 3600.0, 'Low': 3560.0, 'Open': 3580.0, 'Inserted_at_timestamp': '2026-03-17'}, {'Date': '2026-03-11', 'Ticker': 'BMRI.JK', 'Close': 4880.0, 'High': 4970.0, 'Low': 4880.0, 'Open': 4930.0, 'Inserted_at_timestamp': '2026-03-17'}, {'Date': '2026-03-12', 'Ticker': 'BBCA.JK', 'Close': 6900.0, 'High': 7025.0, 'Low': 6825.0, 'Open': 6825.0, 'Inserted_at_timestamp': '2026-03-17'}, {'Date': '2026-03-12', 'Ticker': 'BBRI.JK', 'Close': 3570.0, 'High': 3610.0, 'Low': 3570.0, 'Open': 3580.0, 'Inserted_at_timestamp': '2026-03-17'}, {'Date': '2026-03-12', 'Ticker': 'BMRI.JK', 'Close': 4960.0, 'High': 4980.0, 'Low': 4870.0, 'Open': 4870.0, 'Inserted_at_timestamp': '2026-03-17'}, {'Date': '2026-03-13', 'Ticker': 'BBCA.JK', 'Close': 6875.0, 'High': 7025.0, 'Low': 6850.0, 'Open': 6850.0, 'Inserted_at_timestamp': '2026-03-17'}, {'Date': '2026-03-13', 'Ticker': 'BBRI.JK', 'Close': 3510.0, 'High': 3590.0, 'Low': 3510.0, 'Open': 3560.0, 'Inserted_at_timestamp': '2026-03-17'}, {'Date': '2026-03-13', 'Ticker': 'BMRI.JK', 'Close': 4750.0, 'High': 4920.0, 'Low': 4750.0, 'Open': 4900.0, 'Inserted_at_timestamp': '2026-03-17'}]
+[2026-03-17T07:42:58.246+0000] {taskinstance.py:349} INFO - ::group::Post task execution logs
+[2026-03-17T07:42:58.247+0000] {taskinstance.py:361} INFO - Marking task as SUCCESS. dag_id=dag_get_data_from_yf, task_id=get_data_from_yf, run_id=manual__2026-03-17T07:42:39+00:00, execution_date=20260317T074239, start_date=20260317T074257, end_date=20260317T074258
+[2026-03-17T07:42:58.298+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2026-03-17T07:42:58.299+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2026-03-17T07:42:58.299+0000] {logging_mixin.py:190} INFO - Dag name:dag_get_data_from_yf queued_at:2026-03-17 07:42:47.374894+00:00
+[2026-03-17T07:42:58.300+0000] {logging_mixin.py:190} INFO - Task hostname:e9ef5a9cb8d3 operator:_PythonDecoratedOperator
+[2026-03-17T07:42:58.320+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-03-17T07:42:58.385+0000] {taskinstance.py:3924} INFO - 4 downstream tasks scheduled from follow-on schedule check
+[2026-03-17T07:42:58.388+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

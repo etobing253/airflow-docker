@@ -1,0 +1,275 @@
+[2026-03-18T02:02:18.243+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-03-18T02:02:18.311+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_get_data_from_yf.create_table_db scheduled__2026-03-17T01:00:00+00:00 [queued]>
+[2026-03-18T02:02:18.329+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_get_data_from_yf.create_table_db scheduled__2026-03-17T01:00:00+00:00 [queued]>
+[2026-03-18T02:02:18.330+0000] {taskinstance.py:2884} INFO - Starting attempt 1 of 1
+[2026-03-18T02:02:18.360+0000] {taskinstance.py:2907} INFO - Executing <Task(_PythonDecoratedOperator): create_table_db> on 2026-03-17 01:00:00+00:00
+[2026-03-18T02:02:18.381+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=2633) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2026-03-18T02:02:18.384+0000] {standard_task_runner.py:72} INFO - Started process 2642 to run task
+[2026-03-18T02:02:18.387+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'dag_get_data_from_yf', 'create_table_db', 'scheduled__2026-03-17T01:00:00+00:00', '--job-id', '2090', '--raw', '--subdir', 'DAGS_FOLDER/get_finance_yf_csv.py', '--cfg-path', '/tmp/tmppkd4mwl9']
+[2026-03-18T02:02:18.388+0000] {standard_task_runner.py:105} INFO - Job 2090: Subtask create_table_db
+[2026-03-18T02:02:18.530+0000] {task_command.py:467} INFO - Running <TaskInstance: dag_get_data_from_yf.create_table_db scheduled__2026-03-17T01:00:00+00:00 [running]> on host e9ef5a9cb8d3
+[2026-03-18T02:02:18.825+0000] {taskinstance.py:3157} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag_get_data_from_yf' AIRFLOW_CTX_TASK_ID='create_table_db' AIRFLOW_CTX_EXECUTION_DATE='2026-03-17T01:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-03-17T01:00:00+00:00'
+[2026-03-18T02:02:18.828+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2026-03-18T02:02:18.828+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2026-03-18T02:02:18.829+0000] {logging_mixin.py:190} INFO - Current task name:create_table_db state:running start_date:2026-03-18 02:02:18.312153+00:00
+[2026-03-18T02:02:18.830+0000] {logging_mixin.py:190} INFO - Dag name:dag_get_data_from_yf and current dag run status:running
+[2026-03-18T02:02:18.831+0000] {taskinstance.py:740} INFO - ::endgroup::
+[2026-03-18T02:02:18.864+0000] {base.py:84} INFO - Retrieving connection 'db_custom'
+[2026-03-18T02:02:18.887+0000] {logging_mixin.py:190} INFO - create table if not exists SUKSES
+[2026-03-18T02:02:18.888+0000] {logging_mixin.py:190} INFO - koneksi ditutup
+[2026-03-18T02:02:18.889+0000] {python.py:240} INFO - Done. Returned value was: None
+[2026-03-18T02:02:18.928+0000] {taskinstance.py:349} INFO - ::group::Post task execution logs
+[2026-03-18T02:02:18.929+0000] {taskinstance.py:361} INFO - Marking task as SUCCESS. dag_id=dag_get_data_from_yf, task_id=create_table_db, run_id=scheduled__2026-03-17T01:00:00+00:00, execution_date=20260317T010000, start_date=20260318T020218, end_date=20260318T020218
+[2026-03-18T02:02:19.011+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2026-03-18T02:02:19.012+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2026-03-18T02:02:19.012+0000] {logging_mixin.py:190} INFO - Dag name:dag_get_data_from_yf queued_at:2026-03-18 02:00:29.079666+00:00
+[2026-03-18T02:02:19.013+0000] {logging_mixin.py:190} INFO - Task hostname:e9ef5a9cb8d3 operator:_PythonDecoratedOperator
+[2026-03-18T02:02:19.039+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-03-18T02:02:19.147+0000] {taskinstance.py:3924} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-03-18T02:02:19.160+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2026-03-18T02:08:00.121+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-03-18T02:08:00.184+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_get_data_from_yf.create_table_db scheduled__2026-03-17T01:00:00+00:00 [queued]>
+[2026-03-18T02:08:00.204+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_get_data_from_yf.create_table_db scheduled__2026-03-17T01:00:00+00:00 [queued]>
+[2026-03-18T02:08:00.204+0000] {taskinstance.py:2884} INFO - Starting attempt 1 of 1
+[2026-03-18T02:08:00.232+0000] {taskinstance.py:2907} INFO - Executing <Task(_PythonDecoratedOperator): create_table_db> on 2026-03-17 01:00:00+00:00
+[2026-03-18T02:08:00.245+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=2744) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2026-03-18T02:08:00.249+0000] {standard_task_runner.py:72} INFO - Started process 2746 to run task
+[2026-03-18T02:08:00.250+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'dag_get_data_from_yf', 'create_table_db', 'scheduled__2026-03-17T01:00:00+00:00', '--job-id', '2098', '--raw', '--subdir', 'DAGS_FOLDER/get_finance_yf_csv.py', '--cfg-path', '/tmp/tmphcf34az7']
+[2026-03-18T02:08:00.251+0000] {standard_task_runner.py:105} INFO - Job 2098: Subtask create_table_db
+[2026-03-18T02:08:00.357+0000] {task_command.py:467} INFO - Running <TaskInstance: dag_get_data_from_yf.create_table_db scheduled__2026-03-17T01:00:00+00:00 [running]> on host e9ef5a9cb8d3
+[2026-03-18T02:08:00.533+0000] {taskinstance.py:3157} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag_get_data_from_yf' AIRFLOW_CTX_TASK_ID='create_table_db' AIRFLOW_CTX_EXECUTION_DATE='2026-03-17T01:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-03-17T01:00:00+00:00'
+[2026-03-18T02:08:00.536+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2026-03-18T02:08:00.537+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2026-03-18T02:08:00.537+0000] {logging_mixin.py:190} INFO - Current task name:create_table_db state:running start_date:2026-03-18 02:08:00.184943+00:00
+[2026-03-18T02:08:00.538+0000] {logging_mixin.py:190} INFO - Dag name:dag_get_data_from_yf and current dag run status:running
+[2026-03-18T02:08:00.538+0000] {taskinstance.py:740} INFO - ::endgroup::
+[2026-03-18T02:08:00.564+0000] {base.py:84} INFO - Retrieving connection 'db_custom'
+[2026-03-18T02:08:00.579+0000] {logging_mixin.py:190} INFO - create table if not exists SUKSES
+[2026-03-18T02:08:00.580+0000] {logging_mixin.py:190} INFO - koneksi ditutup
+[2026-03-18T02:08:00.581+0000] {python.py:240} INFO - Done. Returned value was: None
+[2026-03-18T02:08:00.605+0000] {taskinstance.py:349} INFO - ::group::Post task execution logs
+[2026-03-18T02:08:00.606+0000] {taskinstance.py:361} INFO - Marking task as SUCCESS. dag_id=dag_get_data_from_yf, task_id=create_table_db, run_id=scheduled__2026-03-17T01:00:00+00:00, execution_date=20260317T010000, start_date=20260318T020800, end_date=20260318T020800
+[2026-03-18T02:08:00.658+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2026-03-18T02:08:00.658+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2026-03-18T02:08:00.659+0000] {logging_mixin.py:190} INFO - Dag name:dag_get_data_from_yf queued_at:2026-03-18 02:07:19.194660+00:00
+[2026-03-18T02:08:00.659+0000] {logging_mixin.py:190} INFO - Task hostname:e9ef5a9cb8d3 operator:_PythonDecoratedOperator
+[2026-03-18T02:08:00.677+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-03-18T02:08:00.724+0000] {taskinstance.py:3924} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-03-18T02:08:00.727+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2026-03-18T03:38:08.814+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-03-18T03:38:08.874+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_get_data_from_yf.create_table_db scheduled__2026-03-17T01:00:00+00:00 [queued]>
+[2026-03-18T03:38:08.893+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_get_data_from_yf.create_table_db scheduled__2026-03-17T01:00:00+00:00 [queued]>
+[2026-03-18T03:38:08.894+0000] {taskinstance.py:2884} INFO - Starting attempt 1 of 1
+[2026-03-18T03:38:08.923+0000] {taskinstance.py:2907} INFO - Executing <Task(_PythonDecoratedOperator): create_table_db> on 2026-03-17 01:00:00+00:00
+[2026-03-18T03:38:08.940+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=3879) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2026-03-18T03:38:08.944+0000] {standard_task_runner.py:72} INFO - Started process 3881 to run task
+[2026-03-18T03:38:08.953+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'dag_get_data_from_yf', 'create_table_db', 'scheduled__2026-03-17T01:00:00+00:00', '--job-id', '2114', '--raw', '--subdir', 'DAGS_FOLDER/get_finance_yf_csv.py', '--cfg-path', '/tmp/tmpv79it9w3']
+[2026-03-18T03:38:08.955+0000] {standard_task_runner.py:105} INFO - Job 2114: Subtask create_table_db
+[2026-03-18T03:38:09.081+0000] {task_command.py:467} INFO - Running <TaskInstance: dag_get_data_from_yf.create_table_db scheduled__2026-03-17T01:00:00+00:00 [running]> on host e9ef5a9cb8d3
+[2026-03-18T03:38:09.275+0000] {taskinstance.py:3157} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag_get_data_from_yf' AIRFLOW_CTX_TASK_ID='create_table_db' AIRFLOW_CTX_EXECUTION_DATE='2026-03-17T01:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-03-17T01:00:00+00:00'
+[2026-03-18T03:38:09.277+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2026-03-18T03:38:09.278+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2026-03-18T03:38:09.278+0000] {logging_mixin.py:190} INFO - Current task name:create_table_db state:running start_date:2026-03-18 03:38:08.875297+00:00
+[2026-03-18T03:38:09.279+0000] {logging_mixin.py:190} INFO - Dag name:dag_get_data_from_yf and current dag run status:running
+[2026-03-18T03:38:09.279+0000] {taskinstance.py:740} INFO - ::endgroup::
+[2026-03-18T03:38:09.304+0000] {base.py:84} INFO - Retrieving connection 'db_custom'
+[2026-03-18T03:38:09.327+0000] {logging_mixin.py:190} INFO - create table if not exists SUKSES
+[2026-03-18T03:38:09.328+0000] {logging_mixin.py:190} INFO - koneksi ditutup
+[2026-03-18T03:38:09.329+0000] {python.py:240} INFO - Done. Returned value was: None
+[2026-03-18T03:38:09.357+0000] {taskinstance.py:349} INFO - ::group::Post task execution logs
+[2026-03-18T03:38:09.358+0000] {taskinstance.py:361} INFO - Marking task as SUCCESS. dag_id=dag_get_data_from_yf, task_id=create_table_db, run_id=scheduled__2026-03-17T01:00:00+00:00, execution_date=20260317T010000, start_date=20260318T033808, end_date=20260318T033809
+[2026-03-18T03:38:09.421+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2026-03-18T03:38:09.422+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2026-03-18T03:38:09.422+0000] {logging_mixin.py:190} INFO - Dag name:dag_get_data_from_yf queued_at:2026-03-18 03:37:15.065570+00:00
+[2026-03-18T03:38:09.423+0000] {logging_mixin.py:190} INFO - Task hostname:e9ef5a9cb8d3 operator:_PythonDecoratedOperator
+[2026-03-18T03:38:09.448+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-03-18T03:38:09.508+0000] {taskinstance.py:3924} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-03-18T03:38:09.512+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2026-03-18T08:01:22.449+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-03-18T08:01:22.509+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_get_data_from_yf.create_table_db scheduled__2026-03-17T01:00:00+00:00 [queued]>
+[2026-03-18T08:01:22.526+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_get_data_from_yf.create_table_db scheduled__2026-03-17T01:00:00+00:00 [queued]>
+[2026-03-18T08:01:22.527+0000] {taskinstance.py:2884} INFO - Starting attempt 1 of 1
+[2026-03-18T08:01:22.550+0000] {taskinstance.py:2907} INFO - Executing <Task(_PythonDecoratedOperator): create_table_db> on 2026-03-17 01:00:00+00:00
+[2026-03-18T08:01:22.569+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=175) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2026-03-18T08:01:22.572+0000] {standard_task_runner.py:72} INFO - Started process 177 to run task
+[2026-03-18T08:01:22.575+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'dag_get_data_from_yf', 'create_table_db', 'scheduled__2026-03-17T01:00:00+00:00', '--job-id', '2132', '--raw', '--subdir', 'DAGS_FOLDER/get_finance_yf_csv.py', '--cfg-path', '/tmp/tmp1h_f0qjt']
+[2026-03-18T08:01:22.577+0000] {standard_task_runner.py:105} INFO - Job 2132: Subtask create_table_db
+[2026-03-18T08:01:22.714+0000] {task_command.py:467} INFO - Running <TaskInstance: dag_get_data_from_yf.create_table_db scheduled__2026-03-17T01:00:00+00:00 [running]> on host 1e2bf4c93f49
+[2026-03-18T08:01:22.944+0000] {taskinstance.py:3157} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag_get_data_from_yf' AIRFLOW_CTX_TASK_ID='create_table_db' AIRFLOW_CTX_EXECUTION_DATE='2026-03-17T01:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-03-17T01:00:00+00:00'
+[2026-03-18T08:01:22.946+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2026-03-18T08:01:22.947+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2026-03-18T08:01:22.947+0000] {logging_mixin.py:190} INFO - Current task name:create_table_db state:running start_date:2026-03-18 08:01:22.510545+00:00
+[2026-03-18T08:01:22.948+0000] {logging_mixin.py:190} INFO - Dag name:dag_get_data_from_yf and current dag run status:running
+[2026-03-18T08:01:22.948+0000] {taskinstance.py:740} INFO - ::endgroup::
+[2026-03-18T08:01:22.985+0000] {base.py:84} INFO - Retrieving connection 'db_custom'
+[2026-03-18T08:01:23.017+0000] {logging_mixin.py:190} INFO - create table if not exists SUKSES
+[2026-03-18T08:01:23.018+0000] {logging_mixin.py:190} INFO - koneksi ditutup
+[2026-03-18T08:01:23.019+0000] {python.py:240} INFO - Done. Returned value was: None
+[2026-03-18T08:01:23.058+0000] {taskinstance.py:349} INFO - ::group::Post task execution logs
+[2026-03-18T08:01:23.060+0000] {taskinstance.py:361} INFO - Marking task as SUCCESS. dag_id=dag_get_data_from_yf, task_id=create_table_db, run_id=scheduled__2026-03-17T01:00:00+00:00, execution_date=20260317T010000, start_date=20260318T080122, end_date=20260318T080123
+[2026-03-18T08:01:23.131+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2026-03-18T08:01:23.131+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2026-03-18T08:01:23.132+0000] {logging_mixin.py:190} INFO - Dag name:dag_get_data_from_yf queued_at:2026-03-18 08:00:19.119971+00:00
+[2026-03-18T08:01:23.132+0000] {logging_mixin.py:190} INFO - Task hostname:1e2bf4c93f49 operator:_PythonDecoratedOperator
+[2026-03-18T08:01:23.163+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-03-18T08:01:23.241+0000] {taskinstance.py:3924} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-03-18T08:01:23.245+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2026-03-18T08:18:59.668+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-03-18T08:18:59.764+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_get_data_from_yf.create_table_db scheduled__2026-03-17T01:00:00+00:00 [queued]>
+[2026-03-18T08:18:59.799+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_get_data_from_yf.create_table_db scheduled__2026-03-17T01:00:00+00:00 [queued]>
+[2026-03-18T08:18:59.799+0000] {taskinstance.py:2884} INFO - Starting attempt 1 of 1
+[2026-03-18T08:18:59.848+0000] {taskinstance.py:2907} INFO - Executing <Task(_PythonDecoratedOperator): create_table_db> on 2026-03-17 01:00:00+00:00
+[2026-03-18T08:18:59.876+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=170) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2026-03-18T08:18:59.884+0000] {standard_task_runner.py:72} INFO - Started process 179 to run task
+[2026-03-18T08:18:59.894+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'dag_get_data_from_yf', 'create_table_db', 'scheduled__2026-03-17T01:00:00+00:00', '--job-id', '2150', '--raw', '--subdir', 'DAGS_FOLDER/get_finance_yf_csv.py', '--cfg-path', '/tmp/tmpox0mgh_7']
+[2026-03-18T08:18:59.900+0000] {standard_task_runner.py:105} INFO - Job 2150: Subtask create_table_db
+[2026-03-18T08:19:00.155+0000] {task_command.py:467} INFO - Running <TaskInstance: dag_get_data_from_yf.create_table_db scheduled__2026-03-17T01:00:00+00:00 [running]> on host 68aff29379ac
+[2026-03-18T08:19:00.522+0000] {taskinstance.py:3157} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag_get_data_from_yf' AIRFLOW_CTX_TASK_ID='create_table_db' AIRFLOW_CTX_EXECUTION_DATE='2026-03-17T01:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-03-17T01:00:00+00:00'
+[2026-03-18T08:19:00.526+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2026-03-18T08:19:00.527+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2026-03-18T08:19:00.529+0000] {logging_mixin.py:190} INFO - Current task name:create_table_db state:running start_date:2026-03-18 08:18:59.766176+00:00
+[2026-03-18T08:19:00.530+0000] {logging_mixin.py:190} INFO - Dag name:dag_get_data_from_yf and current dag run status:running
+[2026-03-18T08:19:00.531+0000] {taskinstance.py:740} INFO - ::endgroup::
+[2026-03-18T08:19:00.579+0000] {base.py:84} INFO - Retrieving connection 'db_custom'
+[2026-03-18T08:19:00.616+0000] {logging_mixin.py:190} INFO - create table if not exists SUKSES
+[2026-03-18T08:19:00.617+0000] {logging_mixin.py:190} INFO - koneksi ditutup
+[2026-03-18T08:19:00.617+0000] {python.py:240} INFO - Done. Returned value was: None
+[2026-03-18T08:19:00.663+0000] {taskinstance.py:349} INFO - ::group::Post task execution logs
+[2026-03-18T08:19:00.664+0000] {taskinstance.py:361} INFO - Marking task as SUCCESS. dag_id=dag_get_data_from_yf, task_id=create_table_db, run_id=scheduled__2026-03-17T01:00:00+00:00, execution_date=20260317T010000, start_date=20260318T081859, end_date=20260318T081900
+[2026-03-18T08:19:00.774+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2026-03-18T08:19:00.775+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2026-03-18T08:19:00.775+0000] {logging_mixin.py:190} INFO - Dag name:dag_get_data_from_yf queued_at:2026-03-18 08:17:52.904042+00:00
+[2026-03-18T08:19:00.776+0000] {logging_mixin.py:190} INFO - Task hostname:68aff29379ac operator:_PythonDecoratedOperator
+[2026-03-18T08:19:00.819+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-03-18T08:19:00.922+0000] {taskinstance.py:3924} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-03-18T08:19:00.928+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2026-03-18T08:26:24.837+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-03-18T08:26:24.908+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_get_data_from_yf.create_table_db scheduled__2026-03-17T01:00:00+00:00 [queued]>
+[2026-03-18T08:26:24.929+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_get_data_from_yf.create_table_db scheduled__2026-03-17T01:00:00+00:00 [queued]>
+[2026-03-18T08:26:24.930+0000] {taskinstance.py:2884} INFO - Starting attempt 1 of 1
+[2026-03-18T08:26:24.957+0000] {taskinstance.py:2907} INFO - Executing <Task(_PythonDecoratedOperator): create_table_db> on 2026-03-17 01:00:00+00:00
+[2026-03-18T08:26:24.978+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=359) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2026-03-18T08:26:24.981+0000] {standard_task_runner.py:72} INFO - Started process 361 to run task
+[2026-03-18T08:26:24.986+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'dag_get_data_from_yf', 'create_table_db', 'scheduled__2026-03-17T01:00:00+00:00', '--job-id', '2170', '--raw', '--subdir', 'DAGS_FOLDER/get_finance_yf_csv.py', '--cfg-path', '/tmp/tmpeftz4z50']
+[2026-03-18T08:26:24.987+0000] {standard_task_runner.py:105} INFO - Job 2170: Subtask create_table_db
+[2026-03-18T08:26:25.124+0000] {task_command.py:467} INFO - Running <TaskInstance: dag_get_data_from_yf.create_table_db scheduled__2026-03-17T01:00:00+00:00 [running]> on host 68aff29379ac
+[2026-03-18T08:26:25.330+0000] {taskinstance.py:3157} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag_get_data_from_yf' AIRFLOW_CTX_TASK_ID='create_table_db' AIRFLOW_CTX_EXECUTION_DATE='2026-03-17T01:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-03-17T01:00:00+00:00'
+[2026-03-18T08:26:25.333+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2026-03-18T08:26:25.334+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2026-03-18T08:26:25.335+0000] {logging_mixin.py:190} INFO - Current task name:create_table_db state:running start_date:2026-03-18 08:26:24.909190+00:00
+[2026-03-18T08:26:25.336+0000] {logging_mixin.py:190} INFO - Dag name:dag_get_data_from_yf and current dag run status:running
+[2026-03-18T08:26:25.336+0000] {taskinstance.py:740} INFO - ::endgroup::
+[2026-03-18T08:26:25.368+0000] {base.py:84} INFO - Retrieving connection 'db_custom'
+[2026-03-18T08:26:25.385+0000] {logging_mixin.py:190} INFO - create table if not exists SUKSES
+[2026-03-18T08:26:25.386+0000] {logging_mixin.py:190} INFO - koneksi ditutup
+[2026-03-18T08:26:25.387+0000] {python.py:240} INFO - Done. Returned value was: None
+[2026-03-18T08:26:25.419+0000] {taskinstance.py:349} INFO - ::group::Post task execution logs
+[2026-03-18T08:26:25.420+0000] {taskinstance.py:361} INFO - Marking task as SUCCESS. dag_id=dag_get_data_from_yf, task_id=create_table_db, run_id=scheduled__2026-03-17T01:00:00+00:00, execution_date=20260317T010000, start_date=20260318T082624, end_date=20260318T082625
+[2026-03-18T08:26:25.546+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2026-03-18T08:26:25.547+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2026-03-18T08:26:25.547+0000] {logging_mixin.py:190} INFO - Dag name:dag_get_data_from_yf queued_at:2026-03-18 08:25:36.458562+00:00
+[2026-03-18T08:26:25.548+0000] {logging_mixin.py:190} INFO - Task hostname:68aff29379ac operator:_PythonDecoratedOperator
+[2026-03-18T08:26:25.598+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-03-18T08:26:25.727+0000] {taskinstance.py:3924} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-03-18T08:26:25.744+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2026-03-18T08:40:32.738+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-03-18T08:40:32.779+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_get_data_from_yf.create_table_db scheduled__2026-03-17T01:00:00+00:00 [queued]>
+[2026-03-18T08:40:32.791+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_get_data_from_yf.create_table_db scheduled__2026-03-17T01:00:00+00:00 [queued]>
+[2026-03-18T08:40:32.791+0000] {taskinstance.py:2884} INFO - Starting attempt 1 of 1
+[2026-03-18T08:40:32.810+0000] {taskinstance.py:2907} INFO - Executing <Task(_PythonDecoratedOperator): create_table_db> on 2026-03-17 01:00:00+00:00
+[2026-03-18T08:40:32.826+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=180) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2026-03-18T08:40:32.829+0000] {standard_task_runner.py:72} INFO - Started process 182 to run task
+[2026-03-18T08:40:32.832+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'dag_get_data_from_yf', 'create_table_db', 'scheduled__2026-03-17T01:00:00+00:00', '--job-id', '2180', '--raw', '--subdir', 'DAGS_FOLDER/get_finance_yf_csv.py', '--cfg-path', '/tmp/tmpcoe60dvr']
+[2026-03-18T08:40:32.835+0000] {standard_task_runner.py:105} INFO - Job 2180: Subtask create_table_db
+[2026-03-18T08:40:32.947+0000] {task_command.py:467} INFO - Running <TaskInstance: dag_get_data_from_yf.create_table_db scheduled__2026-03-17T01:00:00+00:00 [running]> on host dfdf780ae81b
+[2026-03-18T08:40:33.095+0000] {taskinstance.py:3157} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag_get_data_from_yf' AIRFLOW_CTX_TASK_ID='create_table_db' AIRFLOW_CTX_EXECUTION_DATE='2026-03-17T01:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-03-17T01:00:00+00:00'
+[2026-03-18T08:40:33.096+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2026-03-18T08:40:33.097+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2026-03-18T08:40:33.097+0000] {logging_mixin.py:190} INFO - Current task name:create_table_db state:running start_date:2026-03-18 08:40:32.779674+00:00
+[2026-03-18T08:40:33.098+0000] {logging_mixin.py:190} INFO - Dag name:dag_get_data_from_yf and current dag run status:running
+[2026-03-18T08:40:33.098+0000] {taskinstance.py:740} INFO - ::endgroup::
+[2026-03-18T08:40:33.119+0000] {base.py:84} INFO - Retrieving connection 'db_custom'
+[2026-03-18T08:40:33.135+0000] {logging_mixin.py:190} INFO - create table if not exists SUKSES
+[2026-03-18T08:40:33.135+0000] {logging_mixin.py:190} INFO - koneksi ditutup
+[2026-03-18T08:40:33.136+0000] {python.py:240} INFO - Done. Returned value was: None
+[2026-03-18T08:40:33.155+0000] {taskinstance.py:349} INFO - ::group::Post task execution logs
+[2026-03-18T08:40:33.156+0000] {taskinstance.py:361} INFO - Marking task as SUCCESS. dag_id=dag_get_data_from_yf, task_id=create_table_db, run_id=scheduled__2026-03-17T01:00:00+00:00, execution_date=20260317T010000, start_date=20260318T084032, end_date=20260318T084033
+[2026-03-18T08:40:33.207+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2026-03-18T08:40:33.207+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2026-03-18T08:40:33.208+0000] {logging_mixin.py:190} INFO - Dag name:dag_get_data_from_yf queued_at:2026-03-18 08:39:35.708619+00:00
+[2026-03-18T08:40:33.208+0000] {logging_mixin.py:190} INFO - Task hostname:dfdf780ae81b operator:_PythonDecoratedOperator
+[2026-03-18T08:40:33.223+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-03-18T08:40:33.269+0000] {taskinstance.py:3924} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-03-18T08:40:33.272+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2026-03-18T10:19:26.955+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-03-18T10:19:27.001+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_get_data_from_yf.create_table_db scheduled__2026-03-17T01:00:00+00:00 [queued]>
+[2026-03-18T10:19:27.017+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_get_data_from_yf.create_table_db scheduled__2026-03-17T01:00:00+00:00 [queued]>
+[2026-03-18T10:19:27.018+0000] {taskinstance.py:2884} INFO - Starting attempt 1 of 1
+[2026-03-18T10:19:27.039+0000] {taskinstance.py:2907} INFO - Executing <Task(_PythonDecoratedOperator): create_table_db> on 2026-03-17 01:00:00+00:00
+[2026-03-18T10:19:27.055+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=350) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2026-03-18T10:19:27.057+0000] {standard_task_runner.py:72} INFO - Started process 352 to run task
+[2026-03-18T10:19:27.059+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'dag_get_data_from_yf', 'create_table_db', 'scheduled__2026-03-17T01:00:00+00:00', '--job-id', '2198', '--raw', '--subdir', 'DAGS_FOLDER/get_finance_yf_csv.py', '--cfg-path', '/tmp/tmpffkfsbvk']
+[2026-03-18T10:19:27.060+0000] {standard_task_runner.py:105} INFO - Job 2198: Subtask create_table_db
+[2026-03-18T10:19:27.178+0000] {task_command.py:467} INFO - Running <TaskInstance: dag_get_data_from_yf.create_table_db scheduled__2026-03-17T01:00:00+00:00 [running]> on host e33371178980
+[2026-03-18T10:19:27.362+0000] {taskinstance.py:3157} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag_get_data_from_yf' AIRFLOW_CTX_TASK_ID='create_table_db' AIRFLOW_CTX_EXECUTION_DATE='2026-03-17T01:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-03-17T01:00:00+00:00'
+[2026-03-18T10:19:27.364+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2026-03-18T10:19:27.364+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2026-03-18T10:19:27.365+0000] {logging_mixin.py:190} INFO - Current task name:create_table_db state:running start_date:2026-03-18 10:19:27.002793+00:00
+[2026-03-18T10:19:27.365+0000] {logging_mixin.py:190} INFO - Dag name:dag_get_data_from_yf and current dag run status:running
+[2026-03-18T10:19:27.365+0000] {taskinstance.py:740} INFO - ::endgroup::
+[2026-03-18T10:19:27.367+0000] {logging_mixin.py:190} INFO - create table if not exists SUKSES
+[2026-03-18T10:19:27.368+0000] {python.py:240} INFO - Done. Returned value was: None
+[2026-03-18T10:19:27.392+0000] {taskinstance.py:349} INFO - ::group::Post task execution logs
+[2026-03-18T10:19:27.392+0000] {taskinstance.py:361} INFO - Marking task as SUCCESS. dag_id=dag_get_data_from_yf, task_id=create_table_db, run_id=scheduled__2026-03-17T01:00:00+00:00, execution_date=20260317T010000, start_date=20260318T101927, end_date=20260318T101927
+[2026-03-18T10:19:27.444+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2026-03-18T10:19:27.445+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2026-03-18T10:19:27.445+0000] {logging_mixin.py:190} INFO - Dag name:dag_get_data_from_yf queued_at:2026-03-18 10:18:24.094580+00:00
+[2026-03-18T10:19:27.445+0000] {logging_mixin.py:190} INFO - Task hostname:e33371178980 operator:_PythonDecoratedOperator
+[2026-03-18T10:19:27.462+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-03-18T10:19:27.519+0000] {taskinstance.py:3924} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-03-18T10:19:27.523+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2026-03-18T10:23:36.634+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-03-18T10:23:36.737+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_get_data_from_yf.create_table_db scheduled__2026-03-17T01:00:00+00:00 [queued]>
+[2026-03-18T10:23:36.766+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_get_data_from_yf.create_table_db scheduled__2026-03-17T01:00:00+00:00 [queued]>
+[2026-03-18T10:23:36.767+0000] {taskinstance.py:2884} INFO - Starting attempt 1 of 1
+[2026-03-18T10:23:36.800+0000] {taskinstance.py:2907} INFO - Executing <Task(_PythonDecoratedOperator): create_table_db> on 2026-03-17 01:00:00+00:00
+[2026-03-18T10:23:36.818+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=443) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2026-03-18T10:23:36.822+0000] {standard_task_runner.py:72} INFO - Started process 445 to run task
+[2026-03-18T10:23:36.828+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'dag_get_data_from_yf', 'create_table_db', 'scheduled__2026-03-17T01:00:00+00:00', '--job-id', '2207', '--raw', '--subdir', 'DAGS_FOLDER/get_finance_yf_csv.py', '--cfg-path', '/tmp/tmpm4rhhiy0']
+[2026-03-18T10:23:36.831+0000] {standard_task_runner.py:105} INFO - Job 2207: Subtask create_table_db
+[2026-03-18T10:23:36.983+0000] {task_command.py:467} INFO - Running <TaskInstance: dag_get_data_from_yf.create_table_db scheduled__2026-03-17T01:00:00+00:00 [running]> on host e33371178980
+[2026-03-18T10:23:37.211+0000] {taskinstance.py:3157} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag_get_data_from_yf' AIRFLOW_CTX_TASK_ID='create_table_db' AIRFLOW_CTX_EXECUTION_DATE='2026-03-17T01:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-03-17T01:00:00+00:00'
+[2026-03-18T10:23:37.214+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2026-03-18T10:23:37.215+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2026-03-18T10:23:37.216+0000] {logging_mixin.py:190} INFO - Current task name:create_table_db state:running start_date:2026-03-18 10:23:36.738562+00:00
+[2026-03-18T10:23:37.216+0000] {logging_mixin.py:190} INFO - Dag name:dag_get_data_from_yf and current dag run status:running
+[2026-03-18T10:23:37.217+0000] {taskinstance.py:740} INFO - ::endgroup::
+[2026-03-18T10:23:37.220+0000] {logging_mixin.py:190} INFO - create table if not exists SUKSES
+[2026-03-18T10:23:37.220+0000] {python.py:240} INFO - Done. Returned value was: None
+[2026-03-18T10:23:37.260+0000] {taskinstance.py:349} INFO - ::group::Post task execution logs
+[2026-03-18T10:23:37.263+0000] {taskinstance.py:361} INFO - Marking task as SUCCESS. dag_id=dag_get_data_from_yf, task_id=create_table_db, run_id=scheduled__2026-03-17T01:00:00+00:00, execution_date=20260317T010000, start_date=20260318T102336, end_date=20260318T102337
+[2026-03-18T10:23:37.345+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2026-03-18T10:23:37.346+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2026-03-18T10:23:37.346+0000] {logging_mixin.py:190} INFO - Dag name:dag_get_data_from_yf queued_at:2026-03-18 10:22:43.863809+00:00
+[2026-03-18T10:23:37.347+0000] {logging_mixin.py:190} INFO - Task hostname:e33371178980 operator:_PythonDecoratedOperator
+[2026-03-18T10:23:37.368+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-03-18T10:23:37.446+0000] {taskinstance.py:3924} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-03-18T10:23:37.451+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

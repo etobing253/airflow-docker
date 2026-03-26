@@ -1,0 +1,37 @@
+[2026-03-24T03:20:49.006+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-03-24T03:20:49.126+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_get_data_from_yf.insert_data_task manual__2026-03-24T03:19:27+00:00 map_index=9 [queued]>
+[2026-03-24T03:20:49.162+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_get_data_from_yf.insert_data_task manual__2026-03-24T03:19:27+00:00 map_index=9 [queued]>
+[2026-03-24T03:20:49.164+0000] {taskinstance.py:2884} INFO - Starting attempt 1 of 1
+[2026-03-24T03:20:49.224+0000] {taskinstance.py:2907} INFO - Executing <Mapped(SQLExecuteQueryOperator): insert_data_task> on 2026-03-24 03:19:27+00:00
+[2026-03-24T03:20:49.244+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=274) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2026-03-24T03:20:49.250+0000] {standard_task_runner.py:72} INFO - Started process 337 to run task
+[2026-03-24T03:20:49.254+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'dag_get_data_from_yf', 'insert_data_task', 'manual__2026-03-24T03:19:27+00:00', '--job-id', '2550', '--raw', '--subdir', 'DAGS_FOLDER/get_finance_yf_csv.py', '--cfg-path', '/tmp/tmpkx8bm0qk', '--map-index', '9']
+[2026-03-24T03:20:49.257+0000] {standard_task_runner.py:105} INFO - Job 2550: Subtask insert_data_task
+[2026-03-24T03:20:49.443+0000] {task_command.py:467} INFO - Running <TaskInstance: dag_get_data_from_yf.insert_data_task manual__2026-03-24T03:19:27+00:00 map_index=9 [running]> on host 163f4b6f8ad1
+[2026-03-24T03:20:49.704+0000] {taskinstance.py:3157} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag_get_data_from_yf' AIRFLOW_CTX_TASK_ID='insert_data_task' AIRFLOW_CTX_EXECUTION_DATE='2026-03-24T03:19:27+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-03-24T03:19:27+00:00'
+[2026-03-24T03:20:49.707+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2026-03-24T03:20:49.708+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2026-03-24T03:20:49.709+0000] {logging_mixin.py:190} INFO - Current task name:insert_data_task state:running start_date:2026-03-24 03:20:49.126887+00:00
+[2026-03-24T03:20:49.709+0000] {logging_mixin.py:190} INFO - Dag name:dag_get_data_from_yf and current dag run status:running
+[2026-03-24T03:20:49.710+0000] {taskinstance.py:740} INFO - ::endgroup::
+[2026-03-24T03:20:49.711+0000] {sql.py:392} INFO - Executing:  INSERT INTO indonesian_stocks (date, ticker, close, high, low, open, inserted_at_timestamp_wib) 
+                VALUES ('2026-03-05', 'BBCA.JK', '7100.0', '7125.0', '6950.0', '6975.0', '2026-03-24 10:19:41' )
+                ON CONFLICT (date, ticker) DO NOTHING; 
+[2026-03-24T03:20:49.713+0000] {crypto.py:82} WARNING - empty cryptography key - values will not be stored encrypted.
+[2026-03-24T03:20:49.714+0000] {base.py:84} INFO - Retrieving connection 'db_custom'
+[2026-03-24T03:20:49.729+0000] {base.py:84} INFO - Retrieving connection 'db_custom'
+[2026-03-24T03:20:49.748+0000] {sql.py:829} INFO - Running statement:  INSERT INTO indonesian_stocks (date, ticker, close, high, low, open, inserted_at_timestamp_wib) 
+                VALUES ('2026-03-05', 'BBCA.JK', '7100.0', '7125.0', '6950.0', '6975.0', '2026-03-24 10:19:41' )
+                ON CONFLICT (date, ticker) DO NOTHING; , parameters: None
+[2026-03-24T03:20:49.751+0000] {sql.py:841} INFO - Rows affected: 1
+[2026-03-24T03:20:49.792+0000] {taskinstance.py:349} INFO - ::group::Post task execution logs
+[2026-03-24T03:20:49.793+0000] {taskinstance.py:361} INFO - Marking task as SUCCESS. dag_id=dag_get_data_from_yf, task_id=insert_data_task, run_id=manual__2026-03-24T03:19:27+00:00, map_index=9, execution_date=20260324T031927, start_date=20260324T032049, end_date=20260324T032049
+[2026-03-24T03:20:49.877+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2026-03-24T03:20:49.878+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2026-03-24T03:20:49.879+0000] {logging_mixin.py:190} INFO - Dag name:dag_get_data_from_yf queued_at:2026-03-24 03:19:33.739281+00:00
+[2026-03-24T03:20:49.879+0000] {logging_mixin.py:190} INFO - Task hostname:163f4b6f8ad1 operator:SQLExecuteQueryOperator
+[2026-03-24T03:20:49.903+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-03-24T03:20:50.001+0000] {taskinstance.py:3924} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-03-24T03:20:50.006+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

@@ -1,0 +1,255 @@
+[2026-03-18T11:48:44.691+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-03-18T11:48:44.758+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_get_data_from_yf.prepare_data_csv_all scheduled__2026-03-17T01:00:00+00:00 [queued]>
+[2026-03-18T11:48:44.778+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_get_data_from_yf.prepare_data_csv_all scheduled__2026-03-17T01:00:00+00:00 [queued]>
+[2026-03-18T11:48:44.779+0000] {taskinstance.py:2884} INFO - Starting attempt 1 of 1
+[2026-03-18T11:48:44.813+0000] {taskinstance.py:2907} INFO - Executing <Task(_PythonDecoratedOperator): prepare_data_csv_all> on 2026-03-17 01:00:00+00:00
+[2026-03-18T11:48:44.836+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=451) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2026-03-18T11:48:44.840+0000] {standard_task_runner.py:72} INFO - Started process 455 to run task
+[2026-03-18T11:48:44.843+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'dag_get_data_from_yf', 'prepare_data_csv_all', 'scheduled__2026-03-17T01:00:00+00:00', '--job-id', '2221', '--raw', '--subdir', 'DAGS_FOLDER/get_finance_yf_csv.py', '--cfg-path', '/tmp/tmpef1tnkm0']
+[2026-03-18T11:48:44.846+0000] {standard_task_runner.py:105} INFO - Job 2221: Subtask prepare_data_csv_all
+[2026-03-18T11:48:45.022+0000] {task_command.py:467} INFO - Running <TaskInstance: dag_get_data_from_yf.prepare_data_csv_all scheduled__2026-03-17T01:00:00+00:00 [running]> on host acd199b76f5e
+[2026-03-18T11:48:45.300+0000] {taskinstance.py:3157} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag_get_data_from_yf' AIRFLOW_CTX_TASK_ID='prepare_data_csv_all' AIRFLOW_CTX_EXECUTION_DATE='2026-03-17T01:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-03-17T01:00:00+00:00'
+[2026-03-18T11:48:45.304+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2026-03-18T11:48:45.304+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2026-03-18T11:48:45.305+0000] {logging_mixin.py:190} INFO - Current task name:prepare_data_csv_all state:running start_date:2026-03-18 11:48:44.759421+00:00
+[2026-03-18T11:48:45.306+0000] {logging_mixin.py:190} INFO - Dag name:dag_get_data_from_yf and current dag run status:running
+[2026-03-18T11:48:45.306+0000] {taskinstance.py:740} INFO - ::endgroup::
+[2026-03-18T11:48:45.308+0000] {python.py:240} INFO - Done. Returned value was: []
+[2026-03-18T11:48:45.412+0000] {taskinstance.py:349} INFO - ::group::Post task execution logs
+[2026-03-18T11:48:45.413+0000] {taskinstance.py:361} INFO - Marking task as SUCCESS. dag_id=dag_get_data_from_yf, task_id=prepare_data_csv_all, run_id=scheduled__2026-03-17T01:00:00+00:00, execution_date=20260317T010000, start_date=20260318T114844, end_date=20260318T114845
+[2026-03-18T11:48:45.492+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2026-03-18T11:48:45.493+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2026-03-18T11:48:45.494+0000] {logging_mixin.py:190} INFO - Dag name:dag_get_data_from_yf queued_at:2026-03-18 11:48:17.414411+00:00
+[2026-03-18T11:48:45.495+0000] {logging_mixin.py:190} INFO - Task hostname:acd199b76f5e operator:_PythonDecoratedOperator
+[2026-03-18T11:48:45.523+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-03-18T11:48:45.568+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2026-03-18T11:52:25.164+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-03-18T11:52:25.238+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_get_data_from_yf.prepare_data_csv_all scheduled__2026-03-17T01:00:00+00:00 [queued]>
+[2026-03-18T11:52:25.267+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_get_data_from_yf.prepare_data_csv_all scheduled__2026-03-17T01:00:00+00:00 [queued]>
+[2026-03-18T11:52:25.268+0000] {taskinstance.py:2884} INFO - Starting attempt 1 of 1
+[2026-03-18T11:52:25.300+0000] {taskinstance.py:2907} INFO - Executing <Task(_PythonDecoratedOperator): prepare_data_csv_all> on 2026-03-17 01:00:00+00:00
+[2026-03-18T11:52:25.322+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=532) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2026-03-18T11:52:25.328+0000] {standard_task_runner.py:72} INFO - Started process 536 to run task
+[2026-03-18T11:52:25.333+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'dag_get_data_from_yf', 'prepare_data_csv_all', 'scheduled__2026-03-17T01:00:00+00:00', '--job-id', '2228', '--raw', '--subdir', 'DAGS_FOLDER/get_finance_yf_csv.py', '--cfg-path', '/tmp/tmp1hibt0ik']
+[2026-03-18T11:52:25.335+0000] {standard_task_runner.py:105} INFO - Job 2228: Subtask prepare_data_csv_all
+[2026-03-18T11:52:25.554+0000] {task_command.py:467} INFO - Running <TaskInstance: dag_get_data_from_yf.prepare_data_csv_all scheduled__2026-03-17T01:00:00+00:00 [running]> on host acd199b76f5e
+[2026-03-18T11:52:25.885+0000] {taskinstance.py:3157} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag_get_data_from_yf' AIRFLOW_CTX_TASK_ID='prepare_data_csv_all' AIRFLOW_CTX_EXECUTION_DATE='2026-03-17T01:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-03-17T01:00:00+00:00'
+[2026-03-18T11:52:25.890+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2026-03-18T11:52:25.891+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2026-03-18T11:52:25.891+0000] {logging_mixin.py:190} INFO - Current task name:prepare_data_csv_all state:running start_date:2026-03-18 11:52:25.240254+00:00
+[2026-03-18T11:52:25.892+0000] {logging_mixin.py:190} INFO - Dag name:dag_get_data_from_yf and current dag run status:running
+[2026-03-18T11:52:25.893+0000] {taskinstance.py:740} INFO - ::endgroup::
+[2026-03-18T11:52:25.895+0000] {python.py:240} INFO - Done. Returned value was: None
+[2026-03-18T11:52:25.950+0000] {taskinstance.py:3336} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 801, in _execute_task
+    _record_task_map_for_downstreams(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/api_internal/internal_api_call.py", line 166, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 94, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 1351, in _record_task_map_for_downstreams
+    raise XComForMappingNotPushed()
+airflow.exceptions.XComForMappingNotPushed: did not push XCom for task mapping
+[2026-03-18T11:52:25.973+0000] {logging_mixin.py:190} INFO - Task instance in failure state
+[2026-03-18T11:52:25.974+0000] {logging_mixin.py:190} INFO - Task start:2026-03-18 11:52:25.240254+00:00 end:2026-03-18 11:52:25.971840+00:00 duration:0.731586
+[2026-03-18T11:52:25.976+0000] {logging_mixin.py:190} INFO - Task:<Task(_PythonDecoratedOperator): prepare_data_csv_all> dag:<DAG: dag_get_data_from_yf> dagrun:<DagRun dag_get_data_from_yf @ 2026-03-17 01:00:00+00:00: scheduled__2026-03-17T01:00:00+00:00, state:running, queued_at: 2026-03-18 11:52:11.777623+00:00. externally triggered: False>
+[2026-03-18T11:52:25.976+0000] {logging_mixin.py:190} INFO - Failure caused by did not push XCom for task mapping
+[2026-03-18T11:52:25.977+0000] {taskinstance.py:1242} INFO - Marking task as FAILED. dag_id=dag_get_data_from_yf, task_id=prepare_data_csv_all, run_id=scheduled__2026-03-17T01:00:00+00:00, execution_date=20260317T010000, start_date=20260318T115225, end_date=20260318T115225
+[2026-03-18T11:52:26.165+0000] {taskinstance.py:349} INFO - ::group::Post task execution logs
+[2026-03-18T11:52:26.166+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 2228 for task prepare_data_csv_all (did not push XCom for task mapping; 536)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/cli.py", line 116, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3029, in _run_raw_task
+    return _run_raw_task(
+           ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 282, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3184, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3208, in _execute_task
+    return _execute_task(self, context, task_orig)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 801, in _execute_task
+    _record_task_map_for_downstreams(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/api_internal/internal_api_call.py", line 166, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 94, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 1351, in _record_task_map_for_downstreams
+    raise XComForMappingNotPushed()
+airflow.exceptions.XComForMappingNotPushed: did not push XCom for task mapping
+[2026-03-18T11:52:26.201+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 1
+[2026-03-18T11:52:26.315+0000] {taskinstance.py:3924} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-03-18T11:52:26.326+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2026-03-18T11:53:27.677+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-03-18T11:53:27.788+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_get_data_from_yf.prepare_data_csv_all scheduled__2026-03-17T01:00:00+00:00 [queued]>
+[2026-03-18T11:53:27.826+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_get_data_from_yf.prepare_data_csv_all scheduled__2026-03-17T01:00:00+00:00 [queued]>
+[2026-03-18T11:53:27.827+0000] {taskinstance.py:2884} INFO - Starting attempt 1 of 1
+[2026-03-18T11:53:27.883+0000] {taskinstance.py:2907} INFO - Executing <Task(_PythonDecoratedOperator): prepare_data_csv_all> on 2026-03-17 01:00:00+00:00
+[2026-03-18T11:53:27.958+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=566) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2026-03-18T11:53:27.990+0000] {standard_task_runner.py:72} INFO - Started process 579 to run task
+[2026-03-18T11:53:28.002+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'dag_get_data_from_yf', 'prepare_data_csv_all', 'scheduled__2026-03-17T01:00:00+00:00', '--job-id', '2233', '--raw', '--subdir', 'DAGS_FOLDER/get_finance_yf_csv.py', '--cfg-path', '/tmp/tmpvg_tzrct']
+[2026-03-18T11:53:28.006+0000] {standard_task_runner.py:105} INFO - Job 2233: Subtask prepare_data_csv_all
+[2026-03-18T11:53:28.507+0000] {task_command.py:467} INFO - Running <TaskInstance: dag_get_data_from_yf.prepare_data_csv_all scheduled__2026-03-17T01:00:00+00:00 [running]> on host acd199b76f5e
+[2026-03-18T11:53:29.065+0000] {taskinstance.py:3157} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag_get_data_from_yf' AIRFLOW_CTX_TASK_ID='prepare_data_csv_all' AIRFLOW_CTX_EXECUTION_DATE='2026-03-17T01:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-03-17T01:00:00+00:00'
+[2026-03-18T11:53:29.068+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2026-03-18T11:53:29.069+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2026-03-18T11:53:29.070+0000] {logging_mixin.py:190} INFO - Current task name:prepare_data_csv_all state:running start_date:2026-03-18 11:53:27.789557+00:00
+[2026-03-18T11:53:29.072+0000] {logging_mixin.py:190} INFO - Dag name:dag_get_data_from_yf and current dag run status:running
+[2026-03-18T11:53:29.081+0000] {taskinstance.py:740} INFO - ::endgroup::
+[2026-03-18T11:53:29.085+0000] {python.py:240} INFO - Done. Returned value was: None
+[2026-03-18T11:53:29.179+0000] {taskinstance.py:3336} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 801, in _execute_task
+    _record_task_map_for_downstreams(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/api_internal/internal_api_call.py", line 166, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 94, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 1351, in _record_task_map_for_downstreams
+    raise XComForMappingNotPushed()
+airflow.exceptions.XComForMappingNotPushed: did not push XCom for task mapping
+[2026-03-18T11:53:29.205+0000] {logging_mixin.py:190} INFO - Task instance in failure state
+[2026-03-18T11:53:29.206+0000] {logging_mixin.py:190} INFO - Task start:2026-03-18 11:53:27.789557+00:00 end:2026-03-18 11:53:29.203565+00:00 duration:1.414008
+[2026-03-18T11:53:29.207+0000] {logging_mixin.py:190} INFO - Task:<Task(_PythonDecoratedOperator): prepare_data_csv_all> dag:<DAG: dag_get_data_from_yf> dagrun:<DagRun dag_get_data_from_yf @ 2026-03-17 01:00:00+00:00: scheduled__2026-03-17T01:00:00+00:00, state:running, queued_at: 2026-03-18 11:53:10.493248+00:00. externally triggered: False>
+[2026-03-18T11:53:29.208+0000] {logging_mixin.py:190} INFO - Failure caused by did not push XCom for task mapping
+[2026-03-18T11:53:29.209+0000] {taskinstance.py:1242} INFO - Marking task as FAILED. dag_id=dag_get_data_from_yf, task_id=prepare_data_csv_all, run_id=scheduled__2026-03-17T01:00:00+00:00, execution_date=20260317T010000, start_date=20260318T115327, end_date=20260318T115329
+[2026-03-18T11:53:29.352+0000] {taskinstance.py:349} INFO - ::group::Post task execution logs
+[2026-03-18T11:53:29.353+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 2233 for task prepare_data_csv_all (did not push XCom for task mapping; 579)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/cli.py", line 116, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3029, in _run_raw_task
+    return _run_raw_task(
+           ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 282, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3184, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3208, in _execute_task
+    return _execute_task(self, context, task_orig)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 801, in _execute_task
+    _record_task_map_for_downstreams(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/api_internal/internal_api_call.py", line 166, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 94, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 1351, in _record_task_map_for_downstreams
+    raise XComForMappingNotPushed()
+airflow.exceptions.XComForMappingNotPushed: did not push XCom for task mapping
+[2026-03-18T11:53:29.400+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 1
+[2026-03-18T11:53:29.625+0000] {taskinstance.py:3924} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-03-18T11:53:29.650+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2026-03-18T11:54:57.300+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-03-18T11:54:57.360+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_get_data_from_yf.prepare_data_csv_all scheduled__2026-03-17T01:00:00+00:00 [queued]>
+[2026-03-18T11:54:57.378+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_get_data_from_yf.prepare_data_csv_all scheduled__2026-03-17T01:00:00+00:00 [queued]>
+[2026-03-18T11:54:57.379+0000] {taskinstance.py:2884} INFO - Starting attempt 1 of 1
+[2026-03-18T11:54:57.410+0000] {taskinstance.py:2907} INFO - Executing <Task(_PythonDecoratedOperator): prepare_data_csv_all> on 2026-03-17 01:00:00+00:00
+[2026-03-18T11:54:57.433+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=606) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2026-03-18T11:54:57.438+0000] {standard_task_runner.py:72} INFO - Started process 617 to run task
+[2026-03-18T11:54:57.442+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'dag_get_data_from_yf', 'prepare_data_csv_all', 'scheduled__2026-03-17T01:00:00+00:00', '--job-id', '2234', '--raw', '--subdir', 'DAGS_FOLDER/get_finance_yf_csv.py', '--cfg-path', '/tmp/tmpdnxow8q0']
+[2026-03-18T11:54:57.444+0000] {standard_task_runner.py:105} INFO - Job 2234: Subtask prepare_data_csv_all
+[2026-03-18T11:54:57.622+0000] {task_command.py:467} INFO - Running <TaskInstance: dag_get_data_from_yf.prepare_data_csv_all scheduled__2026-03-17T01:00:00+00:00 [running]> on host acd199b76f5e
+[2026-03-18T11:54:57.906+0000] {taskinstance.py:3157} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag_get_data_from_yf' AIRFLOW_CTX_TASK_ID='prepare_data_csv_all' AIRFLOW_CTX_EXECUTION_DATE='2026-03-17T01:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-03-17T01:00:00+00:00'
+[2026-03-18T11:54:57.911+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2026-03-18T11:54:57.913+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2026-03-18T11:54:57.914+0000] {logging_mixin.py:190} INFO - Current task name:prepare_data_csv_all state:running start_date:2026-03-18 11:54:57.361070+00:00
+[2026-03-18T11:54:57.915+0000] {logging_mixin.py:190} INFO - Dag name:dag_get_data_from_yf and current dag run status:running
+[2026-03-18T11:54:57.916+0000] {taskinstance.py:740} INFO - ::endgroup::
+[2026-03-18T11:54:57.920+0000] {python.py:240} INFO - Done. Returned value was: []
+[2026-03-18T11:54:58.028+0000] {taskinstance.py:349} INFO - ::group::Post task execution logs
+[2026-03-18T11:54:58.029+0000] {taskinstance.py:361} INFO - Marking task as SUCCESS. dag_id=dag_get_data_from_yf, task_id=prepare_data_csv_all, run_id=scheduled__2026-03-17T01:00:00+00:00, execution_date=20260317T010000, start_date=20260318T115457, end_date=20260318T115458
+[2026-03-18T11:54:58.115+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2026-03-18T11:54:58.117+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2026-03-18T11:54:58.119+0000] {logging_mixin.py:190} INFO - Dag name:dag_get_data_from_yf queued_at:2026-03-18 11:54:41.924487+00:00
+[2026-03-18T11:54:58.120+0000] {logging_mixin.py:190} INFO - Task hostname:acd199b76f5e operator:_PythonDecoratedOperator
+[2026-03-18T11:54:58.156+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-03-18T11:54:58.285+0000] {taskinstance.py:3924} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-03-18T11:54:58.290+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2026-03-18T12:03:59.704+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-03-18T12:03:59.796+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_get_data_from_yf.prepare_data_csv_all scheduled__2026-03-17T01:00:00+00:00 [queued]>
+[2026-03-18T12:03:59.822+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_get_data_from_yf.prepare_data_csv_all scheduled__2026-03-17T01:00:00+00:00 [queued]>
+[2026-03-18T12:03:59.822+0000] {taskinstance.py:2884} INFO - Starting attempt 1 of 1
+[2026-03-18T12:03:59.859+0000] {taskinstance.py:2907} INFO - Executing <Task(_PythonDecoratedOperator): prepare_data_csv_all> on 2026-03-17 01:00:00+00:00
+[2026-03-18T12:03:59.880+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=783) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2026-03-18T12:03:59.885+0000] {standard_task_runner.py:72} INFO - Started process 786 to run task
+[2026-03-18T12:03:59.887+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'dag_get_data_from_yf', 'prepare_data_csv_all', 'scheduled__2026-03-17T01:00:00+00:00', '--job-id', '2248', '--raw', '--subdir', 'DAGS_FOLDER/get_finance_yf_csv.py', '--cfg-path', '/tmp/tmpc9roj72l']
+[2026-03-18T12:03:59.891+0000] {standard_task_runner.py:105} INFO - Job 2248: Subtask prepare_data_csv_all
+[2026-03-18T12:04:00.221+0000] {task_command.py:467} INFO - Running <TaskInstance: dag_get_data_from_yf.prepare_data_csv_all scheduled__2026-03-17T01:00:00+00:00 [running]> on host acd199b76f5e
+[2026-03-18T12:04:00.614+0000] {taskinstance.py:3157} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag_get_data_from_yf' AIRFLOW_CTX_TASK_ID='prepare_data_csv_all' AIRFLOW_CTX_EXECUTION_DATE='2026-03-17T01:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-03-17T01:00:00+00:00'
+[2026-03-18T12:04:00.617+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2026-03-18T12:04:00.618+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2026-03-18T12:04:00.620+0000] {logging_mixin.py:190} INFO - Current task name:prepare_data_csv_all state:running start_date:2026-03-18 12:03:59.797059+00:00
+[2026-03-18T12:04:00.621+0000] {logging_mixin.py:190} INFO - Dag name:dag_get_data_from_yf and current dag run status:running
+[2026-03-18T12:04:00.621+0000] {taskinstance.py:740} INFO - ::endgroup::
+[2026-03-18T12:04:00.644+0000] {python.py:240} INFO - Done. Returned value was: [{'Date': '2026-03-17', 'Ticker': 'BBCA.JK', 'Close': 6775.0, 'High': 6825.0, 'Low': 6750.0, 'Open': 6750.0, 'Inserted_at_timestamp_WIB': '2026-03-18 19:03:14'}, {'Date': '2026-03-17', 'Ticker': 'BBRI.JK', 'Close': 3480.0, 'High': 3530.0, 'Low': 3480.0, 'Open': 3500.0, 'Inserted_at_timestamp_WIB': '2026-03-18 19:03:14'}, {'Date': '2026-03-17', 'Ticker': 'BMRI.JK', 'Close': 4730.0, 'High': 4780.0, 'Low': 4710.0, 'Open': 4750.0, 'Inserted_at_timestamp_WIB': '2026-03-18 19:03:14'}]
+[2026-03-18T12:04:00.738+0000] {taskinstance.py:349} INFO - ::group::Post task execution logs
+[2026-03-18T12:04:00.739+0000] {taskinstance.py:361} INFO - Marking task as SUCCESS. dag_id=dag_get_data_from_yf, task_id=prepare_data_csv_all, run_id=scheduled__2026-03-17T01:00:00+00:00, execution_date=20260317T010000, start_date=20260318T120359, end_date=20260318T120400
+[2026-03-18T12:04:00.825+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2026-03-18T12:04:00.826+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2026-03-18T12:04:00.827+0000] {logging_mixin.py:190} INFO - Dag name:dag_get_data_from_yf queued_at:2026-03-18 12:03:02.803534+00:00
+[2026-03-18T12:04:00.827+0000] {logging_mixin.py:190} INFO - Task hostname:acd199b76f5e operator:_PythonDecoratedOperator
+[2026-03-18T12:04:00.859+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-03-18T12:04:00.972+0000] {taskinstance.py:3924} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-03-18T12:04:00.977+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

@@ -1,0 +1,66 @@
+[2026-03-16T05:54:38.307+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-03-16T05:54:38.817+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_get_data_from_yf.create_table_db scheduled__2026-03-04T00:00:00+00:00 [queued]>
+[2026-03-16T05:54:38.949+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_get_data_from_yf.create_table_db scheduled__2026-03-04T00:00:00+00:00 [queued]>
+[2026-03-16T05:54:38.949+0000] {taskinstance.py:2884} INFO - Starting attempt 1 of 1
+[2026-03-16T05:54:39.043+0000] {taskinstance.py:2907} INFO - Executing <Task(_PythonDecoratedOperator): create_table_db> on 2026-03-04 00:00:00+00:00
+[2026-03-16T05:54:39.069+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=2434) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2026-03-16T05:54:39.082+0000] {standard_task_runner.py:72} INFO - Started process 2472 to run task
+[2026-03-16T05:54:39.085+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'dag_get_data_from_yf', 'create_table_db', 'scheduled__2026-03-04T00:00:00+00:00', '--job-id', '844', '--raw', '--subdir', 'DAGS_FOLDER/get_finance_yf_csv.py', '--cfg-path', '/tmp/tmp5e4uja_z']
+[2026-03-16T05:54:39.110+0000] {standard_task_runner.py:105} INFO - Job 844: Subtask create_table_db
+[2026-03-16T05:54:39.351+0000] {task_command.py:467} INFO - Running <TaskInstance: dag_get_data_from_yf.create_table_db scheduled__2026-03-04T00:00:00+00:00 [running]> on host 662456f34d26
+[2026-03-16T05:54:39.949+0000] {taskinstance.py:3157} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag_get_data_from_yf' AIRFLOW_CTX_TASK_ID='create_table_db' AIRFLOW_CTX_EXECUTION_DATE='2026-03-04T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-03-04T00:00:00+00:00'
+[2026-03-16T05:54:39.951+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2026-03-16T05:54:39.952+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2026-03-16T05:54:39.953+0000] {logging_mixin.py:190} INFO - Current task name:create_table_db state:running start_date:2026-03-16 05:54:38.818640+00:00
+[2026-03-16T05:54:39.953+0000] {logging_mixin.py:190} INFO - Dag name:dag_get_data_from_yf and current dag run status:running
+[2026-03-16T05:54:39.954+0000] {taskinstance.py:740} INFO - ::endgroup::
+[2026-03-16T05:54:40.012+0000] {base.py:84} INFO - Retrieving connection 'db_custom'
+[2026-03-16T05:54:40.041+0000] {logging_mixin.py:190} INFO - Table indonesia_stocks_table sudah ada: type "datetime" does not exist
+LINE 8:                         inserted_at_timestamp DATETIME,
+                                                      ^
+[2026-03-16T05:54:40.052+0000] {logging_mixin.py:190} INFO - koneksi ditutup
+[2026-03-16T05:54:40.056+0000] {python.py:240} INFO - Done. Returned value was: None
+[2026-03-16T05:54:40.135+0000] {taskinstance.py:349} INFO - ::group::Post task execution logs
+[2026-03-16T05:54:40.136+0000] {taskinstance.py:361} INFO - Marking task as SUCCESS. dag_id=dag_get_data_from_yf, task_id=create_table_db, run_id=scheduled__2026-03-04T00:00:00+00:00, execution_date=20260304T000000, start_date=20260316T055438, end_date=20260316T055440
+[2026-03-16T05:54:40.283+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2026-03-16T05:54:40.284+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2026-03-16T05:54:40.285+0000] {logging_mixin.py:190} INFO - Dag name:dag_get_data_from_yf queued_at:2026-03-16 04:41:04.774132+00:00
+[2026-03-16T05:54:40.285+0000] {logging_mixin.py:190} INFO - Task hostname:662456f34d26 operator:_PythonDecoratedOperator
+[2026-03-16T05:54:40.315+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-03-16T05:54:40.443+0000] {taskinstance.py:3924} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-03-16T05:54:40.454+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2026-03-16T14:18:24.188+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-03-16T14:18:24.346+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_get_data_from_yf.create_table_db scheduled__2026-03-04T00:00:00+00:00 [queued]>
+[2026-03-16T14:18:24.396+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_get_data_from_yf.create_table_db scheduled__2026-03-04T00:00:00+00:00 [queued]>
+[2026-03-16T14:18:24.397+0000] {taskinstance.py:2884} INFO - Starting attempt 1 of 1
+[2026-03-16T14:18:24.480+0000] {taskinstance.py:2907} INFO - Executing <Task(_PythonDecoratedOperator): create_table_db> on 2026-03-04 00:00:00+00:00
+[2026-03-16T14:18:24.520+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=1235) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2026-03-16T14:18:24.525+0000] {standard_task_runner.py:72} INFO - Started process 1292 to run task
+[2026-03-16T14:18:24.605+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'dag_get_data_from_yf', 'create_table_db', 'scheduled__2026-03-04T00:00:00+00:00', '--job-id', '1132', '--raw', '--subdir', 'DAGS_FOLDER/get_finance_yf_csv.py', '--cfg-path', '/tmp/tmpedezxhom']
+[2026-03-16T14:18:24.644+0000] {standard_task_runner.py:105} INFO - Job 1132: Subtask create_table_db
+[2026-03-16T14:18:25.246+0000] {task_command.py:467} INFO - Running <TaskInstance: dag_get_data_from_yf.create_table_db scheduled__2026-03-04T00:00:00+00:00 [running]> on host 80c99acb76df
+[2026-03-16T14:18:26.400+0000] {taskinstance.py:3157} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag_get_data_from_yf' AIRFLOW_CTX_TASK_ID='create_table_db' AIRFLOW_CTX_EXECUTION_DATE='2026-03-04T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-03-04T00:00:00+00:00'
+[2026-03-16T14:18:26.402+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2026-03-16T14:18:26.403+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2026-03-16T14:18:26.404+0000] {logging_mixin.py:190} INFO - Current task name:create_table_db state:running start_date:2026-03-16 14:18:24.347459+00:00
+[2026-03-16T14:18:26.404+0000] {logging_mixin.py:190} INFO - Dag name:dag_get_data_from_yf and current dag run status:running
+[2026-03-16T14:18:26.406+0000] {taskinstance.py:740} INFO - ::endgroup::
+[2026-03-16T14:18:26.495+0000] {base.py:84} INFO - Retrieving connection 'db_custom'
+[2026-03-16T14:18:26.536+0000] {logging_mixin.py:190} INFO - Table indonesia_stocks_table sudah ada: type "datetime" does not exist
+LINE 8:                         inserted_at_timestamp DATETIME,
+                                                      ^
+[2026-03-16T14:18:26.541+0000] {logging_mixin.py:190} INFO - koneksi ditutup
+[2026-03-16T14:18:26.542+0000] {python.py:240} INFO - Done. Returned value was: None
+[2026-03-16T14:18:26.619+0000] {taskinstance.py:349} INFO - ::group::Post task execution logs
+[2026-03-16T14:18:26.620+0000] {taskinstance.py:361} INFO - Marking task as SUCCESS. dag_id=dag_get_data_from_yf, task_id=create_table_db, run_id=scheduled__2026-03-04T00:00:00+00:00, execution_date=20260304T000000, start_date=20260316T141824, end_date=20260316T141826
+[2026-03-16T14:18:26.762+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2026-03-16T14:18:26.763+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2026-03-16T14:18:26.764+0000] {logging_mixin.py:190} INFO - Dag name:dag_get_data_from_yf queued_at:2026-03-16 10:57:51.819160+00:00
+[2026-03-16T14:18:26.764+0000] {logging_mixin.py:190} INFO - Task hostname:80c99acb76df operator:_PythonDecoratedOperator
+[2026-03-16T14:18:26.809+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-03-16T14:18:27.182+0000] {taskinstance.py:3924} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-03-16T14:18:27.191+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

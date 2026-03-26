@@ -1,0 +1,36 @@
+[2026-03-12T06:59:25.832+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-03-12T06:59:26.002+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_load_data_from_csv.read_csv_file manual__2026-03-12T06:59:10.732051+00:00 [queued]>
+[2026-03-12T06:59:26.060+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_load_data_from_csv.read_csv_file manual__2026-03-12T06:59:10.732051+00:00 [queued]>
+[2026-03-12T06:59:26.062+0000] {taskinstance.py:2884} INFO - Starting attempt 1 of 1
+[2026-03-12T06:59:26.230+0000] {taskinstance.py:2907} INFO - Executing <Task(_PythonDecoratedOperator): read_csv_file> on 2026-03-12 06:59:10.732051+00:00
+[2026-03-12T06:59:26.293+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=4022) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2026-03-12T06:59:26.302+0000] {standard_task_runner.py:72} INFO - Started process 4049 to run task
+[2026-03-12T06:59:26.338+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'dag_load_data_from_csv', 'read_csv_file', 'manual__2026-03-12T06:59:10.732051+00:00', '--job-id', '12053', '--raw', '--subdir', 'DAGS_FOLDER/read_finance_csv_from_other_dag.py', '--cfg-path', '/tmp/tmpg7ydj5w6']
+[2026-03-12T06:59:26.340+0000] {standard_task_runner.py:105} INFO - Job 12053: Subtask read_csv_file
+[2026-03-12T06:59:26.760+0000] {task_command.py:467} INFO - Running <TaskInstance: dag_load_data_from_csv.read_csv_file manual__2026-03-12T06:59:10.732051+00:00 [running]> on host 80e0d0cbfa54
+[2026-03-12T06:59:27.512+0000] {taskinstance.py:3157} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag_load_data_from_csv' AIRFLOW_CTX_TASK_ID='read_csv_file' AIRFLOW_CTX_EXECUTION_DATE='2026-03-12T06:59:10.732051+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-03-12T06:59:10.732051+00:00'
+[2026-03-12T06:59:27.515+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2026-03-12T06:59:27.516+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2026-03-12T06:59:27.516+0000] {logging_mixin.py:190} INFO - Current task name:read_csv_file state:running start_date:2026-03-12 06:59:26.005790+00:00
+[2026-03-12T06:59:27.517+0000] {logging_mixin.py:190} INFO - Dag name:dag_load_data_from_csv and current dag run status:running
+[2026-03-12T06:59:27.518+0000] {taskinstance.py:740} INFO - ::endgroup::
+[2026-03-12T06:59:27.736+0000] {logging_mixin.py:190} INFO -         Price            Close  ...             Open.1              Open.2
+0      Ticker          BBCA.JK  ...            BBRI.JK             BMRI.JK
+1        Date              NaN  ...                NaN                 NaN
+2  2025-03-12  8794.4755859375  ...  3470.537250587444   4230.347079918033
+3  2025-03-13  8649.9091796875  ...  3607.172568873355  4399.5607879252375
+4  2025-03-14  8433.0595703125  ...  3415.883056640625   4132.380982990507
+
+[5 rows x 13 columns]
+[2026-03-12T06:59:27.737+0000] {python.py:240} INFO - Done. Returned value was: /opt/***/scripts/saham_indonesia_all.csv
+[2026-03-12T06:59:27.942+0000] {taskinstance.py:349} INFO - ::group::Post task execution logs
+[2026-03-12T06:59:27.955+0000] {taskinstance.py:361} INFO - Marking task as SUCCESS. dag_id=dag_load_data_from_csv, task_id=read_csv_file, run_id=manual__2026-03-12T06:59:10.732051+00:00, execution_date=20260312T065910, start_date=20260312T065926, end_date=20260312T065927
+[2026-03-12T06:59:28.215+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2026-03-12T06:59:28.221+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2026-03-12T06:59:28.222+0000] {logging_mixin.py:190} INFO - Dag name:dag_load_data_from_csv queued_at:2026-03-12 06:59:10.909523+00:00
+[2026-03-12T06:59:28.222+0000] {logging_mixin.py:190} INFO - Task hostname:80e0d0cbfa54 operator:_PythonDecoratedOperator
+[2026-03-12T06:59:28.453+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-03-12T06:59:28.582+0000] {taskinstance.py:3924} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-03-12T06:59:28.612+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

@@ -1,0 +1,260 @@
+[2026-03-16T15:32:56.392+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-03-16T15:32:56.668+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_get_data_from_yf.olhc_branching.get_csv_high scheduled__2026-03-06T17:00:00+00:00 [queued]>
+[2026-03-16T15:32:56.930+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_get_data_from_yf.olhc_branching.get_csv_high scheduled__2026-03-06T17:00:00+00:00 [queued]>
+[2026-03-16T15:32:56.966+0000] {taskinstance.py:2884} INFO - Starting attempt 1 of 1
+[2026-03-16T15:32:57.610+0000] {taskinstance.py:2907} INFO - Executing <Task(_PythonDecoratedOperator): olhc_branching.get_csv_high> on 2026-03-06 17:00:00+00:00
+[2026-03-16T15:32:57.673+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'dag_get_data_from_yf', 'olhc_branching.get_csv_high', 'scheduled__2026-03-06T17:00:00+00:00', '--job-id', '1264', '--raw', '--subdir', 'DAGS_FOLDER/get_finance_yf_csv.py', '--cfg-path', '/tmp/tmp0ip5tthr']
+[2026-03-16T15:32:57.665+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=1538) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2026-03-16T15:32:57.684+0000] {standard_task_runner.py:72} INFO - Started process 1657 to run task
+[2026-03-16T15:32:57.708+0000] {standard_task_runner.py:105} INFO - Job 1264: Subtask olhc_branching.get_csv_high
+[2026-03-16T15:32:58.224+0000] {task_command.py:467} INFO - Running <TaskInstance: dag_get_data_from_yf.olhc_branching.get_csv_high scheduled__2026-03-06T17:00:00+00:00 [running]> on host 82763a516181
+[2026-03-16T15:32:59.978+0000] {taskinstance.py:3157} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag_get_data_from_yf' AIRFLOW_CTX_TASK_ID='olhc_branching.get_csv_high' AIRFLOW_CTX_EXECUTION_DATE='2026-03-06T17:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-03-06T17:00:00+00:00'
+[2026-03-16T15:32:59.981+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2026-03-16T15:32:59.982+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2026-03-16T15:32:59.983+0000] {logging_mixin.py:190} INFO - Current task name:olhc_branching.get_csv_high state:running start_date:2026-03-16 15:32:56.670273+00:00
+[2026-03-16T15:32:59.996+0000] {logging_mixin.py:190} INFO - Dag name:dag_get_data_from_yf and current dag run status:running
+[2026-03-16T15:32:59.997+0000] {taskinstance.py:740} INFO - ::endgroup::
+[2026-03-16T15:33:00.067+0000] {logging_mixin.py:190} INFO - Ini csv_string_high:  None
+[2026-03-16T15:33:00.071+0000] {python.py:240} INFO - Done. Returned value was: /opt/***/scripts/saham_indonesia_high.csv
+[2026-03-16T15:33:00.311+0000] {taskinstance.py:349} INFO - ::group::Post task execution logs
+[2026-03-16T15:33:00.331+0000] {taskinstance.py:361} INFO - Marking task as SUCCESS. dag_id=dag_get_data_from_yf, task_id=olhc_branching.get_csv_high, run_id=scheduled__2026-03-06T17:00:00+00:00, execution_date=20260306T170000, start_date=20260316T153256, end_date=20260316T153300
+[2026-03-16T15:33:00.529+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2026-03-16T15:33:00.531+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2026-03-16T15:33:00.532+0000] {logging_mixin.py:190} INFO - Dag name:dag_get_data_from_yf queued_at:2026-03-16 15:30:00.007524+00:00
+[2026-03-16T15:33:00.534+0000] {logging_mixin.py:190} INFO - Task hostname:82763a516181 operator:_PythonDecoratedOperator
+[2026-03-16T15:33:00.650+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-03-16T15:33:00.719+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2026-03-16T16:01:33.568+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-03-16T16:01:33.856+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_get_data_from_yf.olhc_branching.get_csv_high scheduled__2026-03-06T17:00:00+00:00 [queued]>
+[2026-03-16T16:01:34.050+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_get_data_from_yf.olhc_branching.get_csv_high scheduled__2026-03-06T17:00:00+00:00 [queued]>
+[2026-03-16T16:01:34.059+0000] {taskinstance.py:2884} INFO - Starting attempt 1 of 1
+[2026-03-16T16:01:34.309+0000] {taskinstance.py:2907} INFO - Executing <Task(_PythonDecoratedOperator): olhc_branching.get_csv_high> on 2026-03-06 17:00:00+00:00
+[2026-03-16T16:01:34.664+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=337) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2026-03-16T16:01:34.669+0000] {standard_task_runner.py:72} INFO - Started process 412 to run task
+[2026-03-16T16:01:34.799+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'dag_get_data_from_yf', 'olhc_branching.get_csv_high', 'scheduled__2026-03-06T17:00:00+00:00', '--job-id', '1321', '--raw', '--subdir', 'DAGS_FOLDER/get_finance_yf_csv.py', '--cfg-path', '/tmp/tmppdexf6lh']
+[2026-03-16T16:01:34.946+0000] {standard_task_runner.py:105} INFO - Job 1321: Subtask olhc_branching.get_csv_high
+[2026-03-16T16:01:35.283+0000] {task_command.py:467} INFO - Running <TaskInstance: dag_get_data_from_yf.olhc_branching.get_csv_high scheduled__2026-03-06T17:00:00+00:00 [running]> on host 957a712a5251
+[2026-03-16T16:01:49.833+0000] {job.py:229} INFO - Heartbeat recovered after 16.80 seconds
+[2026-03-16T16:01:50.203+0000] {taskinstance.py:3157} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag_get_data_from_yf' AIRFLOW_CTX_TASK_ID='olhc_branching.get_csv_high' AIRFLOW_CTX_EXECUTION_DATE='2026-03-06T17:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-03-06T17:00:00+00:00'
+[2026-03-16T16:01:50.213+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2026-03-16T16:01:50.214+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2026-03-16T16:01:50.220+0000] {logging_mixin.py:190} INFO - Current task name:olhc_branching.get_csv_high state:running start_date:2026-03-16 16:01:33.857016+00:00
+[2026-03-16T16:01:50.222+0000] {logging_mixin.py:190} INFO - Dag name:dag_get_data_from_yf and current dag run status:running
+[2026-03-16T16:01:50.224+0000] {taskinstance.py:740} INFO - ::endgroup::
+[2026-03-16T16:01:50.249+0000] {logging_mixin.py:190} INFO - Ini csv_string_high:  None
+[2026-03-16T16:01:50.253+0000] {python.py:240} INFO - Done. Returned value was: /opt/***/scripts/saham_indonesia_high.csv
+[2026-03-16T16:01:50.631+0000] {taskinstance.py:349} INFO - ::group::Post task execution logs
+[2026-03-16T16:01:50.633+0000] {taskinstance.py:361} INFO - Marking task as SUCCESS. dag_id=dag_get_data_from_yf, task_id=olhc_branching.get_csv_high, run_id=scheduled__2026-03-06T17:00:00+00:00, execution_date=20260306T170000, start_date=20260316T160133, end_date=20260316T160150
+[2026-03-16T16:01:51.030+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2026-03-16T16:01:51.031+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2026-03-16T16:01:51.031+0000] {logging_mixin.py:190} INFO - Dag name:dag_get_data_from_yf queued_at:2026-03-16 15:59:45.045879+00:00
+[2026-03-16T16:01:51.033+0000] {logging_mixin.py:190} INFO - Task hostname:957a712a5251 operator:_PythonDecoratedOperator
+[2026-03-16T16:01:51.352+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-03-16T16:01:51.485+0000] {taskinstance.py:3924} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-03-16T16:01:51.504+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2026-03-16T17:19:26.695+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-03-16T17:19:26.874+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_get_data_from_yf.olhc_branching.get_csv_high scheduled__2026-03-06T17:00:00+00:00 [queued]>
+[2026-03-16T17:19:26.904+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_get_data_from_yf.olhc_branching.get_csv_high scheduled__2026-03-06T17:00:00+00:00 [queued]>
+[2026-03-16T17:19:26.905+0000] {taskinstance.py:2884} INFO - Starting attempt 1 of 1
+[2026-03-16T17:19:26.951+0000] {taskinstance.py:2907} INFO - Executing <Task(_PythonDecoratedOperator): olhc_branching.get_csv_high> on 2026-03-06 17:00:00+00:00
+[2026-03-16T17:19:26.995+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=2002) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2026-03-16T17:19:27.000+0000] {standard_task_runner.py:72} INFO - Started process 2048 to run task
+[2026-03-16T17:19:27.017+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'dag_get_data_from_yf', 'olhc_branching.get_csv_high', 'scheduled__2026-03-06T17:00:00+00:00', '--job-id', '1412', '--raw', '--subdir', 'DAGS_FOLDER/get_finance_yf_csv.py', '--cfg-path', '/tmp/tmph_y30lzo']
+[2026-03-16T17:19:27.020+0000] {standard_task_runner.py:105} INFO - Job 1412: Subtask olhc_branching.get_csv_high
+[2026-03-16T17:19:27.629+0000] {task_command.py:467} INFO - Running <TaskInstance: dag_get_data_from_yf.olhc_branching.get_csv_high scheduled__2026-03-06T17:00:00+00:00 [running]> on host 957a712a5251
+[2026-03-16T17:19:28.777+0000] {taskinstance.py:3157} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag_get_data_from_yf' AIRFLOW_CTX_TASK_ID='olhc_branching.get_csv_high' AIRFLOW_CTX_EXECUTION_DATE='2026-03-06T17:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-03-06T17:00:00+00:00'
+[2026-03-16T17:19:28.790+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2026-03-16T17:19:28.792+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2026-03-16T17:19:28.793+0000] {logging_mixin.py:190} INFO - Current task name:olhc_branching.get_csv_high state:running start_date:2026-03-16 17:19:26.875501+00:00
+[2026-03-16T17:19:28.800+0000] {logging_mixin.py:190} INFO - Dag name:dag_get_data_from_yf and current dag run status:running
+[2026-03-16T17:19:28.804+0000] {taskinstance.py:740} INFO - ::endgroup::
+[2026-03-16T17:19:28.901+0000] {logging_mixin.py:190} INFO - Data saved to /opt/***/scripts/saham_indonesia_high.csv
+[2026-03-16T17:19:28.903+0000] {python.py:240} INFO - Done. Returned value was: /opt/***/scripts/saham_indonesia_high.csv
+[2026-03-16T17:19:29.088+0000] {taskinstance.py:349} INFO - ::group::Post task execution logs
+[2026-03-16T17:19:29.090+0000] {taskinstance.py:361} INFO - Marking task as SUCCESS. dag_id=dag_get_data_from_yf, task_id=olhc_branching.get_csv_high, run_id=scheduled__2026-03-06T17:00:00+00:00, execution_date=20260306T170000, start_date=20260316T171926, end_date=20260316T171929
+[2026-03-16T17:19:29.321+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2026-03-16T17:19:29.322+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2026-03-16T17:19:29.324+0000] {logging_mixin.py:190} INFO - Dag name:dag_get_data_from_yf queued_at:2026-03-16 17:15:20.249467+00:00
+[2026-03-16T17:19:29.336+0000] {logging_mixin.py:190} INFO - Task hostname:957a712a5251 operator:_PythonDecoratedOperator
+[2026-03-16T17:19:29.571+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-03-16T17:19:29.722+0000] {taskinstance.py:3924} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-03-16T17:19:29.753+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2026-03-16T17:28:19.288+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-03-16T17:28:19.417+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_get_data_from_yf.olhc_branching.get_csv_high scheduled__2026-03-06T17:00:00+00:00 [queued]>
+[2026-03-16T17:28:19.456+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_get_data_from_yf.olhc_branching.get_csv_high scheduled__2026-03-06T17:00:00+00:00 [queued]>
+[2026-03-16T17:28:19.457+0000] {taskinstance.py:2884} INFO - Starting attempt 1 of 1
+[2026-03-16T17:28:19.507+0000] {taskinstance.py:2907} INFO - Executing <Task(_PythonDecoratedOperator): olhc_branching.get_csv_high> on 2026-03-06 17:00:00+00:00
+[2026-03-16T17:28:19.610+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'dag_get_data_from_yf', 'olhc_branching.get_csv_high', 'scheduled__2026-03-06T17:00:00+00:00', '--job-id', '1454', '--raw', '--subdir', 'DAGS_FOLDER/get_finance_yf_csv.py', '--cfg-path', '/tmp/tmpc4bbifn1']
+[2026-03-16T17:28:19.622+0000] {standard_task_runner.py:105} INFO - Job 1454: Subtask olhc_branching.get_csv_high
+[2026-03-16T17:28:19.560+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=324) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2026-03-16T17:28:19.636+0000] {standard_task_runner.py:72} INFO - Started process 408 to run task
+[2026-03-16T17:28:20.582+0000] {task_command.py:467} INFO - Running <TaskInstance: dag_get_data_from_yf.olhc_branching.get_csv_high scheduled__2026-03-06T17:00:00+00:00 [running]> on host 27461aedc806
+[2026-03-16T17:28:21.588+0000] {taskinstance.py:3157} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag_get_data_from_yf' AIRFLOW_CTX_TASK_ID='olhc_branching.get_csv_high' AIRFLOW_CTX_EXECUTION_DATE='2026-03-06T17:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-03-06T17:00:00+00:00'
+[2026-03-16T17:28:21.591+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2026-03-16T17:28:21.592+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2026-03-16T17:28:21.594+0000] {logging_mixin.py:190} INFO - Current task name:olhc_branching.get_csv_high state:running start_date:2026-03-16 17:28:19.418271+00:00
+[2026-03-16T17:28:21.595+0000] {logging_mixin.py:190} INFO - Dag name:dag_get_data_from_yf and current dag run status:running
+[2026-03-16T17:28:21.595+0000] {taskinstance.py:740} INFO - ::endgroup::
+[2026-03-16T17:28:21.647+0000] {logging_mixin.py:190} INFO - Data saved to /opt/***/scripts/saham_indonesia_high.csv
+[2026-03-16T17:28:21.649+0000] {python.py:240} INFO - Done. Returned value was: /opt/***/scripts/saham_indonesia_high.csv
+[2026-03-16T17:28:21.841+0000] {taskinstance.py:349} INFO - ::group::Post task execution logs
+[2026-03-16T17:28:21.843+0000] {taskinstance.py:361} INFO - Marking task as SUCCESS. dag_id=dag_get_data_from_yf, task_id=olhc_branching.get_csv_high, run_id=scheduled__2026-03-06T17:00:00+00:00, execution_date=20260306T170000, start_date=20260316T172819, end_date=20260316T172821
+[2026-03-16T17:28:22.092+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2026-03-16T17:28:22.095+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2026-03-16T17:28:22.099+0000] {logging_mixin.py:190} INFO - Dag name:dag_get_data_from_yf queued_at:2026-03-16 17:24:20.471502+00:00
+[2026-03-16T17:28:22.100+0000] {logging_mixin.py:190} INFO - Task hostname:27461aedc806 operator:_PythonDecoratedOperator
+[2026-03-16T17:28:22.177+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-03-16T17:28:22.319+0000] {taskinstance.py:3924} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-03-16T17:28:22.377+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2026-03-16T21:48:34.884+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-03-16T21:48:35.635+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_get_data_from_yf.olhc_branching.get_csv_high scheduled__2026-03-06T17:00:00+00:00 [queued]>
+[2026-03-16T21:48:35.744+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_get_data_from_yf.olhc_branching.get_csv_high scheduled__2026-03-06T17:00:00+00:00 [queued]>
+[2026-03-16T21:48:35.745+0000] {taskinstance.py:2884} INFO - Starting attempt 1 of 1
+[2026-03-16T21:48:35.839+0000] {taskinstance.py:2907} INFO - Executing <Task(_PythonDecoratedOperator): olhc_branching.get_csv_high> on 2026-03-06 17:00:00+00:00
+[2026-03-16T21:48:35.865+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=1198) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2026-03-16T21:48:35.873+0000] {standard_task_runner.py:72} INFO - Started process 1230 to run task
+[2026-03-16T21:48:35.896+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'dag_get_data_from_yf', 'olhc_branching.get_csv_high', 'scheduled__2026-03-06T17:00:00+00:00', '--job-id', '1502', '--raw', '--subdir', 'DAGS_FOLDER/get_finance_yf_csv.py', '--cfg-path', '/tmp/tmpu9yicemw']
+[2026-03-16T21:48:35.899+0000] {standard_task_runner.py:105} INFO - Job 1502: Subtask olhc_branching.get_csv_high
+[2026-03-16T21:48:36.730+0000] {task_command.py:467} INFO - Running <TaskInstance: dag_get_data_from_yf.olhc_branching.get_csv_high scheduled__2026-03-06T17:00:00+00:00 [running]> on host 27461aedc806
+[2026-03-16T21:48:37.863+0000] {taskinstance.py:3157} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag_get_data_from_yf' AIRFLOW_CTX_TASK_ID='olhc_branching.get_csv_high' AIRFLOW_CTX_EXECUTION_DATE='2026-03-06T17:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-03-06T17:00:00+00:00'
+[2026-03-16T21:48:37.866+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2026-03-16T21:48:37.867+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2026-03-16T21:48:37.868+0000] {logging_mixin.py:190} INFO - Current task name:olhc_branching.get_csv_high state:running start_date:2026-03-16 21:48:35.636599+00:00
+[2026-03-16T21:48:37.869+0000] {logging_mixin.py:190} INFO - Dag name:dag_get_data_from_yf and current dag run status:running
+[2026-03-16T21:48:37.870+0000] {taskinstance.py:740} INFO - ::endgroup::
+[2026-03-16T21:48:37.962+0000] {logging_mixin.py:190} INFO - Data saved to /opt/***/scripts/saham_indonesia_high.csv
+[2026-03-16T21:48:37.969+0000] {python.py:240} INFO - Done. Returned value was: /opt/***/scripts/saham_indonesia_high.csv
+[2026-03-16T21:48:38.141+0000] {taskinstance.py:349} INFO - ::group::Post task execution logs
+[2026-03-16T21:48:38.142+0000] {taskinstance.py:361} INFO - Marking task as SUCCESS. dag_id=dag_get_data_from_yf, task_id=olhc_branching.get_csv_high, run_id=scheduled__2026-03-06T17:00:00+00:00, execution_date=20260306T170000, start_date=20260316T214835, end_date=20260316T214838
+[2026-03-16T21:48:38.366+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2026-03-16T21:48:38.367+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2026-03-16T21:48:38.368+0000] {logging_mixin.py:190} INFO - Dag name:dag_get_data_from_yf queued_at:2026-03-16 21:43:47.842500+00:00
+[2026-03-16T21:48:38.371+0000] {logging_mixin.py:190} INFO - Task hostname:27461aedc806 operator:_PythonDecoratedOperator
+[2026-03-16T21:48:38.473+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-03-16T21:48:38.663+0000] {taskinstance.py:3924} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-03-16T21:48:38.673+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2026-03-16T22:09:31.149+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-03-16T22:09:31.435+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_get_data_from_yf.olhc_branching.get_csv_high scheduled__2026-03-06T17:00:00+00:00 [queued]>
+[2026-03-16T22:09:31.624+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_get_data_from_yf.olhc_branching.get_csv_high scheduled__2026-03-06T17:00:00+00:00 [queued]>
+[2026-03-16T22:09:31.624+0000] {taskinstance.py:2884} INFO - Starting attempt 1 of 1
+[2026-03-16T22:09:31.756+0000] {taskinstance.py:2907} INFO - Executing <Task(_PythonDecoratedOperator): olhc_branching.get_csv_high> on 2026-03-06 17:00:00+00:00
+[2026-03-16T22:09:31.957+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'dag_get_data_from_yf', 'olhc_branching.get_csv_high', 'scheduled__2026-03-06T17:00:00+00:00', '--job-id', '1572', '--raw', '--subdir', 'DAGS_FOLDER/get_finance_yf_csv.py', '--cfg-path', '/tmp/tmpkrbk5p46']
+[2026-03-16T22:09:31.960+0000] {standard_task_runner.py:105} INFO - Job 1572: Subtask olhc_branching.get_csv_high
+[2026-03-16T22:09:31.913+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=1723) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2026-03-16T22:09:31.976+0000] {standard_task_runner.py:72} INFO - Started process 1785 to run task
+[2026-03-16T22:09:32.864+0000] {task_command.py:467} INFO - Running <TaskInstance: dag_get_data_from_yf.olhc_branching.get_csv_high scheduled__2026-03-06T17:00:00+00:00 [running]> on host 27461aedc806
+[2026-03-16T22:09:33.693+0000] {taskinstance.py:3157} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag_get_data_from_yf' AIRFLOW_CTX_TASK_ID='olhc_branching.get_csv_high' AIRFLOW_CTX_EXECUTION_DATE='2026-03-06T17:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-03-06T17:00:00+00:00'
+[2026-03-16T22:09:33.696+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2026-03-16T22:09:33.696+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2026-03-16T22:09:33.697+0000] {logging_mixin.py:190} INFO - Current task name:olhc_branching.get_csv_high state:running start_date:2026-03-16 22:09:31.436753+00:00
+[2026-03-16T22:09:33.697+0000] {logging_mixin.py:190} INFO - Dag name:dag_get_data_from_yf and current dag run status:running
+[2026-03-16T22:09:33.698+0000] {taskinstance.py:740} INFO - ::endgroup::
+[2026-03-16T22:09:33.747+0000] {logging_mixin.py:190} INFO - Data saved to /opt/***/scripts/saham_indonesia_high.csv
+[2026-03-16T22:09:33.748+0000] {python.py:240} INFO - Done. Returned value was: /opt/***/scripts/saham_indonesia_high.csv
+[2026-03-16T22:09:34.184+0000] {taskinstance.py:349} INFO - ::group::Post task execution logs
+[2026-03-16T22:09:34.186+0000] {taskinstance.py:361} INFO - Marking task as SUCCESS. dag_id=dag_get_data_from_yf, task_id=olhc_branching.get_csv_high, run_id=scheduled__2026-03-06T17:00:00+00:00, execution_date=20260306T170000, start_date=20260316T220931, end_date=20260316T220934
+[2026-03-16T22:09:34.498+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2026-03-16T22:09:34.499+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2026-03-16T22:09:34.500+0000] {logging_mixin.py:190} INFO - Dag name:dag_get_data_from_yf queued_at:2026-03-16 22:05:08.611049+00:00
+[2026-03-16T22:09:34.501+0000] {logging_mixin.py:190} INFO - Task hostname:27461aedc806 operator:_PythonDecoratedOperator
+[2026-03-16T22:09:34.568+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-03-16T22:09:34.856+0000] {taskinstance.py:3924} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-03-16T22:09:34.859+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2026-03-16T22:26:27.219+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-03-16T22:26:27.339+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_get_data_from_yf.olhc_branching.get_csv_high scheduled__2026-03-06T17:00:00+00:00 [queued]>
+[2026-03-16T22:26:27.370+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_get_data_from_yf.olhc_branching.get_csv_high scheduled__2026-03-06T17:00:00+00:00 [queued]>
+[2026-03-16T22:26:27.371+0000] {taskinstance.py:2884} INFO - Starting attempt 1 of 1
+[2026-03-16T22:26:27.430+0000] {taskinstance.py:2907} INFO - Executing <Task(_PythonDecoratedOperator): olhc_branching.get_csv_high> on 2026-03-06 17:00:00+00:00
+[2026-03-16T22:26:27.482+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=2242) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2026-03-16T22:26:27.485+0000] {standard_task_runner.py:72} INFO - Started process 2286 to run task
+[2026-03-16T22:26:27.540+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'dag_get_data_from_yf', 'olhc_branching.get_csv_high', 'scheduled__2026-03-06T17:00:00+00:00', '--job-id', '1637', '--raw', '--subdir', 'DAGS_FOLDER/get_finance_yf_csv.py', '--cfg-path', '/tmp/tmp5rse37bh']
+[2026-03-16T22:26:27.542+0000] {standard_task_runner.py:105} INFO - Job 1637: Subtask olhc_branching.get_csv_high
+[2026-03-16T22:26:28.109+0000] {task_command.py:467} INFO - Running <TaskInstance: dag_get_data_from_yf.olhc_branching.get_csv_high scheduled__2026-03-06T17:00:00+00:00 [running]> on host 27461aedc806
+[2026-03-16T22:26:29.028+0000] {taskinstance.py:3157} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag_get_data_from_yf' AIRFLOW_CTX_TASK_ID='olhc_branching.get_csv_high' AIRFLOW_CTX_EXECUTION_DATE='2026-03-06T17:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-03-06T17:00:00+00:00'
+[2026-03-16T22:26:29.033+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2026-03-16T22:26:29.035+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2026-03-16T22:26:29.041+0000] {logging_mixin.py:190} INFO - Current task name:olhc_branching.get_csv_high state:running start_date:2026-03-16 22:26:27.340945+00:00
+[2026-03-16T22:26:29.052+0000] {logging_mixin.py:190} INFO - Dag name:dag_get_data_from_yf and current dag run status:running
+[2026-03-16T22:26:29.061+0000] {taskinstance.py:740} INFO - ::endgroup::
+[2026-03-16T22:26:29.167+0000] {logging_mixin.py:190} INFO - Data saved to /opt/***/scripts/saham_indonesia_high.csv
+[2026-03-16T22:26:29.169+0000] {python.py:240} INFO - Done. Returned value was: /opt/***/scripts/saham_indonesia_high.csv
+[2026-03-16T22:26:29.426+0000] {taskinstance.py:349} INFO - ::group::Post task execution logs
+[2026-03-16T22:26:29.427+0000] {taskinstance.py:361} INFO - Marking task as SUCCESS. dag_id=dag_get_data_from_yf, task_id=olhc_branching.get_csv_high, run_id=scheduled__2026-03-06T17:00:00+00:00, execution_date=20260306T170000, start_date=20260316T222627, end_date=20260316T222629
+[2026-03-16T22:26:29.796+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2026-03-16T22:26:29.797+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2026-03-16T22:26:29.804+0000] {logging_mixin.py:190} INFO - Dag name:dag_get_data_from_yf queued_at:2026-03-16 22:21:29.692264+00:00
+[2026-03-16T22:26:29.805+0000] {logging_mixin.py:190} INFO - Task hostname:27461aedc806 operator:_PythonDecoratedOperator
+[2026-03-16T22:26:29.854+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-03-16T22:26:30.030+0000] {taskinstance.py:3924} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-03-16T22:26:30.053+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2026-03-16T22:39:28.365+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-03-16T22:39:29.024+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_get_data_from_yf.olhc_branching.get_csv_high scheduled__2026-03-06T17:00:00+00:00 [queued]>
+[2026-03-16T22:39:29.085+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_get_data_from_yf.olhc_branching.get_csv_high scheduled__2026-03-06T17:00:00+00:00 [queued]>
+[2026-03-16T22:39:29.090+0000] {taskinstance.py:2884} INFO - Starting attempt 1 of 1
+[2026-03-16T22:39:29.402+0000] {taskinstance.py:2907} INFO - Executing <Task(_PythonDecoratedOperator): olhc_branching.get_csv_high> on 2026-03-06 17:00:00+00:00
+[2026-03-16T22:39:29.432+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=202) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2026-03-16T22:39:29.454+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'dag_get_data_from_yf', 'olhc_branching.get_csv_high', 'scheduled__2026-03-06T17:00:00+00:00', '--job-id', '1663', '--raw', '--subdir', 'DAGS_FOLDER/get_finance_yf_csv.py', '--cfg-path', '/tmp/tmp53j4ut1d']
+[2026-03-16T22:39:29.444+0000] {standard_task_runner.py:72} INFO - Started process 265 to run task
+[2026-03-16T22:39:29.468+0000] {standard_task_runner.py:105} INFO - Job 1663: Subtask olhc_branching.get_csv_high
+[2026-03-16T22:39:29.762+0000] {task_command.py:467} INFO - Running <TaskInstance: dag_get_data_from_yf.olhc_branching.get_csv_high scheduled__2026-03-06T17:00:00+00:00 [running]> on host 245fc8f76c1e
+[2026-03-16T22:39:30.843+0000] {taskinstance.py:3157} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag_get_data_from_yf' AIRFLOW_CTX_TASK_ID='olhc_branching.get_csv_high' AIRFLOW_CTX_EXECUTION_DATE='2026-03-06T17:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-03-06T17:00:00+00:00'
+[2026-03-16T22:39:30.849+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2026-03-16T22:39:30.867+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2026-03-16T22:39:30.869+0000] {logging_mixin.py:190} INFO - Current task name:olhc_branching.get_csv_high state:running start_date:2026-03-16 22:39:29.026570+00:00
+[2026-03-16T22:39:30.870+0000] {logging_mixin.py:190} INFO - Dag name:dag_get_data_from_yf and current dag run status:running
+[2026-03-16T22:39:30.870+0000] {taskinstance.py:740} INFO - ::endgroup::
+[2026-03-16T22:39:30.928+0000] {logging_mixin.py:190} INFO - Data saved to /opt/***/scripts/saham_indonesia_high.csv
+[2026-03-16T22:39:30.932+0000] {python.py:240} INFO - Done. Returned value was: /opt/***/scripts/saham_indonesia_high.csv
+[2026-03-16T22:39:31.294+0000] {taskinstance.py:349} INFO - ::group::Post task execution logs
+[2026-03-16T22:39:31.296+0000] {taskinstance.py:361} INFO - Marking task as SUCCESS. dag_id=dag_get_data_from_yf, task_id=olhc_branching.get_csv_high, run_id=scheduled__2026-03-06T17:00:00+00:00, execution_date=20260306T170000, start_date=20260316T223929, end_date=20260316T223931
+[2026-03-16T22:39:31.550+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2026-03-16T22:39:31.551+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2026-03-16T22:39:31.551+0000] {logging_mixin.py:190} INFO - Dag name:dag_get_data_from_yf queued_at:2026-03-16 22:37:38.178147+00:00
+[2026-03-16T22:39:31.552+0000] {logging_mixin.py:190} INFO - Task hostname:245fc8f76c1e operator:_PythonDecoratedOperator
+[2026-03-16T22:39:31.649+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-03-16T22:39:31.841+0000] {taskinstance.py:3924} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-03-16T22:39:31.852+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2026-03-16T22:57:52.892+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-03-16T22:57:52.990+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_get_data_from_yf.olhc_branching.get_csv_high scheduled__2026-03-06T17:00:00+00:00 [queued]>
+[2026-03-16T22:57:53.020+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_get_data_from_yf.olhc_branching.get_csv_high scheduled__2026-03-06T17:00:00+00:00 [queued]>
+[2026-03-16T22:57:53.022+0000] {taskinstance.py:2884} INFO - Starting attempt 1 of 1
+[2026-03-16T22:57:53.061+0000] {taskinstance.py:2907} INFO - Executing <Task(_PythonDecoratedOperator): olhc_branching.get_csv_high> on 2026-03-06 17:00:00+00:00
+[2026-03-16T22:57:53.149+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=683) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2026-03-16T22:57:53.172+0000] {standard_task_runner.py:72} INFO - Started process 758 to run task
+[2026-03-16T22:57:53.177+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'dag_get_data_from_yf', 'olhc_branching.get_csv_high', 'scheduled__2026-03-06T17:00:00+00:00', '--job-id', '1715', '--raw', '--subdir', 'DAGS_FOLDER/get_finance_yf_csv.py', '--cfg-path', '/tmp/tmp8d8b_e36']
+[2026-03-16T22:57:53.239+0000] {standard_task_runner.py:105} INFO - Job 1715: Subtask olhc_branching.get_csv_high
+[2026-03-16T22:57:53.536+0000] {task_command.py:467} INFO - Running <TaskInstance: dag_get_data_from_yf.olhc_branching.get_csv_high scheduled__2026-03-06T17:00:00+00:00 [running]> on host 245fc8f76c1e
+[2026-03-16T22:57:54.104+0000] {taskinstance.py:3157} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag_get_data_from_yf' AIRFLOW_CTX_TASK_ID='olhc_branching.get_csv_high' AIRFLOW_CTX_EXECUTION_DATE='2026-03-06T17:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-03-06T17:00:00+00:00'
+[2026-03-16T22:57:54.107+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2026-03-16T22:57:54.108+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2026-03-16T22:57:54.109+0000] {logging_mixin.py:190} INFO - Current task name:olhc_branching.get_csv_high state:running start_date:2026-03-16 22:57:52.992005+00:00
+[2026-03-16T22:57:54.110+0000] {logging_mixin.py:190} INFO - Dag name:dag_get_data_from_yf and current dag run status:running
+[2026-03-16T22:57:54.111+0000] {taskinstance.py:740} INFO - ::endgroup::
+[2026-03-16T22:57:54.143+0000] {logging_mixin.py:190} INFO - Data saved to /opt/***/scripts/saham_indonesia_high.csv
+[2026-03-16T22:57:54.144+0000] {python.py:240} INFO - Done. Returned value was: /opt/***/scripts/saham_indonesia_high.csv
+[2026-03-16T22:57:54.306+0000] {taskinstance.py:349} INFO - ::group::Post task execution logs
+[2026-03-16T22:57:54.308+0000] {taskinstance.py:361} INFO - Marking task as SUCCESS. dag_id=dag_get_data_from_yf, task_id=olhc_branching.get_csv_high, run_id=scheduled__2026-03-06T17:00:00+00:00, execution_date=20260306T170000, start_date=20260316T225752, end_date=20260316T225754
+[2026-03-16T22:57:54.455+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2026-03-16T22:57:54.456+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2026-03-16T22:57:54.456+0000] {logging_mixin.py:190} INFO - Dag name:dag_get_data_from_yf queued_at:2026-03-16 22:53:39.483648+00:00
+[2026-03-16T22:57:54.457+0000] {logging_mixin.py:190} INFO - Task hostname:245fc8f76c1e operator:_PythonDecoratedOperator
+[2026-03-16T22:57:54.512+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-03-16T22:57:54.575+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

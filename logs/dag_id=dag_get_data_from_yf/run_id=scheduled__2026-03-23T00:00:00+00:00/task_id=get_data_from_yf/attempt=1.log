@@ -1,0 +1,266 @@
+[2026-03-24T01:24:35.600+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-03-24T01:24:35.660+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_get_data_from_yf.get_data_from_yf scheduled__2026-03-23T00:00:00+00:00 [queued]>
+[2026-03-24T01:24:35.678+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_get_data_from_yf.get_data_from_yf scheduled__2026-03-23T00:00:00+00:00 [queued]>
+[2026-03-24T01:24:35.678+0000] {taskinstance.py:2884} INFO - Starting attempt 1 of 1
+[2026-03-24T01:24:35.697+0000] {taskinstance.py:2907} INFO - Executing <Task(_PythonDecoratedOperator): get_data_from_yf> on 2026-03-23 00:00:00+00:00
+[2026-03-24T01:24:35.712+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=448) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2026-03-24T01:24:35.714+0000] {standard_task_runner.py:72} INFO - Started process 450 to run task
+[2026-03-24T01:24:35.722+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'dag_get_data_from_yf', 'get_data_from_yf', 'scheduled__2026-03-23T00:00:00+00:00', '--job-id', '2487', '--raw', '--subdir', 'DAGS_FOLDER/get_finance_yf_csv.py', '--cfg-path', '/tmp/tmpf5g6xp2c']
+[2026-03-24T01:24:35.724+0000] {standard_task_runner.py:105} INFO - Job 2487: Subtask get_data_from_yf
+[2026-03-24T01:24:35.820+0000] {task_command.py:467} INFO - Running <TaskInstance: dag_get_data_from_yf.get_data_from_yf scheduled__2026-03-23T00:00:00+00:00 [running]> on host e247b1da77e7
+[2026-03-24T01:24:35.982+0000] {taskinstance.py:3157} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag_get_data_from_yf' AIRFLOW_CTX_TASK_ID='get_data_from_yf' AIRFLOW_CTX_EXECUTION_DATE='2026-03-23T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-03-23T00:00:00+00:00'
+[2026-03-24T01:24:35.984+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2026-03-24T01:24:35.984+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2026-03-24T01:24:35.984+0000] {logging_mixin.py:190} INFO - Current task name:get_data_from_yf state:running start_date:2026-03-24 01:24:35.661246+00:00
+[2026-03-24T01:24:35.984+0000] {logging_mixin.py:190} INFO - Dag name:dag_get_data_from_yf and current dag run status:running
+[2026-03-24T01:24:35.985+0000] {taskinstance.py:740} INFO - ::endgroup::
+[2026-03-24T01:24:35.986+0000] {logging_mixin.py:190} INFO - Ini tickers user: None
+[2026-03-24T01:24:35.986+0000] {logging_mixin.py:190} INFO - Ini start date user: None
+[2026-03-24T01:24:35.986+0000] {logging_mixin.py:190} INFO - Ini end date user: None
+[2026-03-24T01:24:36.394+0000] {history.py:276} ERROR - $BBRI.JK: possibly delisted; no price data found  (1d 2026-03-24 -> 2026-03-24)
+[2026-03-24T01:24:36.395+0000] {logging_mixin.py:190} WARNING - [                       0%                       ]
+[2026-03-24T01:24:36.397+0000] {history.py:276} ERROR - $BBCA.JK: possibly delisted; no price data found  (1d 2026-03-24 -> 2026-03-24)
+[2026-03-24T01:24:36.407+0000] {history.py:276} ERROR - $BMRI.JK: possibly delisted; no price data found  (1d 2026-03-24 -> 2026-03-24)
+[2026-03-24T01:24:36.408+0000] {logging_mixin.py:190} WARNING - [**********************67%*******                ]  2 of 3 completed
+[2026-03-24T01:24:36.415+0000] {logging_mixin.py:190} WARNING - [*********************100%***********************]  3 of 3 completed
+[2026-03-24T01:24:36.415+0000] {multi.py:176} ERROR - 
+3 Failed downloads:
+[2026-03-24T01:24:36.416+0000] {multi.py:189} ERROR - ['BBRI.JK', 'BBCA.JK', 'BMRI.JK']: possibly delisted; no price data found  (1d 2026-03-24 -> 2026-03-24)
+[2026-03-24T01:24:36.427+0000] {logging_mixin.py:190} INFO - scheduled
+[2026-03-24T01:24:36.427+0000] {logging_mixin.py:190} INFO - DEBUG: Row count fetched: 0
+[2026-03-24T01:24:36.432+0000] {logging_mixin.py:190} INFO - DEBUG: Data content: Empty DataFrame
+Columns: [(Adj Close, BBCA.JK), (Adj Close, BBRI.JK), (Adj Close, BMRI.JK), (Close, BBCA.JK), (Close, BBRI.JK), (Close, BMRI.JK), (High, BBCA.JK), (High, BBRI.JK), (High, BMRI.JK), (Low, BBCA.JK), (Low, BBRI.JK), (Low, BMRI.JK), (Open, BBCA.JK), (Open, BBRI.JK), (Open, BMRI.JK), (Volume, BBCA.JK), (Volume, BBRI.JK), (Volume, BMRI.JK)]
+Index: []
+[2026-03-24T01:24:36.437+0000] {logging_mixin.py:190} INFO - data_filtered:  Empty DataFrame
+Columns: [(Close, BBCA.JK), (Close, BBRI.JK), (Close, BMRI.JK), (High, BBCA.JK), (High, BBRI.JK), (High, BMRI.JK), (Low, BBCA.JK), (Low, BBRI.JK), (Low, BMRI.JK), (Open, BBCA.JK), (Open, BBRI.JK), (Open, BMRI.JK)]
+Index: []
+[2026-03-24T01:24:36.447+0000] {logging_mixin.py:190} INFO - data_long.columns before Inserted_at_timestamp:  Index(['Date', 'Ticker', 'Close', 'High', 'Low', 'Open'], dtype='object')
+[2026-03-24T01:24:36.449+0000] {logging_mixin.py:190} INFO - data_long.columns:  Index(['Date', 'Ticker', 'Close', 'High', 'Low', 'Open',
+       'Inserted_at_timestamp_WIB'],
+      dtype='object')
+[2026-03-24T01:24:36.450+0000] {python.py:240} INFO - Done. Returned value was: []
+[2026-03-24T01:24:36.481+0000] {taskinstance.py:349} INFO - ::group::Post task execution logs
+[2026-03-24T01:24:36.482+0000] {taskinstance.py:361} INFO - Marking task as SUCCESS. dag_id=dag_get_data_from_yf, task_id=get_data_from_yf, run_id=scheduled__2026-03-23T00:00:00+00:00, execution_date=20260323T000000, start_date=20260324T012435, end_date=20260324T012436
+[2026-03-24T01:24:36.516+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2026-03-24T01:24:36.516+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2026-03-24T01:24:36.517+0000] {logging_mixin.py:190} INFO - Dag name:dag_get_data_from_yf queued_at:2026-03-24 01:08:54.590048+00:00
+[2026-03-24T01:24:36.517+0000] {logging_mixin.py:190} INFO - Task hostname:e247b1da77e7 operator:_PythonDecoratedOperator
+[2026-03-24T01:24:36.530+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-03-24T01:24:36.601+0000] {taskinstance.py:3924} INFO - 4 downstream tasks scheduled from follow-on schedule check
+[2026-03-24T01:24:36.604+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2026-03-24T02:53:28.277+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-03-24T02:53:28.305+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_get_data_from_yf.get_data_from_yf scheduled__2026-03-23T00:00:00+00:00 [queued]>
+[2026-03-24T02:53:28.314+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_get_data_from_yf.get_data_from_yf scheduled__2026-03-23T00:00:00+00:00 [queued]>
+[2026-03-24T02:53:28.314+0000] {taskinstance.py:2884} INFO - Starting attempt 1 of 1
+[2026-03-24T02:53:28.329+0000] {taskinstance.py:2907} INFO - Executing <Task(_PythonDecoratedOperator): get_data_from_yf> on 2026-03-23 00:00:00+00:00
+[2026-03-24T02:53:28.336+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=153) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2026-03-24T02:53:28.338+0000] {standard_task_runner.py:72} INFO - Started process 162 to run task
+[2026-03-24T02:53:28.339+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'dag_get_data_from_yf', 'get_data_from_yf', 'scheduled__2026-03-23T00:00:00+00:00', '--job-id', '2494', '--raw', '--subdir', 'DAGS_FOLDER/get_finance_yf_csv.py', '--cfg-path', '/tmp/tmp57btlun9']
+[2026-03-24T02:53:28.340+0000] {standard_task_runner.py:105} INFO - Job 2494: Subtask get_data_from_yf
+[2026-03-24T02:53:28.401+0000] {task_command.py:467} INFO - Running <TaskInstance: dag_get_data_from_yf.get_data_from_yf scheduled__2026-03-23T00:00:00+00:00 [running]> on host 23db597e10a6
+[2026-03-24T02:53:28.495+0000] {taskinstance.py:3157} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag_get_data_from_yf' AIRFLOW_CTX_TASK_ID='get_data_from_yf' AIRFLOW_CTX_EXECUTION_DATE='2026-03-23T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-03-23T00:00:00+00:00'
+[2026-03-24T02:53:28.496+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2026-03-24T02:53:28.496+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2026-03-24T02:53:28.496+0000] {logging_mixin.py:190} INFO - Current task name:get_data_from_yf state:running start_date:2026-03-24 02:53:28.306277+00:00
+[2026-03-24T02:53:28.497+0000] {logging_mixin.py:190} INFO - Dag name:dag_get_data_from_yf and current dag run status:running
+[2026-03-24T02:53:28.497+0000] {taskinstance.py:740} INFO - ::endgroup::
+[2026-03-24T02:53:28.497+0000] {logging_mixin.py:190} INFO - Ini tickers user: None
+[2026-03-24T02:53:28.498+0000] {logging_mixin.py:190} INFO - Ini start date user: None
+[2026-03-24T02:53:28.498+0000] {logging_mixin.py:190} INFO - Ini end date user: None
+[2026-03-24T02:53:28.502+0000] {cache.py:132} INFO - Failed to create TzCache, reason: Error creating TzCache folder: '/home/***/.cache/py-yfinance' reason: [Errno 17] File exists: '/home/***/.cache/py-yfinance'. TzCache will not be used. Tip: You can direct cache to use a different location with 'set_tz_cache_location(mylocation)'
+[2026-03-24T02:53:29.179+0000] {history.py:276} ERROR - $BBCA.JK: possibly delisted; no price data found  (1d 2026-03-24 -> 2026-03-24)
+[2026-03-24T02:53:29.181+0000] {history.py:276} ERROR - $BMRI.JK: possibly delisted; no price data found  (1d 2026-03-24 -> 2026-03-24)
+[2026-03-24T02:53:29.182+0000] {logging_mixin.py:190} WARNING - [                       0%                       ]
+[2026-03-24T02:53:29.183+0000] {history.py:276} ERROR - $BBRI.JK: possibly delisted; no price data found  (1d 2026-03-24 -> 2026-03-24)
+[2026-03-24T02:53:29.184+0000] {logging_mixin.py:190} WARNING - [**********************67%*******                ]  2 of 3 completed
+[2026-03-24T02:53:29.192+0000] {logging_mixin.py:190} WARNING - [*********************100%***********************]  3 of 3 completed
+[2026-03-24T02:53:29.192+0000] {multi.py:176} ERROR - 
+3 Failed downloads:
+[2026-03-24T02:53:29.193+0000] {multi.py:189} ERROR - ['BBCA.JK', 'BMRI.JK', 'BBRI.JK']: possibly delisted; no price data found  (1d 2026-03-24 -> 2026-03-24)
+[2026-03-24T02:53:29.213+0000] {logging_mixin.py:190} INFO - scheduled
+[2026-03-24T02:53:29.213+0000] {logging_mixin.py:190} INFO - DEBUG: Row count fetched: 0
+[2026-03-24T02:53:29.223+0000] {logging_mixin.py:190} INFO - DEBUG: Data content: Empty DataFrame
+Columns: [(Adj Close, BBCA.JK), (Adj Close, BBRI.JK), (Adj Close, BMRI.JK), (Close, BBCA.JK), (Close, BBRI.JK), (Close, BMRI.JK), (High, BBCA.JK), (High, BBRI.JK), (High, BMRI.JK), (Low, BBCA.JK), (Low, BBRI.JK), (Low, BMRI.JK), (Open, BBCA.JK), (Open, BBRI.JK), (Open, BMRI.JK), (Volume, BBCA.JK), (Volume, BBRI.JK), (Volume, BMRI.JK)]
+Index: []
+[2026-03-24T02:53:29.229+0000] {logging_mixin.py:190} INFO - data_filtered:  Empty DataFrame
+Columns: [(Close, BBCA.JK), (Close, BBRI.JK), (Close, BMRI.JK), (High, BBCA.JK), (High, BBRI.JK), (High, BMRI.JK), (Low, BBCA.JK), (Low, BBRI.JK), (Low, BMRI.JK), (Open, BBCA.JK), (Open, BBRI.JK), (Open, BMRI.JK)]
+Index: []
+[2026-03-24T02:53:29.252+0000] {logging_mixin.py:190} INFO - data_long.columns before Inserted_at_timestamp:  Index(['Date', 'Ticker', 'Close', 'High', 'Low', 'Open'], dtype='object')
+[2026-03-24T02:53:29.254+0000] {logging_mixin.py:190} INFO - data_long.columns:  Index(['Date', 'Ticker', 'Close', 'High', 'Low', 'Open',
+       'Inserted_at_timestamp_WIB'],
+      dtype='object')
+[2026-03-24T02:53:29.259+0000] {python.py:240} INFO - Done. Returned value was: []
+[2026-03-24T02:53:29.295+0000] {taskinstance.py:349} INFO - ::group::Post task execution logs
+[2026-03-24T02:53:29.296+0000] {taskinstance.py:361} INFO - Marking task as SUCCESS. dag_id=dag_get_data_from_yf, task_id=get_data_from_yf, run_id=scheduled__2026-03-23T00:00:00+00:00, execution_date=20260323T000000, start_date=20260324T025328, end_date=20260324T025329
+[2026-03-24T02:53:29.328+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2026-03-24T02:53:29.329+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2026-03-24T02:53:29.329+0000] {logging_mixin.py:190} INFO - Dag name:dag_get_data_from_yf queued_at:2026-03-24 02:53:17.387151+00:00
+[2026-03-24T02:53:29.329+0000] {logging_mixin.py:190} INFO - Task hostname:23db597e10a6 operator:_PythonDecoratedOperator
+[2026-03-24T02:53:29.337+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-03-24T02:53:29.382+0000] {taskinstance.py:3924} INFO - 4 downstream tasks scheduled from follow-on schedule check
+[2026-03-24T02:53:29.385+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2026-03-24T03:19:04.216+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-03-24T03:19:04.250+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_get_data_from_yf.get_data_from_yf scheduled__2026-03-23T00:00:00+00:00 [queued]>
+[2026-03-24T03:19:04.265+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_get_data_from_yf.get_data_from_yf scheduled__2026-03-23T00:00:00+00:00 [queued]>
+[2026-03-24T03:19:04.266+0000] {taskinstance.py:2884} INFO - Starting attempt 1 of 1
+[2026-03-24T03:19:04.292+0000] {taskinstance.py:2907} INFO - Executing <Task(_PythonDecoratedOperator): get_data_from_yf> on 2026-03-23 00:00:00+00:00
+[2026-03-24T03:19:04.309+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=195) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2026-03-24T03:19:04.312+0000] {standard_task_runner.py:72} INFO - Started process 197 to run task
+[2026-03-24T03:19:04.316+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'dag_get_data_from_yf', 'get_data_from_yf', 'scheduled__2026-03-23T00:00:00+00:00', '--job-id', '2524', '--raw', '--subdir', 'DAGS_FOLDER/get_finance_yf_csv.py', '--cfg-path', '/tmp/tmpb8qgztum']
+[2026-03-24T03:19:04.317+0000] {standard_task_runner.py:105} INFO - Job 2524: Subtask get_data_from_yf
+[2026-03-24T03:19:04.432+0000] {task_command.py:467} INFO - Running <TaskInstance: dag_get_data_from_yf.get_data_from_yf scheduled__2026-03-23T00:00:00+00:00 [running]> on host 163f4b6f8ad1
+[2026-03-24T03:19:04.567+0000] {taskinstance.py:3157} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag_get_data_from_yf' AIRFLOW_CTX_TASK_ID='get_data_from_yf' AIRFLOW_CTX_EXECUTION_DATE='2026-03-23T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-03-23T00:00:00+00:00'
+[2026-03-24T03:19:04.569+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2026-03-24T03:19:04.569+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2026-03-24T03:19:04.570+0000] {logging_mixin.py:190} INFO - Current task name:get_data_from_yf state:running start_date:2026-03-24 03:19:04.250597+00:00
+[2026-03-24T03:19:04.570+0000] {logging_mixin.py:190} INFO - Dag name:dag_get_data_from_yf and current dag run status:running
+[2026-03-24T03:19:04.570+0000] {taskinstance.py:740} INFO - ::endgroup::
+[2026-03-24T03:19:04.571+0000] {logging_mixin.py:190} INFO - Ini tickers user: None
+[2026-03-24T03:19:04.571+0000] {logging_mixin.py:190} INFO - Ini start date user: None
+[2026-03-24T03:19:04.572+0000] {logging_mixin.py:190} INFO - Ini end date user: None
+[2026-03-24T03:19:04.577+0000] {cache.py:132} INFO - Failed to create TzCache, reason: Error creating TzCache folder: '/home/***/.cache/py-yfinance' reason: [Errno 17] File exists: '/home/***/.cache/py-yfinance'. TzCache will not be used. Tip: You can direct cache to use a different location with 'set_tz_cache_location(mylocation)'
+[2026-03-24T03:19:04.577+0000] {cache.py:132} INFO - Failed to create TzCache, reason: Error creating TzCache folder: '/home/***/.cache/py-yfinance' reason: [Errno 17] File exists: '/home/***/.cache/py-yfinance'. TzCache will not be used. Tip: You can direct cache to use a different location with 'set_tz_cache_location(mylocation)'
+[2026-03-24T03:19:05.483+0000] {history.py:276} ERROR - $BBRI.JK: possibly delisted; no price data found  (1d 2026-03-24 -> 2026-03-24)
+[2026-03-24T03:19:05.490+0000] {history.py:276} ERROR - $BMRI.JK: possibly delisted; no price data found  (1d 2026-03-24 -> 2026-03-24)
+[2026-03-24T03:19:05.491+0000] {logging_mixin.py:190} WARNING - [                       0%                       ]
+[2026-03-24T03:19:05.507+0000] {history.py:276} ERROR - $BBCA.JK: possibly delisted; no price data found  (1d 2026-03-24 -> 2026-03-24)
+[2026-03-24T03:19:05.508+0000] {logging_mixin.py:190} WARNING - [**********************67%*******                ]  2 of 3 completed
+[2026-03-24T03:19:05.512+0000] {logging_mixin.py:190} WARNING - [*********************100%***********************]  3 of 3 completed
+[2026-03-24T03:19:05.513+0000] {multi.py:176} ERROR - 
+3 Failed downloads:
+[2026-03-24T03:19:05.513+0000] {multi.py:189} ERROR - ['BBRI.JK', 'BMRI.JK', 'BBCA.JK']: possibly delisted; no price data found  (1d 2026-03-24 -> 2026-03-24)
+[2026-03-24T03:19:05.535+0000] {logging_mixin.py:190} INFO - scheduled
+[2026-03-24T03:19:05.536+0000] {logging_mixin.py:190} INFO - DEBUG: Row count fetched: 0
+[2026-03-24T03:19:05.548+0000] {logging_mixin.py:190} INFO - DEBUG: Data content: Empty DataFrame
+Columns: [(Adj Close, BBCA.JK), (Adj Close, BBRI.JK), (Adj Close, BMRI.JK), (Close, BBCA.JK), (Close, BBRI.JK), (Close, BMRI.JK), (High, BBCA.JK), (High, BBRI.JK), (High, BMRI.JK), (Low, BBCA.JK), (Low, BBRI.JK), (Low, BMRI.JK), (Open, BBCA.JK), (Open, BBRI.JK), (Open, BMRI.JK), (Volume, BBCA.JK), (Volume, BBRI.JK), (Volume, BMRI.JK)]
+Index: []
+[2026-03-24T03:19:05.554+0000] {logging_mixin.py:190} INFO - data_filtered:  Empty DataFrame
+Columns: [(Close, BBCA.JK), (Close, BBRI.JK), (Close, BMRI.JK), (High, BBCA.JK), (High, BBRI.JK), (High, BMRI.JK), (Low, BBCA.JK), (Low, BBRI.JK), (Low, BMRI.JK), (Open, BBCA.JK), (Open, BBRI.JK), (Open, BMRI.JK)]
+Index: []
+[2026-03-24T03:19:05.583+0000] {logging_mixin.py:190} INFO - data_long.columns before Inserted_at_timestamp:  Index(['Date', 'Ticker', 'Close', 'High', 'Low', 'Open'], dtype='object')
+[2026-03-24T03:19:05.585+0000] {logging_mixin.py:190} INFO - data_long.columns:  Index(['Date', 'Ticker', 'Close', 'High', 'Low', 'Open',
+       'Inserted_at_timestamp_WIB'],
+      dtype='object')
+[2026-03-24T03:19:05.590+0000] {python.py:240} INFO - Done. Returned value was: []
+[2026-03-24T03:19:05.634+0000] {taskinstance.py:349} INFO - ::group::Post task execution logs
+[2026-03-24T03:19:05.635+0000] {taskinstance.py:361} INFO - Marking task as SUCCESS. dag_id=dag_get_data_from_yf, task_id=get_data_from_yf, run_id=scheduled__2026-03-23T00:00:00+00:00, execution_date=20260323T000000, start_date=20260324T031904, end_date=20260324T031905
+[2026-03-24T03:19:05.677+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2026-03-24T03:19:05.678+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2026-03-24T03:19:05.679+0000] {logging_mixin.py:190} INFO - Dag name:dag_get_data_from_yf queued_at:2026-03-24 03:18:53.017352+00:00
+[2026-03-24T03:19:05.679+0000] {logging_mixin.py:190} INFO - Task hostname:163f4b6f8ad1 operator:_PythonDecoratedOperator
+[2026-03-24T03:19:05.689+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-03-24T03:19:05.742+0000] {taskinstance.py:3924} INFO - 4 downstream tasks scheduled from follow-on schedule check
+[2026-03-24T03:19:05.747+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2026-03-24T04:28:24.027+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-03-24T04:28:24.077+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_get_data_from_yf.get_data_from_yf scheduled__2026-03-23T00:00:00+00:00 [queued]>
+[2026-03-24T04:28:24.088+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_get_data_from_yf.get_data_from_yf scheduled__2026-03-23T00:00:00+00:00 [queued]>
+[2026-03-24T04:28:24.089+0000] {taskinstance.py:2884} INFO - Starting attempt 1 of 1
+[2026-03-24T04:28:24.106+0000] {taskinstance.py:2907} INFO - Executing <Task(_PythonDecoratedOperator): get_data_from_yf> on 2026-03-23 00:00:00+00:00
+[2026-03-24T04:28:24.121+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=216) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2026-03-24T04:28:24.123+0000] {standard_task_runner.py:72} INFO - Started process 218 to run task
+[2026-03-24T04:28:24.125+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'dag_get_data_from_yf', 'get_data_from_yf', 'scheduled__2026-03-23T00:00:00+00:00', '--job-id', '2554', '--raw', '--subdir', 'DAGS_FOLDER/get_finance_yf_csv.py', '--cfg-path', '/tmp/tmpmcuok05_']
+[2026-03-24T04:28:24.126+0000] {standard_task_runner.py:105} INFO - Job 2554: Subtask get_data_from_yf
+[2026-03-24T04:28:24.200+0000] {task_command.py:467} INFO - Running <TaskInstance: dag_get_data_from_yf.get_data_from_yf scheduled__2026-03-23T00:00:00+00:00 [running]> on host 5e9920a13c8d
+[2026-03-24T04:28:24.341+0000] {taskinstance.py:3157} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag_get_data_from_yf' AIRFLOW_CTX_TASK_ID='get_data_from_yf' AIRFLOW_CTX_EXECUTION_DATE='2026-03-23T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-03-23T00:00:00+00:00'
+[2026-03-24T04:28:24.343+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2026-03-24T04:28:24.343+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2026-03-24T04:28:24.344+0000] {logging_mixin.py:190} INFO - Current task name:get_data_from_yf state:running start_date:2026-03-24 04:28:24.078075+00:00
+[2026-03-24T04:28:24.344+0000] {logging_mixin.py:190} INFO - Dag name:dag_get_data_from_yf and current dag run status:running
+[2026-03-24T04:28:24.344+0000] {taskinstance.py:740} INFO - ::endgroup::
+[2026-03-24T04:28:24.345+0000] {logging_mixin.py:190} INFO - Ini tickers user: None
+[2026-03-24T04:28:24.346+0000] {logging_mixin.py:190} INFO - Ini start date user: None
+[2026-03-24T04:28:24.346+0000] {logging_mixin.py:190} INFO - Ini end date user: None
+[2026-03-24T04:28:24.352+0000] {cache.py:132} INFO - Failed to create TzCache, reason: Error creating TzCache folder: '/home/***/.cache/py-yfinance' reason: [Errno 17] File exists: '/home/***/.cache/py-yfinance'. TzCache will not be used. Tip: You can direct cache to use a different location with 'set_tz_cache_location(mylocation)'
+[2026-03-24T04:28:24.353+0000] {cache.py:132} INFO - Failed to create TzCache, reason: Error creating TzCache folder: '/home/***/.cache/py-yfinance' reason: [Errno 17] File exists: '/home/***/.cache/py-yfinance'. TzCache will not be used. Tip: You can direct cache to use a different location with 'set_tz_cache_location(mylocation)'
+[2026-03-24T04:28:24.999+0000] {history.py:276} ERROR - $BBCA.JK: possibly delisted; no price data found  (1d 2026-03-24 -> 2026-03-24)
+[2026-03-24T04:28:25.001+0000] {logging_mixin.py:190} WARNING - [                       0%                       ]
+[2026-03-24T04:28:25.019+0000] {history.py:276} ERROR - $BBRI.JK: possibly delisted; no price data found  (1d 2026-03-24 -> 2026-03-24)
+[2026-03-24T04:28:25.020+0000] {logging_mixin.py:190} WARNING - [**********************67%*******                ]  2 of 3 completed
+[2026-03-24T04:28:25.023+0000] {history.py:276} ERROR - $BMRI.JK: possibly delisted; no price data found  (1d 2026-03-24 -> 2026-03-24)
+[2026-03-24T04:28:25.031+0000] {logging_mixin.py:190} WARNING - [*********************100%***********************]  3 of 3 completed
+[2026-03-24T04:28:25.031+0000] {multi.py:176} ERROR - 
+3 Failed downloads:
+[2026-03-24T04:28:25.031+0000] {multi.py:189} ERROR - ['BBCA.JK', 'BBRI.JK', 'BMRI.JK']: possibly delisted; no price data found  (1d 2026-03-24 -> 2026-03-24)
+[2026-03-24T04:28:25.055+0000] {logging_mixin.py:190} INFO - scheduled
+[2026-03-24T04:28:25.055+0000] {logging_mixin.py:190} INFO - DEBUG: Row count fetched: 0
+[2026-03-24T04:28:25.073+0000] {logging_mixin.py:190} INFO - DEBUG: Data content: Empty DataFrame
+Columns: [(Adj Close, BBCA.JK), (Adj Close, BBRI.JK), (Adj Close, BMRI.JK), (Close, BBCA.JK), (Close, BBRI.JK), (Close, BMRI.JK), (High, BBCA.JK), (High, BBRI.JK), (High, BMRI.JK), (Low, BBCA.JK), (Low, BBRI.JK), (Low, BMRI.JK), (Open, BBCA.JK), (Open, BBRI.JK), (Open, BMRI.JK), (Volume, BBCA.JK), (Volume, BBRI.JK), (Volume, BMRI.JK)]
+Index: []
+[2026-03-24T04:28:25.083+0000] {logging_mixin.py:190} INFO - data_filtered:  Empty DataFrame
+Columns: [(Close, BBCA.JK), (Close, BBRI.JK), (Close, BMRI.JK), (High, BBCA.JK), (High, BBRI.JK), (High, BMRI.JK), (Low, BBCA.JK), (Low, BBRI.JK), (Low, BMRI.JK), (Open, BBCA.JK), (Open, BBRI.JK), (Open, BMRI.JK)]
+Index: []
+[2026-03-24T04:28:25.148+0000] {logging_mixin.py:190} INFO - data_long.columns before Inserted_at_timestamp:  Index(['Date', 'Ticker', 'Close', 'High', 'Low', 'Open'], dtype='object')
+[2026-03-24T04:28:25.151+0000] {logging_mixin.py:190} INFO - data_long.columns:  Index(['Date', 'Ticker', 'Close', 'High', 'Low', 'Open',
+       'Inserted_at_timestamp_WIB'],
+      dtype='object')
+[2026-03-24T04:28:25.155+0000] {python.py:240} INFO - Done. Returned value was: []
+[2026-03-24T04:28:25.202+0000] {taskinstance.py:349} INFO - ::group::Post task execution logs
+[2026-03-24T04:28:25.203+0000] {taskinstance.py:361} INFO - Marking task as SUCCESS. dag_id=dag_get_data_from_yf, task_id=get_data_from_yf, run_id=scheduled__2026-03-23T00:00:00+00:00, execution_date=20260323T000000, start_date=20260324T042824, end_date=20260324T042825
+[2026-03-24T04:28:25.243+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2026-03-24T04:28:25.244+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2026-03-24T04:28:25.244+0000] {logging_mixin.py:190} INFO - Dag name:dag_get_data_from_yf queued_at:2026-03-24 04:28:12.539893+00:00
+[2026-03-24T04:28:25.244+0000] {logging_mixin.py:190} INFO - Task hostname:5e9920a13c8d operator:_PythonDecoratedOperator
+[2026-03-24T04:28:25.257+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-03-24T04:28:25.315+0000] {taskinstance.py:3924} INFO - 4 downstream tasks scheduled from follow-on schedule check
+[2026-03-24T04:28:25.321+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2026-03-24T14:57:08.381+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-03-24T14:57:08.420+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_get_data_from_yf.get_data_from_yf scheduled__2026-03-23T00:00:00+00:00 [queued]>
+[2026-03-24T14:57:08.434+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_get_data_from_yf.get_data_from_yf scheduled__2026-03-23T00:00:00+00:00 [queued]>
+[2026-03-24T14:57:08.434+0000] {taskinstance.py:2884} INFO - Starting attempt 1 of 1
+[2026-03-24T14:57:08.451+0000] {taskinstance.py:2907} INFO - Executing <Task(_PythonDecoratedOperator): get_data_from_yf> on 2026-03-23 00:00:00+00:00
+[2026-03-24T14:57:08.464+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=119) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2026-03-24T14:57:08.466+0000] {standard_task_runner.py:72} INFO - Started process 129 to run task
+[2026-03-24T14:57:08.468+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'dag_get_data_from_yf', 'get_data_from_yf', 'scheduled__2026-03-23T00:00:00+00:00', '--job-id', '2586', '--raw', '--subdir', 'DAGS_FOLDER/get_finance_yf_csv.py', '--cfg-path', '/tmp/tmpeb73ce9q']
+[2026-03-24T14:57:08.469+0000] {standard_task_runner.py:105} INFO - Job 2586: Subtask get_data_from_yf
+[2026-03-24T14:57:08.543+0000] {task_command.py:467} INFO - Running <TaskInstance: dag_get_data_from_yf.get_data_from_yf scheduled__2026-03-23T00:00:00+00:00 [running]> on host a72f93576683
+[2026-03-24T14:57:08.645+0000] {taskinstance.py:3157} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag_get_data_from_yf' AIRFLOW_CTX_TASK_ID='get_data_from_yf' AIRFLOW_CTX_EXECUTION_DATE='2026-03-23T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-03-23T00:00:00+00:00'
+[2026-03-24T14:57:08.648+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2026-03-24T14:57:08.648+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2026-03-24T14:57:08.649+0000] {logging_mixin.py:190} INFO - Current task name:get_data_from_yf state:running start_date:2026-03-24 14:57:08.421204+00:00
+[2026-03-24T14:57:08.649+0000] {logging_mixin.py:190} INFO - Dag name:dag_get_data_from_yf and current dag run status:running
+[2026-03-24T14:57:08.650+0000] {taskinstance.py:740} INFO - ::endgroup::
+[2026-03-24T14:57:08.650+0000] {logging_mixin.py:190} INFO - Ini tickers user: None
+[2026-03-24T14:57:08.651+0000] {logging_mixin.py:190} INFO - Ini start date user: None
+[2026-03-24T14:57:08.651+0000] {logging_mixin.py:190} INFO - Ini end date user: None
+[2026-03-24T14:57:08.656+0000] {cache.py:132} INFO - Failed to create TzCache, reason: Error creating TzCache folder: '/home/***/.cache/py-yfinance' reason: [Errno 17] File exists: '/home/***/.cache/py-yfinance'. TzCache will not be used. Tip: You can direct cache to use a different location with 'set_tz_cache_location(mylocation)'
+[2026-03-24T14:57:09.551+0000] {history.py:276} ERROR - $BBCA.JK: possibly delisted; no price data found  (1d 2026-03-24 -> 2026-03-24)
+[2026-03-24T14:57:09.554+0000] {logging_mixin.py:190} WARNING - [                       0%                       ]
+[2026-03-24T14:57:09.556+0000] {history.py:276} ERROR - $BBRI.JK: possibly delisted; no price data found  (1d 2026-03-24 -> 2026-03-24)
+[2026-03-24T14:57:09.558+0000] {logging_mixin.py:190} WARNING - [**********************67%*******                ]  2 of 3 completed
+[2026-03-24T14:57:09.564+0000] {history.py:276} ERROR - $BMRI.JK: possibly delisted; no price data found  (1d 2026-03-24 -> 2026-03-24)
+[2026-03-24T14:57:09.569+0000] {logging_mixin.py:190} WARNING - [*********************100%***********************]  3 of 3 completed
+[2026-03-24T14:57:09.569+0000] {multi.py:176} ERROR - 
+3 Failed downloads:
+[2026-03-24T14:57:09.570+0000] {multi.py:189} ERROR - ['BBCA.JK', 'BBRI.JK', 'BMRI.JK']: possibly delisted; no price data found  (1d 2026-03-24 -> 2026-03-24)
+[2026-03-24T14:57:09.608+0000] {logging_mixin.py:190} INFO - scheduled
+[2026-03-24T14:57:09.608+0000] {logging_mixin.py:190} INFO - DEBUG: Row count fetched: 0
+[2026-03-24T14:57:09.627+0000] {logging_mixin.py:190} INFO - DEBUG: Data content: Empty DataFrame
+Columns: [(Adj Close, BBCA.JK), (Adj Close, BBRI.JK), (Adj Close, BMRI.JK), (Close, BBCA.JK), (Close, BBRI.JK), (Close, BMRI.JK), (High, BBCA.JK), (High, BBRI.JK), (High, BMRI.JK), (Low, BBCA.JK), (Low, BBRI.JK), (Low, BMRI.JK), (Open, BBCA.JK), (Open, BBRI.JK), (Open, BMRI.JK), (Volume, BBCA.JK), (Volume, BBRI.JK), (Volume, BMRI.JK)]
+Index: []
+[2026-03-24T14:57:09.637+0000] {logging_mixin.py:190} INFO - data_filtered:  Empty DataFrame
+Columns: [(Close, BBCA.JK), (Close, BBRI.JK), (Close, BMRI.JK), (High, BBCA.JK), (High, BBRI.JK), (High, BMRI.JK), (Low, BBCA.JK), (Low, BBRI.JK), (Low, BMRI.JK), (Open, BBCA.JK), (Open, BBRI.JK), (Open, BMRI.JK)]
+Index: []
+[2026-03-24T14:57:09.683+0000] {logging_mixin.py:190} INFO - data_long.columns before Inserted_at_timestamp:  Index(['Date', 'Ticker', 'Close', 'High', 'Low', 'Open'], dtype='object')
+[2026-03-24T14:57:09.688+0000] {logging_mixin.py:190} INFO - data_long.columns:  Index(['Date', 'Ticker', 'Close', 'High', 'Low', 'Open',
+       'Inserted_at_timestamp_WIB'],
+      dtype='object')
+[2026-03-24T14:57:09.695+0000] {python.py:240} INFO - Done. Returned value was: []
+[2026-03-24T14:57:09.766+0000] {taskinstance.py:349} INFO - ::group::Post task execution logs
+[2026-03-24T14:57:09.767+0000] {taskinstance.py:361} INFO - Marking task as SUCCESS. dag_id=dag_get_data_from_yf, task_id=get_data_from_yf, run_id=scheduled__2026-03-23T00:00:00+00:00, execution_date=20260323T000000, start_date=20260324T145708, end_date=20260324T145709
+[2026-03-24T14:57:09.825+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2026-03-24T14:57:09.825+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2026-03-24T14:57:09.826+0000] {logging_mixin.py:190} INFO - Dag name:dag_get_data_from_yf queued_at:2026-03-24 14:56:58.033279+00:00
+[2026-03-24T14:57:09.827+0000] {logging_mixin.py:190} INFO - Task hostname:a72f93576683 operator:_PythonDecoratedOperator
+[2026-03-24T14:57:09.856+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-03-24T14:57:09.946+0000] {taskinstance.py:3924} INFO - 4 downstream tasks scheduled from follow-on schedule check
+[2026-03-24T14:57:09.951+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

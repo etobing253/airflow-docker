@@ -1,0 +1,393 @@
+[2026-03-15T09:15:56.915+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-03-15T09:15:57.180+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_get_data_from_yf.write_db scheduled__2026-03-10T00:00:00+00:00 [queued]>
+[2026-03-15T09:15:57.214+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_get_data_from_yf.write_db scheduled__2026-03-10T00:00:00+00:00 [queued]>
+[2026-03-15T09:15:57.216+0000] {taskinstance.py:2884} INFO - Starting attempt 1 of 1
+[2026-03-15T09:15:57.281+0000] {taskinstance.py:2907} INFO - Executing <Task(_PythonDecoratedOperator): write_db> on 2026-03-10 00:00:00+00:00
+[2026-03-15T09:15:57.305+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=1839) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2026-03-15T09:15:57.317+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'dag_get_data_from_yf', 'write_db', 'scheduled__2026-03-10T00:00:00+00:00', '--job-id', '14980', '--raw', '--subdir', 'DAGS_FOLDER/get_finance_yf_csv.py', '--cfg-path', '/tmp/tmp8j8lpq49']
+[2026-03-15T09:15:57.320+0000] {standard_task_runner.py:72} INFO - Started process 1894 to run task
+[2026-03-15T09:15:57.323+0000] {standard_task_runner.py:105} INFO - Job 14980: Subtask write_db
+[2026-03-15T09:15:57.689+0000] {task_command.py:467} INFO - Running <TaskInstance: dag_get_data_from_yf.write_db scheduled__2026-03-10T00:00:00+00:00 [running]> on host 547c214a0f76
+[2026-03-15T09:15:58.330+0000] {taskinstance.py:3157} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag_get_data_from_yf' AIRFLOW_CTX_TASK_ID='write_db' AIRFLOW_CTX_EXECUTION_DATE='2026-03-10T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-03-10T00:00:00+00:00'
+[2026-03-15T09:15:58.334+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2026-03-15T09:15:58.335+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2026-03-15T09:15:58.336+0000] {logging_mixin.py:190} INFO - Current task name:write_db state:running start_date:2026-03-15 09:15:57.181831+00:00
+[2026-03-15T09:15:58.336+0000] {logging_mixin.py:190} INFO - Dag name:dag_get_data_from_yf and current dag run status:running
+[2026-03-15T09:15:58.337+0000] {taskinstance.py:740} INFO - ::endgroup::
+[2026-03-15T09:15:58.339+0000] {python.py:240} INFO - Done. Returned value was: None
+[2026-03-15T09:15:58.446+0000] {taskinstance.py:349} INFO - ::group::Post task execution logs
+[2026-03-15T09:15:58.447+0000] {taskinstance.py:361} INFO - Marking task as SUCCESS. dag_id=dag_get_data_from_yf, task_id=write_db, run_id=scheduled__2026-03-10T00:00:00+00:00, execution_date=20260310T000000, start_date=20260315T091557, end_date=20260315T091558
+[2026-03-15T09:15:58.814+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2026-03-15T09:15:58.815+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2026-03-15T09:15:58.815+0000] {logging_mixin.py:190} INFO - Dag name:dag_get_data_from_yf queued_at:2026-03-15 09:07:49.849117+00:00
+[2026-03-15T09:15:58.816+0000] {logging_mixin.py:190} INFO - Task hostname:547c214a0f76 operator:_PythonDecoratedOperator
+[2026-03-15T09:15:58.853+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-03-15T09:15:59.004+0000] {taskinstance.py:3924} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-03-15T09:15:59.014+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2026-03-15T12:15:05.953+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-03-15T12:15:06.185+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_get_data_from_yf.write_db scheduled__2026-03-10T00:00:00+00:00 [queued]>
+[2026-03-15T12:15:06.322+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_get_data_from_yf.write_db scheduled__2026-03-10T00:00:00+00:00 [queued]>
+[2026-03-15T12:15:06.329+0000] {taskinstance.py:2884} INFO - Starting attempt 1 of 1
+[2026-03-15T12:15:06.441+0000] {taskinstance.py:2907} INFO - Executing <Task(_PythonDecoratedOperator): write_db> on 2026-03-10 00:00:00+00:00
+[2026-03-15T12:15:06.481+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=3192) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2026-03-15T12:15:06.485+0000] {standard_task_runner.py:72} INFO - Started process 3231 to run task
+[2026-03-15T12:15:06.490+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'dag_get_data_from_yf', 'write_db', 'scheduled__2026-03-10T00:00:00+00:00', '--job-id', '259', '--raw', '--subdir', 'DAGS_FOLDER/get_finance_yf_csv.py', '--cfg-path', '/tmp/tmp9uujb62h']
+[2026-03-15T12:15:06.493+0000] {standard_task_runner.py:105} INFO - Job 259: Subtask write_db
+[2026-03-15T12:15:07.251+0000] {task_command.py:467} INFO - Running <TaskInstance: dag_get_data_from_yf.write_db scheduled__2026-03-10T00:00:00+00:00 [running]> on host 0682dd67c20c
+[2026-03-15T12:15:08.441+0000] {taskinstance.py:3157} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag_get_data_from_yf' AIRFLOW_CTX_TASK_ID='write_db' AIRFLOW_CTX_EXECUTION_DATE='2026-03-10T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-03-10T00:00:00+00:00'
+[2026-03-15T12:15:08.444+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2026-03-15T12:15:08.450+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2026-03-15T12:15:08.451+0000] {logging_mixin.py:190} INFO - Current task name:write_db state:running start_date:2026-03-15 12:15:06.186526+00:00
+[2026-03-15T12:15:08.452+0000] {logging_mixin.py:190} INFO - Dag name:dag_get_data_from_yf and current dag run status:running
+[2026-03-15T12:15:08.452+0000] {taskinstance.py:740} INFO - ::endgroup::
+[2026-03-15T12:15:08.479+0000] {python.py:240} INFO - Done. Returned value was: None
+[2026-03-15T12:15:08.637+0000] {taskinstance.py:349} INFO - ::group::Post task execution logs
+[2026-03-15T12:15:08.638+0000] {taskinstance.py:361} INFO - Marking task as SUCCESS. dag_id=dag_get_data_from_yf, task_id=write_db, run_id=scheduled__2026-03-10T00:00:00+00:00, execution_date=20260310T000000, start_date=20260315T121506, end_date=20260315T121508
+[2026-03-15T12:15:08.826+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2026-03-15T12:15:08.827+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2026-03-15T12:15:08.828+0000] {logging_mixin.py:190} INFO - Dag name:dag_get_data_from_yf queued_at:2026-03-15 12:05:18.286073+00:00
+[2026-03-15T12:15:08.828+0000] {logging_mixin.py:190} INFO - Task hostname:0682dd67c20c operator:_PythonDecoratedOperator
+[2026-03-15T12:15:08.939+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-03-15T12:15:09.152+0000] {taskinstance.py:3924} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-03-15T12:15:09.168+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2026-03-15T15:26:02.902+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-03-15T15:26:03.126+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_get_data_from_yf.write_db scheduled__2026-03-10T00:00:00+00:00 [queued]>
+[2026-03-15T15:26:03.266+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_get_data_from_yf.write_db scheduled__2026-03-10T00:00:00+00:00 [queued]>
+[2026-03-15T15:26:03.267+0000] {taskinstance.py:2884} INFO - Starting attempt 1 of 1
+[2026-03-15T15:26:03.592+0000] {taskinstance.py:2907} INFO - Executing <Task(_PythonDecoratedOperator): write_db> on 2026-03-10 00:00:00+00:00
+[2026-03-15T15:26:03.696+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=1199) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2026-03-15T15:26:03.731+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'dag_get_data_from_yf', 'write_db', 'scheduled__2026-03-10T00:00:00+00:00', '--job-id', '505', '--raw', '--subdir', 'DAGS_FOLDER/get_finance_yf_csv.py', '--cfg-path', '/tmp/tmp_cnf7kyz']
+[2026-03-15T15:26:03.734+0000] {standard_task_runner.py:105} INFO - Job 505: Subtask write_db
+[2026-03-15T15:26:03.739+0000] {standard_task_runner.py:72} INFO - Started process 1244 to run task
+[2026-03-15T15:26:04.395+0000] {task_command.py:467} INFO - Running <TaskInstance: dag_get_data_from_yf.write_db scheduled__2026-03-10T00:00:00+00:00 [running]> on host c2f7721b6bb3
+[2026-03-15T15:26:05.133+0000] {taskinstance.py:3157} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag_get_data_from_yf' AIRFLOW_CTX_TASK_ID='write_db' AIRFLOW_CTX_EXECUTION_DATE='2026-03-10T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-03-10T00:00:00+00:00'
+[2026-03-15T15:26:05.150+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2026-03-15T15:26:05.160+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2026-03-15T15:26:05.165+0000] {logging_mixin.py:190} INFO - Current task name:write_db state:running start_date:2026-03-15 15:26:03.127006+00:00
+[2026-03-15T15:26:05.167+0000] {logging_mixin.py:190} INFO - Dag name:dag_get_data_from_yf and current dag run status:running
+[2026-03-15T15:26:05.168+0000] {taskinstance.py:740} INFO - ::endgroup::
+[2026-03-15T15:26:05.170+0000] {python.py:240} INFO - Done. Returned value was: None
+[2026-03-15T15:26:05.253+0000] {taskinstance.py:349} INFO - ::group::Post task execution logs
+[2026-03-15T15:26:05.254+0000] {taskinstance.py:361} INFO - Marking task as SUCCESS. dag_id=dag_get_data_from_yf, task_id=write_db, run_id=scheduled__2026-03-10T00:00:00+00:00, execution_date=20260310T000000, start_date=20260315T152603, end_date=20260315T152605
+[2026-03-15T15:26:05.452+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2026-03-15T15:26:05.462+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2026-03-15T15:26:05.464+0000] {logging_mixin.py:190} INFO - Dag name:dag_get_data_from_yf queued_at:2026-03-15 15:18:40.438706+00:00
+[2026-03-15T15:26:05.465+0000] {logging_mixin.py:190} INFO - Task hostname:c2f7721b6bb3 operator:_PythonDecoratedOperator
+[2026-03-15T15:26:05.598+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-03-15T15:26:05.970+0000] {taskinstance.py:3924} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-03-15T15:26:05.974+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2026-03-15T16:23:39.943+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-03-15T16:23:40.229+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_get_data_from_yf.write_db scheduled__2026-03-10T00:00:00+00:00 [queued]>
+[2026-03-15T16:23:40.345+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_get_data_from_yf.write_db scheduled__2026-03-10T00:00:00+00:00 [queued]>
+[2026-03-15T16:23:40.346+0000] {taskinstance.py:2884} INFO - Starting attempt 1 of 1
+[2026-03-15T16:23:40.488+0000] {taskinstance.py:2907} INFO - Executing <Task(_PythonDecoratedOperator): write_db> on 2026-03-10 00:00:00+00:00
+[2026-03-15T16:23:40.545+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=3018) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2026-03-15T16:23:40.599+0000] {standard_task_runner.py:72} INFO - Started process 3089 to run task
+[2026-03-15T16:23:40.657+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'dag_get_data_from_yf', 'write_db', 'scheduled__2026-03-10T00:00:00+00:00', '--job-id', '637', '--raw', '--subdir', 'DAGS_FOLDER/get_finance_yf_csv.py', '--cfg-path', '/tmp/tmpig70iu8u']
+[2026-03-15T16:23:40.659+0000] {standard_task_runner.py:105} INFO - Job 637: Subtask write_db
+[2026-03-15T16:23:41.290+0000] {task_command.py:467} INFO - Running <TaskInstance: dag_get_data_from_yf.write_db scheduled__2026-03-10T00:00:00+00:00 [running]> on host c2f7721b6bb3
+[2026-03-15T16:23:42.062+0000] {taskinstance.py:3157} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag_get_data_from_yf' AIRFLOW_CTX_TASK_ID='write_db' AIRFLOW_CTX_EXECUTION_DATE='2026-03-10T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-03-10T00:00:00+00:00'
+[2026-03-15T16:23:42.065+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2026-03-15T16:23:42.066+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2026-03-15T16:23:42.070+0000] {logging_mixin.py:190} INFO - Current task name:write_db state:running start_date:2026-03-15 16:23:40.230125+00:00
+[2026-03-15T16:23:42.070+0000] {logging_mixin.py:190} INFO - Dag name:dag_get_data_from_yf and current dag run status:running
+[2026-03-15T16:23:42.074+0000] {taskinstance.py:740} INFO - ::endgroup::
+[2026-03-15T16:23:42.232+0000] {base.py:84} INFO - Retrieving connection 'db_custom'
+[2026-03-15T16:23:42.320+0000] {logging_mixin.py:190} INFO - Transaksi berhasil di-commit.
+[2026-03-15T16:23:42.330+0000] {python.py:240} INFO - Done. Returned value was: None
+[2026-03-15T16:23:42.596+0000] {taskinstance.py:349} INFO - ::group::Post task execution logs
+[2026-03-15T16:23:42.597+0000] {taskinstance.py:361} INFO - Marking task as SUCCESS. dag_id=dag_get_data_from_yf, task_id=write_db, run_id=scheduled__2026-03-10T00:00:00+00:00, execution_date=20260310T000000, start_date=20260315T162340, end_date=20260315T162342
+[2026-03-15T16:23:42.818+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2026-03-15T16:23:42.819+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2026-03-15T16:23:42.819+0000] {logging_mixin.py:190} INFO - Dag name:dag_get_data_from_yf queued_at:2026-03-15 16:14:41.481894+00:00
+[2026-03-15T16:23:42.820+0000] {logging_mixin.py:190} INFO - Task hostname:c2f7721b6bb3 operator:_PythonDecoratedOperator
+[2026-03-15T16:23:42.914+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-03-15T16:23:43.229+0000] {taskinstance.py:3924} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-03-15T16:23:43.241+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2026-03-16T05:55:50.513+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-03-16T05:55:50.592+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_get_data_from_yf.write_db scheduled__2026-03-10T00:00:00+00:00 [queued]>
+[2026-03-16T05:55:50.612+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_get_data_from_yf.write_db scheduled__2026-03-10T00:00:00+00:00 [queued]>
+[2026-03-16T05:55:50.613+0000] {taskinstance.py:2884} INFO - Starting attempt 1 of 1
+[2026-03-16T05:55:50.646+0000] {taskinstance.py:2907} INFO - Executing <Task(_PythonDecoratedOperator): write_db> on 2026-03-10 00:00:00+00:00
+[2026-03-16T05:55:50.664+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=2540) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2026-03-16T05:55:50.668+0000] {standard_task_runner.py:72} INFO - Started process 2547 to run task
+[2026-03-16T05:55:50.676+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'dag_get_data_from_yf', 'write_db', 'scheduled__2026-03-10T00:00:00+00:00', '--job-id', '865', '--raw', '--subdir', 'DAGS_FOLDER/get_finance_yf_csv.py', '--cfg-path', '/tmp/tmpvw8cx88v']
+[2026-03-16T05:55:50.678+0000] {standard_task_runner.py:105} INFO - Job 865: Subtask write_db
+[2026-03-16T05:55:50.844+0000] {task_command.py:467} INFO - Running <TaskInstance: dag_get_data_from_yf.write_db scheduled__2026-03-10T00:00:00+00:00 [running]> on host 662456f34d26
+[2026-03-16T05:55:51.183+0000] {taskinstance.py:3157} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag_get_data_from_yf' AIRFLOW_CTX_TASK_ID='write_db' AIRFLOW_CTX_EXECUTION_DATE='2026-03-10T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-03-10T00:00:00+00:00'
+[2026-03-16T05:55:51.202+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2026-03-16T05:55:51.202+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2026-03-16T05:55:51.205+0000] {logging_mixin.py:190} INFO - Current task name:write_db state:running start_date:2026-03-16 05:55:50.592776+00:00
+[2026-03-16T05:55:51.205+0000] {logging_mixin.py:190} INFO - Dag name:dag_get_data_from_yf and current dag run status:running
+[2026-03-16T05:55:51.211+0000] {taskinstance.py:740} INFO - ::endgroup::
+[2026-03-16T05:55:51.267+0000] {base.py:84} INFO - Retrieving connection 'db_custom'
+[2026-03-16T05:55:51.293+0000] {logging_mixin.py:190} INFO - Terjadi kesalahan, transaksi di-rollback: syntax error at or near ")"
+LINE 1: ..., high, low, open, inserted_at_timestamp) VALUES (), (), ();...
+                                                             ^
+[2026-03-16T05:55:51.300+0000] {logging_mixin.py:190} INFO - koneksi ditutup
+[2026-03-16T05:55:51.302+0000] {taskinstance.py:3336} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 776, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 742, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 425, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/decorators/base.py", line 266, in execute
+    return_value = super().execute(context)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 425, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 256, in execute_callable
+    return runner.run(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/get_finance_yf_csv.py", line 235, in write_db
+    raise e  # lempar error agar task Airflow ditandai 'Failed'
+    ^^^^^^^
+  File "/opt/airflow/dags/get_finance_yf_csv.py", line 228, in write_db
+    cursor.execute(query_insert)
+psycopg2.errors.SyntaxError: syntax error at or near ")"
+LINE 1: ..., high, low, open, inserted_at_timestamp) VALUES (), (), ();...
+                                                             ^
+
+[2026-03-16T05:55:51.353+0000] {logging_mixin.py:190} INFO - Task instance in failure state
+[2026-03-16T05:55:51.354+0000] {logging_mixin.py:190} INFO - Task start:2026-03-16 05:55:50.592776+00:00 end:2026-03-16 05:55:51.352776+00:00 duration:0.76
+[2026-03-16T05:55:51.355+0000] {logging_mixin.py:190} INFO - Task:<Task(_PythonDecoratedOperator): write_db> dag:<DAG: dag_get_data_from_yf> dagrun:<DagRun dag_get_data_from_yf @ 2026-03-10 00:00:00+00:00: scheduled__2026-03-10T00:00:00+00:00, state:running, queued_at: 2026-03-16 04:41:07.065433+00:00. externally triggered: False>
+[2026-03-16T05:55:51.355+0000] {logging_mixin.py:190} INFO - Failure caused by syntax error at or near ")"
+LINE 1: ..., high, low, open, inserted_at_timestamp) VALUES (), (), ();...
+                                                             ^
+[2026-03-16T05:55:51.356+0000] {taskinstance.py:1242} INFO - Marking task as FAILED. dag_id=dag_get_data_from_yf, task_id=write_db, run_id=scheduled__2026-03-10T00:00:00+00:00, execution_date=20260310T000000, start_date=20260316T055550, end_date=20260316T055551
+[2026-03-16T05:55:51.492+0000] {taskinstance.py:349} INFO - ::group::Post task execution logs
+[2026-03-16T05:55:51.494+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 865 for task write_db (syntax error at or near ")"
+LINE 1: ..., high, low, open, inserted_at_timestamp) VALUES (), (), ();...
+                                                             ^
+; 2547)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/cli.py", line 116, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3029, in _run_raw_task
+    return _run_raw_task(
+           ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 282, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3184, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3208, in _execute_task
+    return _execute_task(self, context, task_orig)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 776, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 742, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 425, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/decorators/base.py", line 266, in execute
+    return_value = super().execute(context)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 425, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 256, in execute_callable
+    return runner.run(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/get_finance_yf_csv.py", line 235, in write_db
+    raise e  # lempar error agar task Airflow ditandai 'Failed'
+    ^^^^^^^
+  File "/opt/airflow/dags/get_finance_yf_csv.py", line 228, in write_db
+    cursor.execute(query_insert)
+psycopg2.errors.SyntaxError: syntax error at or near ")"
+LINE 1: ..., high, low, open, inserted_at_timestamp) VALUES (), (), ();...
+                                                             ^
+
+[2026-03-16T05:55:51.561+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 1
+[2026-03-16T05:55:51.648+0000] {taskinstance.py:3924} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-03-16T05:55:51.663+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2026-03-16T14:22:54.944+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-03-16T14:22:55.019+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_get_data_from_yf.write_db scheduled__2026-03-10T00:00:00+00:00 [queued]>
+[2026-03-16T14:22:55.044+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_get_data_from_yf.write_db scheduled__2026-03-10T00:00:00+00:00 [queued]>
+[2026-03-16T14:22:55.045+0000] {taskinstance.py:2884} INFO - Starting attempt 1 of 1
+[2026-03-16T14:22:55.076+0000] {taskinstance.py:2907} INFO - Executing <Task(_PythonDecoratedOperator): write_db> on 2026-03-10 00:00:00+00:00
+[2026-03-16T14:22:55.097+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=1344) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2026-03-16T14:22:55.100+0000] {standard_task_runner.py:72} INFO - Started process 1375 to run task
+[2026-03-16T14:22:55.102+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'dag_get_data_from_yf', 'write_db', 'scheduled__2026-03-10T00:00:00+00:00', '--job-id', '1157', '--raw', '--subdir', 'DAGS_FOLDER/get_finance_yf_csv.py', '--cfg-path', '/tmp/tmpdqrn8wbt']
+[2026-03-16T14:22:55.104+0000] {standard_task_runner.py:105} INFO - Job 1157: Subtask write_db
+[2026-03-16T14:22:55.254+0000] {task_command.py:467} INFO - Running <TaskInstance: dag_get_data_from_yf.write_db scheduled__2026-03-10T00:00:00+00:00 [running]> on host 80c99acb76df
+[2026-03-16T14:22:55.494+0000] {taskinstance.py:3157} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag_get_data_from_yf' AIRFLOW_CTX_TASK_ID='write_db' AIRFLOW_CTX_EXECUTION_DATE='2026-03-10T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-03-10T00:00:00+00:00'
+[2026-03-16T14:22:55.500+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2026-03-16T14:22:55.501+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2026-03-16T14:22:55.502+0000] {logging_mixin.py:190} INFO - Current task name:write_db state:running start_date:2026-03-16 14:22:55.020754+00:00
+[2026-03-16T14:22:55.503+0000] {logging_mixin.py:190} INFO - Dag name:dag_get_data_from_yf and current dag run status:running
+[2026-03-16T14:22:55.504+0000] {taskinstance.py:740} INFO - ::endgroup::
+[2026-03-16T14:22:55.547+0000] {base.py:84} INFO - Retrieving connection 'db_custom'
+[2026-03-16T14:22:55.569+0000] {logging_mixin.py:190} INFO - Terjadi kesalahan, transaksi di-rollback: name 'df' is not defined
+[2026-03-16T14:22:55.570+0000] {logging_mixin.py:190} INFO - koneksi ditutup
+[2026-03-16T14:22:55.571+0000] {taskinstance.py:3336} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 776, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 742, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 425, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/decorators/base.py", line 266, in execute
+    return_value = super().execute(context)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 425, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 256, in execute_callable
+    return runner.run(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/get_finance_yf_csv.py", line 234, in write_db
+    raise e  # lempar error agar task Airflow ditandai 'Failed'
+    ^^^^^^^
+  File "/opt/airflow/dags/get_finance_yf_csv.py", line 225, in write_db
+    data_to_insert = df[['date', 'ticker', 'close', 'high', 'low', 'open']].values.tolist()
+                     ^^
+NameError: name 'df' is not defined
+[2026-03-16T14:22:55.603+0000] {logging_mixin.py:190} INFO - Task instance in failure state
+[2026-03-16T14:22:55.604+0000] {logging_mixin.py:190} INFO - Task start:2026-03-16 14:22:55.020754+00:00 end:2026-03-16 14:22:55.602715+00:00 duration:0.581961
+[2026-03-16T14:22:55.605+0000] {logging_mixin.py:190} INFO - Task:<Task(_PythonDecoratedOperator): write_db> dag:<DAG: dag_get_data_from_yf> dagrun:<DagRun dag_get_data_from_yf @ 2026-03-10 00:00:00+00:00: scheduled__2026-03-10T00:00:00+00:00, state:running, queued_at: 2026-03-16 10:57:54.535745+00:00. externally triggered: False>
+[2026-03-16T14:22:55.605+0000] {logging_mixin.py:190} INFO - Failure caused by name 'df' is not defined
+[2026-03-16T14:22:55.605+0000] {taskinstance.py:1242} INFO - Marking task as FAILED. dag_id=dag_get_data_from_yf, task_id=write_db, run_id=scheduled__2026-03-10T00:00:00+00:00, execution_date=20260310T000000, start_date=20260316T142255, end_date=20260316T142255
+[2026-03-16T14:22:55.679+0000] {taskinstance.py:349} INFO - ::group::Post task execution logs
+[2026-03-16T14:22:55.680+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 1157 for task write_db (name 'df' is not defined; 1375)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/cli.py", line 116, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3029, in _run_raw_task
+    return _run_raw_task(
+           ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 282, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3184, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3208, in _execute_task
+    return _execute_task(self, context, task_orig)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 776, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 742, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 425, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/decorators/base.py", line 266, in execute
+    return_value = super().execute(context)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 425, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 256, in execute_callable
+    return runner.run(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/get_finance_yf_csv.py", line 234, in write_db
+    raise e  # lempar error agar task Airflow ditandai 'Failed'
+    ^^^^^^^
+  File "/opt/airflow/dags/get_finance_yf_csv.py", line 225, in write_db
+    data_to_insert = df[['date', 'ticker', 'close', 'high', 'low', 'open']].values.tolist()
+                     ^^
+NameError: name 'df' is not defined
+[2026-03-16T14:22:55.705+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 1
+[2026-03-16T14:22:55.757+0000] {taskinstance.py:3924} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-03-16T14:22:55.784+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

@@ -1,19 +1,18 @@
-from airflow.decorators import dag,task
-from datetime import date, datetime, timedelta
+from airflow.decorators import dag,task,task_group
+from datetime import date, datetime, timedelta, timezone
 import pandas as pd
 import yfinance as yf
-from airflow.operators.trigger_dagrun import TriggerDagRunOperator
 from airflow.operators.empty import EmptyOperator
-from airflow.operators.python import PythonOperator
 from airflow.utils.trigger_rule import TriggerRule
-from io import StringIO
 from airflow.models.param import Param
+from airflow.providers.common.sql.operators.sql import SQLExecuteQueryOperator
+import os
 
 @dag(
     dag_id="dag_get_data_from_yf",
-    start_date=datetime(2026,3,11),
+    start_date=datetime(2026,3,1),
     catchup=False,
-    schedule=None, #"*/1 * * * *",
+    schedule="@daily", 
     params={
         "tickers": Param(None, type=["null", "string"], description="""Masukkan kode saham.\n
                          Jika mau default, kosongkan.\n
@@ -32,33 +31,37 @@ def get_data_from_yf_to_csv():
     
     misc = {
         'file_path_all': '/opt/airflow/scripts/saham_indonesia_all.csv',
-        'raw_data_path': '/opt/airflow/scripts/saham_indonesia_raw.csv',
     }
     
-    labels = ['Close', 'High', 'Low', 'Open']
+    start = EmptyOperator(task_id="start")    
     
-    start = EmptyOperator(task_id="start")      
-    
-    def get_data_from_yf_child(ticker_list:list, start_date:date, end_date:date):
-        if start_date is None and end_date is None: #jika start & end kosong: periode 1 thn terakhir
-            data = yf.download(ticker_list, period="1y", group_by='column')
-            data = data.drop(columns=['Volume'], level=0)
-            raw_data=data.to_csv(misc["raw_data_path"], index=True)
-            print(raw_data)
-            return data
-        elif start_date is not None and end_date is None: #jika end saja yang kosong: start-now
-            data = yf.download(ticker_list, start=start_date, group_by='column')
-            data = data.drop(columns=['Volume'], level=0)
-            raw_data=data.to_csv(misc["raw_data_path"], index=True)
-            print(raw_data)
-            return data
-        elif start_date is not None and end_date is not None: #jika start & end tidak kosong: start-end
+    def get_data_from_yf_child(ticker_list:list, start_date:date, end_date:date, **context):
+        data = None
+        original_schedule_date = datetime.now(timezone(timedelta(hours=7)))
+                
+        if start_date is None and end_date is None: #scheduled event
+            data = yf.download(ticker_list, start=original_schedule_date.strftime('%Y-%m-%d'), group_by='column')
+            print("scheduled")
+            print(f"DEBUG: Row count fetched: {len(data)}")
+            print(f"DEBUG: Data content: {data}")
+        elif start_date is not None and end_date is not None: #triggered event
             end_inclusive = (datetime.strptime(end_date, '%Y-%m-%d') + timedelta(days=1)).strftime('%Y-%m-%d')
             data = yf.download(ticker_list, start=start_date, end=end_inclusive, group_by='column')
-            data = data.drop(columns=['Volume'], level=0)
-            raw_data=data.to_csv(misc["raw_data_path"], index=True)
-            print(raw_data)
-            return data
+            print("triggered")
+            print(f"DEBUG: Row count fetched: {len(data)}")
+            print(f"DEBUG: Data content: {data}")
+                            
+        data_filtered = data[['Close', 'High', 'Low', 'Open']]
+        print("data_filtered: ", data_filtered)
+        data_long = data_filtered.stack(level=1).reset_index()
+        data_long.columns = ['Date', 'Ticker', 'Close', 'High', 'Low', 'Open']
+        print("data_long.columns before Inserted_at_timestamp: ", data_long.columns)
+        data_long['Inserted_at_timestamp_WIB'] = original_schedule_date.strftime('%Y-%m-%d %H:%M:%S') 
+        
+        data_long['Date'] = data_long['Date'].dt.strftime('%Y-%m-%d')
+        print("data_long.columns: ", data_long.columns)
+        
+        return data_long.to_dict(orient='records')
         
     @task
     def get_data_from_yf(**context): 
@@ -70,7 +73,7 @@ def get_data_from_yf_to_csv():
         print(f"Ini end date user: {end_date_input}")            
         
         if tickers_input is None: #saham default
-            get_tickers_default = get_data_from_yf_child(["BMRI.JK", "BBRI.JK", "BBCA.JK"], start_date_input, end_date_input)
+            get_tickers_default = get_data_from_yf_child(["BMRI.JK", "BBRI.JK", "BBCA.JK"], start_date_input, end_date_input, **context)
             return get_tickers_default
         
         #saham custom
@@ -98,81 +101,156 @@ def get_data_from_yf_to_csv():
                 "invalid_count": len(invalid_tickers)
             }
         
-        get_tickers_custom = get_data_from_yf_child(idx_tickers, start_date_input, end_date_input)
+        get_tickers_custom = get_data_from_yf_child(idx_tickers, start_date_input, end_date_input, **context)
+        print("ingest dari yf: ", idx_tickers)
         return get_tickers_custom
-        
-    @task
-    def get_csv_open(data:pd.DataFrame):
-        csv_string_open=data['Open'].to_csv(files["file_path_open"], index=True)
-        print(csv_string_open)
-        
-        # disimpan di xcom (postgres)
-        return files["file_path_open"]
     
-    @task
-    def get_csv_low(data:pd.DataFrame):
-        csv_string_low=data['Low'].to_csv(files["file_path_low"], index=True)
-        print(csv_string_low)
-        
-        # disimpan di xcom (postgres)
-        return files["file_path_low"]
-    
-    @task
-    def get_csv_high(data:pd.DataFrame):
-        csv_string_high=data['High'].to_csv(files["file_path_high"], index=True)
-        print(csv_string_high)
-        
-        # disimpan di xcom (postgres)
-        return files["file_path_high"]
-    
-    @task
-    def get_csv_close(data:pd.DataFrame):
-        csv_string_close=data['Close'].to_csv(files["file_path_close"], index=True)
-        print(csv_string_close)
-        
-        # disimpan di xcom (postgres)
-        return files["file_path_close"]
-    
-    @task(trigger_rule="all_success") # all branch sukses dulu
-    def combine_csv():
-        dfs = []
-        
-        for f in files:
-            df = pd.read_csv(files[f], index_col=0) #Date di kolom pertama dan jadi index
-            dfs.append(df)
+    @task_group(group_id='olhc_branching')
+    def olhc_branching(data_from_yf: dict):    
+        @task
+        def get_csv_open(data_dict: dict):
+            if data_dict is None:
+                raise ValueError("Data dictionary kosong!") # Hindari error jika input kosong
             
-        combined_df = pd.concat(dfs, axis=1, keys=labels)
-        combined_df.columns.names = ['Price', 'Ticker']
-        combined_df.index.name = 'Date'
+            df = pd.DataFrame(data_dict)
+            file_exists = os.path.isfile(files["file_path_open"])
+            df[['Date', 'Ticker', 'Open', 'Inserted_at_timestamp_WIB']].to_csv(files["file_path_open"], mode='a', index=False, header=not file_exists)
+            print(f"Data saved to {files["file_path_open"]}")
+            
+            # disimpan di xcom (postgres)
+            return files["file_path_open"]
         
-        csv_string_all = combined_df.to_csv(misc["file_path_all"], index=True)
-
-        print(csv_string_all)
+        @task
+        def get_csv_low(data_dict: dict):
+            if data_dict is None:
+                raise ValueError("Data dictionary kosong!") # Hindari error jika input kosong
+            
+            df = pd.DataFrame(data_dict)
+            file_exists = os.path.isfile(files["file_path_low"])
+            df[['Date', 'Ticker', 'Low', 'Inserted_at_timestamp_WIB']].to_csv(files["file_path_low"], mode='a', index=False, header=not file_exists)
+            print(f"Data saved to {files["file_path_low"]}")
+            
+            # disimpan di xcom (postgres)
+            return files["file_path_low"]
         
-        return misc["file_path_all"]
+        @task
+        def get_csv_high(data_dict: dict):
+            if data_dict is None:
+                raise ValueError("Data dictionary kosong!") # Hindari error jika input kosong
+            
+            df = pd.DataFrame(data_dict)
+            file_exists = os.path.isfile(files["file_path_high"])
+            df[['Date', 'Ticker', 'High', 'Inserted_at_timestamp_WIB']].to_csv(files["file_path_high"], mode='a', index=False, header=not file_exists)
+            print(f"Data saved to {files["file_path_high"]}")
+            
+            # disimpan di xcom (postgres)
+            return files["file_path_high"]
+        
+        @task
+        def get_csv_close(data_dict: dict):
+            if data_dict is None:
+                raise ValueError("Data dictionary kosong!") # Hindari error jika input kosong
+    
+            df = pd.DataFrame(data_dict)
+            file_exists = os.path.isfile(files["file_path_close"])
+            df[['Date', 'Ticker', 'Close', 'Inserted_at_timestamp_WIB']].to_csv(files["file_path_close"], mode='a', index=False, header=not file_exists)
+            print(f"Data saved to {files["file_path_close"]}")
+            
+            # disimpan di xcom (postgres)
+            return files["file_path_close"]
 
-    # xcom simpan path aja
-    # menunggu DAG pertama selesai
-    trigger_dag2 = TriggerDagRunOperator(
-        task_id='trigger_load_data_dag',
-        trigger_dag_id='dag_load_data_from_csv',
-        wait_for_completion=False, # lgsg done after trigger, gk nunggu sampai dag 2 selesai, hemat resource/slot worker
-        poke_interval=60 # cek setiap 1 mnt
+        get_csv_open(data_from_yf) #stored di XCOM as csv
+        get_csv_low(data_from_yf) #stored di XCOM as csv
+        get_csv_high(data_from_yf) #stored di XCOM as csv
+        get_csv_close(data_from_yf) #stored di XCOM as csv
+    
+    @task(trigger_rule="all_success") # all branch di upstream sukses dulu
+    def combine_csv(): 
+        # VALIDASI: Cek jika ada path yang None
+        for key, path in files.items():
+            if path is None:
+                raise ValueError(f"Task get_csv_{key} tidak mengirimkan path (None). Cek logs task tersebut!")
+            if not os.path.exists(path):
+                raise FileNotFoundError(f"File {path} tidak ditemukan di disk.")
+        
+        # Baca data dan BERSIHKAN header duplikat yang mungkin masuk di file individu
+        def read_and_clean(p):
+            temp_df = pd.read_csv(p)
+            # Menghapus baris yang isinya nama kolom (akibat double header)
+            return temp_df[temp_df['Date'] != 'Date']
+        
+        df_open = read_and_clean(files["file_path_open"])
+        df_low = read_and_clean(files["file_path_low"])
+        df_high = read_and_clean(files["file_path_high"])
+        df_close = read_and_clean(files["file_path_close"])
+        
+        merged = pd.merge(df_open, df_low, on=['Date', 'Ticker', 'Inserted_at_timestamp_WIB'], how='outer')
+        merged = pd.merge(merged, df_high, on=['Date', 'Ticker', 'Inserted_at_timestamp_WIB'], how='outer')
+        merged = pd.merge(merged, df_close, on=['Date', 'Ticker', 'Inserted_at_timestamp_WIB'], how='outer')
+        cols_order = ['Date', 'Ticker', 'Close', 'High', 'Low', 'Open', 'Inserted_at_timestamp_WIB']
+        merged = merged[cols_order]
+        
+        file_exists = os.path.isfile(misc["file_path_all"])
+        if file_exists:
+            existing_df = pd.read_csv(misc["file_path_all"])
+            existing_df = existing_df[existing_df['Date'] != 'Date'] # Bersihkan jika ada header di selain baris 0
+            final_df = pd.concat([existing_df, merged]).drop_duplicates(subset=['Date', 'Ticker'])
+            final_df.to_csv(misc["file_path_all"], index=False)
+        else:            
+            merged.to_csv(misc["file_path_all"], index=False)
+
+        print(f"Berhasil menggabungkan data ke {misc["file_path_all"]}")
+        
+        return misc["file_path_all"] 
+    
+    query_create = SQLExecuteQueryOperator(
+        task_id='create_table_task',
+        conn_id="db_custom",
+        sql=""" CREATE TABLE IF NOT EXISTS indonesian_stocks (
+                date DATE,
+                ticker VARCHAR(7),
+                close FLOAT,
+                high FLOAT,
+                low FLOAT,
+                open FLOAT,
+                inserted_at_timestamp_wib TIMESTAMP,
+                PRIMARY KEY (date, ticker)
+            ); """,
     )
-       
+          
+    query_select = SQLExecuteQueryOperator(
+        task_id='select_data_task',
+        conn_id="db_custom",
+        sql=" SELECT * FROM indonesian_stocks; ",
+    )  
+               
     get_data_task = get_data_from_yf()
     
-    csv_open=get_csv_open(get_data_task) #stored di XCOM as csv
-    csv_low=get_csv_low(get_data_task) #stored di XCOM as csv
-    csv_high=get_csv_high(get_data_task) #stored di XCOM as csv
-    csv_close=get_csv_close(get_data_task) #stored di XCOM as csv
+    olhc_branching_task = olhc_branching(get_data_task)
     
     combine_csv_task = combine_csv()
-                   
+    
+    def prepare_data_csv_all(trigger_from_combine):
+        csv_all = misc["file_path_all"]
+        file_exists = os.path.isfile(csv_all)
+        if file_exists:
+            df = pd.read_csv(csv_all)
+            return df.to_dict(orient='records')
+        
+        return []
+    
+    csv_ready = prepare_data_csv_all(combine_csv_task)
+    
+    query_insert = SQLExecuteQueryOperator.partial(
+        task_id='insert_data_task',
+        conn_id="db_custom",
+        sql=""" INSERT INTO indonesian_stocks (date, ticker, close, high, low, open, inserted_at_timestamp_wib) 
+                VALUES ('{{ params.Date }}', '{{ params.Ticker }}', '{{ params.Close }}', '{{ params.High }}', '{{ params.Low }}', '{{ params.Open }}', '{{ params.Inserted_at_timestamp_WIB }}' )
+                ON CONFLICT (date, ticker) DO NOTHING; """,
+    ).expand(params=csv_ready)
+                      
     end = EmptyOperator(task_id="end", trigger_rule=TriggerRule.ALL_SUCCESS)
     
-    start >> get_data_task >> [csv_close,csv_high,csv_low,csv_open] >> combine_csv_task >> trigger_dag2 >> end
-    
-    # XCOM disimpan di postgres, tapi ada batasan ukuran
+    start >> get_data_task >> olhc_branching_task >> combine_csv_task >> query_create >> query_insert >> query_select >> end
     
 get_data_from_yf_to_csv()

@@ -1,0 +1,241 @@
+[2026-03-25T02:49:36.374+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-03-25T02:49:36.409+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_get_data_from_yf.create_table_task scheduled__2026-03-24T00:00:00+00:00 [queued]>
+[2026-03-25T02:49:36.421+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_get_data_from_yf.create_table_task scheduled__2026-03-24T00:00:00+00:00 [queued]>
+[2026-03-25T02:49:36.422+0000] {taskinstance.py:2884} INFO - Starting attempt 1 of 1
+[2026-03-25T02:49:36.441+0000] {taskinstance.py:2907} INFO - Executing <Task(SQLExecuteQueryOperator): create_table_task> on 2026-03-24 00:00:00+00:00
+[2026-03-25T02:49:36.458+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=157) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2026-03-25T02:49:36.460+0000] {standard_task_runner.py:72} INFO - Started process 159 to run task
+[2026-03-25T02:49:36.462+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'dag_get_data_from_yf', 'create_table_task', 'scheduled__2026-03-24T00:00:00+00:00', '--job-id', '2648', '--raw', '--subdir', 'DAGS_FOLDER/get_finance_yf_csv.py', '--cfg-path', '/tmp/tmpd3zoajg2']
+[2026-03-25T02:49:36.464+0000] {standard_task_runner.py:105} INFO - Job 2648: Subtask create_table_task
+[2026-03-25T02:49:36.569+0000] {task_command.py:467} INFO - Running <TaskInstance: dag_get_data_from_yf.create_table_task scheduled__2026-03-24T00:00:00+00:00 [running]> on host 2cd601aaa810
+[2026-03-25T02:49:36.738+0000] {taskinstance.py:3157} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag_get_data_from_yf' AIRFLOW_CTX_TASK_ID='create_table_task' AIRFLOW_CTX_EXECUTION_DATE='2026-03-24T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-03-24T00:00:00+00:00'
+[2026-03-25T02:49:36.739+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2026-03-25T02:49:36.740+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2026-03-25T02:49:36.740+0000] {logging_mixin.py:190} INFO - Current task name:create_table_task state:running start_date:2026-03-25 02:49:36.410046+00:00
+[2026-03-25T02:49:36.740+0000] {logging_mixin.py:190} INFO - Dag name:dag_get_data_from_yf and current dag run status:running
+[2026-03-25T02:49:36.740+0000] {taskinstance.py:740} INFO - ::endgroup::
+[2026-03-25T02:49:36.741+0000] {sql.py:410} INFO - Executing:  CREATE TABLE IF NOT EXISTS indonesian_stocks (
+                date DATE,
+                ticker VARCHAR(7),
+                close FLOAT,
+                high FLOAT,
+                low FLOAT,
+                open FLOAT,
+                inserted_at_timestamp_wib TIMESTAMP,
+                PRIMARY KEY (date, ticker)
+            ); 
+[2026-03-25T02:49:36.742+0000] {crypto.py:82} WARNING - empty cryptography key - values will not be stored encrypted.
+[2026-03-25T02:49:36.742+0000] {base.py:84} INFO - Retrieving connection 'db_custom'
+[2026-03-25T02:49:36.759+0000] {base.py:84} INFO - Retrieving connection 'db_custom'
+[2026-03-25T02:49:36.770+0000] {sql.py:861} INFO - Running statement:  CREATE TABLE IF NOT EXISTS indonesian_stocks (
+                date DATE,
+                ticker VARCHAR(7),
+                close FLOAT,
+                high FLOAT,
+                low FLOAT,
+                open FLOAT,
+                inserted_at_timestamp_wib TIMESTAMP,
+                PRIMARY KEY (date, ticker)
+            ); , parameters: None
+[2026-03-25T02:49:36.819+0000] {taskinstance.py:349} INFO - ::group::Post task execution logs
+[2026-03-25T02:49:36.820+0000] {taskinstance.py:361} INFO - Marking task as SUCCESS. dag_id=dag_get_data_from_yf, task_id=create_table_task, run_id=scheduled__2026-03-24T00:00:00+00:00, execution_date=20260324T000000, start_date=20260325T024936, end_date=20260325T024936
+[2026-03-25T02:49:36.869+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2026-03-25T02:49:36.869+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2026-03-25T02:49:36.870+0000] {logging_mixin.py:190} INFO - Dag name:dag_get_data_from_yf queued_at:2026-03-25 02:48:50.158161+00:00
+[2026-03-25T02:49:36.870+0000] {logging_mixin.py:190} INFO - Task hostname:2cd601aaa810 operator:SQLExecuteQueryOperator
+[2026-03-25T02:49:36.893+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-03-25T02:49:37.086+0000] {taskinstance.py:3924} INFO - 3 downstream tasks scheduled from follow-on schedule check
+[2026-03-25T02:49:37.090+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2026-03-25T04:12:49.054+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-03-25T04:12:49.091+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_get_data_from_yf.create_table_task scheduled__2026-03-24T00:00:00+00:00 [queued]>
+[2026-03-25T04:12:49.101+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_get_data_from_yf.create_table_task scheduled__2026-03-24T00:00:00+00:00 [queued]>
+[2026-03-25T04:12:49.101+0000] {taskinstance.py:2884} INFO - Starting attempt 1 of 1
+[2026-03-25T04:12:49.115+0000] {taskinstance.py:2907} INFO - Executing <Task(SQLExecuteQueryOperator): create_table_task> on 2026-03-24 00:00:00+00:00
+[2026-03-25T04:12:49.127+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=210) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2026-03-25T04:12:49.128+0000] {standard_task_runner.py:72} INFO - Started process 219 to run task
+[2026-03-25T04:12:49.129+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'dag_get_data_from_yf', 'create_table_task', 'scheduled__2026-03-24T00:00:00+00:00', '--job-id', '2743', '--raw', '--subdir', 'DAGS_FOLDER/get_finance_yf_csv.py', '--cfg-path', '/tmp/tmpnjsvd0_c']
+[2026-03-25T04:12:49.131+0000] {standard_task_runner.py:105} INFO - Job 2743: Subtask create_table_task
+[2026-03-25T04:12:49.242+0000] {task_command.py:467} INFO - Running <TaskInstance: dag_get_data_from_yf.create_table_task scheduled__2026-03-24T00:00:00+00:00 [running]> on host 709f8f45e3d8
+[2026-03-25T04:12:49.445+0000] {taskinstance.py:3157} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag_get_data_from_yf' AIRFLOW_CTX_TASK_ID='create_table_task' AIRFLOW_CTX_EXECUTION_DATE='2026-03-24T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-03-24T00:00:00+00:00'
+[2026-03-25T04:12:49.448+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2026-03-25T04:12:49.448+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2026-03-25T04:12:49.449+0000] {logging_mixin.py:190} INFO - Current task name:create_table_task state:running start_date:2026-03-25 04:12:49.091727+00:00
+[2026-03-25T04:12:49.449+0000] {logging_mixin.py:190} INFO - Dag name:dag_get_data_from_yf and current dag run status:running
+[2026-03-25T04:12:49.450+0000] {taskinstance.py:740} INFO - ::endgroup::
+[2026-03-25T04:12:49.450+0000] {sql.py:410} INFO - Executing:  CREATE TABLE IF NOT EXISTS indonesian_stocks (
+                date DATE,
+                ticker VARCHAR(7),
+                close FLOAT,
+                high FLOAT,
+                low FLOAT,
+                open FLOAT,
+                inserted_at_timestamp_wib TIMESTAMP,
+                PRIMARY KEY (date, ticker)
+            ); 
+[2026-03-25T04:12:49.452+0000] {crypto.py:82} WARNING - empty cryptography key - values will not be stored encrypted.
+[2026-03-25T04:12:49.453+0000] {base.py:84} INFO - Retrieving connection 'db_custom'
+[2026-03-25T04:12:49.487+0000] {base.py:84} INFO - Retrieving connection 'db_custom'
+[2026-03-25T04:12:49.501+0000] {sql.py:861} INFO - Running statement:  CREATE TABLE IF NOT EXISTS indonesian_stocks (
+                date DATE,
+                ticker VARCHAR(7),
+                close FLOAT,
+                high FLOAT,
+                low FLOAT,
+                open FLOAT,
+                inserted_at_timestamp_wib TIMESTAMP,
+                PRIMARY KEY (date, ticker)
+            ); , parameters: None
+[2026-03-25T04:12:49.565+0000] {taskinstance.py:349} INFO - ::group::Post task execution logs
+[2026-03-25T04:12:49.566+0000] {taskinstance.py:361} INFO - Marking task as SUCCESS. dag_id=dag_get_data_from_yf, task_id=create_table_task, run_id=scheduled__2026-03-24T00:00:00+00:00, execution_date=20260324T000000, start_date=20260325T041249, end_date=20260325T041249
+[2026-03-25T04:12:49.627+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2026-03-25T04:12:49.628+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2026-03-25T04:12:49.628+0000] {logging_mixin.py:190} INFO - Dag name:dag_get_data_from_yf queued_at:2026-03-25 04:12:04.174187+00:00
+[2026-03-25T04:12:49.629+0000] {logging_mixin.py:190} INFO - Task hostname:709f8f45e3d8 operator:SQLExecuteQueryOperator
+[2026-03-25T04:12:49.646+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-03-25T04:12:49.824+0000] {taskinstance.py:3924} INFO - 3 downstream tasks scheduled from follow-on schedule check
+[2026-03-25T04:12:49.829+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2026-03-25T06:37:18.923+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-03-25T06:37:18.976+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_get_data_from_yf.create_table_task scheduled__2026-03-24T00:00:00+00:00 [queued]>
+[2026-03-25T06:37:18.995+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_get_data_from_yf.create_table_task scheduled__2026-03-24T00:00:00+00:00 [queued]>
+[2026-03-25T06:37:18.996+0000] {taskinstance.py:2884} INFO - Starting attempt 1 of 1
+[2026-03-25T06:37:19.021+0000] {taskinstance.py:2907} INFO - Executing <Task(SQLExecuteQueryOperator): create_table_task> on 2026-03-24 00:00:00+00:00
+[2026-03-25T06:37:19.036+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=1402) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2026-03-25T06:37:19.038+0000] {standard_task_runner.py:72} INFO - Started process 1404 to run task
+[2026-03-25T06:37:19.042+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'dag_get_data_from_yf', 'create_table_task', 'scheduled__2026-03-24T00:00:00+00:00', '--job-id', '2875', '--raw', '--subdir', 'DAGS_FOLDER/get_finance_yf_csv.py', '--cfg-path', '/tmp/tmp5qurx4kh']
+[2026-03-25T06:37:19.043+0000] {standard_task_runner.py:105} INFO - Job 2875: Subtask create_table_task
+[2026-03-25T06:37:19.167+0000] {task_command.py:467} INFO - Running <TaskInstance: dag_get_data_from_yf.create_table_task scheduled__2026-03-24T00:00:00+00:00 [running]> on host 709f8f45e3d8
+[2026-03-25T06:37:19.348+0000] {taskinstance.py:3157} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag_get_data_from_yf' AIRFLOW_CTX_TASK_ID='create_table_task' AIRFLOW_CTX_EXECUTION_DATE='2026-03-24T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-03-24T00:00:00+00:00'
+[2026-03-25T06:37:19.351+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2026-03-25T06:37:19.352+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2026-03-25T06:37:19.352+0000] {logging_mixin.py:190} INFO - Current task name:create_table_task state:running start_date:2026-03-25 06:37:18.977477+00:00
+[2026-03-25T06:37:19.353+0000] {logging_mixin.py:190} INFO - Dag name:dag_get_data_from_yf and current dag run status:running
+[2026-03-25T06:37:19.353+0000] {taskinstance.py:740} INFO - ::endgroup::
+[2026-03-25T06:37:19.354+0000] {sql.py:410} INFO - Executing:  CREATE TABLE IF NOT EXISTS indonesian_stocks (
+                date DATE,
+                ticker VARCHAR(7),
+                close FLOAT,
+                high FLOAT,
+                low FLOAT,
+                open FLOAT,
+                inserted_at_timestamp_wib TIMESTAMP,
+                PRIMARY KEY (date, ticker)
+            ); 
+[2026-03-25T06:37:19.355+0000] {crypto.py:82} WARNING - empty cryptography key - values will not be stored encrypted.
+[2026-03-25T06:37:19.356+0000] {base.py:84} INFO - Retrieving connection 'db_custom'
+[2026-03-25T06:37:19.367+0000] {base.py:84} INFO - Retrieving connection 'db_custom'
+[2026-03-25T06:37:19.381+0000] {sql.py:861} INFO - Running statement:  CREATE TABLE IF NOT EXISTS indonesian_stocks (
+                date DATE,
+                ticker VARCHAR(7),
+                close FLOAT,
+                high FLOAT,
+                low FLOAT,
+                open FLOAT,
+                inserted_at_timestamp_wib TIMESTAMP,
+                PRIMARY KEY (date, ticker)
+            ); , parameters: None
+[2026-03-25T06:37:19.457+0000] {taskinstance.py:349} INFO - ::group::Post task execution logs
+[2026-03-25T06:37:19.458+0000] {taskinstance.py:361} INFO - Marking task as SUCCESS. dag_id=dag_get_data_from_yf, task_id=create_table_task, run_id=scheduled__2026-03-24T00:00:00+00:00, execution_date=20260324T000000, start_date=20260325T063718, end_date=20260325T063719
+[2026-03-25T06:37:19.522+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2026-03-25T06:37:19.523+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2026-03-25T06:37:19.523+0000] {logging_mixin.py:190} INFO - Dag name:dag_get_data_from_yf queued_at:2026-03-25 06:36:20.361139+00:00
+[2026-03-25T06:37:19.524+0000] {logging_mixin.py:190} INFO - Task hostname:709f8f45e3d8 operator:SQLExecuteQueryOperator
+[2026-03-25T06:37:19.544+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-03-25T06:37:19.567+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2026-03-25T07:22:43.994+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-03-25T07:22:44.055+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_get_data_from_yf.create_table_task scheduled__2026-03-24T00:00:00+00:00 [queued]>
+[2026-03-25T07:22:44.073+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_get_data_from_yf.create_table_task scheduled__2026-03-24T00:00:00+00:00 [queued]>
+[2026-03-25T07:22:44.073+0000] {taskinstance.py:2884} INFO - Starting attempt 1 of 1
+[2026-03-25T07:22:44.098+0000] {taskinstance.py:2907} INFO - Executing <Task(SQLExecuteQueryOperator): create_table_task> on 2026-03-24 00:00:00+00:00
+[2026-03-25T07:22:44.114+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=259) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2026-03-25T07:22:44.117+0000] {standard_task_runner.py:72} INFO - Started process 261 to run task
+[2026-03-25T07:22:44.119+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'dag_get_data_from_yf', 'create_table_task', 'scheduled__2026-03-24T00:00:00+00:00', '--job-id', '2886', '--raw', '--subdir', 'DAGS_FOLDER/get_finance_yf_csv.py', '--cfg-path', '/tmp/tmpqtz5amg4']
+[2026-03-25T07:22:44.121+0000] {standard_task_runner.py:105} INFO - Job 2886: Subtask create_table_task
+[2026-03-25T07:22:44.227+0000] {task_command.py:467} INFO - Running <TaskInstance: dag_get_data_from_yf.create_table_task scheduled__2026-03-24T00:00:00+00:00 [running]> on host dc21c86d4397
+[2026-03-25T07:22:44.395+0000] {taskinstance.py:3157} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag_get_data_from_yf' AIRFLOW_CTX_TASK_ID='create_table_task' AIRFLOW_CTX_EXECUTION_DATE='2026-03-24T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-03-24T00:00:00+00:00'
+[2026-03-25T07:22:44.397+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2026-03-25T07:22:44.398+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2026-03-25T07:22:44.398+0000] {logging_mixin.py:190} INFO - Current task name:create_table_task state:running start_date:2026-03-25 07:22:44.056089+00:00
+[2026-03-25T07:22:44.399+0000] {logging_mixin.py:190} INFO - Dag name:dag_get_data_from_yf and current dag run status:running
+[2026-03-25T07:22:44.399+0000] {taskinstance.py:740} INFO - ::endgroup::
+[2026-03-25T07:22:44.400+0000] {sql.py:410} INFO - Executing:  CREATE TABLE IF NOT EXISTS indonesian_stocks (
+                date DATE,
+                ticker VARCHAR(7),
+                close FLOAT,
+                high FLOAT,
+                low FLOAT,
+                open FLOAT,
+                inserted_at_timestamp_wib TIMESTAMP,
+                PRIMARY KEY (date, ticker)
+            ); 
+[2026-03-25T07:22:44.402+0000] {crypto.py:82} WARNING - empty cryptography key - values will not be stored encrypted.
+[2026-03-25T07:22:44.403+0000] {base.py:84} INFO - Retrieving connection 'db_custom'
+[2026-03-25T07:22:44.486+0000] {base.py:84} INFO - Retrieving connection 'db_custom'
+[2026-03-25T07:22:44.513+0000] {sql.py:861} INFO - Running statement:  CREATE TABLE IF NOT EXISTS indonesian_stocks (
+                date DATE,
+                ticker VARCHAR(7),
+                close FLOAT,
+                high FLOAT,
+                low FLOAT,
+                open FLOAT,
+                inserted_at_timestamp_wib TIMESTAMP,
+                PRIMARY KEY (date, ticker)
+            ); , parameters: None
+[2026-03-25T07:22:44.806+0000] {taskinstance.py:349} INFO - ::group::Post task execution logs
+[2026-03-25T07:22:44.807+0000] {taskinstance.py:361} INFO - Marking task as SUCCESS. dag_id=dag_get_data_from_yf, task_id=create_table_task, run_id=scheduled__2026-03-24T00:00:00+00:00, execution_date=20260324T000000, start_date=20260325T072244, end_date=20260325T072244
+[2026-03-25T07:22:44.925+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2026-03-25T07:22:44.926+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2026-03-25T07:22:44.926+0000] {logging_mixin.py:190} INFO - Dag name:dag_get_data_from_yf queued_at:2026-03-25 07:21:25.815833+00:00
+[2026-03-25T07:22:44.927+0000] {logging_mixin.py:190} INFO - Task hostname:dc21c86d4397 operator:SQLExecuteQueryOperator
+[2026-03-25T07:22:44.968+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-03-25T07:22:45.423+0000] {taskinstance.py:3924} INFO - 3 downstream tasks scheduled from follow-on schedule check
+[2026-03-25T07:22:45.451+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2026-03-25T09:19:28.032+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-03-25T09:19:28.064+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_get_data_from_yf.create_table_task scheduled__2026-03-24T00:00:00+00:00 [queued]>
+[2026-03-25T09:19:28.074+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_get_data_from_yf.create_table_task scheduled__2026-03-24T00:00:00+00:00 [queued]>
+[2026-03-25T09:19:28.074+0000] {taskinstance.py:2884} INFO - Starting attempt 1 of 1
+[2026-03-25T09:19:28.087+0000] {taskinstance.py:2907} INFO - Executing <Task(SQLExecuteQueryOperator): create_table_task> on 2026-03-24 00:00:00+00:00
+[2026-03-25T09:19:28.098+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=203) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2026-03-25T09:19:28.100+0000] {standard_task_runner.py:72} INFO - Started process 205 to run task
+[2026-03-25T09:19:28.100+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'dag_get_data_from_yf', 'create_table_task', 'scheduled__2026-03-24T00:00:00+00:00', '--job-id', '3021', '--raw', '--subdir', 'DAGS_FOLDER/get_finance_yf_csv.py', '--cfg-path', '/tmp/tmpgrzau0hb']
+[2026-03-25T09:19:28.101+0000] {standard_task_runner.py:105} INFO - Job 3021: Subtask create_table_task
+[2026-03-25T09:19:28.167+0000] {task_command.py:467} INFO - Running <TaskInstance: dag_get_data_from_yf.create_table_task scheduled__2026-03-24T00:00:00+00:00 [running]> on host fb0d6796e339
+[2026-03-25T09:19:28.264+0000] {taskinstance.py:3157} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag_get_data_from_yf' AIRFLOW_CTX_TASK_ID='create_table_task' AIRFLOW_CTX_EXECUTION_DATE='2026-03-24T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-03-24T00:00:00+00:00'
+[2026-03-25T09:19:28.265+0000] {taskinstance.py:740} INFO - ::endgroup::
+[2026-03-25T09:19:28.267+0000] {sql.py:410} INFO - Executing:  CREATE TABLE IF NOT EXISTS indonesian_stocks (
+                date DATE,
+                ticker VARCHAR(7),
+                close FLOAT,
+                high FLOAT,
+                low FLOAT,
+                open FLOAT,
+                inserted_at_timestamp_wib TIMESTAMP,
+                PRIMARY KEY (date, ticker)
+            ); 
+[2026-03-25T09:19:28.268+0000] {crypto.py:82} WARNING - empty cryptography key - values will not be stored encrypted.
+[2026-03-25T09:19:28.268+0000] {base.py:84} INFO - Retrieving connection 'db_custom'
+[2026-03-25T09:19:28.281+0000] {base.py:84} INFO - Retrieving connection 'db_custom'
+[2026-03-25T09:19:28.291+0000] {sql.py:861} INFO - Running statement:  CREATE TABLE IF NOT EXISTS indonesian_stocks (
+                date DATE,
+                ticker VARCHAR(7),
+                close FLOAT,
+                high FLOAT,
+                low FLOAT,
+                open FLOAT,
+                inserted_at_timestamp_wib TIMESTAMP,
+                PRIMARY KEY (date, ticker)
+            ); , parameters: None
+[2026-03-25T09:19:28.343+0000] {taskinstance.py:349} INFO - ::group::Post task execution logs
+[2026-03-25T09:19:28.343+0000] {taskinstance.py:361} INFO - Marking task as SUCCESS. dag_id=dag_get_data_from_yf, task_id=create_table_task, run_id=scheduled__2026-03-24T00:00:00+00:00, execution_date=20260324T000000, start_date=20260325T091928, end_date=20260325T091928
+[2026-03-25T09:19:28.398+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-03-25T09:19:28.496+0000] {taskinstance.py:3924} INFO - 2 downstream tasks scheduled from follow-on schedule check
+[2026-03-25T09:19:28.499+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
