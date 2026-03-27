@@ -12,7 +12,7 @@ import os
     dag_id="dag_get_data_from_yf",
     start_date=datetime(2026,3,1),
     catchup=False,
-    schedule="@daily", 
+    schedule="0 17 * * 1-5", # Setiap hari kerja pukul 17:00 WIB
     params={
         "tickers": Param(None, type=["null", "string"], description="""Masukkan kode saham.\n
                          Jika mau default, kosongkan.\n
@@ -37,7 +37,8 @@ def get_data_from_yf_to_csv():
     
     def get_data_from_yf_child(ticker_list:list, start_date:date, end_date:date, **context):
         data = None
-        original_schedule_date = datetime.now(timezone(timedelta(hours=7)))
+        # original_schedule_date = datetime.now(timezone(timedelta(hours=7)))
+        original_schedule_date = datetime.now()
                 
         if start_date is None and end_date is None: #scheduled event
             data = yf.download(ticker_list, start=original_schedule_date.strftime('%Y-%m-%d'), group_by='column')
