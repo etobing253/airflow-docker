@@ -7,10 +7,13 @@ from airflow.utils.trigger_rule import TriggerRule
 from airflow.models.param import Param
 from airflow.providers.common.sql.operators.sql import SQLExecuteQueryOperator
 import os
+import pendulum
+
+local_tz = pendulum.timezone("Asia/Jakarta")
 
 @dag(
     dag_id="dag_get_data_from_yf",
-    start_date=datetime(2026,3,1),
+    start_date=datetime(2026,3,1,tzinfo=local_tz),
     catchup=False,
     schedule="0 17 * * 1-5", # Setiap hari kerja pukul 17:00 WIB
     params={
@@ -38,7 +41,7 @@ def get_data_from_yf_to_csv():
     def get_data_from_yf_child(ticker_list:list, start_date:date, end_date:date, **context):
         data = None
         # original_schedule_date = datetime.now(timezone(timedelta(hours=7)))
-        original_schedule_date = datetime.now()
+        original_schedule_date = datetime.now(local_tz)
                 
         if start_date is None and end_date is None: #scheduled event
             data = yf.download(ticker_list, start=original_schedule_date.strftime('%Y-%m-%d'), group_by='column')
