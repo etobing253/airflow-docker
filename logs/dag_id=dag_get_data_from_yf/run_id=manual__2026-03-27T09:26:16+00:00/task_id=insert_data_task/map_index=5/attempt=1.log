@@ -1,0 +1,60 @@
+[2026-03-27T09:26:46.285+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-03-27T09:26:46.576+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_get_data_from_yf.insert_data_task manual__2026-03-27T09:26:16+00:00 map_index=5 [queued]>
+[2026-03-27T09:26:46.652+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_get_data_from_yf.insert_data_task manual__2026-03-27T09:26:16+00:00 map_index=5 [queued]>
+[2026-03-27T09:26:46.653+0000] {taskinstance.py:2884} INFO - Starting attempt 1 of 1
+[2026-03-27T09:26:46.790+0000] {taskinstance.py:2907} INFO - Executing <Mapped(SQLExecuteQueryOperator): insert_data_task> on 2026-03-27 09:26:16+00:00
+[2026-03-27T09:26:46.976+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=1223) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-03-27T09:26:46.990+0000] {standard_task_runner.py:72} INFO - Started process 1500 to run task
+[2026-03-27T09:26:46.985+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'dag_get_data_from_yf', 'insert_data_task', 'manual__2026-03-27T09:26:16+00:00', '--job-id', '651', '--raw', '--subdir', 'DAGS_FOLDER/get_finance_yf_csv.py', '--cfg-path', '/tmp/tmpbht1mdl1', '--map-index', '5']
+[2026-03-27T09:26:47.023+0000] {standard_task_runner.py:105} INFO - Job 651: Subtask insert_data_task
+[2026-03-27T09:26:48.165+0000] {task_command.py:467} INFO - Running <TaskInstance: dag_get_data_from_yf.insert_data_task manual__2026-03-27T09:26:16+00:00 map_index=5 [running]> on host 715ba069c189
+[2026-03-27T09:26:49.201+0000] {taskinstance.py:3157} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag_get_data_from_yf' AIRFLOW_CTX_TASK_ID='insert_data_task' AIRFLOW_CTX_EXECUTION_DATE='2026-03-27T09:26:16+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-03-27T09:26:16+00:00'
+[2026-03-27T09:26:49.203+0000] {taskinstance.py:740} INFO - ::endgroup::
+[2026-03-27T09:26:49.211+0000] {sql.py:410} INFO - Executing: INSERT INTO indonesian_stocks (
+    date, 
+    ticker, 
+    close, 
+    high, 
+    low, 
+    open, 
+    inserted_at_timestamp_wib
+) 
+VALUES (
+    '2026-03-02', 
+    'BMRI.JK', 
+    5075.0, 
+    5175.0, 
+    5050.0, 
+    5125.0, 
+    '2026-03-27 16:26:27' 
+)
+ON CONFLICT (date, ticker) 
+DO NOTHING;
+[2026-03-27T09:26:49.214+0000] {crypto.py:82} WARNING - empty cryptography key - values will not be stored encrypted.
+[2026-03-27T09:26:49.217+0000] {base.py:84} INFO - Retrieving connection 'db_custom'
+[2026-03-27T09:26:49.269+0000] {base.py:84} INFO - Retrieving connection 'db_custom'
+[2026-03-27T09:26:49.292+0000] {sql.py:861} INFO - Running statement: INSERT INTO indonesian_stocks (
+    date, 
+    ticker, 
+    close, 
+    high, 
+    low, 
+    open, 
+    inserted_at_timestamp_wib
+) 
+VALUES (
+    '2026-03-02', 
+    'BMRI.JK', 
+    5075.0, 
+    5175.0, 
+    5050.0, 
+    5125.0, 
+    '2026-03-27 16:26:27' 
+)
+ON CONFLICT (date, ticker) 
+DO NOTHING;, parameters: None
+[2026-03-27T09:26:49.308+0000] {sql.py:879} INFO - Rows affected: 1
+[2026-03-27T09:26:49.464+0000] {taskinstance.py:349} INFO - ::group::Post task execution logs
+[2026-03-27T09:26:49.465+0000] {taskinstance.py:361} INFO - Marking task as SUCCESS. dag_id=dag_get_data_from_yf, task_id=insert_data_task, run_id=manual__2026-03-27T09:26:16+00:00, map_index=5, execution_date=20260327T092616, start_date=20260327T092646, end_date=20260327T092649
+[2026-03-27T09:26:49.750+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-03-27T09:26:49.820+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

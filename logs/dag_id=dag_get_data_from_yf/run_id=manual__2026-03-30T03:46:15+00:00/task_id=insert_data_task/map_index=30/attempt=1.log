@@ -1,0 +1,61 @@
+[2026-03-30T03:47:14.680+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-03-30T03:47:15.058+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_get_data_from_yf.insert_data_task manual__2026-03-30T03:46:15+00:00 map_index=30 [queued]>
+[2026-03-30T03:47:15.123+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_get_data_from_yf.insert_data_task manual__2026-03-30T03:46:15+00:00 map_index=30 [queued]>
+[2026-03-30T03:47:15.124+0000] {taskinstance.py:2884} INFO - Starting attempt 1 of 1
+[2026-03-30T03:47:15.218+0000] {taskinstance.py:2907} INFO - Executing <Mapped(SQLExecuteQueryOperator): insert_data_task> on 2026-03-30 03:46:15+00:00
+[2026-03-30T03:47:15.358+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=4615) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-03-30T03:47:15.399+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'dag_get_data_from_yf', 'insert_data_task', 'manual__2026-03-30T03:46:15+00:00', '--job-id', '906', '--raw', '--subdir', 'DAGS_FOLDER/get_finance_yf_csv.py', '--cfg-path', '/tmp/tmp7kxcpco0', '--map-index', '30']
+[2026-03-30T03:47:15.399+0000] {standard_task_runner.py:72} INFO - Started process 4864 to run task
+[2026-03-30T03:47:15.401+0000] {standard_task_runner.py:105} INFO - Job 906: Subtask insert_data_task
+[2026-03-30T03:47:16.116+0000] {task_command.py:467} INFO - Running <TaskInstance: dag_get_data_from_yf.insert_data_task manual__2026-03-30T03:46:15+00:00 map_index=30 [running]> on host 42116767826c
+[2026-03-30T03:47:17.020+0000] {taskinstance.py:3157} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag_get_data_from_yf' AIRFLOW_CTX_TASK_ID='insert_data_task' AIRFLOW_CTX_EXECUTION_DATE='2026-03-30T03:46:15+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-03-30T03:46:15+00:00'
+[2026-03-30T03:47:17.041+0000] {taskinstance.py:740} INFO - ::endgroup::
+[2026-03-30T03:47:17.059+0000] {sql.py:410} INFO - Executing: INSERT INTO indonesian_stocks (
+    date, 
+    ticker, 
+    close, 
+    high, 
+    low, 
+    open, 
+    inserted_at_timestamp_wib
+) 
+VALUES (
+    '2026-03-13', 
+    'BBCA.JK', 
+    6586.66064453125, 
+    6730.369604048296, 
+    6562.709151278409, 
+    6562.709151278409, 
+    '2026-03-30 10:07:51' 
+)
+ON CONFLICT (date, ticker) 
+DO NOTHING;
+[2026-03-30T03:47:17.063+0000] {crypto.py:82} WARNING - empty cryptography key - values will not be stored encrypted.
+[2026-03-30T03:47:17.071+0000] {base.py:84} INFO - Retrieving connection 'db_custom'
+[2026-03-30T03:47:17.109+0000] {base.py:84} INFO - Retrieving connection 'db_custom'
+[2026-03-30T03:47:17.149+0000] {sql.py:861} INFO - Running statement: INSERT INTO indonesian_stocks (
+    date, 
+    ticker, 
+    close, 
+    high, 
+    low, 
+    open, 
+    inserted_at_timestamp_wib
+) 
+VALUES (
+    '2026-03-13', 
+    'BBCA.JK', 
+    6586.66064453125, 
+    6730.369604048296, 
+    6562.709151278409, 
+    6562.709151278409, 
+    '2026-03-30 10:07:51' 
+)
+ON CONFLICT (date, ticker) 
+DO NOTHING;, parameters: None
+[2026-03-30T03:47:17.187+0000] {sql.py:879} INFO - Rows affected: 0
+[2026-03-30T03:47:17.274+0000] {taskinstance.py:349} INFO - ::group::Post task execution logs
+[2026-03-30T03:47:17.288+0000] {taskinstance.py:361} INFO - Marking task as SUCCESS. dag_id=dag_get_data_from_yf, task_id=insert_data_task, run_id=manual__2026-03-30T03:46:15+00:00, map_index=30, execution_date=20260330T034615, start_date=20260330T034715, end_date=20260330T034717
+[2026-03-30T03:47:17.645+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-03-30T03:47:17.860+0000] {taskinstance.py:3924} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-03-30T03:47:17.875+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

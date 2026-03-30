@@ -33,7 +33,8 @@ RUN pip install --no-cache-dir \
     pymongo \
     playwright \
     pandas \
-    yfinance
+    yfinance \
+    jinja2 
 
 # 4. Install Playwright Chromium
 RUN playwright install chromium

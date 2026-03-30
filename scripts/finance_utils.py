@@ -15,11 +15,11 @@ def validate_tickers(tickers_input):
             invalid_tickers.append(symbol)
     return idx_tickers, invalid_tickers
  
-def fetch_yf_data(ticker_list, start_date, end_date, logical_date):
+def fetch_yf_data(ticker_list, start_date, end_date, start_date_scheduled):
     """Mengambil data dari yfinance dan mengolahnya ke format long."""
     if not start_date or not end_date:
-        # Menggunakan logical_date (data_interval_start) untuk konsistensi
-        start_fetch = logical_date.strftime('%Y-%m-%d')
+        # Menggunakan start_date_scheduled untuk konsistensi
+        start_fetch = start_date_scheduled.strftime('%Y-%m-%d')
         data = yf.download(ticker_list, start=start_fetch, group_by='column')
     else:
         end_inclusive = (datetime.strptime(end_date, '%Y-%m-%d') + timedelta(days=1)).strftime('%Y-%m-%d')
@@ -32,8 +32,8 @@ def fetch_yf_data(ticker_list, start_date, end_date, logical_date):
     data_filtered = data[['Close', 'High', 'Low', 'Open']]
     data_long = data_filtered.stack(level=1).reset_index()
     data_long.columns = ['Date', 'Ticker', 'Close', 'High', 'Low', 'Open']
-    # Gunakan logical_date untuk timestamp agar idempotent
-    data_long['Inserted_at_timestamp_WIB'] = logical_date.strftime('%Y-%m-%d %H:%M:%S')
+    # Gunakan start_date_scheduled untuk timestamp
+    data_long['Inserted_at_timestamp_WIB'] = start_date_scheduled.strftime('%Y-%m-%d %H:%M:%S')
     data_long['Date'] = data_long['Date'].dt.strftime('%Y-%m-%d')
     return data_long.to_dict(orient='records')
  
@@ -69,3 +69,8 @@ def combine_stock_csv(file_paths, output_path):
  
     merged.to_csv(output_path, index=False)
     return output_path
+
+def read_sql_file(filepath):
+    """Baca SQL file dan return as string"""
+    with open(filepath, 'r', encoding='utf-8') as f:
+        return f.read()
