@@ -30,6 +30,7 @@ def fetch_yf_data(ticker_list, start_date, end_date, start_date_scheduled):
  
     # Transformasi data
     data_filtered = data[['Close', 'High', 'Low', 'Open']]
+    data_filtered = data_filtered.round(1)
     data_long = data_filtered.stack(level=1).reset_index()
     data_long.columns = ['Date', 'Ticker', 'Close', 'High', 'Low', 'Open']
     # Gunakan start_date_scheduled untuk timestamp

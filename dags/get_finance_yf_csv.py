@@ -51,7 +51,6 @@ SQL_INSERT = read_sql_file('/opt/airflow/scripts/upsert_stock.sql')
     dag_id="dag_get_data_from_yf",
     start_date=datetime(2026,3,1,tzinfo=local_tz),
     catchup=False,
-    # template_searchpath=["/opt/airflow/scripts"],
     schedule="0 17 * * 1-5", # Setiap hari kerja pukul 17:00 WIB
     params={
         "tickers": Param(None, type=["null", "string"], description="""Masukkan kode saham.\n
@@ -70,7 +69,6 @@ def get_data_from_yf_to_csv():
         tickers_input = context['params'].get('tickers')
         start_date_input = context['params'].get('start_date')
         end_date_input = context['params'].get('end_date')
-        # logical_date = context['logical_date']
         start_date_scheduled = datetime.now(local_tz)
 
         print(f"Ini tickers user: {tickers_input}")
